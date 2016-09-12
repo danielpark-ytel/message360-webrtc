@@ -1,0 +1,763 @@
+html {
+height: 100%;
+}
+
+body {
+display: flex;
+flex-direction: column;
+height: 100%;
+overflow-x: hidden;
+}
+
+footer {
+    flex: 0 0 auto; !important;
+    background-color: #1c1c1c;
+}
+
+.mask {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    opacity: 0.5;
+    color : white;
+}
+
+.no-pad {
+    padding : 0;
+}
+
+div.clean-wrap {
+    padding : 0;
+    margin : 0;
+}
+
+.videoContainer {
+    position : absolute;
+    height : 100%;
+    width : 100%;
+    overflow : hidden;
+}
+
+video#login-vid {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height : 100%; !important;
+    width : 100%; !important;
+    top: 0px;
+    display : block;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.login-column {
+    padding : 0;
+    margin : 0;
+    height : 100%; !important;
+}
+
+a:hover,
+a:focus {
+text-decoration: none;
+}
+
+.dialpad-group {
+width : 33%;
+display : inline-block;
+text-align: center;
+float:left;
+}
+
+li.sidebar-brand > a {
+font-size : 0.8em;
+}
+
+.dialpad-text {
+font-size: 0.6em;
+}
+
+
+.footer-wrapper {
+    width : inherit;
+    height : 100%
+}
+
+.footer-text, .footer-link {
+    font-size : 0.8em;
+    display: inline-block;
+}
+
+.footer-text {
+    color : white;
+}
+
+.form-footer {
+    background-color: #1c1c1c;
+    padding : 0 0 30px 0;
+    margin : 0;
+    height: 80px;
+}
+
+form#userInfo > div.input-group,
+form#callerIdForm > div.input-group{
+    padding : 20px;
+}
+
+div.modal-body {
+    padding : 0; !important;
+}
+
+div.modal-header {
+    padding : 0; !important;
+}
+
+hr {
+    padding : 0;
+    margin : 0;
+}
+
+.form-wrapper {
+    margin-top : 130px;
+    min-height : 400px;
+}
+
+div.modal-body > form > div.form-group {
+    margin-bottom : 0; !important;
+}
+
+.btn-m360 {
+    font-weight: 900;
+}
+
+.btn-modal {
+    margin-top : 20px;
+}
+
+.control-label {
+    font-size : 16px;
+}
+
+* {
+    font-family: "Lato", sans-serif;
+}
+
+.input-group-addon {
+    padding: 6px 16px;
+    font-size: 24px; !important;
+    font-weight: normal;
+    line-height: 1;
+    color: #ec2c36;
+    background-color: inherit;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+div.container-fluid {
+    padding : 0;
+}
+
+div.banner {
+    top : 0;
+    width : 100%;
+    height : 100px;
+    background-color : #f5f5f5;
+}
+
+img.img-responsive {
+    height : 100px;
+}
+
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+[type=text].form-control:focus,
+[type=password].form-control:focus,
+[type=email].form-control:focus,
+[type=tel].form-control:focus,
+[contenteditable].form-control:focus {
+    -webkit-box-shadow : inset 0 -2px 0 #ec2c36;
+    box-shadow : inset 0 -2px 0 #ec2c36;
+}
+
+section.main-content {
+    flex: 1 0 auto; !important;
+}
+
+
+.btn {
+    padding : 5px 30px;
+    background : white;
+    border-radius : 0;
+    border : 3px solid white;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    outline : none;
+}
+
+div.load-screen-container {
+    padding-top : 25%;
+    padding-bottom : 25%;
+}
+
+div.status-block {
+    float: left;
+    position : absolute;
+    width : 100%;
+}
+
+.status-label {
+    padding : 10px;
+    font-size : 0.9em;
+    float : left;
+    margin-right : 5px;
+    border-radius: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.status-ion {
+    color : white; !important;
+    font-sie : 1.1em;
+}
+
+.btn-m360 {
+    background : #ec2c36;
+    color : #fff;
+    border-color : #ec2c36;
+    font-size : 1.2em;
+    outline : none;
+}
+
+.btn-m360:hover {
+    background : #fff;
+    color : #ec2c36;
+    border-color : #ec2c36;
+    outline : none;
+}
+
+.btn-m360:active, .btn-m360:focus {
+    background : #fff;
+    color : #ec2c36;
+    border-color : #ec2c36;
+    outline : none !important;
+}
+
+.btn-hold {
+    background : #ec2c36;
+    color : #fff;
+    border-color : #ec2c36;
+    outline : none;
+}
+
+.btn-hold:hover {
+    background : #fff;
+    color : #ec2c36;
+    border-color : #ec2c36;
+    outline : none;
+}
+
+.btn-hold:active, .btn-hold:focus {
+    background : #fff;
+    color : #ec2c36;
+    border-color : #ec2c36;
+    outline : none !important;
+}
+
+
+
+.btn-hangup {
+    background : #ec2c36;
+    color : #fff;
+    border-color : #ec2c36;
+    outline : none;
+    padding-right : 5px;
+}
+
+.btn-hangup:hover {
+    background : #fff;
+    color : #ec2c36;
+    border-color : #ec2c36;
+    outline : none;
+}
+
+.btn-hangup:active, .btn-hangup:focus {
+    background : #fff;
+    color : #ec2c36;
+    border-color : #ec2c36;
+    outline : none !important;
+}
+
+p.loadscreen {
+    font-size : 22px;
+}
+
+#webcam {
+    width : 100%;
+    height : 100%;
+    object-fit: inherit;
+}
+
+#panel-middle {
+    padding : 25px 25px 0 25px; !important;
+}
+
+.btn-hold,
+.btn-hangup {
+    height : 60px;
+    width : 60px;
+    border-radius : 100%;
+    position: relative;
+    margin-right : 20px;
+    float : right;
+    outline : none;
+}
+
+nav.navbar.navbar-default{
+    height : 68px;
+    background : #1c1c1c;
+}
+
+i.ion.special:before {
+    font-size : 2em; !important;
+    position: absolute;
+    top:40%;
+    left:50%;
+    height : 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    width : 10px;
+    height : 10px;
+    display : block;
+}
+
+.btn-block {
+    width : 70%; !important;
+    margin : auto auto;
+    padding : 6px;
+}
+
+p {
+    margin : 0;
+    padding : 0;
+}
+
+p.incall-text {
+    font-size : 18px;
+    font-weight : 400;
+    letter-spacing: 1px;
+}
+
+.incall-text, timer {
+    display: inline-block;
+    line-height : 50px;
+}
+
+.navbar-text {
+    letter-spacing : 2px;
+}
+
+.wrapper {
+    padding-top : 68px;
+}
+
+.incall {
+    margin-top : 25vh;
+    padding : 0;
+}
+
+ul.nav.navbar-nav > li > a {
+    font-size : 18px;
+    color : #ec2c36;
+    line-height : 34px;
+    font-weight : 900;
+}
+
+timer > span,
+.called-number {
+    font-size : 18px;
+    font-weight : 900;
+}
+
+.panel {
+    height : inherit;
+}
+
+.panel-body {
+    padding : 16px;
+}
+
+.panel-footer {
+    background-color : #1c1c1c;
+}
+
+div.footer-group {
+    line-height : 80px;
+    padding : 0 15px 0 180px;
+}
+
+.settings, .settings-label {
+    color : white;
+    display : inline-block;
+}
+
+.settings[type="checkbox"]:checked:after {
+    background-color: #ec2c36;
+    border-color: #ec2c36;
+}
+
+.settings[type="checkbox"]:focus:after {
+    border-color : #ec2c36;
+}
+
+div.dialpad-wrapper {
+    padding-bottom : 5%;
+    margin-bottom : 80px;
+}
+
+#dialpadForm .btn-dialer {
+    padding: 5px 25px;
+    width: 70%;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+#dialpadForm input.form-control {
+    height : 80px;
+    font-size : 34px;
+    padding : 6px;
+    background-color : #f3f3f3;
+}
+
+button.btn-call {
+    margin : auto auto;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+    font-size : 30px;
+    border : 5px solid white;
+}
+
+.fa-phone:before {
+    vertical-align: middle;
+}
+
+i.fa.fa-phone {
+    color : #59b75c;
+}
+
+.btn-dialer:hover {
+    border-color : #59b75c;
+}
+
+
+.fa-lg {
+    vertical-align: 0 !important;
+}
+
+div.btn-container {
+    text-align: right;
+}
+
+div.fs-banner {
+    position : fixed;
+    top : 0;
+    right : 0;
+    bottom : 0;
+    left : 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+div.fs-banner video {
+    position : absolute;
+    top : 0;
+    left : 0;
+    width : 100%;
+    height : 100%;
+}
+
+div.row.text-center {
+    padding-top : 20px;
+}
+
+.btn-call:hover {
+    background : #fff;
+    color : #ec2c36;
+    border-color : #59b75c;
+    outline : none;
+}
+
+.btn-call:active, .btn-call:focus {
+    background : #fff;
+    color : #ec2c36;
+    border-color : #59b75c;
+    outline : none !important;
+}
+
+/* Toggle Styles */
+
+#dialer {
+    padding-left: 180px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+#dialer.toggled {
+    padding-left: 180px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 180px;
+    width: 180px;
+    height: 100%;
+    margin-left: -180px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#dialer.toggled #sidebar-wrapper {
+    width: 180px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#sidebar-wrapper > ul > li > a:focus {
+    outline : none; !important;
+    border : none; !important;
+}
+
+#dialer.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -180px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 180px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    video#login-vid {
+        -o-object-fit: cover;
+        object-fit: cover;
+        height : 100%;
+        width : 100%;
+        top: 0px;
+        display : block;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    .loader-text {
+        font-size : 1em;
+        color : #ec2c36;
+    }
+
+    .ion-android-checkmark-circle {
+        color : green;
+    }
+
+    .ion-android-checkmark-circle.ion-status {
+        color : white; !important;
+    }
+
+    .ion-close {
+        color : white;
+    }
+
+    .loader {
+        width : 50px;
+        height : inherit;
+        margin: auto auto;
+    }
+
+    div.loading-block {
+        padding-top : 30px;
+        height : 50px;
+        text-align: center;
+    }
+    .before {
+        color : #ec2c36; !important;
+    }
+
+    ul.ng-toast__list {
+        height : auto;
+        width : auto;
+    }
+
+    .status-label {
+        width : 157px;
+        text-align: center;
+    }
+
+    .login-content {
+        width : 340px;
+        margin : auto auto;
+        text-align : center;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+    form#loginForm {
+        width : inherit;
+        height : inherit;
+    }
+
+    .info-box {
+        padding-bottom : 15px;
+        margin-top : 15px;
+    }
+
+    .input-group-addon {
+        padding-left: 0;
+        float : none;
+        width : 53px;
+    }
+
+    div.input-group {
+        min-width : 100%; !important;
+    }
+
+    hr.form-divider {
+        margin-bottom : 10px;
+    }
+
+    .loader-text {
+        font-size : 1em;
+        color : #fa372e;
+    }
+    .ion-android-checkmark-circle {
+        color : green;
+    }
+    .loader {
+        width : 50px;
+        height : inherit;
+        margin: auto auto;
+    }
+    div.loading-block {
+        padding-top : 30px;
+        height : 50px;
+        text-align: center;
+    }
+
+    .before {
+        color : #fa372e; !important;
+    }
+
+    .input-group-addon {
+        padding-left: 0;
+        float : none;
+        width : 53px;
+    }
+    div.input-group {
+        min-width : 100%; !important;
+    }
+    hr.form-divider {
+        margin-bottom : 10px;
+    }
+
+    @media (min-width: 768px) {
+        .input-group-addon {
+            padding : 6px 16px; !important;
+        }
+    }
+
+    @media (min-height: 1100px) {
+        div.dialpad-wrapper {
+            padding-top : 10%;
+            padding-bottom : 10%;
+            margin-bottom : 80px;
+        }
+    }
+
+    @media only screen and (min-width : 900px) {
+        .footer-link, .footer-text {
+            font-size : 1em;
+        }
+    }
+
+    @media (min-aspect-ratio: 16/9) {
+        .fs-banner video {
+            width : 100%;
+            height : auto;
+        }
+    }
+
+    @media (max-aspect-ratio: 16/9) {
+        .fs-banner video {
+            width : 100%;
+            height : auto;
+        }
+    }
+}

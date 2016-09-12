@@ -1,0 +1,56 @@
+<div class="wrapper">
+
+    <nav class="navbar navbar-default navbar-fixed-top"> <!-- Start Navbar -->
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapsed" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <p class="animated slideInLeft navbar-text">Status: <span ng-show="storage.data.calling">Dialing to number</span><span ng-show="!storage.data.calling">Connected to dialed number</span></p>
+            </div>
+        </div>
+    </nav> <!-- End Navbar -->
+
+    <div class="container"> <!-- Start Container -->
+        <div class="incall animated fadeIn panel panel-default col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
+            <div class="panel-body">
+                <p class="incall-text">Number Dialed: <span class="called-number">{{storage.data.called_number | phoneFilter}}</span></p>
+                <hr style="margin:0">
+                <div id="panel-middle" class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <div ng-show="storage.data.calling">
+                            <p class="incall-text">Making outbound call..</p>
+                            <img class="loader" src="assets/svg/ring.gif" alt="oops!"/>
+                        </div>
+                        <div ng-show="!storage.data.calling">
+                            <p class="incall-text">Call Duration: </p>
+                            <timer start-time="start_time" autostart="false" interval="1000">
+                                {{hhours}}:{{mminutes}}:{{sseconds}}
+                            </timer>
+                        </div>
+                    </div>
+                    <div ng-show="!storage.data.calling" class="col-sm-6 col-md-6 col-lg-6 btn-container">
+                        <button class="btn btn-hangup text-center" tooltips tooltip-template="Hang up" tooltip-side="left" ng-click="hangup()">
+                            <i class="ion special ion-ios-telephone"></i>
+                        </button>
+                        <button class="btn btn-hold text-center" tooltips tooltip-template="Hold the call" tooltip-side="right" ng-click="hold()">
+                            <i class="ion special ion-ios-pause"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="panel-footer">
+                <p class="settings-label" ng-show="storage.data.useMic">Mute Microphone</p>
+                <p class="settings-label" ng-show="!storage.data.useMic">Use Microphone</p>
+                <input class="settings" type="checkbox" ng-click="toggleMic();">
+                <p class="settings-label" ng-show="storage.data.useVideo">Disable Video</p>
+                <p class="settings-label" ng-show="!storage.data.useVideo">Enable Video</p>
+                <input class="settings" type="checkbox" ng-click="toggleVideo();">
+            </div>
+        </div>
+    </div> <!-- End Container -->
+</div>

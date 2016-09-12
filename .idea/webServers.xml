@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a7227842-432a-4237-b739-425a5bc3648e" name="ID1389LA" url="http://id1389la.ytel.com">
+        <fileTransfer host="id1389la.ytel.com" port="26" rootFolder="/www/message360.com" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="26" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
