@@ -1,17 +1,16 @@
 html {
-height: 100%;
+    height: 100% !important;
 }
 
 body {
-display: flex;
-flex-direction: column;
-height: 100%;
-overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100% !important;
+    overflow-x: hidden;
 }
 
-footer {
-    flex: 0 0 auto; !important;
-    background-color: #1c1c1c;
+section {
+    flex: 1 0 auto !important;
 }
 
 .mask {
@@ -24,15 +23,7 @@ footer {
     background: #333;
     opacity: 0.5;
     color : white;
-}
-
-.no-pad {
-    padding : 0;
-}
-
-div.clean-wrap {
-    padding : 0;
-    margin : 0;
+    z-index: -1000;
 }
 
 .videoContainer {
@@ -40,6 +31,12 @@ div.clean-wrap {
     height : 100%;
     width : 100%;
     overflow : hidden;
+}
+
+div.login-content {
+    height : 525px;
+    padding : 15px;
+    margin-top : 60px;
 }
 
 video#login-vid {
@@ -53,45 +50,32 @@ video#login-vid {
     background-size: cover;
 }
 
-.login-column {
-    padding : 0;
-    margin : 0;
-    height : 100%; !important;
+input#identifier.form-control {
+    color: white;
 }
 
 a:hover,
 a:focus {
-text-decoration: none;
+    text-decoration: none;
 }
 
 .dialpad-group {
-width : 33%;
-display : inline-block;
-text-align: center;
-float:left;
+    width : 33%;
+    display : inline-block;
+    text-align: center;
+    float:left;
 }
 
 li.sidebar-brand > a {
-font-size : 0.8em;
+    font-size : 0.8em;
 }
 
 .dialpad-text {
-font-size: 0.6em;
+    font-size: 0.6em;
 }
 
-
-.footer-wrapper {
-    width : inherit;
-    height : 100%
-}
-
-.footer-text, .footer-link {
-    font-size : 0.8em;
-    display: inline-block;
-}
-
-.footer-text {
-    color : white;
+#loginForm {
+    margin-top : 40px;
 }
 
 .form-footer {
@@ -100,6 +84,13 @@ font-size: 0.6em;
     margin : 0;
     height: 80px;
 }
+
+div.input-group {
+    width : 50%;
+    margin : auto auto;
+}
+
+
 
 form#userInfo > div.input-group,
 form#callerIdForm > div.input-group{
@@ -119,17 +110,45 @@ hr {
     margin : 0;
 }
 
-.form-wrapper {
-    margin-top : 130px;
-    min-height : 400px;
+div.img-wrapper {
+    height : auto;
+    width : auto;
+    padding : 5%;
+}
+
+div.img-wrapper > i {
+    font-size : 6em;
+    margin-right : 10px;
+}
+
+.login-logo:before {
+    color : #e82f2e;
+    line-height : 100px;
+    vertical-align: sub;
+}
+
+.login-h3 {
+    line-height : 100px;
+    letter-spacing: 1.2px;
+}
+
+div.form-mask {
+    padding : 10%;
+    background-color: white;
+    position : relative;
+    opacity: 0.7;
 }
 
 div.modal-body > form > div.form-group {
     margin-bottom : 0; !important;
 }
 
-.btn-m360 {
-    font-weight: 900;
+.ib {
+    display : inline-block;
+}
+
+.no-margin {
+    margin : 0;
 }
 
 .btn-modal {
@@ -155,19 +174,32 @@ div.modal-body > form > div.form-group {
     border-radius: 3px;
 }
 
+.plain-list {
+    list-style-type: none;
+    color : white;
+    padding : 0;
+    letter-spacing: 1px;
+}
+
 div.container-fluid {
     padding : 0;
 }
 
+.f-height {
+    height : inherit;
+}
+
 div.banner {
+    position: relative;
     top : 0;
     width : 100%;
-    height : 100px;
-    background-color : #f5f5f5;
+    height : 130px;
+    padding : 25px 0;
+    background-color : white;
 }
 
 img.img-responsive {
-    height : 100px;
+    height : 75px;
 }
 
 textarea:focus,
@@ -186,16 +218,12 @@ input[type=number]:focus,
     box-shadow : inset 0 -2px 0 #ec2c36;
 }
 
-section.main-content {
-    flex: 1 0 auto; !important;
-}
-
-
 .btn {
-    padding : 5px 30px;
+    padding : 5px 15px;
+    font-size: 0.8em;
     background : white;
     border-radius : 0;
-    border : 3px solid white;
+    border : 1px solid white;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
@@ -234,6 +262,7 @@ div.status-block {
 }
 
 .btn-m360 {
+    border-radius: 20px;
     background : #ec2c36;
     color : #fff;
     border-color : #ec2c36;
@@ -343,10 +372,8 @@ i.ion.special:before {
     display : block;
 }
 
-.btn-block {
-    width : 70%; !important;
-    margin : auto auto;
-    padding : 6px;
+i.ion-android-checkmark-circle {
+    color : green;
 }
 
 p {
@@ -599,153 +626,6 @@ div.row.text-center {
     color: #fff;
     background: none;
 }
-
-@media(min-width:768px) {
-    video#login-vid {
-        -o-object-fit: cover;
-        object-fit: cover;
-        height : 100%;
-        width : 100%;
-        top: 0px;
-        display : block;
-        -webkit-background-size: cover;
-        background-size: cover;
-    }
-
-    #page-content-wrapper {
-        padding: 20px;
-        position: relative;
-    }
-
-    .loader-text {
-        font-size : 1em;
-        color : #ec2c36;
-    }
-
-    .ion-android-checkmark-circle {
-        color : green;
-    }
-
-    .ion-android-checkmark-circle.ion-status {
-        color : white; !important;
-    }
-
-    .ion-close {
-        color : white;
-    }
-
-    .loader {
-        width : 50px;
-        height : inherit;
-        margin: auto auto;
-    }
-
-    div.loading-block {
-        padding-top : 30px;
-        height : 50px;
-        text-align: center;
-    }
-    .before {
-        color : #ec2c36; !important;
-    }
-
-    ul.ng-toast__list {
-        height : auto;
-        width : auto;
-    }
-
-    .status-label {
-        width : 157px;
-        text-align: center;
-    }
-
-    .login-content {
-        width : 340px;
-        margin : auto auto;
-        text-align : center;
-        -webkit-transition: all 0.4s ease-in-out;
-        -moz-transition: all 0.4s ease-in-out;
-        -ms-transition: all 0.4s ease-in-out;
-        -o-transition: all 0.4s ease-in-out;
-        transition: all 0.4s ease-in-out;
-    }
-    form#loginForm {
-        width : inherit;
-        height : inherit;
-    }
-
-    .info-box {
-        padding-bottom : 15px;
-        margin-top : 15px;
-    }
-
-    .input-group-addon {
-        padding-left: 0;
-        float : none;
-        width : 53px;
-    }
-
-    div.input-group {
-        min-width : 100%; !important;
-    }
-
-    hr.form-divider {
-        margin-bottom : 10px;
-    }
-
-    .loader-text {
-        font-size : 1em;
-        color : #fa372e;
-    }
-    .ion-android-checkmark-circle {
-        color : green;
-    }
-    .loader {
-        width : 50px;
-        height : inherit;
-        margin: auto auto;
-    }
-    div.loading-block {
-        padding-top : 30px;
-        height : 50px;
-        text-align: center;
-    }
-
-    .before {
-        color : #fa372e; !important;
-    }
-
-    .input-group-addon {
-        padding-left: 0;
-        float : none;
-        width : 53px;
-    }
-    div.input-group {
-        min-width : 100%; !important;
-    }
-    hr.form-divider {
-        margin-bottom : 10px;
-    }
-
-    @media (min-width: 768px) {
-        .input-group-addon {
-            padding : 6px 16px; !important;
-        }
-    }
-
-    @media (min-height: 1100px) {
-        div.dialpad-wrapper {
-            padding-top : 10%;
-            padding-bottom : 10%;
-            margin-bottom : 80px;
-        }
-    }
-
-    @media only screen and (min-width : 900px) {
-        .footer-link, .footer-text {
-            font-size : 1em;
-        }
-    }
 
     @media (min-aspect-ratio: 16/9) {
         .fs-banner video {
