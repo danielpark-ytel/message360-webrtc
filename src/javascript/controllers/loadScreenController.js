@@ -59,19 +59,15 @@
                         return;
                     }
                     loadScreen.next();
-                }, 400);
+                }, 600);
             });
 
             $rootScope.$on("progress.complete", function(ev, currentProgress) {
                 console.log(verto.data.connected);
-                $scope.message = "Connected to verto, going to login.";
-                if(verto.data.connected) {
-                    $timeout(function() {
-                        $state.go('login');
-                    }, 300);
-                } else {
+                $scope.message = "Done configuring, going to login.";
+                $timeout(function() {
                     $state.go("login");
-                }
+                }, 500);
             });
             loadScreen.next();
         });

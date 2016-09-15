@@ -1,14 +1,20 @@
-<div class="container load-screen-container">
-    <div class="img-wrapper text-center">
-        <img style="margin : auto auto;" class="img img-responsive animated fadeInDown" alt="No Image Found" src="assets/images/m360logos.png">
-    </div>
+<div class="container-fluid">
     <div class="row load-screen-wrapper">
-        <p>Preparing for use.</p>
-        <hr>
         <div class="progress animated fadeIn progress-striped active">
             <div class="progress-bar progress-bar-danger" ng-class="{'progress-bar-danger':interruptNext}"
-                 style="width:{{progressPercentage}}%"></div>
+                 style="width:{{progressPercentage}}%">
+             </div>
         </div>
-        <p class="loadscreen" ng-bind="message"></p>
+        <div class="progress-bar-text text-center">
+            <p style="color:white">
+                Hello, we're getting you setup.
+            </p>
+            <p style="color:white;" ng-bind="message"></p>
+        </div>
+    </div>
+    <div class="load-wrapper">
+        <img class="loader-img" src="assets/images/m360icon.png" alt="no image" />
+        <div class="row loader text-center">
+        </div>
     </div>
 </div>

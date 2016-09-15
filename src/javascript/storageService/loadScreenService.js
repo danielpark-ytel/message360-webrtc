@@ -12,7 +12,7 @@ angular.module('storageService')
                         'activity' : activity,
                         'status' : 'success',
                         'soft' : false,
-                        'message' : $translate.instant("Initializing load scripts...")
+                        'message' : $translate.instant("Loading configuration scripts.")
                     };
                     resolve(result);
                 });
@@ -26,7 +26,7 @@ angular.module('storageService')
                         'activity': activity,
                         'status': 'success',
                         'soft' : false,
-                        'message': $translate.instant("Checking browser compatibility...")
+                        'message': $translate.instant("Checking for browser compatibility.")
                     };
                     navigator.getUserMedia = navigator.getUserMedia ||
                         navigator.webkitGetUserMedia ||
@@ -34,12 +34,10 @@ angular.module('storageService')
 
                     if (!navigator.getUserMedia) {
                         result['status'] = 'error';
-                        result['message'] = $translate.instant("Error with browser...")
+                        result['message'] = $translate.instant("Something went wrong.")
                         reject(result);
                     }
-
                     resolve(result);
-
                 });
             };
 
@@ -51,13 +49,13 @@ angular.module('storageService')
                         'activity': activity,
                         'status': 'success',
                         'soft' : false,
-                        'message': $translate.instant("Checking media permissions...")
+                        'message': $translate.instant("Configuring media permissions.")
                     };
 
                     verto.mediaPerm(function(status) {
                         if(!status) {
                             result['status'] = 'error';
-                            result['message'] = $translate.instant("Error with permissions...")
+                            result['message'] = $translate.instant("Something went wrong.")
                             verto.data.mediaPerm = false;
                             reject(result);
                         }
@@ -74,7 +72,7 @@ angular.module('storageService')
                         'status': 'success',
                         'activity': activity,
                         'soft' : true,
-                        'message': $translate.instant("Refreshing media devices...")
+                        'message': $translate.instant("Re")
                     };
 
                     verto.refreshDevices(function(status) {
@@ -95,17 +93,17 @@ angular.module('storageService')
             ];
 
             var progressMessage = [
-                $translate.instant("Initializing load scripts..."),
-                $translate.instant("Checking browser compatibility..."),
-                $translate.instant("Checking for media permissions..."),
-                $translate.instant("Refreshing media devices..."),
+                $translate.instant("Loading configuration scripts."),
+                $translate.instant("Checking for browser compatibility."),
+                $translate.instant("Configuring media permissions."),
+                $translate.instant("Refreshing media devices."),
             ];
 
             var getProgressMessage = function(currentProgress) {
                 if(progressMessage[currentProgress] != undefined) {
                     return progressMessage[currentProgress];
                 } else {
-                    return $translate.instant("Please Wait...");
+                    return $translate.instant("Hold on a second.");
                 }
             };
 

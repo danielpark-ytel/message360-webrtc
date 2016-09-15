@@ -3,7 +3,7 @@
 
     angular.module("vertoControllers")
         .controller("dialpadController", function($rootScope, $scope, $http, $state, verto, storage, ngToast) {
-
+            storage.data.notifications = true;
             var countryCode = "1";
             console.debug("Executing Dialpad Controller...");
             storage.data.videoCall = false;
@@ -47,6 +47,15 @@
 
             $rootScope.cancel = function() {
                 $scope.cancelled = true;
+            };
+
+            $scope.updateCallerId = function() {
+                if ($scope.user.cid.length == 10) {
+                    storage.data.cid_number = $scope.user.cid;
+                }
+                $uibModalInstance.dismiss("cancel");
+                ngAudio.play("assets/sounds/notification.mp3");
+                ngToast.create("<p class='toast-text'><i class='ion-android-notifications'></i> Caller ID updated.</p>");
             };
 
         });
