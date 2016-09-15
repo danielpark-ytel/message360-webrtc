@@ -26,18 +26,29 @@
                         </div>
                     </uib-tab>
                     <uib-tab index="1" heading="Settings">
-                        <div class="form-wrapper animated fadeIn">
-                            <input class="form-control" type="text" ng-model="storage.data.cid_number" placeholder="Enter valid number.">
+                        <div class="form-wrapper animated fadeIn text-center">
+                            <h4 class="text-center"><i style="color:white;" class="fa fa-2x fa-info-circle"></i></h4>
+                            <p class="information">Set your caller ID for this session here.<br> Make sure its a number that
+                                you own on Message360.</p>
+                            <br>
+                            <input class="form-control" style="height:50px;" type="text" ng-model="storage.data.cid_number" placeholder="Enter valid number.">
+                            <button class="btn update" ng-click="updateCallerId(storage.data.cid_number)">Update Caller ID</button>
                         </div>
                     </uib-tab>
                     <uib-tab index="2" heading="Call History">
                         <div class="ch-content animated fadeIn">
-                            <ul>
-                                <li>phone numbers</li>
-                                <li>phone numbers</li>
-                                <li>phone numbers</li>
-                                <li>phone numbers</li>
-                            </ul>
+                            <table class="table table-hover" >
+                                <thead>
+                                    <th>Dialed Number</th>
+                                    <th>Date/Time</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>7141111111</td>
+                                        <td>Some Date, Some time</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </uib-tab>
                 </uib-tabset>

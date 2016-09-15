@@ -500,6 +500,12 @@ div.phone {
     color : white;
 }
 
+.information {
+    margin-top : 10px;
+    text-align: center;
+    font-size : 1em;
+}
+
 #dialpadForm .btn-dialer {
     height : 78px;
     padding : 0;
@@ -519,6 +525,10 @@ div.phone {
     color : white;
     -webkit-box-shadow : inset 0px -2px 0 #28343b;
     box-shadow : inset 0px -2px 0 #28343b;
+}
+
+.table-hover>tbody>tr:hover {
+    background-color : #28343b;
 }
 
 #dialpadForm > div.form-group {
@@ -563,6 +573,18 @@ div.fs-banner {
     left : 0;
     overflow: hidden;
     z-index: -100;
+}
+
+.update {
+    margin-top : 20px;
+    background-color : #59b75c;
+    border : 2px solid #59b75c;
+    font-weight : 700;
+}
+
+.update:hover, .update:active, .update:focus {
+    color : #59b75c;
+    background-color: white;
 }
 
 div.fs-banner video {
