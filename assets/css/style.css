@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100% !important;
-    overflow: auto;
+    overflow-x: hidden;
 }
 
 section {
@@ -59,15 +59,13 @@ a:focus {
     text-decoration: none;
 }
 
+
+
 .dialpad-group {
-    width : 33%;
+    width : 33.3333333%;
     display : inline-block;
     text-align: center;
     float:left;
-}
-
-li.sidebar-brand > a {
-    font-size : 0.8em;
 }
 
 .dialpad-text {
@@ -79,31 +77,9 @@ li.sidebar-brand > a {
     margin-top : 40px;
 }
 
-.form-footer {
-    background-color: #1c1c1c;
-    padding : 0 0 30px 0;
-    margin : 0;
-    height: 80px;
-}
-
 div.input-group {
     width : 50%;
     margin : auto auto;
-}
-
-
-
-form#userInfo > div.input-group,
-form#callerIdForm > div.input-group{
-    padding : 20px;
-}
-
-div.modal-body {
-    padding : 0; !important;
-}
-
-div.modal-header {
-    padding : 0; !important;
 }
 
 hr {
@@ -231,8 +207,8 @@ input[type=number]:focus,
 [type=email].form-control:focus,
 [type=tel].form-control:focus,
 [contenteditable].form-control:focus {
-    -webkit-box-shadow : inset 0 -2px 0 #ec2c36;
-    box-shadow : inset 0 -2px 0 #ec2c36;
+    -webkit-box-shadow : inset 0px -2px 0 #333;
+    box-shadow : inset 0px -2px 0 #333;
 }
 
 .btn {
@@ -253,19 +229,6 @@ div.status-block {
     float: left;
     position : absolute;
     width : 100%;
-}
-
-.status-label {
-    padding : 10px;
-    font-size : 0.9em;
-    float : left;
-    margin-right : 5px;
-    border-radius: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
 }
 
 .status-ion {
@@ -362,11 +325,6 @@ div.status-block {
     outline : none;
 }
 
-nav.navbar.navbar-default{
-    height : 68px;
-    background : #1c1c1c;
-}
-
 i.ion.special:before {
     font-size : 2em; !important;
     position: absolute;
@@ -400,10 +358,6 @@ p.incall-text {
     line-height : 50px;
 }
 
-.navbar-text {
-    letter-spacing : 2px;
-}
-
 .wrapper {
     padding-top : 68px;
 }
@@ -413,34 +367,19 @@ p.incall-text {
     padding : 0;
 }
 
-ul.nav.navbar-nav > li > a {
-    font-size : 18px;
-    color : #ec2c36;
-    line-height : 34px;
-    font-weight : 900;
-}
-
 timer > span,
 .called-number {
     font-size : 18px;
     font-weight : 900;
 }
 
-.panel {
-    height : inherit;
-}
-
-.panel-body {
-    padding : 16px;
-}
-
-.panel-footer {
-    background-color : #1c1c1c;
-}
-
 div.footer-group {
     line-height : 80px;
     padding : 0 15px 0 180px;
+}
+
+div.dialpad-container {
+    padding-top : 40px;
 }
 
 .settings, .settings-label {
@@ -457,51 +396,87 @@ div.footer-group {
     border-color : #ec2c36;
 }
 
-div.dialpad-wrapper {
-    padding-bottom : 5%;
-    margin-bottom : 80px;
+.d-panel {
+    color : white;
+    background: #333;
+    height : inherit;
+}
+
+#dialpadForm {
+    margin: auto auto;
+    background: #333;
+    position: relative;
+    height : auto;
+    width: 300px;
+}
+
+.settings-wrapper {
+    padding : 0px 40px;
+    height : 580px;
+    opacity: 0.96;
+}
+
+div.phone {
+    opacity: 0.7;
+    width : 380px;
+    background: #4a4a4a;
+    padding-top : 70px;
+    padding-bottom : 70px;
+    border-radius: 100px;
+    margin : auto auto;
+}
+
+.dialpad-number {
+    color : white;
 }
 
 #dialpadForm .btn-dialer {
-    padding: 5px 25px;
-    width: 70%;
+    height : 78px;
+    padding : 0;
+    margin : 0;
+    background: black;
+    width: 100%;
+        border: none;
     box-shadow: none;
-    -webkit-box-shadow: none;
+    -webkit-box-shadow : none;
 }
 
 #dialpadForm input.form-control {
     height : 80px;
     font-size : 34px;
+    background: black;
     padding : 6px;
-    background-color : #f3f3f3;
+    color : white;
+    -webkit-box-shadow : inset 0px -2px 0 black;
+    box-shadow : inset 0px -2px 0 black;
 }
 
-button.btn-call {
-    margin : auto auto;
-    width: 70px;
-    height: 70px;
-    text-align: center;
-    padding: 10px;
-    border-radius: 50%;
-    font-size : 30px;
-    border : 5px solid white;
+#dialpadForm > div.form-group {
+    margin : 0;
 }
 
-.fa-phone:before {
-    vertical-align: middle;
+.group {
+    height : auto;
+    width : auto;
 }
 
-i.fa.fa-phone {
-    color : #59b75c;
+.btn-call {
+    margin : 0;
+    min-height : 100%;
+    min-width : 100%;
+    line-height : 40px;
+    background: #59b75c;
+    border: 2px solid #59b75c;
+    font-size: 1.8em;
+    color : white;
 }
 
 .btn-dialer:hover {
     border-color : #59b75c;
 }
 
-
-.fa-lg {
-    vertical-align: 0 !important;
+.btn-row {
+    background: #59b75c;
 }
 
 div.btn-container {
@@ -532,9 +507,10 @@ div.row.text-center {
 
 .btn-call:hover {
     background : #fff;
-    color : #ec2c36;
+    color : white;
     border-color : #59b75c;
     outline : none;
+    color : #59b75c;
 }
 
 .btn-call:active, .btn-call:focus {
@@ -542,41 +518,10 @@ div.row.text-center {
     color : #ec2c36;
     border-color : #59b75c;
     outline : none !important;
+    color : #59b75c;
 }
 
 /* Toggle Styles */
-
-#dialer {
-    padding-left: 180px;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-
-#dialer.toggled {
-    padding-left: 180px;
-}
-
-#sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
-    left: 180px;
-    width: 180px;
-    height: 100%;
-    margin-left: -180px;
-    overflow-y: auto;
-    background: #000;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-#dialer.toggled #sidebar-wrapper {
-    width: 180px;
-}
 
 #page-content-wrapper {
     width: 100%;
@@ -584,68 +529,16 @@ div.row.text-center {
     padding: 15px;
 }
 
-#sidebar-wrapper > ul > li > a:focus {
-    outline : none; !important;
-    border : none; !important;
-}
-
-#dialer.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -180px;
-}
-
-/* Sidebar Styles */
-
-.sidebar-nav {
-    position: absolute;
-    top: 0;
-    width: 180px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.sidebar-nav li {
-    text-indent: 20px;
-    line-height: 40px;
-}
-
-.sidebar-nav li a {
-    display: block;
-    color: #999999;
-}
-
-.sidebar-nav li a:hover {
-    color: #fff;
-    background: rgba(255,255,255,0.2);
-}
-
-.sidebar-nav > .sidebar-brand {
-    height: 65px;
-    font-size: 18px;
-    line-height: 60px;
-}
-
-.sidebar-nav > .sidebar-brand a {
-    color: #999999;
-}
-
-.sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
-    background: none;
-}
-
-    @media (min-aspect-ratio: 16/9) {
-        .fs-banner video {
-            width : 100%;
-            height : auto;
-        }
+@media (min-aspect-ratio: 16/9) {
+    .fs-banner video {
+        width : 100%;
+        height : auto;
     }
+}
 
-    @media (max-aspect-ratio: 16/9) {
-        .fs-banner video {
-            width : 100%;
-            height : auto;
-        }
+@media (max-aspect-ratio: 16/9) {
+    .fs-banner video {
+        width : 100%;
+        height : auto;
     }
 }

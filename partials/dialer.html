@@ -1,146 +1,108 @@
-<div id="dialer">
-    <div id="sidebar-wrapper" ng-controller="modalController">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand">
-                <a href="" ng-click="setCallerId()">Set Caller ID Number</a>
-            </li>
-            <li class="sidebar-brand">
-                <a href="" ng-click="viewHistory()">View Call History</a>
-            </li>
-            <li class="sidebar-brand">
-                <a href="" ng-click="logout()">End Session</a>
-            </li>
-        </ul>
-    </div>
-    <div class="status-block">
-        <label class="animated fadeIn" ng-class="{ 'label label-danger status-label' : !storage.data.cid_number, 'label label-success status-label' : storage.data.cid_number}"><i ng-class="{ 'ion ion-close': !storage.data.cid_number, 'ion ion-android-checkmark-circle ion-status': storage.data.cid_number }"></i> Authenticated Number</label>
-    </div>
-
-    <div class="animated slideInDown dialpad-wrapper col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
-        <div class="row text-center info-box">
-            <p class="text-muted"><i style="font-size: 2.5em;" class="ion-information-circled"></i> <br>Use the dialer below to make a call! <br>Call button is disabled until a 10-digit phone number is entered.</p>
+<div class="container-fluid dialpad-container">
+    <div class="settings-wrapper col-sm-6 col-md-6 col-lg-6">
+        <div class="animated fadeInLeft panel d-panel">
+            <div class="panel-heading">
+                <h3 style="color: white;">Hello, {{verto.data.login}}</h3>
+            </div>
+            <div class="panel-body">
+                Content
+            </div>
         </div>
-        <div class="panel panel-default">
-            <form id="dialpadForm" role-="form" ng-submit="call(dialpadNumber)" name="dialpadForm" novalidate>
+    </div>
+    <div class="dialpad-wrapper col-sm-6 col-md-6 col-lg-6">
+        <div class="phone">
+            <form id="dialpadForm" role="form" ng-submit="call(dialpadNumber)" name="dialpadForm" novalidate>
                 <div class="form-group">
                     <input name="dialpadNumber" type="text" class="form-control text-center" placeholder="8001234567" ng-model="dialpadNumber" autofocus required ng-minlength="10" ng-maxlength="10">
                 </div>
-                <div class="panel-body">
-                    <div class="dialpad-numbers">
-                        <div class="row">
-                            <div class="dialpad-group">
-                                <a class="btn btn-dialer" ng-click="dtmf(1)">
-                                    <h4 class="dialpad-number">1</h4>
-                                    <span class="dialpad-text">./@</span>
-                                </a>
-                            </div>
-                            <div class="dialpad-group">
-                                <a class="btn btn-dialer" ng-click="dtmf(2)">
-                                    <h4 class="dialpad-number">2</h4>
-                                    <span class="dialpad-text">ABC</span>
-                                </a>
-                            </div>
-                            <div class="dialpad-group">
-                                <a class="btn btn-dialer" ng-click="dtmf(3)">
-                                    <h4 class="dialpad-number">3</h4>
-                                    <span class="dialpad-text">DEF</span>
-                                </a>
-                            </div>
+                <div class="dialpad-numbers">
+                    <div class="group">
+                        <div class="dialpad-group">
+                            <a class="btn btn-dialer" ng-click="dtmf(1)">
+                                <h4 class="dialpad-number">1</h4>
+                                <span class="dialpad-text">./@</span>
+                            </a>
                         </div>
-                        <div class="row">
-                            <div class="dialpad-group">
-                                <a class="btn btn-dialer" ng-click="dtmf(4)">
-                                    <h4 class="dialpad-number">4</h4>
-                                    <span class="dialpad-text">GHI</span>
-                                </a>
-                            </div>
-                            <div class="dialpad-group">
-                                <a class="btn btn-dialer" ng-click="dtmf(5)">
-                                    <h4 class="dialpad-number">5</h4>
-                                    <span class="dialpad-text">JKL</span>
-                                </a>
-                            </div>
-                            <div class="dialpad-group">
-                                <a class="btn btn-dialer" ng-click="dtmf(6)">
-                                    <h4 class="dialpad-number">6</h4>
-                                    <span class="dialpad-text">MNO</span>
-                                </a>
-                            </div>
+                        <div class="dialpad-group">
+                            <a class="btn btn-dialer" ng-click="dtmf(2)">
+                                <h4 class="dialpad-number">2</h4>
+                                <span class="dialpad-text">ABC</span>
+                            </a>
                         </div>
-                        <div class="row">
-                            <div class="dialpad-group">
-                                <a class="btn btn-dialer" ng-click="dtmf(7)">
-                                    <h4 class="dialpad-number">7</h4>
-                                    <span class="dialpad-text">PQRS</span>
-                                </a>
-                            </div>
-                            <div class="dialpad-group">
-                                <a class="btn btn-dialer" ng-click="dtmf(8)">
-                                    <h4 class="dialpad-number">8</h4>
-                                    <span class="dialpad-text">TUV</span>
-                                </a>
-                            </div>
-                            <div class="dialpad-group">
-                                <a class="btn btn-dialer" ng-click="dtmf(9)">
-                                    <h4 class="dialpad-number">9</h4>
-                                    <span class="dialpad-text">WXYZ</span>
-                                </a>
-                            </div>
+                        <div class="dialpad-group">
+                            <a class="btn btn-dialer" ng-click="dtmf(3)">
+                                <h4 class="dialpad-number">3</h4>
+                                <span class="dialpad-text">DEF</span>
+                            </a>
                         </div>
-                        <div class="row">
-                            <div class="dialpad-group">
-                                <a class="btn btn-dialer" ng-click="dtmf('*')">
-                                    <h4 class="dialpad-number">*</h4>
-                                    <span class="dialpad-text">---</span>
-                                </a>
-                            </div>
-                            <div class="dialpad-group">
-                                <a class="btn btn-dialer" ng-click="dtmf(0)">
-                                    <h4 class="dialpad-number">0</h4>
-                                    <span class="dialpad-text">+</span>
-                                </a>
-                            </div>
-                            <div class="dialpad-group">
-                                <a class="btn btn-dialer" ng-click="dtmf('#')">
-                                    <h4 class="dialpad-number">#</h4>
-                                    <span class="dialpad-text">---</span>
-                                </a>
-                            </div>
+                    </div>
+                    <div class="group">
+                        <div class="dialpad-group">
+                            <a class="btn btn-dialer" ng-click="dtmf(4)">
+                                <h4 class="dialpad-number">4</h4>
+                                <span class="dialpad-text">GHI</span>
+                            </a>
                         </div>
-                        <div class="row text-center">
-                            <button class="btn btn-call" ng-disabled="dialpadForm.$invalid" type="submit">
-                                <i class="fa fa-phone fa-lg" aria-hidden="true"></i>
-                            </button>
+                        <div class="dialpad-group">
+                            <a class="btn btn-dialer" ng-click="dtmf(5)">
+                                <h4 class="dialpad-number">5</h4>
+                                <span class="dialpad-text">JKL</span>
+                            </a>
                         </div>
+                        <div class="dialpad-group">
+                            <a class="btn btn-dialer" ng-click="dtmf(6)">
+                                <h4 class="dialpad-number">6</h4>
+                                <span class="dialpad-text">MNO</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="dialpad-group">
+                            <a class="btn btn-dialer" ng-click="dtmf(7)">
+                                <h4 class="dialpad-number">7</h4>
+                                <span class="dialpad-text">PQRS</span>
+                            </a>
+                        </div>
+                        <div class="dialpad-group">
+                            <a class="btn btn-dialer" ng-click="dtmf(8)">
+                                <h4 class="dialpad-number">8</h4>
+                                <span class="dialpad-text">TUV</span>
+                            </a>
+                        </div>
+                        <div class="dialpad-group">
+                            <a class="btn btn-dialer" ng-click="dtmf(9)">
+                                <h4 class="dialpad-number">9</h4>
+                                <span class="dialpad-text">WXYZ</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="dialpad-group">
+                            <a class="btn btn-dialer" ng-click="dtmf('*')">
+                                <h4 class="dialpad-number">*</h4>
+                                <span class="dialpad-text">---</span>
+                            </a>
+                        </div>
+                        <div class="dialpad-group">
+                            <a class="btn btn-dialer" ng-click="dtmf(0)">
+                                <h4 class="dialpad-number">0</h4>
+                                <span class="dialpad-text">+</span>
+                            </a>
+                        </div>
+                        <div class="dialpad-group">
+                            <a class="btn btn-dialer" ng-click="dtmf('#')">
+                                <h4 class="dialpad-number">#</h4>
+                                <span class="dialpad-text">---</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="group text-center btn-row">
+                        <button class="btn btn-call" ng-disabled="dialpadForm.$invalid" type="submit">
+                            <i class="fa fa-phone"></i> CALL
+                        </button>
                     </div>
                 </div>
             </form>
         </div>
-    </div>
-
-    <div ng-controller="modalController">
-
-        <script type="text/ng-template" id="setCallerId.html">
-            <div class="modal-header">
-                <h4 class="modal-header">Enter a valid Message360 number</h4>
-            </div>
-            <div class="modal-body">
-                <form id="callerIdForm" role="form" ng-submit="updateCallerId()" name="callerIdForm" novalidate>
-                    <div class="input-group">
-                        <span class="input-group-addon modal-group" id="callerIdAddon"><i ng-class="{ 'ion before ion-ios-telephone': callerIdForm.caller_id.$invalid, 'ion ion-android-checkmark-circle': callerIdForm.caller_id.$valid }"></i></span>
-                        <input type="text" ng-model="user.cid" class="form-control" placeholder="(888)-888-8888" name="caller_id" id="caller_id" ng-minlength="10" ng-maxlength="10" autocomplete="off" aria-describedby="callerIdAddon" required>
-                    </div>
-                    <div class="form-footer text-center">
-                        <button class="btn btn-m360 btn-modal" ng-disabled="callerId.$invalid" type="submit">
-                            <span class="ion-wrapper">
-                                <i class="ion-android-checkbox-outline btn-addon"></i>
-                            </span>
-                            Authenticate
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </script>
-
     </div>
 </div>
