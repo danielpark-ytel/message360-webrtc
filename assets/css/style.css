@@ -26,6 +26,62 @@ section {
     z-index: -1000;
 }
 
+div.panel-body {
+    padding : 10px;
+    margin : 0;
+    min-height : 420px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b5bdc8+0,828c95+36,28343b+100;Grey+Black+3D */
+    background: #b5bdc8; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #b5bdc8 0%, #828c95 36%, #28343b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #b5bdc8 0%,#828c95 36%,#28343b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #b5bdc8 0%,#828c95 36%,#28343b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.panel-heading {
+    background: #28343b;
+}
+
+.profile-content {
+    padding : 10px;
+}
+
+.profile-box {
+    text-align: center;
+    width : 180px;
+    display: inline-block;
+    height : 180px;
+    margin : 20px auto 0;
+    border: 3px solid #28343b;
+}
+
+.access-box {
+    width : 100% !important;
+    height : 100px;
+    margin-top : 20px;
+}
+
+.profile-box > h4 {
+    color : white;
+    font-size: 1.21em;
+    margin : 0;
+    padding : 10px;
+    background-color : #28343b;
+}
+
+ul.nav.nav-tabs > li {
+    text-align: center;
+    color : white;
+    font-size: 1.2em;
+    font-weight: 500;
+    color : white;
+    letter-spacing: 1px;
+}
+
+ul.nav.nav-tabs > li > a {
+    color : inherit;
+}
+
 .videoContainer {
     position : absolute;
     height : 100%;
@@ -195,6 +251,21 @@ img.loader-img {
   margin-right: auto;
 }
 
+#access-token {
+    line-height:58px;
+}
+
+div.profile-box > h3 {
+    margin : 0;
+    line-height : 130px;
+    color : white;
+}
+
+div.phone-info > p {
+    margin : 0;
+    line-height : 68px;
+}
+
 textarea:focus,
 textarea.form-control:focus,
 input.form-control:focus,
@@ -207,8 +278,9 @@ input[type=number]:focus,
 [type=email].form-control:focus,
 [type=tel].form-control:focus,
 [contenteditable].form-control:focus {
-    -webkit-box-shadow : inset 0px -2px 0 #333;
-    box-shadow : inset 0px -2px 0 #333;
+    -webkit-box-shadow : inset 0px -2px 0 #2196f3;
+    box-shadow : inset 0px -2px 0 #2196f3;
+    color : white;
 }
 
 .btn {
@@ -382,11 +454,6 @@ div.dialpad-container {
     padding-top : 40px;
 }
 
-.settings, .settings-label {
-    color : white;
-    display : inline-block;
-}
-
 .settings[type="checkbox"]:checked:after {
     background-color: #ec2c36;
     border-color: #ec2c36;
@@ -399,7 +466,9 @@ div.dialpad-container {
 .d-panel {
     color : white;
     background: #333;
+    width: 440px;
     height : inherit;
+    margin: auto auto;
 }
 
 #dialpadForm {
@@ -411,13 +480,14 @@ div.dialpad-container {
 }
 
 .settings-wrapper {
+    margin-top : 30px;
     padding : 0px 40px;
-    height : 580px;
+    height : auto;
     opacity: 0.96;
 }
 
 div.phone {
-    opacity: 0.7;
+    opacity: 0.8;
     width : 380px;
     background: #4a4a4a;
     padding-top : 70px;
@@ -447,8 +517,8 @@ div.phone {
     background: black;
     padding : 6px;
     color : white;
-    -webkit-box-shadow : inset 0px -2px 0 black;
-    box-shadow : inset 0px -2px 0 black;
+    -webkit-box-shadow : inset 0px -2px 0 #28343b;
+    box-shadow : inset 0px -2px 0 #28343b;
 }
 
 #dialpadForm > div.form-group {
@@ -469,6 +539,7 @@ div.phone {
     border: 2px solid #59b75c;
     font-size: 1.8em;
     color : white;
+    z-index: 10;
 }
 
 .btn-dialer:hover {
@@ -477,6 +548,7 @@ div.phone {
 
 .btn-row {
     background: #59b75c;
+    opacity: 1;
 }
 
 div.btn-container {
@@ -513,6 +585,7 @@ div.row.text-center {
     color : #59b75c;
 }
 
+
 .btn-call:active, .btn-call:focus {
     background : #fff;
     color : #ec2c36;
@@ -527,6 +600,12 @@ div.row.text-center {
     width: 100%;
     position: absolute;
     padding: 15px;
+}
+
+@@media (min-width < 900px) {
+    .settings-wrapper {
+        display : none;
+    }
 }
 
 @media (min-aspect-ratio: 16/9) {

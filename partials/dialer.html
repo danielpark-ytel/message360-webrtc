@@ -2,10 +2,45 @@
     <div class="settings-wrapper col-sm-6 col-md-6 col-lg-6">
         <div class="animated fadeInLeft panel d-panel">
             <div class="panel-heading">
-                <h3 style="color: white;">Hello, {{verto.data.login}}</h3>
+                <h3 style="color: white;"><i class="fa fa-user"></i> Hello, {{verto.data.login}}</h3>
             </div>
             <div class="panel-body">
-                Content
+                <uib-tabset active="activeJustified" justified="true">
+                    <uib-tab index="0" heading="Profile">
+                        <div class="profile-content animated fadeIn">
+                            <div class="profile-box">
+                                <h4><i class="fa fa-mobile"></i> Calls this session</h4>
+                                <h3>{{ storage.data.count || 0 }}</h3>
+                            </div>
+                            <div class="profile-box pull-right">
+                                <h4><i class="ion ion-android-contact"></i> Caller ID Number</h4>
+                                <div class="phone-info">
+                                    <p>{{ storage.data.cid_number || "Please set your caller ID"}}</p>
+                                    <p>Authenticated: {{ storage.data.cid_authenticated || false}}</p>
+                                </div>
+                            </div>
+                            <div class="profile-box access-box">
+                                <h4><i class="fa fa-lock"></i> Access Token</h4>
+                                <p id="access-token">{{ storage.data.accessToken || "No Token" }}</p>
+                            </div>
+                        </div>
+                    </uib-tab>
+                    <uib-tab index="1" heading="Settings">
+                        <div class="form-wrapper animated fadeIn">
+                            <input class="form-control" type="text" ng-model="storage.data.cid_number" placeholder="Enter valid number.">
+                        </div>
+                    </uib-tab>
+                    <uib-tab index="2" heading="Call History">
+                        <div class="ch-content animated fadeIn">
+                            <ul>
+                                <li>phone numbers</li>
+                                <li>phone numbers</li>
+                                <li>phone numbers</li>
+                                <li>phone numbers</li>
+                            </ul>
+                        </div>
+                    </uib-tab>
+                </uib-tabset>
             </div>
         </div>
     </div>
