@@ -27,7 +27,7 @@
                 storage.data.mutedVideo = false;
                 storage.data.mutedMic = false;
                 storage.data.videoCall = false;
-                verto.call("##"+countryCode+$rootScope.dialpadNumber);
+                verto.call("##1"+$rootScope.dialpadNumber);
                 storage.data.called_number = extension;
                 $state.go("incall");
             };

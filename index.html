@@ -31,7 +31,20 @@
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
+        <video class="hide" id="webcam" autoplay="autoplay" style="width:100%; height:100%; object-fit:inherit;"></video>
         <toast></toast>
+        <div class="banner">
+            <img style="margin : auto auto;" class="img img-responsive animated fadeInLeft" alt="No Image Found" src="assets/images/m360logo.png">
+        </div>
+        <div class="fs-banner">
+            <div class="mask"></div>
+            <video id="mask-vid" poster muted autoplay loop>
+                <source src="http://w5.message360.com/video/communicate.mp4" type="video/mp4">
+                <source src="http://w5.message360.com/video/communicate.webms" type="video/webm">
+                <source src="http://w5.message360.com/video/communicate.ogv" type="video/ogv">
+                Your browser does not support the video tag.
+            </video>
+        </div>
         <section class="main-content" ui-view>
         </section>
         <!-- Verto Plugin Dependencies -->

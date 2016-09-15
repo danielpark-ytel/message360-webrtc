@@ -25,7 +25,12 @@
                         }
                     });
                 };
-                //Imitating the action token functionality
+                /**
+                * Request to server for accessToken
+                * Should have server side configured with
+                * @param String account_sid
+                * @param String auth_token
+                **/
                 $http.post("https://park-dev.message360.com/api/v2/fs/createToken").then(function(response) {
                     if(response.data) {
                         verto.data.passwd = response.data;

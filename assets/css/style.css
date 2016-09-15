@@ -39,7 +39,7 @@ div.login-content {
     margin-top : 60px;
 }
 
-video#login-vid {
+video#mask-vid {
     -o-object-fit: cover;
     object-fit: cover;
     height : 100%; !important;
@@ -71,7 +71,8 @@ li.sidebar-brand > a {
 }
 
 .dialpad-text {
-    font-size: 0.6em;
+    font-size: 0.8em;
+    font-weight : 600;
 }
 
 #loginForm {
