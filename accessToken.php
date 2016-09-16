@@ -12,9 +12,9 @@ $Message360 -> setOptions(array(
 
 try
 {
-    $accessToken = $Message360->getToken('freeswitch', 'createToken');
+    $accessToken = $Message360->getAccessToken('freeswitch', 'createToken');
     $response = $accessToken->getResponse();
-    echo json_encode($response);
+    echo $response;
 }
 catch (Message360_Exception $e)
 {

@@ -244,7 +244,7 @@ abstract class Message360_Related {
       * @param String $action
      * @return String $token
      */
-    function getToken($component, $action) {
+    function getAccessToken($component, $action) {
         $data = array(
             "account_sid" => $this->option('account_sid'),
             "auth_token" => $this->option('auth_token')
