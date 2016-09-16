@@ -30,16 +30,14 @@ div.panel-body {
     padding : 10px;
     margin : 0;
     min-height : 420px;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b5bdc8+0,828c95+36,28343b+100;Grey+Black+3D */
-    background: #b5bdc8; /* Old browsers */
-    background: -moz-linear-gradient(45deg, #b5bdc8 0%, #828c95 36%, #28343b 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(45deg, #b5bdc8 0%,#828c95 36%,#28343b 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(45deg, #b5bdc8 0%,#828c95 36%,#28343b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background: #16222A; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #16222A , #3A6073); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #16222A , #3A6073); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .panel-heading {
-    background: #28343b;
+    background: #16222A;
 }
 
 .profile-content {
@@ -52,7 +50,7 @@ div.panel-body {
     display: inline-block;
     height : 180px;
     margin : 20px auto 0;
-    border: 3px solid #28343b;
+    border: 3px solid #16222A;
 }
 
 .access-box {
@@ -66,7 +64,7 @@ div.panel-body {
     font-size: 1.21em;
     margin : 0;
     padding : 10px;
-    background-color : #28343b;
+    background-color : #16222A;
 }
 
 ul.nav.nav-tabs > li {
@@ -261,9 +259,11 @@ div.profile-box > h3 {
     color : white;
 }
 
-div.phone-info > p {
-    margin : 0;
-    line-height : 68px;
+.phonenumber {
+    font-size : 1.3em;
+    color : white;
+    font-weight: 800;
+    letter-spacing: 1px;
 }
 
 textarea:focus,
@@ -294,7 +294,7 @@ input[type=number]:focus,
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    outline : none;
+    outline : none !important;
 }
 
 div.status-block {
@@ -419,15 +419,38 @@ p {
     padding : 0;
 }
 
+.incall-content {
+    margin-top : 8%;
+    position: relative;
+    background: transparent;
+    width : 100%;
+    height : auto;
+}
+
 p.incall-text {
     font-size : 18px;
     font-weight : 400;
     letter-spacing: 1px;
+    color : white;
 }
 
-.incall-text, timer {
+.incall-box {
+    padding-top : 15px;
+}
+
+.incall-text {
     display: inline-block;
     line-height : 50px;
+}
+
+timer {
+    line-height : 50px;
+}
+
+.timer-box {
+    height : 50px;
+    background: black;
+    color : white;
 }
 
 .wrapper {
@@ -489,11 +512,108 @@ div.dialpad-container {
 div.phone {
     opacity: 0.8;
     width : 380px;
-    background: #4a4a4a;
+    background: #16222A;
     padding-top : 70px;
     padding-bottom : 70px;
     border-radius: 100px;
     margin : auto auto;
+}
+
+.incall-btn {
+    min-width : 100%;
+    height : 50px;
+}
+
+.incall-mask {
+    height : 100%;
+    width : 100%;
+    position : absolute;
+    opacity: 0.5;
+    background: #333;
+}
+
+.mute {
+    font-size: 1.2em;
+    font-weight: 600;
+    color : white;
+    height : 50px;
+    vertical-align: top;
+    padding : 0 !important;
+    margin : 0 !important;
+    width : 20% !important;
+    display : inline-block;
+    left : 0;
+    background-color: #16232b;
+    border : 3px solid #16232b;
+    position:relative;
+}
+
+tooltip {
+    height:inherit;
+    width  :100%;
+    float : left;
+}
+
+.mute:focus {
+    color : #16232b;
+}
+
+.mute:active,
+.mute:visited,
+.mute:hover {
+    color : #16232b;
+    background-color: white;
+    border: 2px solid #16232b;
+    outline: none;
+}
+
+.btn-incall {
+    font-size: 1.2em;
+    font-weight: 600;
+    color : white;
+    height : 50px;
+    vertical-align: top;
+    padding : 0 !important;
+    margin : 0 !important;
+    width : 50%;
+    float : left;
+    display : inline-block;
+}
+
+.hangup {
+    background-color: red;
+    border: 2px solid red;
+}
+.hangup:focus {
+    color : white;
+}
+
+.hangup:active,
+.hangup:visited,
+.hangup:hover {
+    color : red;
+    background-color: white;
+    border: 2px solid red;
+    outline: none;
+}
+
+.hold:focus {
+    color : white;
+}
+
+.hold:active,
+.hold:visited,
+.hold:hover {
+    color : darkred;
+    background-color: white;
+    border: 2px solid darkred;
+    outline: none;
+}
+
+
+.hold {
+    background-color: darkred;
+    border: 2px solid darkred;
 }
 
 .dialpad-number {
@@ -624,10 +744,15 @@ div.row.text-center {
     padding: 15px;
 }
 
-@@media (min-width < 900px) {
-    .settings-wrapper {
-        display : none;
-    }
+.incall-display {
+    width : 300px;
+    height : auto;
+    position: relative;
+    margin : auto auto;
+    text-align: center;
+    background: #16222A; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #16222A , #3A6073); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #16222A , #3A6073); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 @media (min-aspect-ratio: 16/9) {

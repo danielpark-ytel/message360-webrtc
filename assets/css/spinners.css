@@ -1,5 +1,4 @@
 .loader {
-  background-image: url("assets/images/m360icon.png");
   margin: 60px auto;
   font-size: 10px;
   position: relative;
@@ -39,4 +38,12 @@
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+.incall {
+    border-top: 1em solid rgba(255, 255, 255, 0.2);
+    border-right: 1em solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1em solid rgba(255, 255, 255, 0.2);
+    border-left: 1em solid #213743;
+    margin : 10px auto;
 }
