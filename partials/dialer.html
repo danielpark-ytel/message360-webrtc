@@ -15,7 +15,7 @@
                             <div class="profile-box pull-right">
                                 <h4><i class="ion ion-android-contact"></i> Caller ID Number</h4>
                                 <div class="phone-info">
-                                    <p>{{ storage.data.cid_number || "Please set your caller ID"}}</p>
+                                    <p ng-class="{ }">{{ storage.data.cid_number || "Please set your caller ID"}}</p>
                                     <p>Authenticated: {{ storage.data.cid_authenticated || false}}</p>
                                 </div>
                             </div>
