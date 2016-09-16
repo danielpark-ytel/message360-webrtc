@@ -33,6 +33,7 @@
                 * @param String auth_token
                 **/
                 $http.post("/accessToken.php").then(function(response) {
+                    console.log(response);
                     if(response.data.Message360['AccessToken'] != "") {
                         verto.data.passwd = response.data.Message360['AccessToken'];
                         console.debug("Token Acquired: "+storage.data.accessToken);
