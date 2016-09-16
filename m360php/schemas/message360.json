@@ -1,0 +1,262 @@
+{
+    "version" : "0.0.4",
+    "rest_api" : {
+        "components" : {
+            "accounts"                : "Accounts",
+            "notifications"           : "Notifications",
+            "recordings"              : "Recordings",
+            "sms_messages"            : "SMS/Messages",
+            "transcriptions"          : "Transcriptions",
+            "calls"                   : "Calls",
+            "carrier"                 : "Lookups/Carrier",
+            "cnam"                    : "Lookups/Cnam",
+            "bna"                     : "Lookups/Bna",
+            "incoming_phone_numbers"  : "IncomingPhoneNumbers",
+            "available_phone_numbers" : "AvailablePhoneNumbers",
+            "conferences"             : "Conferences",
+            "applications"            : "Applications",
+            "fraud"                   : "Fraud",
+            "usages"                  : "Usages",
+            "rates"                   : "Rates",
+            "connect"                 : "Connect",
+            "faxes"                   : "Faxes"
+        },
+
+        "pagination" : [
+            "page", "num_pages", "page_size", "total", "start", "end",
+            "uri", "first_page_uri", "previous_page_uri", "next_page_uri",
+            "last_page_uri"   
+        ]
+    },
+    
+    "inboundxml" : {
+        "verbs": {
+            "Response": {
+                "attributes": [],
+                "nesting": [
+                    "Say",
+                    "Play",
+                    "Gather",
+                    "GetSpeech",
+                    "Record",
+                    "PlayLastRecording",
+                    "Dial",
+                    "Hangup",
+                    "Ping",
+                    "Redirect",
+                    "Reject",
+                    "Pause",
+                    "Sms",
+                    "Speak"
+                ],
+                "docs_url": "https://api.message360.com/Docs/VoiceBasics/response",
+                "blank": false
+            },
+            "Say": {
+                "attributes": [
+                    "voice",
+                    "loop",
+                    "language"
+                ],
+                "nesting": [],
+                "docs_url": "https://api.message360.com/Docs/VoiceElements/say",
+                "blank": false
+            },
+             "Speak": {
+                "attributes": [
+                    "voice",
+                    "loops",
+                    "language",
+                    "file",
+                    "engine",
+                    "voice"
+                ],
+                "nesting": [],
+                "docs_url": "https://api.message360.com/Docs/VoiceElements/play",
+                "blank": false
+            },
+            "Play": {
+                "attributes": [
+                    "loop"
+                ],
+                "nesting": [],
+                "docs_url": "https://api.message360.com/Docs/VoiceElements/play",
+                "blank": false
+            },
+            "Gather": {
+                "attributes": [
+                    "action",
+                    "method",
+                    "finishOnKey",
+                    "timeout",
+                    "numDigits"
+                ],
+                "nesting": [
+                    "Say",
+                    "Play",
+                    "Pause"
+                ],
+                "docs_url": "https://api.message360.com/Docs/VoiceElements/gather",
+                "blank": true
+            },
+            "Record": {
+                "attributes": [
+                    "action",
+                    "method",
+                    "timeout",
+                    "finishOnKey",
+                    "maxLength",
+                    "transcribe",
+                    "transcribeCallback",
+                    "transcribeQuality",
+                    "playBeep",
+                    "direction",
+                    "fileFormat",
+                    "background"
+                ],
+                "nesting": [],
+                "docs_url": "https://api.message360.com/Docs/VoiceElements/record",
+                "blank": true
+            },
+            "PlayLastRecording": {
+                "attributes": [],
+                "nesting": [],
+                "docs_url": "https://api.message360.com/Docs/VoiceElements/playlastrecording",
+                "blank": true
+            },
+            "GetSpeech": {
+                "attributes": [
+                    "grammar", "action", "method", "timeout", "playBeep"
+                ],
+                "nesting": [
+                    "Say", "Play", "Pause"
+                ],
+                "docs_url": "https://api.message360.com/Docs/VoiceElements/pause",
+                "blank": false
+            },
+            "Dial": {
+                "attributes": [
+                    "action",
+                    "method",
+                    "timeout",
+                    "hangupOnStar",
+                    "timeLimit",
+                    "callerId",
+                    "hideCallerId",
+                    "dialMusic",
+                    "callbackUrl",
+                    "callbackMethod",
+                    "confirmSound",
+                    "digitsMatch",
+                    "straightToVm",
+                    "heartbeatUrl",
+                    "heartbeatMethod",
+                    "forwardedFrom",
+                    "ifMachine",
+                    "ifMachineUrl",
+                    "ifMachineMethod",
+                     "GroupConfirmKey",
+                    "GroupConfirmFile",
+                    "ToCountryCode",
+                    "FromCountryCode",
+                    "callerId"
+                ],
+                "nesting": [
+                    "Number",
+                    "Conference",
+                    "Sip"
+                ],
+                "docs_url": "https://api.message360.com/Docs/VoiceElements/dial",
+                "blank": false
+            },
+            "Number": {
+                "attributes": [
+                    "sendDigits"
+                ],
+                "nesting": [],
+                "docs_url": "https://api.message360.com/Docs/VoiceElements/number",
+                "blank": false
+            },
+            "Conference": {
+                "attributes": [
+                    "muted",
+                    "beep",
+                    "startConferenceOnEnter",
+                    "endConferenceOnEnter",
+                    "maxParticipants",
+                    "waitUrl",
+                    "waitMethod",
+                    "hangupOnStar",
+                    "callbackUrl",
+                    "waitSound",
+                    "waitSoundMethod",
+                    "digitsMatch",
+                    "stayAlone"
+                ],
+                "nesting": [],
+                "docs_url": "https://api.message360.com/Docs/VoiceElements/conference",
+                "blank": false
+            },
+            "Sip": {
+                "attributes": [
+                    "action",
+                    "method"
+                ],
+                "nesting": [],
+                "docs_url": "https://api.message360.com/Docs/VoiceElements/conference",
+                "blank": false
+            },
+            "Hangup": {
+                "attributes": [
+                    "schedule"
+                ],
+                "nesting": [],
+                "docs_url": "https://api.message360.com/Docs/VoiceElements/hangup",
+                "blank": false
+            },
+            "Ping": {
+                "attributes": [],
+                "nesting": [],
+                "docs_url": "https://api.message360.com/Docs/VoiceElements/ping",
+                "blank": true
+            },
+            "Redirect": {
+                "attributes": [
+                    "method"
+                ],
+                "nesting": [],
+                "docs_url": "https://api.message360.com/Docs/VoiceElements/redirect",
+                "blank": true
+            },
+            "Reject": {
+                "attributes": [
+                    "reason"
+                ],
+                "nesting": [],
+                "docs_url": "https://api.message360.com/Docs/VoiceElements/reject",
+                "blank": true
+            },
+            "Pause": {
+                "attributes": [
+                    "length"
+                ],
+                "nesting": [],
+                "docs_url": "https://api.message360.com/Docs/VoiceElements/pause",
+                "blank": true
+            },
+            "Sms": {
+                "attributes": [
+                    "to",
+                    "from",
+                    "action",
+                    "method",
+                    "statusCallback",
+                    "statusCallbackMethod"
+                ],
+                "nesting": [],
+                "docs_url": "https://api.message360.com/Docs/SMS/inboundsms",
+                "blank": false
+            }
+        }
+    }
+}

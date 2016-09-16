@@ -50,8 +50,9 @@
             };
 
             $scope.updateCallerId = function() {
-                if ($scope.user.cid.length == 10) {
-                    storage.data.cid_number = $scope.user.cid;
+                if(storage.data.cid_number.length == 10) {
+                    ngAudio.play("assets/sounds/notification.mp3");
+                    ngToast.create("<p class='toast-text'><i class='ion-android-notifications'></i> Caller ID updated.</p>");
                 }
                 $uibModalInstance.dismiss("cancel");
                 ngAudio.play("assets/sounds/notification.mp3");

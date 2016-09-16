@@ -18,7 +18,7 @@
          accessToken : "",
          cid_number : null,
          userStatus : 'disconnected',
-         mutedVideo : false,
+         mutedVideo : true,
          mutedMic : false,
          preview : true,
          selectedVideo : null,

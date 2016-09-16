@@ -7,6 +7,7 @@
             $scope.login = function() {
                 console.log("User is connecting as: " + verto.data.login);
                 var connectCallback = function(v, connected) {
+                    console.log(verto.data);
                     $scope.$apply(function() {
                         verto.data.connecting = false;
                         if (connected) {
@@ -21,7 +22,7 @@
                         if(verto.data.connected == true) {
                             $state.go('dialer');
                         } else {
-                            return false;
+                            console.error("Couldn't connect to verto.");
                         }
                     });
                 };
@@ -31,10 +32,10 @@
                 * @param String account_sid
                 * @param String auth_token
                 **/
-                $http.post("https://park-dev.message360.com/api/v2/fs/createToken").then(function(response) {
-                    if(response.data) {
-                        verto.data.passwd = response.data;
-                        console.debug("Access Token Acquired: " + verto.data.passwd);
+                $http.post("/webrtc_client/accessToken.php").then(function(response) {
+                    if(response.data.Message360['AccessToken'] != "") {
+                        verto.data.passwd = response.data.Message360['AccessToken'];
+                        console.debug("Token Acquired: "+storage.data.accessToken);
                     }
                     verto.data.connecting = true;
                     verto.connect(connectCallback);
@@ -42,6 +43,5 @@
                     console.error(err);
                 });
             };
-            console.log(verto.data);
         });
 })();
