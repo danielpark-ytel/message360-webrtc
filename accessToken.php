@@ -14,7 +14,7 @@ try
 {
     $accessToken = $Message360->getAccessToken('freeswitch', 'createToken');
     $response = $accessToken->getResponse();
-    echo $response;
+    echo json_encode($response);
 }
 catch (Message360_Exception $e)
 {
