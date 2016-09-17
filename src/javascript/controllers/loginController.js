@@ -5,7 +5,7 @@
         .controller("loginController", function ($scope, $http, $state, $rootScope, storage, verto, $timeout) {
             console.debug("Executing Login Controller...");
             $scope.login = function() {
-                console.log("User is connecting as: " + verto.data.login);
+                console.log("User is connecting as: " + verto.data.name);
                 var connectCallback = function(v, connected) {
                     console.log(verto.data);
                     $scope.$apply(function() {
@@ -35,8 +35,8 @@
                 $http.post("/accessToken.php").then(function(response) {
                     console.log(response);
                     if(response.data.Message360['AccessToken'] != "") {
+                        verto.data.login = response.data.Message360['AccessToken'];
                         verto.data.passwd = response.data.Message360['AccessToken'];
-                        console.debug("Token Acquired: "+storage.data.accessToken);
                     }
                     verto.data.connecting = true;
                     verto.connect(connectCallback);

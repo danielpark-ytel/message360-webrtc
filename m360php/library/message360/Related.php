@@ -255,6 +255,21 @@ abstract class Message360_Related {
     }
 
     /**
+     * Authenticate phone number for WebRTC usage.
+     *
+     * @param String $component
+     * @param String $action
+     * @param String $phone_number
+     * @return String $status_code
+     */
+    function authenticateNumber($component, $action, Array $data) {
+        $creation_url = rtrim($this->_buildBaseUrl() . $component . '/' . $this->_buildUrl($action, $data), '/');
+        $post_params = $this->_buildPostParameters($action,$data);
+        return new Message360_Connector($this->_execute($creation_url, 'POST', $post_params), $this->option('response_to_array'), $this->_component);
+    }
+
+
+    /**
      * Get singular option value. If value is not set, null will be returned
      *
      * @param  string $key

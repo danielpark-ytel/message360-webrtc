@@ -75,7 +75,6 @@
 	    localTag: null,
             videoParams: {},
             audioParams: {},
-	    loginParams: {},
 	    deviceParams: {onResCheck: null},
 	    userVariables: {},
             iceServers: false,

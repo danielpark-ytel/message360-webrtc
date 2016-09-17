@@ -476,12 +476,12 @@ vertoService.service('verto', ['$rootScope', '$state', 'storage', '$location',
                         login: data.login + '@' + data.hostname,
                         passwd: data.passwd,
                         socketUrl: data.wsURL,
-                        loginParams : {
-                            accessToken : data.passwd
-                        },
                         tag: "webcam",
                         ringFile: "sounds/bellring.wav",
-                        // TODO: Add options for this.
+                        userVariables: {
+                            name : data.name,
+                            email : data.email
+                        },
                         audioParams: {
                             googEchoCancellation: storage.data.googEchoCancellation || true,
                             googNoiseSuppression: storage.data.googNoiseSuppression || true,
@@ -564,7 +564,7 @@ vertoService.service('verto', ['$rootScope', '$state', 'storage', '$location',
 
                 var call = data.instance.newCall(angular.extend({
                     destination_number: destination,
-                    caller_id_name: storage.data.cid_name,
+                    caller_id_name: storage.data.name,
                     caller_id_number: storage.data.cid_number,
                     outgoingBandwidth: storage.data.outgoingBandwidth,
                     incomingBandwidth: storage.data.incomingBandwidth,
@@ -576,6 +576,7 @@ vertoService.service('verto', ['$rootScope', '$state', 'storage', '$location',
                     dedEnc: storage.data.useDedenc,
                     mirrorInput: storage.data.mirrorInput,
                     userVariables: {
+                        name : storage.data.name,
                         email : storage.data.email
                     }
                 }, custom));

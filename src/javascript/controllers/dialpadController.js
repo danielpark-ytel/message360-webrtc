@@ -4,6 +4,7 @@
     angular.module("vertoControllers")
         .controller("dialpadController", function($rootScope, $scope, $http, $state, verto, storage, ngToast) {
             storage.data.notifications = true;
+            $scope.user = {};
             var countryCode = "1";
             console.debug("Executing Dialpad Controller...");
             storage.data.videoCall = false;
@@ -50,13 +51,21 @@
             };
 
             $scope.updateCallerId = function() {
-                if(storage.data.cid_number.length == 10) {
-                    ngAudio.play("assets/sounds/notification.mp3");
-                    ngToast.create("<p class='toast-text'><i class='ion-android-notifications'></i> Caller ID updated.</p>");
-                }
-                $uibModalInstance.dismiss("cancel");
-                ngAudio.play("assets/sounds/notification.mp3");
-                ngToast.create("<p class='toast-text'><i class='ion-android-notifications'></i> Caller ID updated.</p>");
+                console.log($scope.user.phoneNumber);
+                var data = {
+                    "phone_number": $scope.user.phoneNumber
+                };
+                $http.post('/webrtc_client/authenticateNumber.php', data).then(function(response) {
+                    console.log(response);
+                });
+
+                // if(storage.data.cid_number.length == 10) {
+                //     ngAudio.play("assets/sounds/notification.mp3");
+                //     ngToast.create("<p class='toast-text'><i class='ion-android-notifications'></i> Caller ID updated.</p>");
+                // }
+                // $uibModalInstance.dismiss("cancel");
+                // ngAudio.play("assets/sounds/notification.mp3");
+                // ngToast.create("<p class='toast-text'><i class='ion-android-notifications'></i> Caller ID updated.</p>");
             };
 
         });
