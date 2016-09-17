@@ -32,7 +32,7 @@
                 * @param String account_sid
                 * @param String auth_token
                 **/
-                $http.post("/accessToken.php").then(function(response) {
+                $http.post("/webrtc_client/accessToken.php").then(function(response) {
                     console.log(response);
                     if(response.data.Message360['AccessToken'] != "") {
                         verto.data.login = response.data.Message360['AccessToken'];
