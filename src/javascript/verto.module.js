@@ -100,5 +100,21 @@
         };
     });
 
+    app.run(['$rootScope', '$location', 'verto', 'storage', '$state',
+    function($rootScope, $location, toastr, verto, $state) {
+        $rootScope.$on("$stateChangeStart", function (event, toState, fromState) {
+            if(!verto.data.connected) {
+                if(toState.templateUrl = "partials/login.html") {
+                } else {
+                    $location.path('/');
+                }
+            }
+        });
+        $rootScope.safeProtocol = false;
+        if(window.location.protocol == 'https:') {
+            $rootScope.safeProtocol = true;
+        }
+    }]);
+
 })();
 

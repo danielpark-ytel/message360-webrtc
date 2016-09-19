@@ -12,10 +12,10 @@
                 Bringing the phone to the browser.
             </li>
             <li>
-                Web Communications made spectacularly simple.
+                Web Communications made simple.
             </li>
             <li>
-                All powered by Message360.
+                Powered by Message360.
             </li>
         </ul>
     </div>
@@ -24,12 +24,12 @@
         <form id="loginForm" name="loginForm" novalidate>
             <div class="form-group">
                 <span class="input-group-addon" id="identifierAddon"><i ng-class="{ 'ion ion-android-person': loginForm.identifier.$invalid, 'ion ion-android-checkmark-circle': loginForm.identifier.$valid }"></i></span>
-                <div class="input-group">
+                <div class="form-group">
                     <input type="text" ng-model="verto.data.name" class="form-control text-center white-text" placeholder="Agent ID" name="identifier" id="identifier" autocomplete="off" aria-describedby="identifierAddon" required />
                 </div>
             </div>
-            <div style="margin-top: 40px;"class="form-group text-center">
-                <button class="btn btn-m360" ng-disabled="loginForm.$invalid" ng-click="login()"><i class="ion ion-log-in"></i> Login</button>
+            <div style="margin-top: 40px;"class="form-group">
+                <button class="btn btn-block btn-m360" ng-disabled="loginForm.$invalid" ng-click="login()"><i class="ion ion-log-in"></i> Login</button>
             </div>
         </form>
     </div>

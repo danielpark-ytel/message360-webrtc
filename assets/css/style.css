@@ -140,11 +140,11 @@ a:focus {
 }
 
 #loginForm {
-    margin-top : 40px;
+    width : 60%;
+    margin : 40px auto 0px auto;
 }
 
 div.input-group {
-    width : 50%;
     margin : auto auto;
 }
 
@@ -361,7 +361,6 @@ div.status-block {
 }
 
 .btn-m360 {
-    border-radius: 20px;
     background : #ec2c36;
     color : #fff;
     border-color : #ec2c36;
