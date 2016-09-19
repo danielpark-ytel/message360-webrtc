@@ -5,8 +5,7 @@
         <div class="incall-box">
             <p class="incall-text"><i class="fa fa-2x fa-user"></i>{{verto.data.login}}</p>
             <div class="loader-box" style="height:106px;">
-                <div ng-show="storage.data.calling" class="loader incall"></div>
-                <div ng-show="!storage.data.calling" class="fa fa-5x fa-check-circle-o" style="color:green; line-height:106px;"></div>
+                <div ng-class="{'loader incall': storage.data.calling, 'fa fa-5x fa-check-circle-o green': !storage.data.calling}"></div>
             </div>
             <p class="phonenumber">{{storage.data.called_number | phoneFilter}}</p>
         </div>

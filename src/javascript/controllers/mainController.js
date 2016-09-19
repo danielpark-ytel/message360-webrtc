@@ -25,6 +25,7 @@
             var disconnect = function() {
                 var disconnectCallback = function(v, connected) {
                     console.debug("Logging out..");
+                    $window.localStorage.clear();
                     storage.reset();
                     $state.go("login");
                 };
@@ -70,10 +71,10 @@
             //Reset the timer
             $scope.$broadcast("timer-reset");
             //Reset dialpad number
+            storage.data.numOfCalls += 1;
             $rootScope.dialpadNumber = "";
             console.debug("Going back to dialer..");
             $state.go("dialer");
-
             try {
                 $rootScope.$digest();
             } catch (e) {

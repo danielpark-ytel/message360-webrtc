@@ -13,7 +13,7 @@ abstract class Message360_Related {
     CONST WRAPPER_XML = 'xml';
 
     /** BASE Message360 URI */
-    CONST API_URL = 'https://park-dev.message360.com/api/v2/';
+    CONST API_URL = 'https://webrtc-api.message360.com/api/v2/';
 
     /** BASE Message360 API VERSION */
     CONST API_VERSION = 'v2';
@@ -182,7 +182,8 @@ abstract class Message360_Related {
         'checkSmsNumber' => 'checkSmsNumber',
 
         /*Freeswitch Module*/
-        'createToken' => 'createToken'
+        'createToken' => 'createToken',
+        'authenticateNumber' => 'authenticateNumber'
     );
 
     /**
@@ -244,12 +245,12 @@ abstract class Message360_Related {
       * @param String $action
      * @return String $token
      */
-    function getAccessToken($component, $action) {
+    function createToken($component, $action) {
         $data = array(
             "account_sid" => $this->option('account_sid'),
             "auth_token" => $this->option('auth_token')
         );
-        $creation_url = rtrim($this->_buildBaseUrl() . $component . '/' . $this->_buildUrl($action, $data), '/');
+        $creation_url = rtrim($this->_buildBaseUrl() . $component . '/' . $this->_buildUrl($action, $data), '/') . '.' . self::WRAPPER_JSON;
         $post_params = $this->_buildPostParameters($action,$data);
         return new Message360_Connector($this->_execute($creation_url, 'POST', $post_params), $this->option('response_to_array'), $this->_component);
     }
@@ -259,15 +260,21 @@ abstract class Message360_Related {
      *
      * @param String $component
      * @param String $action
-     * @param String $phone_number
+     * @param Array $data
      * @return String $status_code
      */
     function authenticateNumber($component, $action, Array $data) {
-        $creation_url = rtrim($this->_buildBaseUrl() . $component . '/' . $this->_buildUrl($action, $data), '/');
+        $phone_number = $data['phone_number'];
+        $account_sid = $this->option('account_sid');
+        $data = array(
+            "account_sid" => $account_sid,
+            "phone_number" => $phone_number
+        );
+        $creation_url = rtrim($this->_buildBaseUrl() . $component . '/' . $this->_buildUrl($action, $data), '/') . '.' . self::WRAPPER_JSON;
         $post_params = $this->_buildPostParameters($action,$data);
         return new Message360_Connector($this->_execute($creation_url, 'POST', $post_params), $this->option('response_to_array'), $this->_component);
-    }
 
+    }
 
     /**
      * Get singular option value. If value is not set, null will be returned
@@ -386,17 +393,14 @@ abstract class Message360_Related {
      */
     private function _buildBaseUrl()
     {
-
         //$return_url = self::API_URL . $this->_getBaseVersion() . '/';
-
         $return_url = self::API_URL;
         if (is_null($this->option('account_sid'))) {
             throw new \Message360_Exception(
-            "Please set account_sid option. You need to pass account_sid option as
+                "Please set account_sid option. You need to pass account_sid option as
                 auth_token in order to authenticate and/or use Message360 wrapper"
             );
         }
-
         // $return_url .= self::API_START_COMPONENT . '/' . $this->option('account_sid') . '/';
         return $return_url;
     }

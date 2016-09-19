@@ -40,7 +40,8 @@
          testSpeedJoin : true,
          bestFrameRate : "30",
          language : undefined,
-         wsURL : "wss://id953la.ytel.com:8082"
+         wsURL : "wss://id953la.ytel.com:8082",
+         numOfCalls : 0
      };
 
      data.$default(defaultSettings);

@@ -45,10 +45,15 @@ div.panel-body {
 }
 
 .profile-box {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
     text-align: center;
-    width : 180px;
+    width : 160px;
     display: inline-block;
-    height : 180px;
+    height : 160px;
     margin : 20px auto 0;
     border: 3px solid #16222A;
 }
@@ -61,7 +66,7 @@ div.panel-body {
 
 .profile-box > h4 {
     color : white;
-    font-size: 1.21em;
+    font-size: 1em;
     margin : 0;
     padding : 10px;
     background-color : #16222A;
@@ -113,8 +118,15 @@ a:focus {
     text-decoration: none;
 }
 
+#auth {
+    font-size: 1.3em;
+    height: inherit;
+    vertical-align: sub;
+}
 
-
+.dialpad-wrapper {
+    padding : 0px 50px;
+}
 .dialpad-group {
     width : 33.3333333%;
     display : inline-block;
@@ -220,6 +232,10 @@ div.container-fluid {
     height : inherit;
 }
 
+.green {
+    color : green;
+}
+
 div.banner {
     position: relative;
     top : 0;
@@ -253,10 +269,29 @@ img.loader-img {
     line-height:58px;
 }
 
+div.profile-box:hover {
+    background-color: #286d90;
+}
+
 div.profile-box > h3 {
     margin : 0;
-    line-height : 130px;
+    line-height : 100px;
     color : white;
+}
+
+div.phone-info {
+    padding : 0;
+    line-height : 120px;
+    font-size : 1.3em;
+}
+
+::-webkit-input-placeholder {
+    color : white;
+}
+
+.form-content {
+    margin: auto auto;
+    width : 75%;
 }
 
 .phonenumber {
@@ -489,17 +524,20 @@ div.dialpad-container {
 .d-panel {
     color : white;
     background: #333;
-    width: 440px;
+    width: 400px;
     height : inherit;
     margin: auto auto;
 }
 
 #dialpadForm {
+    left: 0;
+    right : 0;
+    top: 40px;
     margin: auto auto;
     background: #333;
-    position: relative;
+    position: absolute;
     height : auto;
-    width: 300px;
+    width: 270px;
 }
 
 .settings-wrapper {
@@ -510,13 +548,12 @@ div.dialpad-container {
 }
 
 div.phone {
+    position : relative;
     opacity: 0.8;
-    width : 380px;
+    width : 350px;
+    height : 512px;
     background: #16222A;
-    padding-top : 70px;
-    padding-bottom : 70px;
-    border-radius: 100px;
-    margin : auto auto;
+    margin : 30px auto 0px auto;
 }
 
 .incall-btn {
@@ -627,7 +664,7 @@ tooltip {
 }
 
 #dialpadForm .btn-dialer {
-    height : 78px;
+    height : 75px;
     padding : 0;
     margin : 0;
     background: black;
@@ -648,7 +685,20 @@ tooltip {
 }
 
 .table-hover>tbody>tr:hover {
-    background-color : #28343b;
+    background-color : #16222A;
+}
+
+p.phone-req {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    padding : 8px 0px;
+}
+
+p.phone-req:hover {
+    background-color : #16222A;
 }
 
 #dialpadForm > div.form-group {
@@ -667,6 +717,31 @@ tooltip {
     line-height : 40px;
     background: #59b75c;
     border: 2px solid #59b75c;
+    font-size: 1.8em;
+    color : white;
+    z-index: 10;
+}
+
+.btn-update:focus {
+    color : white;
+}
+
+.btn-update:active,
+.btn-update:visited,
+.btn-update:hover {
+    color : white;
+    background-color: #0061a2;
+    border: 2px solid #16222A;
+    outline: none;
+}
+
+.btn-update {
+    margin : 0;
+    min-height : 100%;
+    min-width : 100%;
+    line-height : 30px;
+    background: #16222A;
+    border: 2px solid #16222A;
     font-size: 1.8em;
     color : white;
     z-index: 10;
@@ -753,6 +828,7 @@ div.row.text-center {
     background: #16222A; /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #16222A , #3A6073); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #16222A , #3A6073); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 @media (min-aspect-ratio: 16/9) {

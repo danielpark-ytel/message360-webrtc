@@ -13,10 +13,10 @@
                                 <h3>{{ storage.data.count || 0 }}</h3>
                             </div>
                             <div class="profile-box pull-right">
-                                <h4><i class="ion ion-android-contact"></i> Caller ID Number</h4>
+                                <h4><i class="ion ion-android-contact"></i> Caller ID</h4>
                                 <div class="phone-info">
-                                    <p ng-class="{ }">{{ storage.data.cid_number || "Please set your caller ID"}}</p>
-                                    <p>Authenticated: {{ storage.data.cid_authenticated || false}}</p>
+                                    <p ng-show="storage.data.cid_number" style="color:white;">{{storage.data.cid_number}}</p>
+                                    <p ng-show="!storage.data.cid_number" style="color:white;">Please set a caller ID number.</p>
                                 </div>
                             </div>
                             <div class="profile-box access-box">
@@ -27,12 +27,18 @@
                     </uib-tab>
                     <uib-tab index="1" heading="Settings">
                         <div class="form-wrapper animated fadeIn text-center">
-                            <h4 class="text-center"><i style="color:white;" class="fa fa-2x fa-info-circle"></i></h4>
-                            <p class="information">Set your caller ID for this session here.<br> Make sure its a number that
-                                you own on Message360.</p>
-                            <br>
-                            <input class="form-control" style="height:50px;" type="text" ng-model="user.phoneNumber" placeholder="Enter valid number.">
-                            <button class="btn update" ng-click="updateCallerId()">Update Caller ID</button>
+                            <p class="information"><span style="color:white;" class="fa fa-info-circle"></span> Set Caller ID.</p>
+                            <p class="information">Requirements: </p>
+                            <hr>
+                            <p class="phone-req">Must be owned by your account.</p>
+                            <p class="phone-req">Must be Voice Enabled.</p>
+                            <p class="phone-req">Number must be active.</p>
+
+                            <div class="form-content">
+                                <input class="form-control" style="height:50px; text-align: center;" type="text" ng-model="user.phoneNumber" placeholder="Enter valid number.">
+                                <br>
+                                <button class="btn btn-update" ng-click="updateCallerId()">Update Caller ID</button>
+                            </div>
                         </div>
                     </uib-tab>
                     <uib-tab index="2" heading="Call History">

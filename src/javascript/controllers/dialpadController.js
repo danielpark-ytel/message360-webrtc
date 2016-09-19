@@ -2,14 +2,14 @@
     'use strict';
 
     angular.module("vertoControllers")
-        .controller("dialpadController", function($rootScope, $scope, $http, $state, verto, storage, ngToast) {
-            storage.data.notifications = true;
-            $scope.user = {};
-            var countryCode = "1";
+        .controller("dialpadController", function($rootScope, $scope, $http, $state, verto, storage, ngToast, ngAudio) {
             console.debug("Executing Dialpad Controller...");
+            $scope.user = {};
+            storage.data.notifications = true;
             storage.data.videoCall = false;
             storage.data.userStatus = 'connecting';
             storage.data.calling = false;
+            $scope.numberAuthenticated = false;
 
             //TODO: call history, last call, call chat?
 
@@ -52,11 +52,21 @@
 
             $scope.updateCallerId = function() {
                 console.log($scope.user.phoneNumber);
-                var data = {
-                    "phone_number": $scope.user.phoneNumber
-                };
-                $http.post('/webrtc_client/authenticateNumber.php', data).then(function(response) {
-                    console.log(response);
+                var url = window.location.origin + window.location.pathname + "authenticateNumber.php";
+                $http({
+                    method: "POST",
+                    url: url,
+                    data: {
+                        phone_number: $scope.user.phoneNumber
+                    }
+                }).then(function(response) {
+                    if (response.data.Message360.ResponseStatus == 1) {
+                        storage.data.cid_number = $scope.user.phoneNumber;
+                        ngAudio.play("/webrtc_client/assets/sounds/notification.mp3");
+                        ngToast.create("<p class='toast-text'><i class='ion-android-notifications'></i> Caller ID updated.</p>");
+                    }
+                }, function(err) {
+                    ngToast.create("<p class='toast-text'><i class='ion-android-notifications'></i> Error Occurred.</p>");
                 });
 
                 // if(storage.data.cid_number.length == 10) {

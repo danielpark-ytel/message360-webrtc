@@ -1,4 +1,3 @@
-
 <?php
 // First we must import the actual Message360 library
 require_once 'm360php/library/message360.php';
@@ -6,8 +5,8 @@ require_once 'm360php/library/message360.php';
 $Message360 = Message360API\Lib\Message360::getInstance();
 // Message360 REST API credentials are required
 $Message360 -> setOptions(array(
-    'account_sid'       => '6aed4f68-91f4-9223-22a0-ded8583c62f9',
-    'auth_token'        => '936eb51aff11375ccf07616e2b73ecee',
+    'account_sid'       => 'cbc6a0b5-c113-a6e4-4f96-53366a7c9966',
+    'auth_token'        => '5964d5de074084894ff57f7771b296c3',
     'response_to_array' =>true,
 ));
 
@@ -15,13 +14,12 @@ try
 {
     // Fetch Account
     $viewAccount = $Message360->listAll('accounts', 'viewaccount', array(
-        'date' => '2016-09-15'
+        'date' => '2017-09-17'
     ));
-
-    // Print content of the $viewAccount objects
-    print_r($viewAccount->getResponse());
+    print_r($viewAccount);
 }
 catch (Message360_Exception $e)
 {
     echo "Error occured: " . $e->getMessage() . "\n";
 }
+?>
