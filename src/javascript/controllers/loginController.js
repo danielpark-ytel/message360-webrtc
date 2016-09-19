@@ -43,7 +43,12 @@
                     verto.data.connecting = true;
                     verto.connect(connectCallback);
                 }, function(err) {
-                    console.error(err);
+                    if(err) {
+                        ngToast.create({
+                            className : 'warning',
+                            content: "<p class='toast-text'><i class='fa fa-info-circle'></i> The Message360 SDK for authentication is not set up properly.</p>"
+                        });
+                    }
                 });
             };
         });

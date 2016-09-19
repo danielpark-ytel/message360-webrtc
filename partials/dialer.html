@@ -10,7 +10,7 @@
                         <div class="profile-content animated fadeIn">
                             <div class="profile-box">
                                 <h4><i class="fa fa-mobile"></i> Calls this session</h4>
-                                <h3>{{ storage.data.count || 0 }}</h3>
+                                <h3>{{ storage.data.numOfCalls }}</h3>
                             </div>
                             <div class="profile-box pull-right">
                                 <h4><i class="ion ion-android-contact"></i> Caller ID</h4>
@@ -25,19 +25,19 @@
                             </div>
                         </div>
                     </uib-tab>
-                    <uib-tab index="1" heading="Settings">
+                    <uib-tab index="1" heading="Caller ID">
                         <div class="form-wrapper animated fadeIn text-center">
-                            <p class="information"><span style="color:white;" class="fa fa-info-circle"></span> Set Caller ID.</p>
-                            <p class="information">Requirements: </p>
+                            <p class="callerid-info" style="font-weight: 600; font-size : 1.3em;"><span style="color:white;" class="fa fa-info-circle"></span> Caller ID Requirements:</p>
                             <hr>
                             <p class="phone-req">Must be owned by your account.</p>
                             <p class="phone-req">Must be Voice Enabled.</p>
                             <p class="phone-req">Number must be active.</p>
-
                             <div class="form-content">
-                                <input class="form-control" style="height:50px; text-align: center;" type="text" ng-model="user.phoneNumber" placeholder="Enter valid number.">
-                                <br>
-                                <button class="btn btn-update" ng-click="updateCallerId()">Update Caller ID</button>
+                                <form name="callerId" role="form" id="callerId" novalidate>
+                                    <input class="form-control" autofocus required ng-minlength="10" ng-maxlength="10" name='calleridInput' style="height:50px; text-align: center;" type="text" ng-model="user.phoneNumber" placeholder="(714)123-1234">
+                                    <br>
+                                    <button class="btn btn-update" ng-disabled="callerId.$invalid" ng-click="updateCallerId()">Update Caller ID</button>
+                                </form>
                             </div>
                         </div>
                     </uib-tab>

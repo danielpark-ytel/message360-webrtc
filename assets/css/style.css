@@ -302,6 +302,23 @@ div.phone-info {
 }
 
 textarea:focus,
+textarea.form-control,
+input.form-control,
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+[type=text].form-control,
+[type=password].form-control,
+[type=email].form-control,
+[type=tel].form-control,
+[contenteditable].form-control {
+    -webkit-box-shadow : inset 0px -2px 0 white;
+    box-shadow : inset 0px -2px 0 white;
+    color : white;
+}
+
+textarea:focus,
 textarea.form-control:focus,
 input.form-control:focus,
 input[type=text]:focus,
@@ -512,15 +529,6 @@ div.dialpad-container {
     padding-top : 40px;
 }
 
-.settings[type="checkbox"]:checked:after {
-    background-color: #ec2c36;
-    border-color: #ec2c36;
-}
-
-.settings[type="checkbox"]:focus:after {
-    border-color : #ec2c36;
-}
-
 .d-panel {
     color : white;
     background: #333;
@@ -688,13 +696,19 @@ tooltip {
     background-color : #16222A;
 }
 
+.callerid-info {
+    font-weight:600;
+    font-size:1.3em;
+    padding: 10px 0px 10px 0px;
+}
+
 p.phone-req {
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    padding : 8px 0px;
+    padding : 5px 0px;
 }
 
 p.phone-req:hover {
@@ -708,6 +722,10 @@ p.phone-req:hover {
 .group {
     height : auto;
     width : auto;
+}
+
+p.toast-text {
+    font-weight: 700;
 }
 
 .btn-call {

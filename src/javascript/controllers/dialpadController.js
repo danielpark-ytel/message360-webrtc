@@ -65,8 +65,12 @@
                         ngAudio.play("/webrtc_client/assets/sounds/notification.mp3");
                         ngToast.create("<p class='toast-text'><i class='ion-android-notifications'></i> Caller ID updated.</p>");
                     }
-                }, function(err) {
-                    ngToast.create("<p class='toast-text'><i class='ion-android-notifications'></i> Error Occurred.</p>");
+                    else {
+                        ngToast.create({
+                            className : 'danger',
+                            content: "<p class='toast-text'><i class='fa fa-times-circle'></i> "+response.data.Message360.Errors+"</p>"
+                        });
+                    }
                 });
 
                 // if(storage.data.cid_number.length == 10) {
