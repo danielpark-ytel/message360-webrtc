@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module("vertoControllers")
-        .controller("loginController", function ($scope, $http, preRoute, $state, $rootScope, storage, verto, callHistory) {
+        .controller("loginController", function ($scope, $http, preRoute, $state, $rootScope, storage, verto, callHistory, ngToast) {
             console.debug("Executing Login Controller...");
             $scope.login = function(redirect) {
                 var redirect = undefined;
@@ -34,7 +34,8 @@
                 * @param String account_sid
                 * @param String auth_token
                 **/
-                $http.post("/webrtc_client/accessToken.php").then(function(response) {
+                var url = window.location.origin + "accessToken.php";
+                $http.post(url).then(function(response) {
                     if(response.data.Message360.Message['token'] != "") {
                         var token = response.data.Message360.Message['token'];
                         verto.data.login = token;

@@ -54,7 +54,7 @@
             };
 
             $scope.updateCallerId = function() {
-                var url = window.location.origin + window.location.pathname + "authenticateNumber.php";
+                var url = window.location.origin + "authenticateNumber.php";
                 $http({
                     method: "POST",
                     url: url,
