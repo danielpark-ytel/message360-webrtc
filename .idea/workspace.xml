@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01a08caa-74cb-43d0-8f37-016b28ce0734" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javascript/controllers/dialpadController.js" afterPath="$PROJECT_DIR$/src/javascript/controllers/dialpadController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javascript/controllers/loginController.js" afterPath="$PROJECT_DIR$/src/javascript/controllers/loginController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/dialer.html" afterPath="$PROJECT_DIR$/partials/dialer.html" />
     </list>
     <ignored path="client_src.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dialpadController.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dialpadController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/javascript/controllers/dialpadController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="56" column="53" selection-start-line="56" selection-start-column="53" selection-end-line="56" selection-end-column="53" />
+            <state relative-caret-position="16">
+              <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -44,14 +43,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dialer.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dialer.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/partials/dialer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="133" selection-start-line="17" selection-start-column="133" selection-end-line="17" selection-end-column="133" />
+            <state relative-caret-position="221">
+              <caret line="18" column="108" selection-start-line="18" selection-start-column="108" selection-end-line="18" selection-end-column="108" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#1;n#div#0;n#div#1;n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -183,12 +181,12 @@
         <option value="$PROJECT_DIR$/src/javascript/controllers/incallController.js" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/loadScreenController.js" />
         <option value="$PROJECT_DIR$/src/javascript/vertoService/callHistoryService.js" />
-        <option value="$PROJECT_DIR$/partials/dialer.html" />
         <option value="$PROJECT_DIR$/partials/incall.html" />
         <option value="$PROJECT_DIR$/src/javascript/vertoService/vertoService.js" />
         <option value="$PROJECT_DIR$/src/javascript/vertoService/preRouteService.js" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/loginController.js" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/dialpadController.js" />
+        <option value="$PROJECT_DIR$/partials/dialer.html" />
       </list>
     </option>
   </component>
@@ -494,12 +492,12 @@
       <workItem from="1474273382437" duration="7825000" />
       <workItem from="1474301277769" duration="23366000" />
       <workItem from="1474331951623" duration="5277000" />
-      <workItem from="1474343187351" duration="1765000" />
+      <workItem from="1474343187351" duration="1861000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105652000" />
+    <option name="totallyTimeSpent" value="105748000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1611" y="66" width="1592" height="861" extended-state="0" />
@@ -886,20 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partials/dialer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="133" selection-start-line="17" selection-start-column="133" selection-end-line="17" selection-end-column="133" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#0;n#div#1;n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partials/incall.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -920,14 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/incallController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/javascript/controllers/loginController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -936,11 +912,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/incallController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/javascript/controllers/dialpadController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="56" column="53" selection-start-line="56" selection-start-column="53" selection-end-line="56" selection-end-column="53" />
+        <state relative-caret-position="16">
+          <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/dialer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="108" selection-start-line="18" selection-start-column="108" selection-end-line="18" selection-end-column="108" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#uib-tab#0;n#uib-tabset#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#div#0;n#uib-tab#1;n#uib-tabset#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
