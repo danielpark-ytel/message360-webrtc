@@ -34,7 +34,7 @@
                 * @param String account_sid
                 * @param String auth_token
                 **/
-                var url = window.location.origin + "accessToken.php";
+                var url = window.location.origin + "/accessToken.php";
                 $http.post(url).then(function(response) {
                     if(response.data.Message360.Message['token'] != "") {
                         var token = response.data.Message360.Message['token'];
