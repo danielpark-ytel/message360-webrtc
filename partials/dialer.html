@@ -43,15 +43,17 @@
                     </uib-tab>
                     <uib-tab index="2" heading="Call History">
                         <div class="ch-content animated fadeIn">
-                            <table class="table table-hover" >
+                            <table class="table  table-hover" >
                                 <thead>
                                     <th>Dialed Number</th>
-                                    <th>Date/Time</th>
+                                    <th>Call Start</th>
+                                    <th>Direction</th>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>7141111111</td>
-                                        <td>Some Date, Some time</td>
+                                    <tr ng-repeat="call in callHistory | limitTo: listSize">
+                                        <td>{{call[0].number}}</td>
+                                        <td>{{call[0].call_start}}</td>
+                                        <td>{{call[0].direction}}</td>
                                     </tr>
                                 </tbody>
                             </table>

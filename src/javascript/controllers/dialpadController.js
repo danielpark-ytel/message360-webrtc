@@ -2,13 +2,16 @@
     'use strict';
 
     angular.module("vertoControllers")
-        .controller("dialpadController", function($rootScope, $scope, $http, $state, verto, storage, ngToast, ngAudio) {
+        .controller("dialpadController", function($rootScope, $scope, $http, $state, verto, storage, ngToast, ngAudio, callHistory, preRoute) {
             console.debug("Executing Dialpad Controller...");
+            preRoute.checkVerto();
             $scope.user = {};
             storage.data.notifications = true;
             storage.data.videoCall = false;
             storage.data.userStatus = 'connecting';
             storage.data.calling = false;
+            $scope.listSize = 8;
+            $scope.callHistory = callHistory.all();
             $scope.numberAuthenticated = false;
 
             //TODO: call history, last call, call chat?
@@ -51,7 +54,6 @@
             };
 
             $scope.updateCallerId = function() {
-                console.log($scope.user.phoneNumber);
                 var url = window.location.origin + window.location.pathname + "authenticateNumber.php";
                 $http({
                     method: "POST",
@@ -72,14 +74,6 @@
                         });
                     }
                 });
-
-                // if(storage.data.cid_number.length == 10) {
-                //     ngAudio.play("assets/sounds/notification.mp3");
-                //     ngToast.create("<p class='toast-text'><i class='ion-android-notifications'></i> Caller ID updated.</p>");
-                // }
-                // $uibModalInstance.dismiss("cancel");
-                // ngAudio.play("assets/sounds/notification.mp3");
-                // ngToast.create("<p class='toast-text'><i class='ion-android-notifications'></i> Caller ID updated.</p>");
             };
 
         });

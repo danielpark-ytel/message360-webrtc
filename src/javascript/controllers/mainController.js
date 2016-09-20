@@ -6,7 +6,7 @@
 (function() {
     'use strict';
     angular.module("vertoControllers").controller("mainController",
-    function($scope, $rootScope, $location, $timeout, $q, verto, storage, $state, prompt, ngToast, $http) {
+    function($scope, $rootScope, $location, $timeout, $q, verto, storage, $state, prompt, ngToast, callHistory) {
         console.debug("Executing Main Controller");
         if(storage.data.language && storage.data.language !== 'browse') {
             storage.data.language = 'browser';
@@ -72,6 +72,7 @@
             $scope.$broadcast("timer-reset");
             //Reset dialpad number
             storage.data.numOfCalls += 1;
+            callHistory.add(storage.data.called_number, 'Outbound', true);
             $rootScope.dialpadNumber = "";
             console.debug("Going back to dialer..");
             $state.go("dialer");

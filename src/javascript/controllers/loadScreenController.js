@@ -63,7 +63,6 @@
             });
 
             $rootScope.$on("progress.complete", function(ev, currentProgress) {
-                console.log(verto.data.connected);
                 $scope.message = "Done configuring, going to login.";
                 $timeout(function() {
                     $state.go("login");

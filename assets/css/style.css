@@ -695,6 +695,11 @@ tooltip {
     background-color : #16222A;
 }
 
+.table-hover>thead,
+.table-hover>tbody{
+    font-size:0.8em;
+}
+
 .callerid-info {
     font-weight:600;
     font-size:1.3em;

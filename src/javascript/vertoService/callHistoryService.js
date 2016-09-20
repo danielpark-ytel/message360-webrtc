@@ -17,7 +17,6 @@ angular.module("vertoService").factory("callHistory", function(storage) {
         });
 
         var index = history_control.indexOf(number);
-        console.log(index);
         if (index > -1) { history_control.splice(index, 1); }
         history_control.unshift(number);
     };
