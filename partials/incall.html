@@ -3,7 +3,7 @@
     <div class="animated fadeIn incall-display">
         <button class="btn btn-block btn-incall mute" tooltips tooltip-template="(un)Mute" tooltip-side="left" ng-click="muteMic(cbMuteMic)"><i class="fa fa-volume-off fa-2x"></i></button>
         <div class="incall-box">
-            <p class="incall-text"><i class="fa fa-2x fa-user"></i>{{verto.data.name}}</p>
+            <p class="incall-text" style="font-size : 2em;"><i class="fa fa-user" style="margin-right:7px;"></i>{{verto.data.name}}</p>
             <div class="loader-box" style="height:106px;">
                 <div ng-class="{'loader incall': storage.data.calling, 'fa fa-5x fa-check-circle-o green': !storage.data.calling}"></div>
             </div>

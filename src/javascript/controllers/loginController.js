@@ -4,7 +4,6 @@
     angular.module("vertoControllers")
         .controller("loginController", function ($scope, $http, preRoute, $state, $rootScope, storage, verto, callHistory) {
             console.debug("Executing Login Controller...");
-            preRoute.checkVerto();
             $scope.login = function(redirect) {
                 var redirect = undefined;
                 var connectCallback = function(v, connected) {

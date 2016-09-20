@@ -402,10 +402,6 @@ vertoService.service('verto', ['$rootScope', '$state', 'storage', '$location',
                             callback(v, success);
                         }
                     },
-                    onWSClose: function(v, success) {
-                        console.debug('onWSClose', success);
-                        $rootScope.$emit('ws.close', success);
-                    },
                     onDialogState: function(d) {
                         if (!data.call) {
                             data.call = d;
