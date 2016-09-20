@@ -280,9 +280,8 @@ div.profile-box > h3 {
 }
 
 div.phone-info {
-    padding : 0;
-    line-height : 120px;
-    font-size : 1.3em;
+    padding : 30px 0;
+    font-size : 1.2em;
 }
 
 ::-webkit-input-placeholder {
