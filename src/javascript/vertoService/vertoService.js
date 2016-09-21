@@ -608,7 +608,7 @@ vertoService.service('verto', ['$rootScope', '$state', 'storage', '$location',
                     data.conf.destroy();
                     data.conf = null;
                 }
-
+                cleanCall();
                 console.debug('Message: Call was hung up.');
 
                 if (angular.isFunction(callback)) {
