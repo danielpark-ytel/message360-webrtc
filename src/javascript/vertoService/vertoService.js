@@ -16,7 +16,7 @@ var videoQualitySource = [{
     id: 'qvga_wide',
     label: 'QVGA WIDE 320x180',
     width: 320,
-    height: 180 
+    height: 180
 }, {
     id: 'vga_wide',
     label: 'VGA WIDE 640x360',

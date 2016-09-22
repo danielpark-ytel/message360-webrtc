@@ -54,7 +54,7 @@
             };
 
             $scope.updateCallerId = function() {
-                var url = window.location.origin + "/webrtc_client/authenticateNumber.php";
+                var url = window.location.origin + "/authenticateNumber.php";
                 $http({
                     method: "POST",
                     url: url,
