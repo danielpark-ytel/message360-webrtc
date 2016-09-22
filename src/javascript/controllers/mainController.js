@@ -113,10 +113,6 @@
                 });
             });
 
-            $rootScope.$on('ws.close', onWSClose);
-            $rootScope.$on('ws.login', onWSLogin);
-
-
             $scope.hold = function() {
                 storage.data.onHold = !storage.data.onHold;
                 verto.data.call.toggleHold();
