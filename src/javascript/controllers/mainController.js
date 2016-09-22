@@ -116,31 +116,6 @@
             $rootScope.$on('ws.close', onWSClose);
             $rootScope.$on('ws.login', onWSLogin);
 
-            function onWSClose(ev, data) {
-                if(ws_modalInstance) {
-                    return;
-                };
-                var options = {
-                    backdrop: 'static',
-                    keyboard: false
-                };
-                if ($scope.showReconnectModal) {
-                    ws_modalInstance = $scope.openModal('partials/ws_reconnect.html', 'ModalWsReconnectController', options);
-                };
-            };
-
-            function onWSLogin(ev, data) {
-                if(storage.data.autoBand) {
-                    verto.testSpeed();
-                }
-                if(!ws_modalInstance) {
-                    return;
-                };
-
-                ws_modalInstance.close();
-                ws_modalInstance = null;
-            };
-
 
             $scope.hold = function() {
                 storage.data.onHold = !storage.data.onHold;
