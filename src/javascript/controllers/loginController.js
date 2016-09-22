@@ -36,7 +36,7 @@
                 **/
                 var url = window.location.origin + "/accessToken.php";
                 $http.post(url).then(function(response) {
-                    console.log(response.data);
+                    console.log(response);
                     if(response.data.Message360.Message['token'] != "") {
                         var token = response.data.Message360.Message['token'];
                         verto.data.login = token;
