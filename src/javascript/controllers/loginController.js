@@ -36,6 +36,7 @@
                 **/
                 var url = window.location.origin + "/webrtc_client/accessToken.php";
                 $http.post(url).then(function(response) {
+                    console.log(response.data);
                     if(response.data.Message360.Message['token'] != "") {
                         var token = response.data.Message360.Message['token'];
                         verto.data.login = token;
