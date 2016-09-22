@@ -13,7 +13,6 @@
          history_control : [],
          call_start : false,
          name : null,
-         email : null,
          login : "",
          accessToken : "",
          cid_number : null,
@@ -37,10 +36,7 @@
          googHighpassFilter : true,
          googEchoCancellation : true,
          autoBand : true,
-         testSpeedJoin : true,
          bestFrameRate : "30",
-         language : undefined,
-         wsURL : "wss://id953la.ytel.com:8082",
          numOfCalls : 0
      };
 

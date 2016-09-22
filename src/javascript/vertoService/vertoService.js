@@ -129,7 +129,6 @@ vertoService.service('verto', ['$rootScope', '$state', 'storage', '$location',
             videoQuality: [],
             extension: null,
             name: storage.data.name || null,
-            email: storage.data.email || null,
             cid: storage.data.cid || null,
             textTo: null,
             login: null,
@@ -476,7 +475,6 @@ vertoService.service('verto', ['$rootScope', '$state', 'storage', '$location',
                         ringFile: "sounds/bellring.wav",
                         userVariables: {
                             name : data.name,
-                            email : data.email
                         },
                         audioParams: {
                             googEchoCancellation: storage.data.googEchoCancellation || true,
@@ -573,7 +571,6 @@ vertoService.service('verto', ['$rootScope', '$state', 'storage', '$location',
                     mirrorInput: storage.data.mirrorInput,
                     userVariables: {
                         name : storage.data.name,
-                        email : storage.data.email
                     }
                 }, custom));
 

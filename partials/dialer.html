@@ -50,7 +50,7 @@
                                     <th>Direction</th>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="call in callHistory | limit: 8">
+                                    <tr ng-repeat="call in callHistory | limitTo : 8">
                                         <td>{{call[0].number}}</td>
                                         <td>{{call[0].call_start}}</td>
                                         <td>{{call[0].direction}}</td>

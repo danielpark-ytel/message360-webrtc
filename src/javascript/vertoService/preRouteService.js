@@ -17,6 +17,9 @@ angular.module("vertoService")
                     $state.go("login");
                 }
             };
+            var checkCallActive = function() {
+
+            };
             return {
                 "checkVerto" : checkVerto,
             };
