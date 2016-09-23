@@ -61,7 +61,7 @@
             };
 
             $scope.updateCallerId = function() {
-                var url = window.location.origin + "/authenticateNumber.php";
+                var url = window.location.origin + "/webrtc_client/authenticateNumber.php";
                 $http({
                     method: "POST",
                     url: url,
@@ -71,7 +71,7 @@
                 }).then(function(response) {
                     if (response.data.Message360.ResponseStatus == 1) {
                         storage.data.cid_number = $scope.user.phoneNumber;
-                        ngAudio.play("/assets/sounds/notification.mp3");
+                        ngAudio.play("assets/sounds/notification.mp3");
                         ngToast.create("<p class='toast-text'><i class='ion-android-notifications'></i> Caller ID updated.</p>");
                     }
                     else {
