@@ -28,6 +28,13 @@
                     console.debug("A call is already in progress.");
                     return false;
                 }
+                if (storage.data.cid_number == null) {
+                    ngToast.create({
+                        className : "danger",
+                        content: "<p class='toast-text'><i class='fa fa-times-circle'></i> You have not yet set a Caller ID Number.</p>"
+                    });
+                    return false;
+                }
                 storage.data.mutedVideo = false;
                 storage.data.mutedMic = false;
                 storage.data.videoCall = false;
@@ -54,7 +61,7 @@
             };
 
             $scope.updateCallerId = function() {
-                var url = window.location.origin + "/authenticateNumber.php";
+                var url = window.location.origin + "/webrtc_client/authenticateNumber.php";
                 $http({
                     method: "POST",
                     url: url,

@@ -573,14 +573,10 @@ vertoService.service('verto', ['$rootScope', '$state', 'storage', '$location',
                         name : storage.data.name,
                     }
                 }, custom));
-
                 data.call = call;
-
                 data.mutedMic = false;
                 data.mutedVideo = false;
-                calling();
                 this.refreshDevices();
-
                 if (angular.isFunction(callback)) {
                     callback(data.instance, call);
                 }
@@ -593,21 +589,16 @@ vertoService.service('verto', ['$rootScope', '$state', 'storage', '$location',
              */
             hangup: function(callback) {
                 console.debug('Attempting to hangup the current call.');
-
                 if (!data.call) {
                     console.debug('There is no call to hangup.');
                     return false;
                 }
-
                 data.call.hangup();
-
                 if (data.conf) {
                     data.conf.destroy();
                     data.conf = null;
                 }
-                cleanCall();
                 console.debug('Message: Call was hung up.');
-
                 if (angular.isFunction(callback)) {
                     callback(data.instance, true);
                 }
@@ -636,6 +627,24 @@ vertoService.service('verto', ['$rootScope', '$state', 'storage', '$location',
             },
 
             /**
+             * Send a DTMF to the current call
+             *
+             * @param{string|integer} number
+             * @param callback
+             */
+            dtmf: function(number, callback) {
+                console.debug("DTMF: "+number);
+                if(!data.call) {
+                    console.debug("No call to send the number to.");
+                    return false;
+                }
+                data.call.dtf(number);
+                console.debug("The DTMF was sent for the call");
+                if(angular.isFunction(callback)) {
+                    callback(data, instance);
+                }
+            },
+            /**
              * Mute the microphone for the current call.
              *
              * @param callback
@@ -656,7 +665,6 @@ vertoService.service('verto', ['$rootScope', '$state', 'storage', '$location',
                     callback(data.instance, true);
                 }
             },
-
             /**
              * Mute the video for the current call.
              *
@@ -678,6 +686,6 @@ vertoService.service('verto', ['$rootScope', '$state', 'storage', '$location',
                     callback(data.instance, true);
                 }
             }
-        };
+        }
     }
 ]);

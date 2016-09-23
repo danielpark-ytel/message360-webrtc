@@ -142,5 +142,6 @@
                 });
                 $state.go("incall");
             };
+            console.log(verto.data);
         });
 })();

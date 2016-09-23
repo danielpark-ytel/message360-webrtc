@@ -3,6 +3,8 @@
 
     angular.module("vertoControllers")
         .controller("incallController", function($rootScope, $scope, $http, $state, $timeout, verto, storage, preRoute) {
+
+
             console.debug("Executing InCall Controller.");
             preRoute.checkVerto();
             $rootScope.dialpadNumber = "";

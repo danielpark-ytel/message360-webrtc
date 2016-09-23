@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01a08caa-74cb-43d0-8f37-016b28ce0734" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accessToken.php" afterPath="$PROJECT_DIR$/accessToken.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javascript/controllers/dialpadController.js" afterPath="$PROJECT_DIR$/src/javascript/controllers/dialpadController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javascript/controllers/incallController.js" afterPath="$PROJECT_DIR$/src/javascript/controllers/incallController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javascript/controllers/loginController.js" afterPath="$PROJECT_DIR$/src/javascript/controllers/loginController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javascript/controllers/mainController.js" afterPath="$PROJECT_DIR$/src/javascript/controllers/mainController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javascript/vertoService/vertoService.js" afterPath="$PROJECT_DIR$/src/javascript/vertoService/vertoService.js" />
     </list>
     <ignored path="client_src.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,41 +30,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dialpadController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/javascript/controllers/dialpadController.js">
+      <file leaf-file-name="vertoService.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javascript/vertoService/vertoService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+            <state relative-caret-position="167">
+              <caret line="601" column="40" selection-start-line="595" selection-start-column="29" selection-end-line="601" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="storageService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/javascript/storageService/storageService.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+            <state relative-caret-position="180">
+              <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="storageService.module.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/javascript/storageService/storageService.module.js">
+      <file leaf-file-name="accessToken.php" pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;a7227842-432a-4237-b739-425a5bc3648e&gt;/webrtc-client-dev/accessToken.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dialer.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/partials/dialer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="13" column="43" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -66,18 +63,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="670">
-              <caret line="216" column="6" selection-start-line="216" selection-start-column="6" selection-end-line="216" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="authenticateNumber.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/authenticateNumber.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="250">
+              <caret line="627" column="14" selection-start-line="627" selection-start-column="4" selection-end-line="627" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -87,18 +74,50 @@
         <entry file="file://$PROJECT_DIR$/src/javascript/controllers/loadScreenController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+              <caret line="5" column="23" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loginController.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/javascript/controllers/loginController.js">
+      <file leaf-file-name="incallController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javascript/controllers/incallController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
+            <state relative-caret-position="120">
+              <caret line="8" column="23" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="23" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebrtcController.php" pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;a7227842-432a-4237-b739-425a5bc3648e&gt;/webrtc-api/app/Http/Controllers/V2/Webrtc/WebrtcController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-630">
+              <caret line="123" column="30" selection-start-line="123" selection-start-column="30" selection-end-line="123" selection-end-column="30" />
+              <folding>
+                <marker date="0" expanded="true" signature="4828:5892" ph="..." />
+                <marker date="0" expanded="true" signature="4859:5880" ph="..." />
+                <marker date="0" expanded="true" signature="4898:5865" ph="..." />
+                <marker date="0" expanded="true" signature="4919:5109" ph="..." />
+                <marker date="0" expanded="true" signature="5130:5847" ph="..." />
+                <marker date="0" expanded="true" signature="5169:5825" ph="..." />
+                <marker date="0" expanded="true" signature="5197:5800" ph="..." />
+                <marker date="0" expanded="true" signature="5256:5771" ph="..." />
+                <marker date="0" expanded="true" signature="5293:5572" ph="..." />
+                <marker date="0" expanded="true" signature="5612:5739" ph="..." />
+                <marker date="0" expanded="true" signature="6245:7262" ph="..." />
+                <marker date="0" expanded="true" signature="6276:7250" ph="..." />
+                <marker date="0" expanded="true" signature="6315:7235" ph="..." />
+                <marker date="0" expanded="true" signature="6336:6526" ph="..." />
+                <marker date="0" expanded="true" signature="6547:7217" ph="..." />
+                <marker date="0" expanded="true" signature="6586:7195" ph="..." />
+                <marker date="0" expanded="true" signature="6610:7170" ph="..." />
+                <marker date="0" expanded="true" signature="6665:7145" ph="..." />
+                <marker date="0" expanded="true" signature="6698:6962" ph="..." />
+                <marker date="0" expanded="true" signature="6998:7117" ph="..." />
+                <marker date="0" expanded="true" signature="7424:7441" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,18 +125,28 @@
       <file leaf-file-name="mainController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/javascript/controllers/mainController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-45">
-              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+            <state relative-caret-position="730">
+              <caret line="144" column="36" selection-start-line="144" selection-start-column="36" selection-end-line="144" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/partials/login.html">
+      <file leaf-file-name="vertoControllers.module.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javascript/controllers/vertoControllers.module.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+            <state relative-caret-position="90">
+              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="preRouteService.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javascript/vertoService/preRouteService.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -159,25 +188,25 @@
         <option value="&lt;a7227842-432a-4237-b739-425a5bc3648e&gt;/webrtc-api/config/app.php" />
         <option value="&lt;a7227842-432a-4237-b739-425a5bc3648e&gt;/webrtc-api/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/authenticateNumber.php" />
-        <option value="$PROJECT_DIR$/m360php/library/message360/Related.php" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/callHistoryController.js" />
         <option value="&lt;a7227842-432a-4237-b739-425a5bc3648e&gt;/webrtc-api/app/Http/Controllers/V2/Webrtc/WebrtcController.php" />
         <option value="$PROJECT_DIR$/src/javascript/verto.module.js" />
-        <option value="$PROJECT_DIR$/src/javascript/controllers/incallController.js" />
         <option value="$PROJECT_DIR$/src/javascript/vertoService/callHistoryService.js" />
         <option value="$PROJECT_DIR$/partials/incall.html" />
-        <option value="$PROJECT_DIR$/src/javascript/vertoService/vertoService.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/javascript/vertoService/preRouteService.js" />
         <option value="$PROJECT_DIR$/partials/login.html" />
-        <option value="$PROJECT_DIR$/accessToken.php" />
         <option value="$PROJECT_DIR$/partials/dialer.html" />
-        <option value="$PROJECT_DIR$/src/javascript/controllers/mainController.js" />
-        <option value="$PROJECT_DIR$/src/javascript/storageService/storageService.js" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/loadScreenController.js" />
+        <option value="$PROJECT_DIR$/accessToken.php" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/loginController.js" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/dialpadController.js" />
+        <option value="$PROJECT_DIR$/src/javascript/storageService/storageService.js" />
+        <option value="$PROJECT_DIR$/src/javascript/controllers/incallController.js" />
+        <option value="$PROJECT_DIR$/m360php/library/message360/Related.php" />
+        <option value="$PROJECT_DIR$/src/javascript/vertoService/vertoService.js" />
+        <option value="$PROJECT_DIR$/src/javascript/controllers/mainController.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -189,10 +218,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="428" />
-    <option name="y" value="23" />
-    <option name="width" value="1009" />
-    <option name="height" value="868" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -219,8 +246,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -254,6 +281,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="javascript" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webrtc_client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webrtc_client" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascript" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vertoService" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -339,6 +388,56 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="m360php" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webrtc_client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webrtc_client" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="m360php" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="schemas" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webrtc_client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webrtc_client" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="videos" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webrtc_client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webrtc_client" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -378,6 +477,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -468,26 +568,28 @@
       <workItem from="1474530401811" duration="1207000" />
       <workItem from="1474560973600" duration="4841000" />
       <workItem from="1474571421818" duration="619000" />
-      <workItem from="1474600704715" duration="3641000" />
+      <workItem from="1474600704715" duration="4034000" />
+      <workItem from="1474648911320" duration="5566000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121421000" />
+    <option name="totallyTimeSpent" value="127380000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="428" y="23" width="1009" height="868" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.05687694" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14788005" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.016452074" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10443491" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2492378" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35824743" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33493975" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -496,7 +598,6 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32955405" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -703,20 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/m360php/library/message360/Sdk.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2093">
-          <caret line="2" column="49" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m360php/library/message360/Related.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="407" column="7" selection-start-line="407" selection-start-column="7" selection-end-line="408" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/javascript/storageService/loadScreenService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -736,13 +823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/vertoControllers.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -767,21 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/incallController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascript/vertoService/vertoService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8910">
-          <caret line="594" column="47" selection-start-line="594" selection-start-column="47" selection-end-line="594" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/javascript/vertoService/vertoService.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -790,23 +855,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascript/vertoService/preRouteService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partials/load_screen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authenticateNumber.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascript/storageService/storageService.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -816,16 +880,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/accessToken.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="120">
+          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/authenticateNumber.php">
+    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/loginController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="387">
+          <caret line="37" column="67" selection-start-line="37" selection-start-column="67" selection-end-line="37" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascript/storageService/storageService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -840,40 +912,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/partials/dialer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="-912">
+          <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/mainController.js">
+    <entry file="file://$PROJECT_DIR$/m360php/library/message360/Related.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-45">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+        <state relative-caret-position="-552">
+          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascript/storageService/storageService.module.js">
+    <entry file="file://$PROJECT_DIR$/m360php/library/message360/Sdk.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="672">
+          <caret line="131" column="30" selection-start-line="131" selection-start-column="30" selection-end-line="131" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascript/storageService/storageService.js">
+    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/dialpadController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+        <state relative-caret-position="258">
+          <caret line="45" column="87" selection-start-line="45" selection-start-column="86" selection-end-line="45" selection-end-column="87" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
+    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/incallController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="216" column="6" selection-start-line="216" selection-start-column="6" selection-end-line="216" selection-end-column="6" />
+        <state relative-caret-position="120">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -881,23 +953,55 @@
     <entry file="file://$PROJECT_DIR$/src/javascript/controllers/loadScreenController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/dialpadController.js">
+    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/vertoControllers.module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+        <state relative-caret-position="90">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/loginController.js">
+    <entry file="file://$PROJECT_DIR$/src/javascript/vertoService/preRouteService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
+        <state relative-caret-position="300">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascript/vertoService/vertoService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="601" column="40" selection-start-line="595" selection-start-column="29" selection-end-line="601" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="627" column="14" selection-start-line="627" selection-start-column="4" selection-end-line="627" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/mainController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="730">
+          <caret line="144" column="36" selection-start-line="144" selection-start-column="36" selection-end-line="144" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -919,6 +1023,6 @@
     </states>
   </component>
   <component name="webServersAuthStorage">
-    <data>AAAAwNh8X/PKPglq5Omyy51F5SZ7OomsMAigOHk9gGTN2zpAZKrhiGbw6mUJp7wYnU9Z6YV+cV/b+0oKQqEXoHRALZLk84JwsIFa8Ox+q1rG0aANmn6N8jrBnnrBzCj97A5wD8HQ57F+kzDIsih+mJhmUFtzbcyaPhrSLRm3FDjJkp0hg9tbnYLCugPm3myzjNS1cnV9/8MDlTGiRoEFSODBRiDlxufQRTlOHbm5XwEkjzWDQNCHQU1Jzn0AMf76gdZctkeIATqmOvNmH+Nqi0rx1Gk=</data>
+    <data>AAAAwFCDVZ0oN3SiGE7Fe0iIKp0JZ4xEJdciUludI/eiWs69SVyZJJZDpDZvlj91/NkyuD133iCap9s10MCPN4eU7vQFgPmWwHPZysS3BOUn1KzTL10wLEdyba2wqLkRBU1zrZjwFP8uDhk7w5wtNhR8CaVABejMTITGeTAj12f3Tg85a3O/WQ7N852gRqzG7dr8HNp/mDGml+7Eid+GQUdxgbv3sOCUm3mmkB8aisrvsSd3Rn9KXCDgc/nM2Q3SXMwQiOSb+EGqG1AEjQzhUmNcv/A=</data>
   </component>
 </project>
