@@ -11,7 +11,6 @@
             storage.data.userStatus = 'connecting';
             storage.data.calling = false;
             $scope.listSize = 8;
-            $scope.callHistory = callHistory.all();
             $scope.numberAuthenticated = false;
 
             //TODO: call history, last call, call chat?
@@ -61,7 +60,7 @@
             };
 
             $scope.updateCallerId = function() {
-                var url = window.location.origin + "/authenticateNumber.php";
+                var url = window.location.origin + "/webrtc_client/authenticateNumber.php";
                 $http({
                     method: "POST",
                     url: url,
