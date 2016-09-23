@@ -5,8 +5,8 @@ require_once "m360php/library/message360.php";
 $Message360 = Message360API\Lib\Message360::getInstance();
 // Message360 REST API credentials are required
 $Message360 -> setOptions(array(
-    'account_sid'       => 'cbc6a0b5-c113-a6e4-4f96-53366a7c9966',
-    'auth_token'        => '5964d5de074084894ff57f7771b296c3',
+    'account_sid'       => '6ad7e139-080c-49ab-bbe4-7c9f686dc64b',
+    'auth_token'        => '53ee61684ef2a3805fb4721dfdf9672f',
     'response_to_array' =>true,
 ));
 try
