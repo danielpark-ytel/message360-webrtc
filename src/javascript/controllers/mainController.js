@@ -25,8 +25,8 @@
                 var disconnect = function() {
                     var disconnectCallback = function(v, connected) {
                         console.debug("Logging out..");
-                        $window.localStorage.clear();
                         storage.reset();
+                        storage.factoryReset();
                         $state.go("login");
                     };
                     verto.disconnect(disconnectCallback);

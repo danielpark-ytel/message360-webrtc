@@ -101,8 +101,8 @@ div.login-content {
 video#mask-vid {
     -o-object-fit: cover;
     object-fit: cover;
-    height : 100%; !important;
-    width : 100%; !important;
+    height : 100% !important;
+    width : 100% !important;
     top: 0px;
     display : block;
     -webkit-background-size: cover;
@@ -183,7 +183,7 @@ div.form-mask {
 }
 
 div.modal-body > form > div.form-group {
-    margin-bottom : 0; !important;
+    margin-bottom : 0 !important;
 }
 
 .ib {
@@ -208,7 +208,7 @@ div.modal-body > form > div.form-group {
 
 .input-group-addon {
     padding: 6px 16px;
-    font-size: 24px; !important;
+    font-size: 24px !important;
     font-weight: normal;
     line-height: 1;
     color: #ec2c36;
@@ -354,24 +354,47 @@ div.status-block {
     width : 100%;
 }
 
-div.profile-heading h3, button {
-    display: inline-block;
-}
-
 div.profile-heading > h3 {
     color : white;
-    width : 70%;
+    width : 230px;
+    margin-top : 11.5px;
 }
 
+.logout {
+    background : #ec2c36;
+    color : #fff;
+    border-color : #ec2c36;
+    font-size : 1em;
+    outline : none;
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+.logout:hover {
+    background : #fff;
+    color : #ec2c36;
+    border-color : #ec2c36;
+    outline : none;
+}
+
+.logout:active, .btn-m360:focus {
+    background : #fff;
+    color : #ec2c36;
+    border-color : #ec2c36;
+    outline : none !important;
+}
 div.profile-heading > button {
     width: auto;
-    font-size : 1.2em;
-    margin : 15px 15px;
-    padding : 4px;
+    font-size : 1.4em;
+    margin : auto;
+    padding : 4px 12px;
+    background-color : red;
+    color : white;
 }
 
 .status-ion {
-    color : white; !important;
+    color : white !important;
     font-sie : 1.1em;
 }
 
@@ -449,7 +472,7 @@ div.profile-heading > button {
 }
 
 #panel-middle {
-    padding : 25px 25px 0 25px; !important;
+    padding : 25px 25px 0 25px !important;
 }
 
 .btn-hold,
@@ -464,7 +487,7 @@ div.profile-heading > button {
 }
 
 i.ion.special:before {
-    font-size : 2em; !important;
+    font-size : 2em important;
     position: absolute;
     top:40%;
     left:50%;
@@ -597,9 +620,9 @@ div.phone {
     color : white;
     height : 50px;
     vertical-align: top;
-    padding : 0 !important;
-    margin : 0 !important;
-    width : 20% !important;
+    padding : 0 important;
+    margin : 0 important;
+    width : 20% important;
     display : inline-block;
     left : 0;
     background-color: #16232b;
