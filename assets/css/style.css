@@ -364,11 +364,9 @@ div.profile-heading > h3 {
 }
 
 div.profile-heading > button {
-    display : inline-block;
     width: auto;
-    float: right;
     font-size : 1.2em;
-    margin-bottom : 16px;
+    margin : 15px 15px;
     padding : 4px;
 }
 
