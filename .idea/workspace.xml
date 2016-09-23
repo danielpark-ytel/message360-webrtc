@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="01a08caa-74cb-43d0-8f37-016b28ce0734" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/dialer.html" afterPath="$PROJECT_DIR$/partials/dialer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javascript/controllers/loadScreenController.js" afterPath="$PROJECT_DIR$/src/javascript/controllers/loadScreenController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javascript/controllers/loginController.js" afterPath="$PROJECT_DIR$/src/javascript/controllers/loginController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javascript/controllers/mainController.js" afterPath="$PROJECT_DIR$/src/javascript/controllers/mainController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javascript/storageService/storageService.js" afterPath="$PROJECT_DIR$/src/javascript/storageService/storageService.js" />
     </list>
     <ignored path="client_src.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="storageService.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="storageService.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/javascript/storageService/storageService.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="533">
@@ -72,8 +67,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="355" column="0" selection-start-line="355" selection-start-column="0" selection-end-line="355" selection-end-column="0" />
+            <state relative-caret-position="670">
+              <caret line="216" column="6" selection-start-line="216" selection-start-column="6" selection-end-line="216" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -89,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loadScreenController.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="loadScreenController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/javascript/controllers/loadScreenController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+            <state relative-caret-position="90">
+              <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -177,13 +172,13 @@
         <option value="$PROJECT_DIR$/src/javascript/vertoService/preRouteService.js" />
         <option value="$PROJECT_DIR$/partials/login.html" />
         <option value="$PROJECT_DIR$/accessToken.php" />
-        <option value="$PROJECT_DIR$/src/javascript/controllers/loadScreenController.js" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/loginController.js" />
         <option value="$PROJECT_DIR$/partials/dialer.html" />
-        <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/dialpadController.js" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/mainController.js" />
         <option value="$PROJECT_DIR$/src/javascript/storageService/storageService.js" />
+        <option value="$PROJECT_DIR$/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/src/javascript/controllers/loadScreenController.js" />
       </list>
     </option>
   </component>
@@ -474,12 +469,12 @@
       <workItem from="1474530401811" duration="1207000" />
       <workItem from="1474560973600" duration="4841000" />
       <workItem from="1474571421818" duration="619000" />
-      <workItem from="1474600704715" duration="3189000" />
+      <workItem from="1474600704715" duration="3437000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120969000" />
+    <option name="totallyTimeSpent" value="121217000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="428" y="23" width="1009" height="868" extended-state="0" />
@@ -493,7 +488,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2492378" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10309278" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35824743" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -836,14 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/loadScreenController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partials/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -868,22 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="355" column="0" selection-start-line="355" selection-start-column="0" selection-end-line="355" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/dialpadController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-562">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/javascript/controllers/mainController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-45">
@@ -904,6 +875,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="533">
           <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="670">
+          <caret line="216" column="6" selection-start-line="216" selection-start-column="6" selection-end-line="216" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/dialpadController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-562">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/loadScreenController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
           <folding />
         </state>
       </provider>
