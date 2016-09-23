@@ -75,6 +75,7 @@
 	    localTag: null,
             videoParams: {},
             audioParams: {},
+	    loginParams: {},
 	    deviceParams: {onResCheck: null},
 	    userVariables: {},
             iceServers: false,
@@ -2009,10 +2010,18 @@
         };
 
         RTCcallbacks.onStream = function(rtc, stream) {
+            if (dialog.verto.options.permissionCallback &&
+                typeof dialog.verto.options.permissionCallback.onGranted === 'function'){
+                dialog.verto.options.permissionCallback.onGranted();
+            }
             console.log("stream started");
         };
 
         RTCcallbacks.onError = function(e) {
+            if (dialog.verto.options.permissionCallback &&
+                typeof dialog.verto.options.permissionCallback.onDenied === 'function'){
+                dialog.verto.options.permissionCallback.onDenied();
+            }
             console.error("ERROR:", e);
             dialog.hangup({cause: "Device or Permission Error"});
         };
