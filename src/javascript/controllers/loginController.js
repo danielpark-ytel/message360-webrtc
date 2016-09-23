@@ -5,7 +5,7 @@
         .controller("loginController", function ($scope, $http, preRoute, $state, $rootScope, storage, verto, callHistory, ngToast) {
             console.debug("Executing Login Controller...");
             preRoute.checkLogin();
-            $scope.login = function(redirect) {
+            $scope.login = function() {
                 var redirect = undefined;
                 var connectCallback = function(v, connected) {
                     $scope.$apply(function() {
@@ -35,7 +35,7 @@
                 * @param String account_sid
                 * @param String auth_token
                 **/
-                var url = window.location.origin + "/webrtc_client/accessToken.php";
+                var url = window.location.origin + "/accessToken.php";
                 $http.post(url).then(function(response) {
                     console.log(response);
                     if(response.data.Message360.Message['token'] != "") {
