@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="01a08caa-74cb-43d0-8f37-016b28ce0734" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/dialer.html" afterPath="$PROJECT_DIR$/partials/dialer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/login.html" afterPath="$PROJECT_DIR$/partials/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javascript/controllers/loadScreenController.js" afterPath="$PROJECT_DIR$/src/javascript/controllers/loadScreenController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javascript/controllers/loginController.js" afterPath="$PROJECT_DIR$/src/javascript/controllers/loginController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javascript/vertoService/preRouteService.js" afterPath="$PROJECT_DIR$/src/javascript/vertoService/preRouteService.js" />
     </list>
     <ignored path="client_src.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,22 +28,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="storageService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/javascript/storageService/storageService.js">
+      <file leaf-file-name="dialpadController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javascript/controllers/dialpadController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+            <state relative-caret-position="683">
+              <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vertoService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/javascript/vertoService/vertoService.js">
+      <file leaf-file-name="dialer.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partials/dialer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8910">
-              <caret line="594" column="47" selection-start-line="594" selection-start-column="47" selection-end-line="594" selection-end-column="47" />
-              <folding />
+            <state relative-caret-position="75">
+              <caret line="5" column="87" selection-start-line="5" selection-start-column="87" selection-end-line="5" selection-end-column="87" />
+              <folding>
+                <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,8 +63,8 @@
       <file leaf-file-name="preRouteService.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/javascript/vertoService/preRouteService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+            <state relative-caret-position="113">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -67,8 +73,8 @@
       <file leaf-file-name="loadScreenController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/javascript/controllers/loadScreenController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -77,8 +83,8 @@
       <file leaf-file-name="loginController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/javascript/controllers/loginController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+            <state relative-caret-position="105">
+              <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -104,17 +110,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/partials/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+            <state relative-caret-position="479">
+              <caret line="31" column="130" selection-start-line="31" selection-start-column="130" selection-end-line="31" selection-end-column="130" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -161,24 +167,24 @@
         <option value="&lt;a7227842-432a-4237-b739-425a5bc3648e&gt;/webrtc-api/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/authenticateNumber.php" />
         <option value="$PROJECT_DIR$/m360php/library/message360/Related.php" />
-        <option value="$PROJECT_DIR$/partials/login.html" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/callHistoryController.js" />
         <option value="&lt;a7227842-432a-4237-b739-425a5bc3648e&gt;/webrtc-api/app/Http/Controllers/V2/Webrtc/WebrtcController.php" />
         <option value="$PROJECT_DIR$/src/javascript/verto.module.js" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/incallController.js" />
-        <option value="$PROJECT_DIR$/src/javascript/controllers/loadScreenController.js" />
         <option value="$PROJECT_DIR$/src/javascript/vertoService/callHistoryService.js" />
         <option value="$PROJECT_DIR$/partials/incall.html" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/src/javascript/storageService/storageService.js" />
-        <option value="$PROJECT_DIR$/src/javascript/vertoService/preRouteService.js" />
-        <option value="$PROJECT_DIR$/partials/dialer.html" />
-        <option value="$PROJECT_DIR$/src/javascript/controllers/loginController.js" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/mainController.js" />
         <option value="$PROJECT_DIR$/src/javascript/vertoService/vertoService.js" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/dialpadController.js" />
         <option value="$PROJECT_DIR$/accessToken.php" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/src/javascript/vertoService/preRouteService.js" />
+        <option value="$PROJECT_DIR$/src/javascript/controllers/loginController.js" />
+        <option value="$PROJECT_DIR$/src/javascript/controllers/loadScreenController.js" />
+        <option value="$PROJECT_DIR$/partials/dialer.html" />
+        <option value="$PROJECT_DIR$/partials/login.html" />
       </list>
     </option>
   </component>
@@ -190,10 +196,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="183" />
-    <option name="y" value="132" />
-    <option name="width" value="1198" />
-    <option name="height" value="759" />
+    <option name="x" value="26" />
+    <option name="y" value="23" />
+    <option name="width" value="1355" />
+    <option name="height" value="868" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -513,26 +519,26 @@
       <workItem from="1474530401811" duration="1207000" />
       <workItem from="1474560973600" duration="4841000" />
       <workItem from="1474571421818" duration="619000" />
-      <workItem from="1474600704715" duration="555000" />
+      <workItem from="1474600704715" duration="991000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118335000" />
+    <option name="totallyTimeSpent" value="118771000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="183" y="132" width="1198" height="759" extended-state="0" />
+    <frame x="26" y="23" width="1355" height="868" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.047577854" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12370242" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.041888803" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10891089" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2492378" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4287856" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10309278" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -847,21 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partials/dialer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="66" column="27" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/dialpadController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/javascript/storageService/storageService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -886,22 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascript/vertoService/preRouteService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/loadScreenController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/javascript/controllers/mainController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1830">
@@ -918,26 +893,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascript/vertoService/preRouteService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/javascript/controllers/loginController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+        <state relative-caret-position="105">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/loadScreenController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/dialpadController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="683">
+          <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/dialer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="87" selection-start-line="5" selection-start-column="87" selection-end-line="5" selection-end-column="87" />
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/partials/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+        <state relative-caret-position="479">
+          <caret line="31" column="130" selection-start-line="31" selection-start-column="130" selection-end-line="31" selection-end-column="130" />
           <folding />
         </state>
       </provider>

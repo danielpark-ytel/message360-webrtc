@@ -20,7 +20,14 @@ angular.module("vertoService")
             var checkCallActive = function() {
 
             };
+            var checkLogin = function() {
+                if(verto.data.connected) {
+                    $state.go('dialer');
+                    console.debug("User logged in. Redirecting to dialer.");
+                }
+            };
             return {
                 "checkVerto" : checkVerto,
+                "checkLogin" : checkLogin
             };
         }]);

@@ -3,7 +3,7 @@
     angular.module("vertoControllers")
         .controller("loadScreenController", function($scope, $location, $rootScope, $state, $timeout, storage, loadScreen, verto) {
             console.debug("Executing loadScreenController...");
-
+            preRoute.checkLogin();
             $scope.progressPercentage = loadScreen.progressPercentage;
             $scope.message = '';
             $scope.interruptNext = false;
