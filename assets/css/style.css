@@ -354,6 +354,20 @@ div.status-block {
     width : 100%;
 }
 
+div.profile-heading h3, button {
+    display: inline-block;
+}
+
+div.profile-heading > h3 {
+    color : white;
+    width : 70%;
+}
+
+div.profile-heading > button {
+    display : inline-block;
+    width: auto;
+}
+
 .status-ion {
     color : white; !important;
     font-sie : 1.1em;
