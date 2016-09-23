@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01a08caa-74cb-43d0-8f37-016b28ce0734" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javascript/vertoService/vertoService.js" afterPath="$PROJECT_DIR$/src/javascript/vertoService/vertoService.js" />
-    </list>
+    <list default="true" id="01a08caa-74cb-43d0-8f37-016b28ce0734" name="Default" comment="" />
     <ignored path="client_src.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -34,8 +32,8 @@
       <file leaf-file-name="jquery.FSRTC.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/javascript/vertoDependencies/jquery.FSRTC.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="1035" column="13" selection-start-line="1035" selection-start-column="8" selection-end-line="1035" selection-end-column="13" />
+            <state relative-caret-position="378">
+              <caret line="1040" column="37" selection-start-line="1040" selection-start-column="37" selection-end-line="1040" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -93,10 +91,10 @@
         <option value="$PROJECT_DIR$/m360php/library/message360/Related.php" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/mainController.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/src/javascript/vertoDependencies/jquery.FSRTC.js" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/loginController.js" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/dialpadController.js" />
         <option value="$PROJECT_DIR$/src/javascript/vertoService/vertoService.js" />
+        <option value="$PROJECT_DIR$/src/javascript/vertoDependencies/jquery.FSRTC.js" />
       </list>
     </option>
   </component>
@@ -500,12 +498,12 @@
       <workItem from="1474560973600" duration="4841000" />
       <workItem from="1474571421818" duration="619000" />
       <workItem from="1474600704715" duration="4034000" />
-      <workItem from="1474648911320" duration="7727000" />
+      <workItem from="1474648911320" duration="7970000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129541000" />
+    <option name="totallyTimeSpent" value="129784000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2560" y="-172" width="1660" height="1103" extended-state="0" />
@@ -943,8 +941,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/javascript/vertoDependencies/jquery.FSRTC.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="1035" column="13" selection-start-line="1035" selection-start-column="8" selection-end-line="1035" selection-end-column="13" />
+        <state relative-caret-position="378">
+          <caret line="1040" column="37" selection-start-line="1040" selection-start-column="37" selection-end-line="1040" selection-end-column="37" />
           <folding />
         </state>
       </provider>
