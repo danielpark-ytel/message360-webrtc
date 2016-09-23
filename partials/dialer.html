@@ -3,7 +3,7 @@
         <div class="animated fadeInLeft panel d-panel">
             <div class="panel-heading profile-heading">
                 <h3><i class="fa fa-user"></i> Hello, {{verto.data.name}}</h3>
-                <button class="btn btn-danger logout" ng-click="logout()"><i class="fa fa-sign-out"> Logout</i></button>
+                <button class="btn logout" ng-click="logout()"><i class="fa fa-sign-out"></i> Sign Out</button>
             </div>
             <div class="panel-body">
                 <uib-tabset active="activeJustified" justified="true">
@@ -44,17 +44,17 @@
                     </uib-tab>
                     <uib-tab index="2" heading="Call History">
                         <div class="ch-content animated fadeIn">
-                            <table class="table  table-hover" >
+                            <table class="table table-hover" >
                                 <thead>
                                     <th>Dialed Number</th>
                                     <th>Call Start</th>
                                     <th>Direction</th>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="call in callHistory | limitTo : 8">
-                                        <td>{{call[0].number}}</td>
-                                        <td>{{call[0].call_start}}</td>
-                                        <td>{{call[0].direction}}</td>
+                                    <tr ng-repeat="call in call_history">
+                                        <td>{{ call.dialedNumber }}</td>
+                                        <td>{{ call.call_start }}</td>
+                                        <td>{{ call.direction }}</td>
                                     </tr>
                                 </tbody>
                             </table>

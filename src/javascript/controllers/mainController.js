@@ -72,7 +72,8 @@
                 $scope.$broadcast("timer-reset");
                 //Reset dialpad number
                 storage.data.numOfCalls += 1;
-                callHistory.add(storage.data.called_number, 'Outbound', true);
+                callHistory.addCall(storage.data.called_number, 'Outbound', true);
+                $scope.call_history = storage.data.call_history;
                 $rootScope.dialpadNumber = "";
                 console.debug("Going back to dialer..");
                 $state.go("dialer");

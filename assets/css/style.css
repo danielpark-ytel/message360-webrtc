@@ -360,6 +360,10 @@ div.profile-heading > h3 {
     margin-top : 11.5px;
 }
 
+div,panel {
+
+}
+
 .logout {
     background : #ec2c36;
     color : #fff;
@@ -384,6 +388,7 @@ div.profile-heading > h3 {
     border-color : #ec2c36;
     outline : none !important;
 }
+
 div.profile-heading > button {
     width: auto;
     font-size : 1.4em;
@@ -571,6 +576,7 @@ div.dialpad-container {
     background: #333;
     width: 400px;
     height : inherit;
+    position : relative;
     margin: auto auto;
 }
 
