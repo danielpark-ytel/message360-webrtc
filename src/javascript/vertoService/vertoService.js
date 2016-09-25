@@ -134,7 +134,7 @@ vertoService.service('verto', ['$rootScope', '$state', 'storage', '$location',
             login: null,
             passwd: null,
             hostname: "message360.com",
-            wsURL: "wss://id953la.message360.com:7443"
+            wsURL: "wss://id953la.message360.com:8080"
         };
 
         function cleanCall() {

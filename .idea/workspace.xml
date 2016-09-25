@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01a08caa-74cb-43d0-8f37-016b28ce0734" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accessToken.php" afterPath="$PROJECT_DIR$/accessToken.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/authenticateNumber.php" afterPath="$PROJECT_DIR$/authenticateNumber.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javascript/controllers/loginController.js" afterPath="$PROJECT_DIR$/src/javascript/controllers/loginController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javascript/vertoService/vertoService.js" afterPath="$PROJECT_DIR$/src/javascript/vertoService/vertoService.js" />
     </list>
     <ignored path="client_src.iws" />
@@ -34,18 +38,78 @@
       <file leaf-file-name="jquery.FSRTC.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/javascript/vertoDependencies/jquery.FSRTC.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
+            <state relative-caret-position="15420">
               <caret line="1057" column="0" selection-start-line="1057" selection-start-column="0" selection-end-line="1057" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vertoService.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="vertoService.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/javascript/vertoService/vertoService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+            <state relative-caret-position="258">
+              <caret line="136" column="53" selection-start-line="136" selection-start-column="53" selection-end-line="136" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="accessToken.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/accessToken.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loginController.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/javascript/controllers/loginController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="verto.module.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javascript/verto.module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="637">
+              <caret line="106" column="10" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="authenticateNumber.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/authenticateNumber.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="message360.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/m360php/library/message360.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Related.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/m360php/library/message360/Related.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="236" column="51" selection-start-line="236" selection-start-column="51" selection-end-line="236" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -54,7 +118,7 @@
       <file leaf-file-name="jquery.jsonrpcclient.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/javascript/vertoDependencies/jquery.jsonrpcclient.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
+            <state relative-caret-position="3315">
               <caret line="250" column="100" selection-start-line="250" selection-start-column="99" selection-end-line="250" selection-end-column="100" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -98,7 +162,6 @@
         <option value="&lt;a7227842-432a-4237-b739-425a5bc3648e&gt;/webrtc-api/app/NumberLog.php" />
         <option value="&lt;a7227842-432a-4237-b739-425a5bc3648e&gt;/webrtc-api/config/app.php" />
         <option value="&lt;a7227842-432a-4237-b739-425a5bc3648e&gt;/webrtc-api/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/authenticateNumber.php" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/callHistoryController.js" />
         <option value="&lt;a7227842-432a-4237-b739-425a5bc3648e&gt;/webrtc-api/app/Http/Controllers/V2/Webrtc/WebrtcController.php" />
         <option value="$PROJECT_DIR$/src/javascript/verto.module.js" />
@@ -109,16 +172,17 @@
         <option value="$PROJECT_DIR$/partials/dialer.html" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/loadScreenController.js" />
-        <option value="$PROJECT_DIR$/accessToken.php" />
         <option value="$PROJECT_DIR$/src/javascript/storageService/storageService.js" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/incallController.js" />
-        <option value="$PROJECT_DIR$/m360php/library/message360/Related.php" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/mainController.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/src/javascript/controllers/loginController.js" />
         <option value="$PROJECT_DIR$/src/javascript/controllers/dialpadController.js" />
         <option value="$PROJECT_DIR$/src/javascript/vertoDependencies/jquery.FSRTC.js" />
+        <option value="$PROJECT_DIR$/authenticateNumber.php" />
+        <option value="$PROJECT_DIR$/m360php/library/message360/Related.php" />
+        <option value="$PROJECT_DIR$/accessToken.php" />
         <option value="$PROJECT_DIR$/src/javascript/vertoService/vertoService.js" />
+        <option value="$PROJECT_DIR$/src/javascript/controllers/loginController.js" />
       </list>
     </option>
   </component>
@@ -130,10 +194,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2168" />
-    <option name="y" value="-157" />
-    <option name="width" value="1660" />
-    <option name="height" value="1103" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -160,6 +222,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -322,100 +386,12 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="m360php" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webrtc_client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webrtc_client" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="m360php" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="schemas" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webrtc_client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webrtc_client" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="videos" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webrtc_client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webrtc_client" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webrtc_client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webrtc_client" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sounds" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webrtc_client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webrtc_client" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -431,6 +407,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -524,18 +501,21 @@
       <workItem from="1474600704715" duration="4034000" />
       <workItem from="1474648911320" duration="7970000" />
       <workItem from="1474664059824" duration="914000" />
+      <workItem from="1474671167018" duration="269000" />
+      <workItem from="1474671473776" duration="210000" />
+      <workItem from="1474767158469" duration="620000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130698000" />
+    <option name="totallyTimeSpent" value="131797000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2168" y="-157" width="1660" height="1103" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15593705" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0908529" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15665236" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -666,13 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/m360php/library/message360.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/m360php/library/message360/Helpers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -724,13 +697,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/javascript/controllers/callHistoryController.js" />
-    <entry file="file://$PROJECT_DIR$/src/javascript/verto.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="106" column="10" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/javascript/controllers/wsReconnectController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -763,7 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -774,24 +739,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/authenticateNumber.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/javascript/storageService/storageService.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accessToken.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -806,14 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m360php/library/message360/Related.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-552">
-          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -849,7 +792,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -892,7 +834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="33">
           <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="41" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -903,19 +844,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/loginController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/javascript/controllers/mainController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
           <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -923,13 +855,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="641">
           <caret line="72" column="74" selection-start-line="72" selection-start-column="74" selection-end-line="72" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/javascript/vertoDependencies/jquery.jsonrpcclient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
+        <state relative-caret-position="3315">
           <caret line="250" column="100" selection-start-line="250" selection-start-column="99" selection-end-line="250" selection-end-column="100" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -939,16 +870,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/javascript/vertoDependencies/jquery.FSRTC.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
+        <state relative-caret-position="15420">
           <caret line="1057" column="0" selection-start-line="1057" selection-start-column="0" selection-end-line="1057" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authenticateNumber.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m360php/library/message360.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m360php/library/message360/Related.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="236" column="51" selection-start-line="236" selection-start-column="51" selection-end-line="236" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accessToken.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascript/verto.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="106" column="10" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/javascript/vertoService/vertoService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+        <state relative-caret-position="258">
+          <caret line="136" column="53" selection-start-line="136" selection-start-column="53" selection-end-line="136" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascript/controllers/loginController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -970,6 +949,6 @@
     </states>
   </component>
   <component name="webServersAuthStorage">
-    <data>AAAAwEbazDh460mXb3nJzPqabCr+0FrQy4b52+UKB8UZo+ZgOijsixtKVIdX8zmYUhFxKsXxV0L5UWpSisY06tSMwvoma7zL5O7fih3yYfIbP5kADQOsXdBcAaFx2H1xOnzcaqnbaREU355FvF0mfnz4Kg97VKI+TkECLc87G+hqGvcj0BGplH4zQZEgU1Qx3da0DJuIp9vOcuHhEeniplbfyQJNqCP06rXH6VzxaImve6icEG9wdI6t1xG2Eg1bNjSt9Zi5yUzFIVq4k8WCDqH70w0=</data>
+    <data>AAAAwCc9YO/WLbmnaLNH+njKYjlP2/GqSMZfzxXCNnhylEGyUgRIT0WrartE9YjFxNuX5xxDaxwYTRGAaOsG9rVnol24edqJUMm4jth8yT6rMbuZvcTdIOLvG7caiFXw5yxTw41tx9VpHEZTJTS0Eqgu3MZQfzFqHZx173G1Mno1WtVY21Wkw5SuaqFoZz3qDyykVe7iWu/iwGLA4/v2/MvVvvEUcb+G2e3y3OmvIIxx87YkUYbQDMQpry4isGD35VoHRgTUcQOVv8PkLo1zdnpn32s=</data>
   </component>
 </project>
