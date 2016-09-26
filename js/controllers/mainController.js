@@ -56,7 +56,6 @@
                 storage.data.userStatus = "connected";
                 var call_start = new Date(storage.data.call_start);
                 $rootScope.start_time = call_start;
-
                 $timeout(function() {
                     $scope.$broadcast("timer-start");
                 });
