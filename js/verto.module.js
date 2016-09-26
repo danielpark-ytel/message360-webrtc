@@ -18,25 +18,25 @@
         $stateProvider
             .state("loading", {
                 url : '/',
-                templateUrl : 'partials/load_screen.html',
+                templateUrl : 'src/partials/load_screen.html',
                 controller : "loadScreenController",
                 title : "Loading..."
             })
             .state("login", {
                 url: "/login",
-                templateUrl: "partials/login.html",
+                templateUrl: "src/partials/login.html",
                 controller : "loginController",
                 title : "Welcome!"
             })
             .state("dialer", {
                 url: "/dialer",
-                templateUrl: "partials/dialer.html",
+                templateUrl: "src/partials/dialer.html",
                 controller : "dialpadController",
                 title : "WebRTC Client"
             })
             .state("incall", {
                 url : "/incall",
-                templateUrl : "partials/incall.html",
+                templateUrl : "src/partials/incall.html",
                 controller : "incallController",
                 title : "Voice Call Session"
             });

@@ -33,7 +33,7 @@
                 * @param String account_sid
                 * @param String auth_token
                 **/
-                var url = window.location.origin + "/webrtc_client/accessToken.php";
+                var url = window.location.origin + "/webrtc_client/lib/accessToken.php";
                 $http.post(url).then(function(response) {
                     console.log(response);
                     if(response.data.Message360.Error) {
