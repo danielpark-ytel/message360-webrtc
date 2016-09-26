@@ -40,7 +40,6 @@
              * @param {String} number - Number touched on dialer.
              */
             $rootScope.dtmf = function(number) {
-                console.log(parseInt(number));
                 if(number=='*') {
                     ngAudio.play('assets/sounds/dtmf/dtmf-star.mp3');
                 }
