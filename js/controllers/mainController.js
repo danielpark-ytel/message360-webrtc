@@ -56,6 +56,9 @@
 		};
 
 		$rootScope.callActive = function(data, params) {
+			$timeout(function() {
+				$scope.$broadcast("timer-reset");
+			})
 			verto.data.mutedMic = storage.data.mutedMic;
 			if (!storage.data.cur_call) {
 				storage.data.call_start = new Date();
@@ -65,6 +68,7 @@
 			$rootScope.start_time = call_start;
 			$timeout(function() {
 				$scope.$broadcast("timer-start");
+				$scope.timerRunning = true;
 			});
 			storage.data.calling = false;
 			storage.data.cur_call = 1;
@@ -75,13 +79,15 @@
              */
 		$rootScope.$on("call.hangup", function(event, data) {
 			//Reset the timer
-			$scope.$broadcast("timer-reset");
+			$scope.$broadcast("timer-stop");
+			$scope.timerRunning = false;
 			//Reset dialpad number
 			storage.data.numOfCalls += 1;
 			callHistory.addCall(storage.data.called_number, 'Outbound', true);
 			$scope.call_history = storage.data.call_history;
 			$rootScope.dialpadNumber = "";
 			console.debug("Going back to dialer..");
+			$scope.$broadcast("timer-reset");
 			$state.go("dialer");
 			try {
 				$rootScope.$digest();

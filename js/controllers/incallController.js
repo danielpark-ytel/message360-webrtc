@@ -9,6 +9,5 @@
             storage.data.mutedMic = !storage.data.mutedMic;
         }
         $scope.muteMic = verto.muteMic;
-        if (verto.data.)
     });
 })();
