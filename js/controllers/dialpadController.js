@@ -14,7 +14,6 @@
             $scope.numberAuthenticated = false;
 
             //TODO: call history, last call, call chat?
-
             function call(extension) {
                 storage.data.cur_call = 0;
                 storage.data.onHold = false;
@@ -22,7 +21,6 @@
                 if(!$rootScope.dialpadNumber) {
                     return false;
                 }
-
                 if (verto.data.call) {
                     console.debug("A call is already in progress.");
                     return false;

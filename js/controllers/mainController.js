@@ -6,7 +6,7 @@
 (function() {
     'use strict';
     angular.module("vertoControllers").controller("mainController",
-        function($scope, $rootScope, $location, $timeout, $q, verto, storage, $state, prompt, ngToast, callHistory) {
+        function($scope, $rootScope, $location, $timeout, $q, verto, storage, $state, prompt, ngToast, callHistory, ngAudio) {
             console.debug("Executing Main Controller");
             if(storage.data.language && storage.data.language !== 'browse') {
                 storage.data.language = 'browser';
@@ -19,7 +19,6 @@
              * @type {String}
              */
             $rootScope.dialpadNumber = "";
-
             //Logout the user from the server and redirect to login page.
             $rootScope.logout = function() {
                 var disconnect = function() {
@@ -35,13 +34,22 @@
                 disconnect();
                 ngToast.create("<p>Successfully logged out!</p>");
             };
-
             /**
              * Updates the display adding the number pressed.
              *
              * @param {String} number - Number touched on dialer.
              */
             $rootScope.dtmf = function(number) {
+                console.log(parseInt(number));
+                if(number=='*') {
+                    ngAudio.play('assets/sounds/dtmf/dtmf-star.mp3');
+                }
+                else if(number=='#') {
+                    ngAudio.play('assets/sounds/dtmf/dtmf-hash.mp3');
+                }
+                else {
+                    ngAudio.play('assets/sounds/dtmf/dtmf-'+number+'.mp3');
+                }
                 $rootScope.dialpadNumber = $scope.dialpadNumber + number;
                 if (verto.data.call) {
                     verto.dtmf(number);
