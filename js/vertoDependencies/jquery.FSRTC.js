@@ -299,7 +299,7 @@
             console.log("stopping peer");
             self.peer.stop();
         }
-    }
+    };
 
     $.FSRTC.prototype.stop = function() {
         var self = this;
@@ -362,7 +362,7 @@
     $.FSRTC.prototype.getMute = function() {
 	var self = this;
 	return self.audioEnabled;
-    }
+    };
 
     $.FSRTC.prototype.setMute = function(what) {
 	var self = this;
@@ -386,12 +386,12 @@
 	}
 
 	return !self.audioEnabled;
-    }
+    };
 
     $.FSRTC.prototype.getVideoMute = function() {
 	var self = this;
 	return self.videoEnabled;
-    }
+    };
 
     $.FSRTC.prototype.setVideoMute = function(what) {
 	var self = this;
@@ -415,7 +415,7 @@
 	}
 
 	return !self.videoEnabled;
-    }
+    };
 
     $.FSRTC.prototype.createAnswer = function(params) {
         var self = this;
@@ -554,7 +554,7 @@
 	video = {
 	    mandatory: obj.options.videoParams,
 	    optional: []
-        }	    	    
+        };
 	
 	var useVideo = obj.options.useVideo;
 
@@ -1074,7 +1074,7 @@
 	}
 
 	return false;
-    }
+    };
 
     $.FSRTC.bestResSupported = function() {
 	var w = 0, h = 0;
@@ -1087,7 +1087,7 @@
 	}
 
 	return [w, h];
-    }
+    };
 
     var resList = [[160, 120], [320, 180], [320, 240], [640, 360], [640, 480], [1280, 720], [1920, 1080]];
     var resI = 0;
@@ -1110,7 +1110,7 @@
 	var video = {
             mandatory: {},
             optional: []
-        }	
+        };
 
 	if (cam) {
 	    video.optional = [{sourceId: cam}];
@@ -1137,7 +1137,7 @@
 		console.info(w + "x" + h + " supported."); $.FSRTC.validRes.push([w, h]); checkRes(cam, func);},
 	    onerror: function(e) {console.error( w + "x" + h + " not supported."); checkRes(cam, func);}
         });
-    }
+    };
     
 
     $.FSRTC.getValidRes = function (cam, func) {
@@ -1161,7 +1161,7 @@
 	resI = 0;
 
 	checkRes(cam, func);
-    }
+    };
 
     $.FSRTC.checkPerms = function (runtime, check_audio, check_video) {
 	getUserMedia({

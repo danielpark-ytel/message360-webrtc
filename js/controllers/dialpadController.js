@@ -5,6 +5,7 @@
         .controller("dialpadController", function($rootScope, $scope, $http, $state, verto, storage, ngToast, ngAudio, callHistory, preRoute) {
             console.debug("Executing Dialpad Controller...");
             preRoute.checkVerto();
+            console.log(verto.data);
             $scope.user = {};
             storage.data.notifications = true;
             storage.data.videoCall = false;
@@ -38,8 +39,7 @@
                 verto.call("##1"+$rootScope.dialpadNumber);
                 storage.data.called_number = extension;
                 $state.go("incall");
-            };
-
+            }
             //TODO : validating caller_id_number for outbound calls, making sure they have funds.
 
             /**
@@ -58,7 +58,7 @@
             };
 
             $scope.updateCallerId = function() {
-                var url = window.location.origin + "/webrtc_client/lib/authenticateNumber.php";
+                var url = window.location.origin + "/lib/authenticateNumber.php";
                 $http({
                     method: "POST",
                     url: url,

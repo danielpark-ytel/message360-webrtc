@@ -2005,7 +2005,7 @@
             //console.log("cand", rtc.mediaData.candidate);
             if (rtc.type == "offer") {
                 console.log("offer", rtc.mediaData.candidate);
-                return;
+
             }
         };
 
@@ -2136,7 +2136,7 @@
 		callback(false, null, arg);
 	    }
 	}
-    }
+    };
 
     $.verto.dialog.prototype.setState = function(state) {
         var dialog = this;
@@ -2725,7 +2725,7 @@
 
     $.verto.refreshDevices = function(runtime) {
 	checkDevices(runtime);
-    }
+    };
 
     $.verto.init = function(obj, runtime) {
 	if (!obj) {
@@ -2746,7 +2746,7 @@
 	    runtime(null);
 	}
 
-    }
+    };
 
     $.verto.genUUID = function () {
 	return generateGUID();

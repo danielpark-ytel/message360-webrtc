@@ -29,16 +29,14 @@
                         return;
                     } else {
                         message = message + '. Continue?';
-                    };
-
+                    }
                     if(!confirm(message)) {
                         $scope.interruptNext = true;
-                    };
-                };
-
+                    }
+                }
                 if($scope.interruptNext) {
                     return;
-                };
+                }
                 $scope.message = loadScreen.getProgressMessage(currentProgress + 1);
                 return true;
             };
@@ -51,7 +49,7 @@
                             status = response['status'];
                             if(checkProgressState(currentProgress, status, promise, activity, soft, interrupt, message)) {
                                 loadScreen.next();
-                            };
+                            }
                         });
                         return;
                     }

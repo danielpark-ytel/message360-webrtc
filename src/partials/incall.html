@@ -1,11 +1,11 @@
 <div class="incall-content">
     <div class="incall-mask"></div>
     <div class="animated fadeIn incall-display">
-        <button class="btn btn-block btn-incall mute" tooltips tooltip-template="(un)Mute" tooltip-side="left" ng-click="muteMic()"><i class="fa fa-volume-off fa-2x"></i></button>
+        <button class="btn btn-incall mute" ng-click="muteMic()"><i class="fa fa-2x" ng-class="{'fa-microphone' : verto.data.mutedMic, 'fa-microphone-slash' : !verto.data.mutedMic}"></i></button>
         <div class="incall-box">
             <p class="incall-text" style="font-size : 2em;"><i class="fa fa-user" style="margin-right:7px;"></i>{{verto.data.name}}</p>
             <div class="loader-box" style="height:106px;">
-                <div ng-class="{'loader incall': storage.data.calling, 'fa fa-5x fa-check-circle-o green': !storage.data.calling}"></div>
+                <div id="loader-div" ng-class="{'loader incall': verto.data.callState != active, 'fa fa-5x fa-check-circle-o green': verto.data.callState == active}"></div>
             </div>
             <p class="phonenumber">{{storage.data.called_number | phoneFilter}}</p>
         </div>

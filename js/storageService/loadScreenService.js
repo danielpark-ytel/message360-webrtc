@@ -34,7 +34,7 @@ angular.module('storageService')
 
                     if (!navigator.getUserMedia) {
                         result['status'] = 'error';
-                        result['message'] = $translate.instant("Something went wrong.")
+                        result['message'] = $translate.instant("Something went wrong.");
                         reject(result);
                     }
                     resolve(result);
@@ -55,7 +55,7 @@ angular.module('storageService')
                     verto.mediaPerm(function(status) {
                         if(!status) {
                             result['status'] = 'error';
-                            result['message'] = $translate.instant("Something went wrong.")
+                            result['message'] = $translate.instant("Something went wrong.");
                             verto.data.mediaPerm = false;
                             reject(result);
                         }

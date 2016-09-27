@@ -14,7 +14,7 @@ angular.module("vertoService").factory("callHistory", function(storage) {
             storage.data.call_history.shift();
             storage.data.call_history.push(callInfo);
         }
-    }
+    };
     return {
         'addCall' : addCall,
         clear : function() {
