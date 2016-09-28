@@ -11,7 +11,8 @@
         '720kb.tooltips',
         "cgPrompt",
         'ngToast',
-        'ngAudio'
+        'ngAudio',
+        'ngCookies'
     ]);
 
     app.config(function ($stateProvider, $urlRouterProvider, $translateProvider) {

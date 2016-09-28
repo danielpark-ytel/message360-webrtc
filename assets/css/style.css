@@ -20,6 +20,15 @@ section {
     line-height: 36px;
 }
 
+.reconnect-body {
+    padding : 0px 15px 15px 15px;
+}
+
+.reconnect-title {
+    background-color: lightcoral;
+    padding-top : 10px;
+}
+
 .backspace > i {
     line-height : 36px;
     padding-right : 5px;

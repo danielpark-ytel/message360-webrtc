@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module("vertoService")
-    .service('preRoute', ['$rootScope', 'verto', '$state', 'ngToast',
-        function($rootScope, verto, $state, ngToast) {
+    .service('preRoute', ['$rootScope', 'verto', '$state', 'ngToast', '$cookies',
+        function($rootScope, verto, $state, ngToast, $cookies) {
             /**
              * Event queue functionality? What is this going to be used for..
              */
@@ -17,9 +17,7 @@ angular.module("vertoService")
                     $state.go("login");
                 }
             };
-            var checkCallActive = function() {
 
-            };
             var checkLogin = function() {
                 if(verto.data.connected) {
                     $state.go('dialer');

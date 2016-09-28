@@ -369,10 +369,9 @@ vertoService.service('verto', ['$rootScope', '$state', 'storage', '$location', f
 					onResCheck: that.refreshVideoResolution
 				});
 			}
-			if (data.mediaPerm) {
+			if(data.mediaPerm) {
 				ourBootstrap();
-			}
-			else {
+			} else {
 				$.FSRTC.checkPerms(ourBootstrap, true, true);
 			}
 		},
