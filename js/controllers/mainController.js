@@ -5,13 +5,14 @@
 
 (function() {
 	'use strict';
-	angular.module("vertoControllers").controller("mainController", function($scope, $rootScope, $http, $location, $timeout, $q, verto, storage, $state, prompt, ngToast, callHistory, ngAudio) {
+	angular.module("vertoControllers").controller("mainController", function($scope, $rootScope, $http, $location, $timeout, $q, verto, storage, $state, prompt, ngToast, callHistory, ngAudio, $uibModal) {
 		console.debug("Executing Main Controller");
 		if(storage.data.language && storage.data.language !== 'browse') {
 			storage.data.language = 'browser';
 		}
 		$scope.verto = verto;
 		$scope.storage = storage;
+		$scope.showReconnect = true;
 		$rootScope.dialpadNumber = "";
 
         /**
@@ -41,7 +42,7 @@
                     }
                 });
             };
-            var url = window.location.origin + "/lib/accessToken.php";
+            var url = window.location.origin + "/webrtc_client/lib/accessToken.php";
             $http.post(url).then(function(response) {
                 console.log(response);
                 if(response.data.Message360.Error) {
@@ -78,10 +79,28 @@
 			if(verto.data.call) {
 				verto.hangup();
 			}
+			$scope.showReconnect = false;
 			verto.disconnect(disconnectCallback);
 			verto.hangup();
 			ngToast.create("<p class='toast-text'><i class='ion-android-notifications'></i> Successfully logged out!</p>");
 		};
+
+		$rootScope.openModal = function(templateUrl, controller, _opts) {
+			var opts = {
+				animation : true,
+				templateUrl : templateUrl,
+				controller : "wsReconnectController",
+				size : 'sm'
+			};
+			angular.extend(opts, _opts);
+			var modalInstance = $uibModal.open(opts);
+			modalInstance.result.then(function(result) {
+				console.log(result);
+			}, function() {
+				console.log("Modal dismissed at: " + new Date());
+			})
+		}
+
 		/**
         * Updates the display adding the number pressed.
         *
@@ -180,13 +199,28 @@
 		$rootScope.$on('ws.close', onWSClose);
 		$rootScope.$on('ws.login', onWSLogin);
 
+		var wsInstance;
+
 		function onWSClose(event, data) {
-			//Function to add reconnection later.
-			console.log(onWSClose);
-		}
+			// If connection to websocket is lost show error modal.
+			if(wsInstance) {
+				return;
+			};
+			var options = {
+				backdrop : 'static',
+				keyboard : false
+			};
+			if($scope.showReconnect) {
+				wsInstance = $scope.openModal("src/partials/websocket_error.html", "wsReconnectController", options);
+			};
+		};
 
 		function onWSLogin(event, data) {
-			console.log(onWSLogin);
+			if(!wsInstance) {
+				return;
+			}
+			wsInstance.close();
+			wsInstance = null;
 		}
 
 		$scope.hold = function() {
