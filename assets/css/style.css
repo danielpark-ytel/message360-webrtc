@@ -13,6 +13,18 @@ section {
     flex: 1 0 auto !important;
 }
 
+.backspace {
+    position : absolute;
+    top : 0;
+    right : 0;
+    line-height: 36px;
+}
+
+.backspace > i {
+    line-height : 36px;
+    padding-right : 5px;
+}
+
 .mask {
     position: absolute;
     display: block;
@@ -194,10 +206,6 @@ div.modal-body > form > div.form-group {
     margin : 0;
 }
 
-.btn-modal {
-    margin-top : 20px;
-}
-
 .control-label {
     font-size : 16px;
 }
@@ -358,10 +366,6 @@ div.profile-heading > h3 {
     color : white;
     width : 230px;
     margin-top : 11.5px;
-}
-
-div,panel {
-
 }
 
 .logout {
@@ -607,6 +611,10 @@ div.phone {
     margin : 30px auto 0px auto;
 }
 
+#loader-div {
+    line-height: 100px;
+}
+
 .incall-btn {
     min-width : 100%;
     height : 50px;
@@ -620,40 +628,37 @@ div.phone {
     background: #333;
 }
 
-.mute {
-    font-size: 1.2em;
-    font-weight: 600;
+.incall-opt {
+    font-size : 1.1em;
+    font-weight: 500;
+    height : 40px;
     color : white;
-    height : 50px;
-    vertical-align: top;
-    padding : 0 important;
-    margin : 0 important;
-    width : 20% important;
-    display : inline-block;
-    left : 0;
+    width : 40px;
+    padding : 0 !important;
     background-color: #16232b;
     border : 3px solid #16232b;
-    position:relative;
+    position: absolute;
 }
 
-tooltip {
-    height:inherit;
-    width  :100%;
-    float : left;
+.incall-opt:focus {
+    color : white;
 }
-
-.mute:focus {
-    color : #16232b;
-}
-
-.mute:active,
-.mute:visited,
-.mute:hover {
+.incall-opt:active,
+.incall-opt:visited,
+.incall-opt:hover {
     color : #16232b;
     background-color: white;
     border: 2px solid #16232b;
     outline: none;
 }
+
+.mute {
+    left : 0;
+}
+.toggle {
+    right : 0;
+}
+
 
 .btn-incall {
     font-size: 1.2em;
@@ -890,11 +895,13 @@ div.row.text-center {
     height : auto;
     position: relative;
     margin : auto auto;
-    text-align: center;
     background: #16222A; /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #16222A , #3A6073); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #16222A , #3A6073); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
+.incall-box {
+    text-align: center;
 }
 
 @media (min-aspect-ratio: 16/9) {

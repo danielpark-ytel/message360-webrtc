@@ -8,29 +8,31 @@
         <link rel="shoftcut icon" href="/assets/images/favicon.png" type="image/png"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/paper/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/font-awesome-4.6.3/css/font-awesome.min.css">
-        <link rel="stylesheet" href="src/bower_components/ngToast/dist/ngToast.min.css">
-        <link rel="stylesheet" href="src/bower_components/ngToast/dist/ngToast-animations.min.css">
-        <link rel="stylesheet" href="src/bower_components/angular-tooltips/dist/angular-tooltips.min.css">
+        <link rel="stylesheet" href="lib/bower_components/ngToast/dist/ngToast.min.css">
+        <link rel="stylesheet" href="lib/bower_components/ngToast/dist/ngToast-animations.min.css">
+        <link rel="stylesheet" href="lib/bower_components/angular-tooltips/dist/angular-tooltips.min.css">
         <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <link rel="stylesheet" href="assets/css/animate.css">
-        <script src="src/bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="src/bower_components/angular/angular.js"></script>
-        <script src="src/bower_components/angular-animate/angular-animate.min.js"></script>
-        <script src="src/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-        <script src="src/bower_components/ngstorage/ngStorage.min.js"></script>
-        <script src="src/bower_components/moment/moment.js"></script>
-        <script src="src/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
-        <script src="src/bower_components/ngToast/dist/ngToast.min.js"></script>
-        <script src="src/bower_components/angular-translate/angular-translate.min.js"></script>
-        <script src="src/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-        <script src="src/bower_components/angular-tooltips/dist/angular-tooltips.min.js"></script>
-        <script src="src/bower_components/humanize-duration/humanize-duration.js"></script>
-        <script src="src/bower_components/angular-timer/dist/angular-timer.min.js"></script>
-        <script src="src/bower_components/angular-prompt/dist/angular-prompt.min.js"></script>
-        <script src="src/bower_components/angular-audio/app/angular.audio.js"></script>
+        <script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="lib/bower_components/angular/angular.js"></script>
+        <script src="lib/bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="lib/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="lib/bower_components/ngstorage/ngStorage.min.js"></script>
+        <script src="lib/bower_components/moment/moment.js"></script>
+        <script src="lib/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="lib/bower_components/ngToast/dist/ngToast.min.js"></script>
+        <script src="lib/bower_components/angular-translate/angular-translate.min.js"></script>
+        <script src="lib/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="lib/bower_components/angular-tooltips/dist/angular-tooltips.min.js"></script>
+        <script src="lib/bower_components/humanize-duration/humanize-duration.js"></script>
+        <script src="lib/bower_components/angular-timer/dist/angular-timer.min.js"></script>
+        <script src="lib/bower_components/angular-prompt/dist/angular-prompt.min.js"></script>
+        <script src="lib/bower_components/angular-audio/app/angular.audio.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/spinners.css" />
+        <link href="assets/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <link rel="stylesheet" href="assets/css/spinners.css"/>
+        <link rel="stylesheet" href="assets/css/minipad.css"/>
         <script type="text/javascript">
             window.addEventListener('pageshow', function (event) {
                 if (event.persisted) {
@@ -58,35 +60,35 @@
         <section class="main-content" ui-view>
         </section>
         <!-- Verto Plugin Dependencies -->
-        <script type='text/javascript' src="src/javascript/vertoDependencies/jquery.jsonrpcclient.js"></script>
-        <script type='text/javascript' src="src/javascript/vertoDependencies/jquery.FSRTC.js"></script>
-        <script type='text/javascript' src="src/javascript/vertoDependencies/jquery.verto.js"></script>
-        <script type="text/javascript" src="src/bower_components/jquery-json/dist/jquery.json.min.js"></script>
-        <script type='text/javascript' src="src/javascript/vertoDependencies/getScreenId.js"></script>
-        <script type='text/javascript' src="src/javascript/vertoDependencies/md5.min.js"></script>
-        <script type='text/javascript' src="src/javascript/vertoDependencies/volume-meter.js"></script>
+        <script type='text/javascript' src="js/vertoDependencies/jquery.jsonrpcclient.js"></script>
+        <script type='text/javascript' src="js/vertoDependencies/jquery.FSRTC.js"></script>
+        <script type='text/javascript' src="js/vertoDependencies/jquery.verto.js"></script>
+        <script type="text/javascript" src="lib/bower_components/jquery-json/dist/jquery.json.min.js"></script>
+        <script type='text/javascript' src="js/vertoDependencies/getScreenId.js"></script>
+        <script type='text/javascript' src="js/vertoDependencies/md5.min.js"></script>
+        <script type='text/javascript' src="js/vertoDependencies/volume-meter.js"></script>
 
         <!-- Verto App -->
-        <script type='text/javascript' src="src/javascript/verto.module.js"></script>
+        <script type='text/javascript' src="js/verto.module.js"></script>
 
         <!-- Verto Controller Module -->
-        <script type='text/javascript' src="src/javascript/controllers/vertoControllers.module.js"></script>
-        <script type="text/javascript" src="src/javascript/controllers/mainController.js"></script>
-        <script type="text/javascript" src="src/javascript/controllers/loginController.js"></script>
-        <script type="text/javascript" src="src/javascript/controllers/loadScreenController.js"></script>
-        <script type="text/javascript" src="src/javascript/controllers/dialpadController.js"></script>
-        <script type="text/javascript" src="src/javascript/controllers/incallController.js"></script>
+        <script type='text/javascript' src="js/controllers/vertoControllers.module.js"></script>
+        <script type="text/javascript" src="js/controllers/mainController.js"></script>
+        <script type="text/javascript" src="js/controllers/loginController.js"></script>
+        <script type="text/javascript" src="js/controllers/loadScreenController.js"></script>
+        <script type="text/javascript" src="js/controllers/dialpadController.js"></script>
+        <script type="text/javascript" src="js/controllers/incallController.js"></script>
 
         <!-- Verto Services Module -->
-        <script type="text/javascript" src="src/javascript/vertoService/vertoService.module.js"></script>
-        <script type="text/javascript" src="src/javascript/vertoService/vertoService.js"></script>
-        <script type="text/javascript" src="src/javascript/vertoService/eventQueueService.js"></script>
-        <script type="text/javascript" src="src/javascript/vertoService/callHistoryService.js"></script>
-        <script type="text/javascript" src="src/javascript/vertoService/preRouteService.js"></script>
+        <script type="text/javascript" src="js/vertoService/vertoService.module.js"></script>
+        <script type="text/javascript" src="js/vertoService/vertoService.js"></script>
+        <script type="text/javascript" src="js/vertoService/eventQueueService.js"></script>
+        <script type="text/javascript" src="js/vertoService/callHistoryService.js"></script>
+        <script type="text/javascript" src="js/vertoService/preRouteService.js"></script>
 
         <!-- Storage Services Module -->
-        <script type="text/javascript" src="src/javascript/storageService/storageService.module.js"></script>
-        <script type="text/javascript" src="src/javascript/storageService/loadScreenService.js"></script>
-        <script type="text/javascript" src="src/javascript/storageService/storageService.js"></script>
+        <script type="text/javascript" src="js/storageService/storageService.module.js"></script>
+        <script type="text/javascript" src="js/storageService/loadScreenService.js"></script>
+        <script type="text/javascript" src="js/storageService/storageService.js"></script>
     </body>
 </html>

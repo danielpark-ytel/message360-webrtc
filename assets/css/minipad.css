@@ -1,0 +1,49 @@
+/**
+
+parent: minipad;
+child: minipad-header;
+child: minipad-body;
+
+parent: minipad-body;
+child: minipad-group;
+
+
+
+*/
+
+div.minipad {
+	position: absolute;
+	height : auto;
+	width : 210px;
+	top : 0;
+}
+
+div.minipad-header > input {
+	color : black !important;
+	background-color: white;
+}
+
+div.minipad-header {
+	min-width : 100%;
+}
+
+div.minipad-body {
+	min-width : 100%;
+	padding : 0;
+	margin : 0;
+}
+
+a.btn-mp {
+	padding : 0;
+	float : left;
+	border : none !important;
+	outline: none !important;
+	margin : 0;
+	width : 33.333333333%;
+}
+
+a.btn-mp > h4,
+a.btn-mp > span {
+	font-size : 1em;
+	font-weight: 700;
+}
