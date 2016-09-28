@@ -103,6 +103,12 @@
 			}
 		};
 
+		$rootScope.backspace = function() {
+			var number = $rootScope.dialpadNumber;
+			var length = number.length;
+			$rootScope.dialpadNumber = number.substring(0, length - 1);
+		}
+
 		$rootScope.callActive = function(data, params) {
 			verto.data.mutedMic = storage.data.mutedMic;
 			if (!storage.data.cur_call) {
@@ -208,5 +214,6 @@
 			});
 			$state.go("incall");
 		};
+
 	});
 })();

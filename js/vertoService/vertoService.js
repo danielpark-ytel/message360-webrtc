@@ -510,16 +510,12 @@ vertoService.service('verto', ['$rootScope', '$state', 'storage', '$location', f
 		* @param callback
 		*/
 		muteMic: function (callback) {
-
-		 	console.debug('Attempting to mute mic for the current call.');
 		 	if (!data.call) {
-		 		console.debug('There is no call to mute.');
 		 		return false;
 		 	}
-		 	data.call.dtmf("0");
-		 	data.mutedMic = !data.mutedMic;
-		 	console.log(data.mutedMic);
-		 	console.debug('The mic was muted for the call.');
+		 	console.debug("Toggling mute for the call.");
+		 	data.call.setMute('toggle');
+		 	data.mutedMic != data.mutedMic;
 		 	if (angular.isFunction(callback)) {
 		 		callback(data.instance, true);
 		 	}
@@ -542,6 +538,7 @@ vertoService.service('verto', ['$rootScope', '$state', 'storage', '$location', f
 		 	if (angular.isFunction(callback)) {
 		 		callback(data.instance, true);
 		 	}
-		 }
+		}
+
 		}
 	}]);
