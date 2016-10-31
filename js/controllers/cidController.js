@@ -1,7 +1,6 @@
 (function() {
 	angular.module("vertoControllers")
 	.controller("cidController", function($scope, $rootScope, storage, verto, $http, ngToast, ngAudio) {
-		console.debug("Caller ID Controller => Loading caller identity.");
 		$scope.callerIdNumber = "";
 		$scope.updateCid = function() {
             var url = window.location.origin + "/webrtc_client/lib/authenticateNumber.php";
@@ -12,7 +11,6 @@
                     phone_number: $scope.callerIdNumber
                 }
             }).then(function(response) {
-                console.log(response);
                 if (response.data.Message360.ResponseStatus == 1) {
                     storage.data.cid_number = $scope.callerIdNumber;
                     ngAudio.play("assets/sounds/notification.mp3");
