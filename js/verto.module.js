@@ -8,7 +8,6 @@
         "vertoControllers",
         'pascalprecht.translate',
         'timer',
-        '720kb.tooltips',
         "cgPrompt",
         'ngToast',
         'ngAudio',
