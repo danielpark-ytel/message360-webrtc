@@ -5,7 +5,6 @@
 		console.debug("Side Menu Controller => Preparing side menu for usage.");
 		$scope.verto = verto;
 		$scope.storage = storage;
-		$scope.default = "Please select a media source.";
 		$scope.userData = {};
 		$scope.update = function() {
 			if($scope.userData != {}) {
