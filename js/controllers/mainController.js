@@ -19,7 +19,7 @@
          * IMPORTANT: Set the url which points to the location of your helper library script to obtain an access token.
          * This should be the location of the script on your web server, for example: 'https://www.yourdomain.com/accessToken.php'
          */
-        var tokenUrl = "";
+        var tokenUrl = 'lib/accessToken.php';
 
         /**
          * Request to server for accessToken
