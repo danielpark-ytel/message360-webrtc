@@ -48,7 +48,7 @@
                     }
                 });
             };
-            $http.post('/lib/accessToken.php').then(function (response) {
+            $http.post(tokenUrl).then(function (response) {
                 if (response.data.Message360.Error) {
                     ngToast.create({
                         className: 'danger',
