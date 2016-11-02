@@ -14,9 +14,15 @@
         $scope.showReconnect = true;
         $rootScope.dialpadNumber = "";
         $scope.callHistory = [];
+
+        /**
+         * IMPORTANT: Set the url which points to the location of your helper library script to obtain an access token.
+         * This should be the location of the script on your web server, for example: 'https://www.yourdomain.com/accessToken.php'
+         */
+        var tokenUrl = 'lib/accessToken.php';
+
         /**
          * Request to server for accessToken
-         * Should have server side configured with
          **/
         $scope.login = function () {
             var connectCallback = function (v, connected) {
@@ -36,22 +42,20 @@
                         $state.go("dashboard");
                     } else {
                         ngToast.create({
-                        className : 'danger',
-                        content: "<p class='toast-text'><i class='fa fa-times-circle'></i> There was an error connecting to the server.</p>"
-                    });
+                            className: 'danger',
+                            content: "<p class='toast-text'><i class='fa fa-times-circle'></i> There was an error connecting to the server.</p>"
+                        });
                     }
                 });
             };
-            var url = window.location.origin + "/webrtc_client/lib/accessToken.php";
-            $http.post(url).then(function (response) {
+            $http.post(tokenUrl).then(function (response) {
                 if (response.data.Message360.Error) {
                     ngToast.create({
                         className: 'danger',
                         content: "<p class='toast-text'><i class='fa fa-info-circle'></i>" + response.data.Message360.Error + "</p>"
                     });
                     return false;
-                }
-                else if (response.data.Message360.Message['token']) {
+                } else if (response.data.Message360.Message['token']) {
                     var token = response.data.Message360.Message['token'];
                     verto.data.login = token;
                     verto.data.passwd = token;
@@ -92,9 +96,7 @@
             };
             angular.extend(opts, _opts);
             var modalInstance = $uibModal.open(opts);
-            modalInstance.result.then(function (result) {
-            }, function () {
-            })
+            modalInstance.result.then(function (result) {}, function () {})
         };
 
         var settingsInstance;
@@ -143,11 +145,9 @@
         $rootScope.dtmf = function (number) {
             if (number == '*') {
                 ngAudio.play('assets/sounds/dtmf/dtmf-star.mp3');
-            }
-            else if (number == '#') {
+            } else if (number == '#') {
                 ngAudio.play('assets/sounds/dtmf/dtmf-hash.mp3');
-            }
-            else {
+            } else {
                 ngAudio.play('assets/sounds/dtmf/dtmf-' + number + '.mp3');
             }
             $rootScope.dialpadNumber = $scope.dialpadNumber + number;
@@ -176,7 +176,7 @@
          * Event handlers
          */
         $rootScope.$on("call.hangup", function (event, data) {
-            $timeout(function() {
+            $timeout(function () {
                 $scope.$broadcast('timer-clear');
                 $scope.$broadcast('timer-stop');
                 $scope.$broadcast('timer-reset');
@@ -188,8 +188,7 @@
             $rootScope.dialpadNumber = "";
             try {
                 $rootScope.$digest();
-            } catch (e) {
-            }
+            } catch (e) {}
         });
 
         $rootScope.$on("call.active", function (event, data, params) {
@@ -243,7 +242,7 @@
         $scope.openChModal = function () {
             var options = {
                 animation: true,
-                controller : "chModalController",
+                controller: "chModalController",
                 size: "md",
                 templateUrl: "src/modals/callHistoryModal.html"
             };
@@ -261,16 +260,14 @@
         function onWSClose(event, data) {
             if (wsInstance) {
                 return;
-            }
-            ;
+            };
             var options = {
                 backdrop: 'static',
                 keyboard: false
             };
             if ($scope.showReconnect) {
                 wsInstance = $scope.openModal("src/partials/websocket_error.html", "wsReconnectController", options);
-            }
-            ;
+            };
             if (verto.data.call) {
                 verto.hangup();
             }
