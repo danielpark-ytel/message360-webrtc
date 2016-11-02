@@ -17,6 +17,7 @@
                     phone_number: $scope.callerIdNumber
                 }
             }).then(function(response) {
+                console.log(response.data);
                 if (response.data.Message360.ResponseStatus == 1) {
                     storage.data.cid_number = $scope.callerIdNumber;
                     ngAudio.play("assets/sounds/notification.mp3");
