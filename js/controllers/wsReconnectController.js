@@ -1,7 +1,3 @@
-/**
- * Created by danielpark on 8/26/16.
- */
-
 (function() {
     'use strict';
     angular.module('vertoControllers')

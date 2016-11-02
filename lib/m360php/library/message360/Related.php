@@ -13,7 +13,7 @@ abstract class Message360_Related {
     CONST WRAPPER_XML = 'xml';
 
     /** BASE Message360 URI */
-    CONST API_URL = 'https://webrtc-api.message360.com/api/v2/';
+    CONST API_URL = 'https://lara-dev.message360.com/api/v2/';
 
     /** BASE Message360 API VERSION */
     CONST API_VERSION = 'v2';
