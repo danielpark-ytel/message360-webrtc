@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 require_once "m360php/library/message360.php";
 $Message360 = Message360API\Lib\Message360::getInstance();
 $Message360 -> setOptions(array(
