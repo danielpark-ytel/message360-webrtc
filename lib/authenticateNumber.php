@@ -8,6 +8,7 @@ $Message360 -> setOptions(array(
     'response_to_array' =>true,
 ));
 $post_data = file_get_contents("php://input");
+die(var_dump($post_data));
 $request = json_decode($post_data);
 try {
     	$checkNumber = $Message360->authenticateNumber('webrtc', 'authenticateNumber', array(
