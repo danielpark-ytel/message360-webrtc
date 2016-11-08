@@ -1,0 +1,60 @@
+<div class="modal-title on-sm-md">
+    <h4 class="settings-header"><i class="fa fa-cogs"></i> Settings & Info</h4>
+</div>
+<div class="modal-body on-sm-md">
+    <uib-tabset active="activeJustified" justified="true">
+        <uib-tab index="0" heading="User Info">
+            <div class="settings-box">
+                <div class="info-group">
+                    <p class="inline-left"><i class="fa fa-user"></i> User Name: </p>
+                    <p class="inline-right"> {{ verto.data.name }}</p>
+                </div>
+                <div class="info-group">
+                    <p class="inline-left"><i class="fa fa-phone-square"></i> Caller ID: </p>
+                    <p class="inline-right"> {{ storage.data.cid_number || "Caller ID not set" }}</p>
+                </div>
+                <div class="info-group">
+                    <p class="inline-left"><i class="fa fa-lock"></i> Access Token: </p>
+                    <p class="inline-right"> {{ storage.data.accessToken }}</p>
+                </div>
+                <div class="info-group">
+                    <p class="inline-left"><i class="fa fa-sort-numeric-asc"></i> Number of Calls: </p>
+                    <p class="inline-right"> {{storage.data.numOfCalls }}</p>
+                </div>
+                <div class="info-group">
+                    <p class="inline-left"><i class="fa fa-volume-up"></i> Speaker Source:  </p>
+                    <p class="inline-right"> {{storage.data.selectedSpeakerLabel }}</p>
+                </div>
+                <div class="info-group">
+                    <p class="inline-left"><i class="fa fa-microphone"></i> Mic Source: </p>
+                    <p class="inline-right"> {{storage.data.selectedAudioLabel }}</p>
+                </div>
+                <div class="info-group">
+                    <p class="inline-left"><i class="fa fa-video-camera"></i> Video Source: </p>
+                    <p class="inline-right"> {{storage.data.selectedVideoLabel }}</p>
+                </div>
+            </div>
+        </uib-tab>
+        <uib-tab index="1" heading="Settings">
+            <div class="settings-box">
+                <div class="form-group inline-group">
+                    <label for="selectedSpeaker"> Speaker Source: </label>
+                    <select class="form-control" name="selectedSpeaker" ng-options="item as item.label for item in verto.data.speakerDevices track by item.id" ng-model="userData.speaker">
+                    </select>
+                    <a class="update-settings" href="" ng-if="userData.speaker" ng-click="update()">Update</a>
+                </div>
+                <div class="form-group inline-group">
+                    <label for="selectedAudio"> Mic Source: </label>
+                    <select class="form-control" name="selectedAudio" ng-options="item as item.label for item in verto.data.audioDevices track by item.id" ng-model="userData.audio"></select>
+                    <a class="update-settings" href="" ng-if="userData.audio" ng-click="update()">Update</a>
+                </div>
+                <div class="form-group inline-group">
+                    <label for="selectedVideo"> Video Source: </label>
+                    <select class="form-control" name="selectedVideo" ng-model="userData.video" ng-options="item as item.label for item in verto.data.videoDevices track by item.id">
+                    </select>
+                    <a class="update-settings" href="" ng-if="userData.video" ng-click="update()">Update</a>
+                </div>
+            </div>
+        </uib-tab>
+    </uib-tabset>
+</div>

@@ -1,0 +1,10 @@
+<div class="modal-title settings-title text-center">
+	<h4>Audio Settings</h4>
+</div>
+<div class="modal-body settings-body">
+	<div class="form-group">
+		<label for="selectedAudio"> Audio Source : </label>
+		<select class="form-control" name="selectedAudio" ng-options="item as item.label for item in verto.data.audioDevices track by item.id" ng-model="userData.audio"></select>
+	</div>
+	<a class="update-settings" href="" ng-if="userData.audio" ng-click="update()">Update</a>
+</div>

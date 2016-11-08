@@ -8,7 +8,6 @@
         "vertoControllers",
         'pascalprecht.translate',
         'timer',
-        '720kb.tooltips',
         "cgPrompt",
         'ngToast',
         'ngAudio',
@@ -29,17 +28,10 @@
                 controller : "loginController",
                 title : "Welcome!"
             })
-            .state("dialer", {
-                url: "/dialer",
-                templateUrl: "src/partials/dialer.html",
-                controller : "dialpadController",
-                title : "WebRTC Client"
-            })
-            .state("incall", {
-                url : "/incall",
-                templateUrl : "src/partials/incall.html",
-                controller : "incallController",
-                title : "Voice Call Session"
+            .state("dashboard", {
+                url : "/dashboard",
+                templateUrl : "src/partials/dashboard.html",
+                title : "Dashboard"
             });
             $urlRouterProvider.otherwise("/");
         $translateProvider
