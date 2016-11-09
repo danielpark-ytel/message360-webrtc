@@ -20,7 +20,7 @@ angular.module("vertoService")
 
             var checkLogin = function() {
                 if(verto.data.connected) {
-                    $state.go('dialer');
+                    $state.go('dashboard');
                     console.debug("User logged in. Redirecting to dialer.");
                 }
             };

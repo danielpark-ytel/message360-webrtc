@@ -1211,6 +1211,22 @@ div#chImage > h4 {
 	margin-top : 32px;
 }
 
+.logout-btn {
+	background: #ff4136;
+	color: white;
+	position: absolute;
+	right : 6px;
+	top : 10%;
+	bottom : 10%;
+}
+
+.logout-btn:hover,
+.logout-btn:focus {
+	background: white;
+	color : #ff4136;
+	border: 2px solid #FF4136;
+}
+
 .nocall-fa {
 	text-align: center;
 }
@@ -1291,7 +1307,6 @@ div#chImage > h4 {
 	.info-col {
 		display: block;
 		float: left;
-		vertical-align: top;
 		height : 100%;
 		width : 33.33333334% !important;
 	}

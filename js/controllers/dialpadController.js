@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     angular.module("vertoControllers")
-        .controller("dialpadController", function($rootScope, $scope, $http, $state, verto, storage, ngToast) {
+        .controller("dialpadController", function($rootScope, $scope, $http, $state, verto, storage, ngToast, preRoute) {
             storage.data.notifications = true;
             storage.data.videoCall = false;
             storage.data.userStatus = 'connecting';

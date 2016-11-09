@@ -1,7 +1,8 @@
 (function() {
 	'use strict';
 	angular.module("vertoControllers")
-	.controller("sidemenuController", function($scope, $rootScope, storage, verto, ngToast) {
+	.controller("sidemenuController", function($scope, $rootScope, storage, verto, ngToast, preRoute) {
+		preRoute.checkVerto();
 		console.debug("Side Menu Controller => Preparing side menu for usage.");
 		$scope.verto = verto;
 		$scope.storage = storage;
@@ -30,12 +31,12 @@
 			}
 		};
 
-		$scope.appearance = function() {
-			ngToast.create({
-				className : "warning",
-				content : "<p class='toast-text'><i class='fa fa-exclamation-circle'></i> This feature is coming in the next update.</p>"
-			})
-		}
+		// $scope.appearance = function() {
+		// 	ngToast.create({
+		// 		className : "warning",
+		// 		content : "<p class='toast-text'><i class='fa fa-exclamation-circle'></i> This feature is coming in the next update.</p>"
+		// 	})
+		// }
 	});
 
 })();

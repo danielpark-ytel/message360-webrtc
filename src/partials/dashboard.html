@@ -13,18 +13,18 @@
             </h4>
             <hr class="sm-hr">
             <ul class="sm-nav">
-                <li>
+                <!--<li>
                     <a href="" ng-click="openSettings('video')" class="btn btn-sidenav">Video Settings</a>
-                </li>
+                </li>-->
                 <li>
                     <a href="" ng-click="openSettings('speaker')" class="btn btn-sidenav">Speaker Settings</a>
                 </li>
                 <li>
                     <a href="" ng-click="openSettings('audio')" class="btn btn-sidenav">Mic Settings</a>
                 </li>
-                <li>
+                <!--<li>
                     <a href="" ng-click="appearance()" class="btn btn-sidenav">Appearance</a>
-                </li>
+                </li>-->
             </ul>
         </div>
     </div>
@@ -33,6 +33,7 @@
         <div class="dashboard-header-sm">
             <button class="settings-caret" ng-click="openSettingsModal()"><i class="fa fa-bars" aria-hidden="true"></i></button>
             <h4><i class="fa fa-tachometer" style="font-size: 1.2em;"></i> User Dashboard</h4>
+            <button class="logout-btn btn" ng-click="logout()"><i class="fa fa-sign-out"></i> Logout</button>
         </div>
         <div class="dashboard-body-sm">
             <div class="dialer-sm effect8">
@@ -141,6 +142,7 @@
         <div class="dashboard-header">
             <button class="settings-caret" ng-click="openSettingsModal()"><i class="fa fa-bars" aria-hidden="true"></i></button>
             <h4><i class="fa fa-tachometer"></i> User Dashboard</h4>
+            <button class="logout-btn btn" ng-click="logout()"><i class="fa fa-sign-out"></i> Logout</button>
         </div>
 
 

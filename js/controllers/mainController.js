@@ -150,10 +150,13 @@
             } else {
                 ngAudio.play('assets/sounds/dtmf/dtmf-' + number + '.mp3');
             }
-            $rootScope.dialpadNumber = $scope.dialpadNumber + number;
+            if(number !== undefined && number!== "") {
+                $rootScope.dialpadNumber = $scope.dialpadNumber + number;
+            }
             if (verto.data.call) {
                 verto.dtmf(number);
             }
+            console.log($rootScope.dialpadNumber);
         };
 
         $rootScope.callActive = function (data, params) {
