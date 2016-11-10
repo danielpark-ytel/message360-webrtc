@@ -260,7 +260,7 @@ abstract class Message360_Related {
      * Authenticate phone number for WebRTC usage.
      *
      * @param String $component
-     * @param String $action
+     * @param String $action 
      * @param Array $data
      * @return String $status_code
      */

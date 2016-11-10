@@ -19,7 +19,14 @@
          * IMPORTANT: Set the url which points to the location of your helper library script to obtain an access token.
          * This should be the location of the script on your web server, for example: 'https://www.yourdomain.com/accessToken.php'
          */
-        var tokenUrl = 'lib/accessToken.php';
+        var tokenUrl = 'lib/access-token.php';
+        var fundUrl = 'lib/check-funds.php';
+
+        function checkFunds() {
+            $http.post(fundUrl).then(function(response) {
+                console.log(response); 
+            });
+        }
 
         /**
          * Request to server for accessToken
@@ -49,6 +56,7 @@
                 });
             };
             $http.post(tokenUrl).then(function (response) {
+                console.log(response);
                 if (response.data.Message360.Error) {
                     ngToast.create({
                         className: 'danger',
@@ -64,6 +72,7 @@
                 verto.connect(connectCallback);
             }, function (err) {
                 if (err) {
+                    console.log(err);
                     ngToast.create({
                         className: 'warning',
                         content: "<p class='toast-text'><i class='fa fa-info-circle'></i> The Message360 SDK for authentication is not set up properly.</p>"
@@ -179,6 +188,7 @@
          * Event handlers
          */
         $rootScope.$on("call.hangup", function (event, data) {
+            checkFunds();
             $timeout(function () {
                 $scope.$broadcast('timer-clear');
                 $scope.$broadcast('timer-stop');
