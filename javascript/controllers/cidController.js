@@ -26,7 +26,7 @@
                 else {
                     ngToast.create({
                         className : 'danger',
-                        content: "<p class='toast-text'><i class='fa fa-times-circle'></i> "+response.data.Message360.Errors+"</p>"
+                        content: "<p class='toast-text'><i class='fa fa-times-circle'></i> "+response.data.Message360.Errors.Error[0]+"</p>"
                     });
                 }
             });

@@ -68,7 +68,7 @@
                 if (response.data.Message360.Error) {
                     ngToast.create({
                         className: 'danger',
-                        content: "<p class='toast-text'><i class='fa fa-info-circle'></i>" + response.data.Message360.Error + "</p>"
+                        content: "<p class='toast-text'><i class='fa fa-info-circle'></i>" + response.data.Message360.Errors.Error[0] + "</p>"
                     });
                     return false;
                 } else if (response.data.Message360.Message['token']) {
