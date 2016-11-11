@@ -110,6 +110,36 @@ p {
 	width : 70%;
 }
 
+.dialpad-input {
+	position : relative;
+	height : auto;
+	padding : 0;
+	margin : 0;
+}
+
+.btn-backspace {
+	position: absolute;
+	top : 15%;
+	vertical-align: top;
+	padding : 0;
+	right : 0;
+	box-shadow: none;
+	color : #2196f3 !important;
+	height : 30px;
+	width : 30px;
+	outline : none !important;
+	line-height : 27.5px;
+	border : 2px solid transparent;
+}
+
+.btn-backspace:hover,
+.btn-backspace:focus {
+	color : white !important;
+	background: #2196f3 !important;
+	border-radius: 50%;
+	border : 2px solid #2196f3 !important;
+}
+
 p.cid-left,
 p.cid-right {
 	letter-spacing: 1px;
@@ -708,7 +738,7 @@ div.content-wrapper {
 
 input[type=text].dialer-input {
 	color : black !important;
-	height : 50px;
+	height : 45px;
 	background: #f0f0f0;
 	-webkit-box-shadow : inset 0px -2px 0 white;
     box-shadow : inset 0px -2px 0 white;

@@ -24,7 +24,15 @@
 
         function checkFunds() {
             $http.post(fundUrl).then(function(response) {
-                console.log(response); 
+                if(response.data.Message360.ResponseStatus != 1) {
+                    $scope.logout();
+                    ngToast.create({
+                        className: 'danger',
+                        content: "<p class='toast-text'><i class='fa fa-info-circle'></i>" + response.data.Message360.Errors.Error[0] + "</p>"
+                    });
+                } else {
+                    console.debug("Account has funds: TRUE");
+                }
             });
         }
 
@@ -116,23 +124,26 @@
                 size: "sm"
             };
             if (type == "video") {
-                options.templateUrl = "src/modals/videoSettingsModal.html";
+                options.templateUrl = "views/modals/videoSettingsModal.html";
             }
             if (type == "audio") {
-                options.templateUrl = "src/modals/audioSettingsModal.html";
+                options.templateUrl = "views/modals/audioSettingsModal.html";
             }
             if (type == "speaker") {
-                options.templateUrl = "src/modals/speakerSettingsModal.html";
+                options.templateUrl = "views/modals/speakerSettingsModal.html";
             }
             settingsInstance = $uibModal.open(options);
         };
 
         $rootScope.openSettingsModal = function () {
+            if(!verto.data.audioDevices.length || !verto.data.speakerDevices.length || !verto.data.audioDevices.length) {
+                verto.refreshDevices();
+            }
             var options = {
                 animation: true,
                 controller: "sidemenuController",
                 size: "md",
-                templateUrl: "src/modals/settingsModal.html"
+                templateUrl: "views/modals/settingsModal.html"
             };
             settingsInstance = $uibModal.open(options);
         };
@@ -144,6 +155,12 @@
                 settingsInstance.close();
                 settingsInstance = null;
             }
+        };
+
+        $rootScope.backspace = function() {
+            var number = $rootScope.dialpadNumber;
+            var length = number.length;
+            $rootScope.dialpadNumber = number.substring(0, length - 1);
         };
 
         /**
@@ -165,7 +182,6 @@
             if (verto.data.call) {
                 verto.dtmf(number);
             }
-            console.log($rootScope.dialpadNumber);
         };
 
         $rootScope.callActive = function (data, params) {

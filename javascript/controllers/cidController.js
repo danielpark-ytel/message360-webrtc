@@ -7,7 +7,7 @@
          * IMPORTANT: Set the url which points to the location of your helper library script to authenticate your caller ID number.
          * This should be the location of the script on your web server, for example: 'https://www.yourdomain.com/authenticateNumber.php'
          */
-        var numberUrl = "lib/authenticateNumber.php";
+        var numberUrl = "lib/authenticate-number.php";
         
 		$scope.updateCid = function() {
             $http({

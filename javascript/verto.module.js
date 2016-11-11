@@ -18,19 +18,19 @@
         $stateProvider
             .state("loading", {
                 url : '/',
-                templateUrl : 'src/partials/load_screen.html',
+                templateUrl : 'views/partials/load_screen.html',
                 controller : "loadScreenController",
                 title : "Loading..."
             })
             .state("login", {
                 url: "/login",
-                templateUrl: "src/partials/login.html",
+                templateUrl: "views/partials/login.html",
                 controller : "loginController",
                 title : "Welcome!"
             })
             .state("dashboard", {
                 url : "/dashboard",
-                templateUrl : "src/partials/dashboard.html",
+                templateUrl : "views/partials/dashboard.html",
                 title : "Dashboard"
             });
             $urlRouterProvider.otherwise("/");
