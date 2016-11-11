@@ -12,6 +12,7 @@ if (floatval(phpversion()) < 5.2) {
     ));
 }
 
+
 /** @see Message360_Exception */
 require_once 'message360/Exception.php';
 

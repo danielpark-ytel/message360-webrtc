@@ -31,7 +31,7 @@ abstract class Message360_Related {
     /**
      * All existing and available Message360 components that can be accessed by
      * this wrapper
-     *
+     * 
      * @var array
      */
     private $_components = array(
@@ -57,13 +57,13 @@ abstract class Message360_Related {
          'listsms' => 'listsms',
          'viewsms' => 'viewsms',
          'getinboundsms' => 'getinboundsms',
-         'numberoptin' => 'numberoptin',
-
+         'numberoptin' => 'numberoptin', 
+         	
     	/*Incoming Phone Number v1b Module*/
     	'viewNumber'=>'viewNumber',
     	'updateNumber'=>'updateNumber',
     	'listNumber' => 'listNumber',
-    	'buyNumber' => 'buyNumber',
+    	'buyNumber' => 'buyNumber', 
     	'releaseNumber' => 'releaseNumber',
 	/*Conference v1b Module*/
        'viewConference'=>'viewConference',
@@ -74,12 +74,12 @@ abstract class Message360_Related {
        'hangupParticipant'=>'hangupParticipant',
        'deafMuteParticipant'=>'deafMuteParticipant',
        'playAudio'=>'playAudio',
-
+    	
 		/*Recording v1b Module*/
 		'viewRecording' => 'viewRecording',
         'listRecording' => 'listRecording',
         'deleteRecording' => 'deleteRecording',
-
+	
         'TranscribeAudioUrlAPI' => 'TranscribeAudioUrlAPI',
         'ListAvailableNumbersAPI' => 'ListAvailableNumbersAPI',
         'createIncomingPhoneNumberAPI' => 'createIncomingPhoneNumberAPI',
@@ -118,13 +118,13 @@ abstract class Message360_Related {
         'deleteinvalideemailapi' => 'deleteinvalideemailapi',
         'deleteunsubscribeemailapi' => 'deleteunsubscribeemailapi',
         'addunsubscribeapi' => 'addunsubscribeapi',
-
+        
 		/*SMS v1 Module*/
         'sendSMSMsg' => 'sendSMSMsg',
         'viewSMS' => 'viewSMS',
         'listSMS' => 'listSMS',
         'getInboundSMS' => 'getInboundSMS',
-
+		
 /*Incoming Phone Number*/
 	'viewNumber'=>'viewNumber',
 	'updateNumber'=>'updateNumber',
@@ -163,7 +163,7 @@ abstract class Message360_Related {
         'whiteListDestinationAPIS' => 'whiteListDestinationAPIS',
         'blockAPIS' => 'blockAPIS',
         'extentAuthorizeAPIS' => 'extentAuthorizeAPIS',
-
+        
 		/*Carrier*/
 		'lookup'=>'lookup',
 		'lookuplist'=>'lookuplist',
@@ -180,24 +180,23 @@ abstract class Message360_Related {
         'updateNumber' => 'updateNumber',
         'ajaxPurchaseNumber' => 'ajaxPurchaseNumber',
         'checkSmsNumber' => 'checkSmsNumber',
-
-        /*Freeswitch Module*/
+        /*WebRTC*/
         'createToken' => 'createToken',
         'authenticateNumber' => 'authenticateNumber',
-        'checkFunds' => 'checkFunds'
+        'checkFunds' => 'checkFunds',
     );
 
     /**
      * Current component key which will be passed out to the Connector class
      * when the time comes
-     *
+     * 
      * @var string|null
      */
     private $_component = null;
 
     /**
      * Client token. When generated, it will be "saved" here
-     *
+     * 
      * @var array
      */
     protected $_clientToken = array();
@@ -213,8 +212,8 @@ abstract class Message360_Related {
 
     /**
      * Set a list of options all at once.
-     *
-     * @param  array $options
+     * 
+     * @param  array $options 
      * @return void
      */
     function setOptions(Array $options) {
@@ -225,10 +224,10 @@ abstract class Message360_Related {
     /**
      * Set a single option for the Message360 wrapper. If option key doesn't exist it will
      * throw that the key itself is not available and therefore cannot be found.
-     *
+     * 
      * @param  string $key
      * @param  mixed  $value
-     * @throws \Message360_Exception
+     * @throws \Message360_Exception 
      * @return void
      */
     function setOption($key, $value) {
@@ -238,7 +237,7 @@ abstract class Message360_Related {
         self::$_options[strtolower($key)] = $value;
     }
 
-     /**
+    /**
      * Once the the account_sid and auth_token are set using the setOption method.
      * This will fire a request to Message360 in order to validate the account and return
      * an access token for WebRTC usage.
@@ -260,7 +259,7 @@ abstract class Message360_Related {
      * Authenticate phone number for WebRTC usage.
      *
      * @param String $component
-     * @param String $action 
+     * @param String $action
      * @param Array $data
      * @return String $status_code
      */
@@ -285,13 +284,18 @@ abstract class Message360_Related {
      * @return String $status_code
      */
      function checkFunds($component, $action, Array $data) {
-         
+         $data = array(
+             "account_sid" => $this->option("account_sid"),
+             "auth_token" => $this->options("auth_token")
+         );
+         $creation_url = rtrim($this->_buildBaseUrl() . $component . '/' . $this->_buildUrl($action, $data), '/') . '.' . self::WRAPPER_JSON;
+         $post_params = $this->_buildPostParameters($action,$data);
+         return new Message360_Connector($this->_execute($creation_url, 'POST', $post_params), $this->option('response_to_array'), $this->_component);
      }
-
 
     /**
      * Get singular option value. If value is not set, null will be returned
-     *
+     * 
      * @param  string $key
      * @return mixed
      */
@@ -303,9 +307,9 @@ abstract class Message360_Related {
 
     /**
      * Get resource by component and component SID
-     *
+     * 
      * @param  string|array $component
-     * @param  array        $parameters
+     * @param  array        $parameters 
      * @return Message360_Connector
      */
     function get($component, $action, Array $parameters = array()) {
@@ -319,10 +323,10 @@ abstract class Message360_Related {
     /**
      * POSTING (Creating) new documents for desired resources, such as sending new
      * SMS messages
-     *
+     * 
      * @param  string[] $component
      * @param  array        $data
-     * @return Message360_Connector
+     * @return Message360_Connector 
      */
     function create($component, $action, Array $data) {
         $creation_url = rtrim($this->_buildBaseUrl() . $component . '/' . $this->_buildUrl($action, $data), '/') . '.' . self::WRAPPER_JSON;
@@ -333,10 +337,10 @@ abstract class Message360_Related {
     /**
      * POSTING (Updating) documents for desired resources, such as sending new
      * SMS messages
-     *
+     * 
      * @param  string|array $component
      * @param  array        $data
-     * @return Message360_Connector
+     * @return Message360_Connector 
      */
     function listAll($component, $action, Array $data = array()) {
         $creation_url = rtrim($this->_buildBaseUrl() . $component . '/' . $this->_buildUrl($action, $data), '/') . '.' . self::WRAPPER_JSON;
@@ -352,7 +356,7 @@ abstract class Message360_Related {
 
     function post($component, $action, Array $data = array()) {
         $creation_url = rtrim($this->_buildBaseUrl() . $component . '/' . $this->_buildUrl($action, $data), '/') . '.' . self::WRAPPER_JSON;
-
+        
         return new Message360_Connector($this->_execute($creation_url, 'POST', $data), $this->option('response_to_array'), $this->_component);
     }
 
@@ -360,9 +364,9 @@ abstract class Message360_Related {
      * DELETING resources such as recordings.
      * You cannot add query parameters to this resource and it is very limited (deleting)
      * so please consult REST documentation on the Message360 site.
-     *
-     * @param  string|array $component
-     * @return Message360_Connector
+     * 
+     * @param  string|array $component 
+     * @return Message360_Connector 
      */
     function delete($component, $action, Array $parameters = array()) {
         return new Message360_Connector($this->_execute(
@@ -376,7 +380,7 @@ abstract class Message360_Related {
 
     /**
      * Return an instance of the Message360 Client class
-     *
+     * 
      * @return Message360_Client <Message360_Client, self, NULL>
      */
     function getClient()
@@ -397,30 +401,33 @@ abstract class Message360_Related {
     /**     * ********** INTERNAL METHODS ************** * */
 
     /**
-     * Building base URL of Message360 wrapper. This will set
+     * Building base URL of Message360 wrapper. This will set 
      * https://{url}/{version}/accounts/account_sid
      * as main and base url.
-     *
+     * 
      * @return string
-     * @throws Message360_Exception
+     * @throws Message360_Exception 
      */
     private function _buildBaseUrl()
     {
+
         //$return_url = self::API_URL . $this->_getBaseVersion() . '/';
+
         $return_url = self::API_URL;
         if (is_null($this->option('account_sid'))) {
             throw new \Message360_Exception(
-                "Please set account_sid option. You need to pass account_sid option as
+            "Please set account_sid option. You need to pass account_sid option as 
                 auth_token in order to authenticate and/or use Message360 wrapper"
             );
         }
+
         // $return_url .= self::API_START_COMPONENT . '/' . $this->option('account_sid') . '/';
         return $return_url;
     }
 
     /**
      * Get base version of the Message360 REST API endpoint.
-     *
+     * 
      * @return string
      * @throws Message360_Exception  If invalid api_version applied
      */
@@ -439,7 +446,7 @@ abstract class Message360_Related {
     /**
      * This will build URL of Message360 wrapper after the AccountSid with or without
      * possible GET parameters like ?PageSize=20
-     *
+     * 
      * @param  array|string $component
      * @param  array $parameters
      * @return string
@@ -456,9 +463,9 @@ abstract class Message360_Related {
 
     /**
      * Building GET query parameters will return blank if there are no parameters
-     *
+     * 
      * @param  array  $parameters
-     * @return string
+     * @return string 
      */
     private function _buildParameters(Array $parameters = array()) {
         $return_params = '';
@@ -484,9 +491,9 @@ abstract class Message360_Related {
 
     /**
      * Building GET query parameters will return blank if there are no parameters
-     *
+     * 
      * @param  array  $parameters
-     * @return string
+     * @return string 
      */
     private function _buildPostParameters($action,Array $parameters = array()) {
         $return_params = '';
@@ -494,8 +501,8 @@ abstract class Message360_Related {
         {
             return $parameters;
         }
-       else
-        {
+       else 
+        {   
         if (count($parameters) > 0) {
 
             foreach ($parameters as $parameter => $value) {
@@ -520,7 +527,7 @@ abstract class Message360_Related {
         }
 
         return $return_params;
-       }
+       } 
     }
 
     /**
@@ -541,17 +548,17 @@ abstract class Message360_Related {
 
     /**
      * Do the actual curl request
-     *
+     * 
      * @param  string  $url
      * @param  string  $type
      * @param  string  $params
-     * @return array
+     * @return array 
      */
-    private function _execute($url, $type = 'GET', $params = null) {
+    private function _execute($url, $type = 'GET', $params = null) {  
         $type = strtoupper($type);
         $account_sid = $this->option('account_sid');
         $auth_token = $this->option('auth_token');
-        $response = array();
+        $response = array(); 
         $curl_port = 80;
         if (substr($url, 0, 4) == 'http')
             $curl_port = 80;
@@ -578,11 +585,11 @@ abstract class Message360_Related {
                 {
                  $curl_opts[CURLOPT_POST] = 1;
                 $curl_opts[CURLOPT_POSTFIELDS] = $params;
-
+                  
                   }
                 else
-                {
-
+                { 
+              
                 $params = explode('&', $params);
                 $params12=array();
                 foreach ($params as $key => $value) {
@@ -596,14 +603,14 @@ abstract class Message360_Related {
                 $curl_opts[CURLOPT_POST] = 1;
                 $curl_opts[CURLOPT_POSTFIELDS] = $params;
             }
-           }
+           } 
             if ($this->getConnect()->getStatus() === true) {
                 if (count(self::$_connectHeaders) > 0) {
                     $curl_opts[CURLOPT_HTTPHEADER] = self::$_connectHeaders;
                 }
             }
 
-
+            
             if (curl_setopt_array($resource, $curl_opts)) {
                 $response['exec'] = curl_exec($resource);
                 $response['error'] = curl_error($resource);
