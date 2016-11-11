@@ -65,7 +65,7 @@
             };
             $http.post(tokenUrl).then(function (response) {
                 console.log(response);
-                if (response.data.Message360.Error) {
+                if (response.data.Message360.Errors) {
                     ngToast.create({
                         className: 'danger',
                         content: "<p class='toast-text'><i class='fa fa-info-circle'></i>" + response.data.Message360.Errors.Error[0] + "</p>"
@@ -295,7 +295,7 @@
                 keyboard: false
             };
             if ($scope.showReconnect) {
-                wsInstance = $scope.openModal("src/partials/websocket_error.html", "wsReconnectController", options);
+                wsInstance = $scope.openModal("views/partials/websocket_error.html", "wsReconnectController", options);
             };
             if (verto.data.call) {
                 verto.hangup();
