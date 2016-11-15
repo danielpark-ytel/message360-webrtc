@@ -261,11 +261,13 @@
         $scope.muteMic = verto.muteMic;
 
         $scope.hangup = function () {
-            if (!verto.data.call) {
-                return;
-            }
-            verto.hangup();
-            $rootScope.$broadcast('stop-timer');
+            $timeout(function() {
+                if (!verto.data.call) {
+                    return;
+                }
+                verto.hangup();
+                $rootScope.$broadcast('stop-timer');
+            }, 1000);
         };
 
         var modalInstance;
