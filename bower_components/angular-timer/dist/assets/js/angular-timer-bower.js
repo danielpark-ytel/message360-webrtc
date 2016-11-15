@@ -346,12 +346,12 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 
   $(function(){
 
-    var $window = $(window);
+    var $window = $(window)
 
     // Disable certain links in docs
     $('section [href^=#]').click(function (e) {
       e.preventDefault()
-    });
+    })
 
     // side bar
     setTimeout(function () {
@@ -361,17 +361,17 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
         , bottom: 270
         }
       })
-    }, 100);
+    }, 100)
 
     // make code pretty
-    window.prettyPrint && prettyPrint();
+    window.prettyPrint && prettyPrint()
 
     // add-ons
     $('.add-on :checkbox').on('click', function () {
       var $this = $(this)
-        , method = $this.attr('checked') ? 'addClass' : 'removeClass';
+        , method = $this.attr('checked') ? 'addClass' : 'removeClass'
       $(this).parents('.add-on')[method]('active')
-    });
+    })
 
     // add tipsies to grid for scaffolding
     if ($('#gridSystem').length) {
@@ -384,51 +384,51 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
     // tooltip demo
     $('.tooltip-demo').tooltip({
       selector: "a[data-toggle=tooltip]"
-    });
+    })
 
-    $('.tooltip-test').tooltip();
-    $('.popover-test').popover();
+    $('.tooltip-test').tooltip()
+    $('.popover-test').popover()
 
     // popover demo
     $("a[data-toggle=popover]")
       .popover()
       .click(function(e) {
         e.preventDefault()
-      });
+      })
 
     // button state demo
     $('#fat-btn')
       .click(function () {
-        var btn = $(this);
-        btn.button('loading');
+        var btn = $(this)
+        btn.button('loading')
         setTimeout(function () {
           btn.button('reset')
         }, 3000)
-      });
+      })
 
     // carousel demo
-    $('#myCarousel').carousel();
+    $('#myCarousel').carousel()
 
     // javascript build logic
     var inputsComponent = $("#components.download input")
       , inputsPlugin = $("#plugins.download input")
-      , inputsVariables = $("#variables.download input");
+      , inputsVariables = $("#variables.download input")
 
     // toggle all plugin checkboxes
     $('#components.download .toggle-all').on('click', function (e) {
-      e.preventDefault();
+      e.preventDefault()
       inputsComponent.attr('checked', !inputsComponent.is(':checked'))
-    });
+    })
 
     $('#plugins.download .toggle-all').on('click', function (e) {
-      e.preventDefault();
+      e.preventDefault()
       inputsPlugin.attr('checked', !inputsPlugin.is(':checked'))
-    });
+    })
 
     $('#variables.download .toggle-all').on('click', function (e) {
-      e.preventDefault();
+      e.preventDefault()
       inputsVariables.val('')
-    });
+    })
 
     // request built javascript
     $('.download-btn .btn').on('click', function () {
@@ -440,12 +440,12 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
             .map(function () { return this.value })
             .toArray()
         , vars = {}
-        , img = ['glyphicons-halflings.png', 'glyphicons-halflings-white.png'];
+        , img = ['glyphicons-halflings.png', 'glyphicons-halflings-white.png']
 
     $("#variables.download input")
       .each(function () {
         $(this).val() && (vars[ $(this).prev().text() ] = $(this).val())
-      });
+      })
 
       $.ajax({
         type: 'POST'
@@ -459,7 +459,7 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
       }
       })
     })
-  });
+  })
 
 // Modified from the original jsonpi https://github.com/benvinegar/jquery-jsonpi
 $.ajaxTransport('jsonpi', function(opts, originalOptions, jqXHR) {
@@ -468,16 +468,16 @@ $.ajaxTransport('jsonpi', function(opts, originalOptions, jqXHR) {
   return {
     send: function(_, completeCallback) {
       var name = 'jQuery_iframe_' + jQuery.now()
-        , iframe, form;
+        , iframe, form
 
       iframe = $('<iframe>')
         .attr('name', name)
-        .appendTo('head');
+        .appendTo('head')
 
       form = $('<form>')
         .attr('method', opts.type) // GET or POST
         .attr('action', url)
-        .attr('target', name);
+        .attr('target', name)
 
       $.each(opts.params, function(k, v) {
 
@@ -486,11 +486,11 @@ $.ajaxTransport('jsonpi', function(opts, originalOptions, jqXHR) {
           .attr('name', k)
           .attr('value', typeof v == 'string' ? v : JSON.stringify(v))
           .appendTo(form)
-      });
+      })
 
       form.appendTo('body').submit()
     }
   }
 })
 
-}(window.jQuery);
+}(window.jQuery)

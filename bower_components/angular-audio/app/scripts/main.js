@@ -45,7 +45,7 @@ angular.module("ngAudioDemo", ['ngAudio', 'ui.router'])
                     songRemember[url] = $scope.audio;                    
                 }
             }
-        });
+        })
 
 
 
@@ -61,4 +61,4 @@ angular.module("ngAudioDemo", ['ngAudio', 'ui.router'])
             ngAudio.load('audio/song3.mp3'),
             ngAudio.load('audio/daniel_stern_robot_hitchiker.mp3'),
         ]
-    });
+    })

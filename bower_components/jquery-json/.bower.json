@@ -1,15 +1,15 @@
 {
   "name": "jquery-json",
   "homepage": "https://github.com/Krinkle/jquery-json",
-  "version": "2.5.1",
-  "_release": "2.5.1",
+  "version": "2.6.0",
+  "_release": "2.6.0",
   "_resolution": {
     "type": "version",
-    "tag": "v2.5.1",
-    "commit": "91cf9484cce329e7f7ba7bd7800e80ed8293f9e7"
+    "tag": "v2.6.0",
+    "commit": "23398043f780ea88b6f78ecd0b09268ed888e584"
   },
   "_source": "https://github.com/Krinkle/jquery-json.git",
-  "_target": "^2.5.1",
+  "_target": "^2.6.0",
   "_originalSource": "jquery-json",
   "_direct": true
 }

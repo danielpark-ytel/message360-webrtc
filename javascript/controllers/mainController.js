@@ -36,6 +36,17 @@
             });
         }
 
+        $scope.timerRunning = false;
+        $scope.startTimer = function() {
+            $scope.$broadcast('timer-start');
+            $scope.timerRunning = true;
+        }
+        $scope.stopTimer = function() {
+            console.log("stopTimer function");
+            $scope.$broadcast('timer-reset');
+            $scope.timerRunning = false;
+        }
+
         /**
          * Request to server for accessToken
          **/
@@ -182,7 +193,6 @@
             } else {
                 $rootScope.dialpad.number = "" + number;
             }
-            console.log($rootScope.dialpad.number);
         };
 
         $rootScope.callActive = function (data, params) {
@@ -194,7 +204,7 @@
             var call_start = new Date(storage.data.call_start);
             $rootScope.start_time = call_start;
             $timeout(function () {
-                $scope.$broadcast("timer-start");
+                $scope.startTimer();
                 $scope.incall = true;
             });
             storage.data.calling = false;
@@ -205,12 +215,11 @@
          * Event handlers
          */
         $rootScope.$on("call.hangup", function (event, data) {
-            checkFunds();
-            $timeout(function () {
-                $scope.$broadcast('timer-clear');
-                $scope.$broadcast('timer-stop');
-                $scope.$broadcast('timer-reset');
+            $timeout(function() {
+                console.log("Hangup");
+                $scope.stopTimer();
             });
+            checkFunds();
             $scope.incall = false;
             storage.data.numOfCalls += 1;
             callHistory.addCall(storage.data.called_number, 'Outbound', true);
@@ -266,7 +275,6 @@
                     return;
                 }
                 verto.hangup();
-                $rootScope.$broadcast('stop-timer');
             }, 1000);
         };
 

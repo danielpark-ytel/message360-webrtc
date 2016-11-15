@@ -428,7 +428,7 @@ vertoService.service('verto', ['$rootScope', '$state', 'storage', '$location', f
             console.debug('Attempting to call destination ' + destination + '.');
             var call = data.instance.newCall(angular.extend({
                 destination_number: destination,
-                caller_id_name: storage.data.name,
+                caller_id_name: storage.data.cid_number,
                 caller_id_number: storage.data.cid_number,
                 outgoingBandwidth: storage.data.outgoingBandwidth,
                 incomingBandwidth: storage.data.incomingBandwidth,

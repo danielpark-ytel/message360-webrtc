@@ -57,8 +57,9 @@
 			{ regex: SyntaxHighlighter.regexLib.xmlComments,												css: 'comments' },	// <!-- ... -->
 			{ regex: new XRegExp('(&lt;|<)[\\s\\/\\?]*(\\w+)(?<attributes>.*?)[\\s\\/\\?]*(&gt;|>)', 'sg'), func: process }
 		];
-    }
-    Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	};
+
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
 	Brush.aliases	= ['xml', 'xhtml', 'xslt', 'html'];
 
 	SyntaxHighlighter.brushes.Xml = Brush;
