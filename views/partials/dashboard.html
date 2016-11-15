@@ -43,14 +43,14 @@
                         <a href="" class="btn btn-holdcall" ng-click="hold()"><i ng-class="{'fa fa-pause' : !storage.data.onHold, 'fa fa-play' : storage.data.onHold}"></i></a>
                     </div>
                     <div class="nocall-group" ng-if="!verto.data.call">
-                        <a href="" class="btn btn-callphone" ng-click="call(dialpadNumber)" ng-disabled="dialpadNumber.length != 10"><i class="fa fa-phone"></i></a>
+                        <a href="" class="btn btn-callphone" ng-click="call(dialpad.number)" ng-disabled="dialpad.number.length != 10"><i class="fa fa-phone"></i></a>
                         <a href="" class="btn btn-calendar" ng-click="openChModal()" ng-if="callHistory.length"><i
                                 class="fa fa-calendar"></i></a>
                     </div>
                 </div>
                 <div class="dialer-right">
                     <div class="dialpad-input">
-                        <input ng-model="dialpadNumber" ng-readonly="true" class="dialer-input-sm form-control" placeholder="(714)800-2222" autofocus required ng-minlength="10" ng-maxlength="10">
+                        <input ng-model="dialpad.number" class="dialer-input-sm form-control" placeholder="(714)800-2222" autofocus required ng-minlength="10" ng-maxlength="10">
                         <a class='btn btn-backspace' ng-click='backspace()'><i class="fa fa-chevron-left"></i></a>
                     </div>
                     <div class="dialer-row-sm">
@@ -228,7 +228,7 @@
                 <div class="webrtc-row" ng-controller="dialpadController">
                     <form id="dialerForm" role="form" name="dialerForm" novalidate>
                         <div class='dialpad-input'>
-                            <input name="dialpadNumber" ng-readonly="true" type="text" class="form-control text-center dialer-input" placeholder="(800)123-4567" ng-model="dialpadNumber" autofocus required ng-minlength="10" ng-maxlength="10">
+                            <input name="dialpadNumber" type="text" class="form-control text-center dialer-input" placeholder="(800)123-4567" ng-model="dialpad.number" autofocus required ng-minlength="10" ng-maxlength="10">
                             <a class='btn btn-backspace' ng-click='backspace()'><i class="fa fa-chevron-left"></i></a>
                         </div>
                         <div class="group">
@@ -287,7 +287,7 @@
                                 <span class="dialer-text">---</span>
                             </a>
                         </div>
-                        <a class="btn btn-callphone" ng-disabled="dialerForm.$invalid || verto.data.call" ng-click="call(dialpadNumber)">
+                        <a class="btn btn-callphone" ng-disabled="dialerForm.$invalid || verto.data.call" ng-click="call(dialpad.number)">
                             <i class="fa fa-phone"></i> CALL
                         </a>
                     </form>

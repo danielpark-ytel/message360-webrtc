@@ -10,8 +10,8 @@
             function call(extension) {
                 storage.data.cur_call = 0;
                 storage.data.onHold = false;
-                $rootScope.dialpadNumber = extension;
-                if(!$rootScope.dialpadNumber) {
+                $rootScope.dialpad.number = extension;
+                if(!$rootScope.dialpad.number) {
                     ngToast.create({
                         className : 'danger',
                         content: "<p class='toast-text'><i class='fa fa-times-circle'></i> Please enter an extension.</p>"
@@ -35,7 +35,7 @@
                 storage.data.mutedVideo = false;
                 storage.data.mutedMic = false;
                 storage.data.videoCall = false;
-                verto.call("##1"+$rootScope.dialpadNumber);
+                verto.call("##1"+$rootScope.dialpad.number);
                 storage.data.called_number = extension;
             }
 

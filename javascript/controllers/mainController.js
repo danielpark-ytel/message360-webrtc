@@ -12,7 +12,7 @@
         $scope.verto = verto;
         $scope.storage = storage;
         $scope.showReconnect = true;
-        $rootScope.dialpadNumber = "";
+        $rootScope.dialpad = {};
         $scope.callHistory = [];
 
         /**
@@ -28,7 +28,7 @@
                     $scope.logout();
                     ngToast.create({
                         className: 'danger',
-                        content: "<p class='toast-text'><i class='fa fa-info-circle'></i>" + response.data.Message360.Errors.Error[0] + "</p>"
+                        content: "<p class='toast-text'><i class='fa fa-info-circle'></i>" + response.data.Message360.Errors.Error[0].Message + "</p>"
                     });
                 } else {
                     console.debug("Account has funds: TRUE");
@@ -68,7 +68,7 @@
                 if (response.data.Message360.Errors) {
                     ngToast.create({
                         className: 'danger',
-                        content: "<p class='toast-text'><i class='fa fa-info-circle'></i>" + response.data.Message360.Errors.Error[0] + "</p>"
+                        content: "<p class='toast-text'><i class='fa fa-info-circle'></i>" + response.data.Message360.Errors.Error[0].Message + "</p>"
                     });
                     return false;
                 } else if (response.data.Message360.Message['token']) {
@@ -158,9 +158,9 @@
         };
 
         $rootScope.backspace = function() {
-            var number = $rootScope.dialpadNumber;
+            var number = $rootScope.dialpad.number;
             var length = number.length;
-            $rootScope.dialpadNumber = number.substring(0, length - 1);
+            $rootScope.dialpad.number = number.substring(0, length - 1);
         };
 
         /**
@@ -176,12 +176,13 @@
             } else {
                 ngAudio.play('assets/sounds/dtmf/dtmf-' + number + '.mp3');
             }
-            if(number !== undefined && number!== "") {
-                $rootScope.dialpadNumber = $scope.dialpadNumber + number;
+            if($rootScope.dialpad.number !== undefined && $rootScope.dialpad.number !== null){
+                //Added "" just to make sure the number is treated like a string
+                $rootScope.dialpad.number = "" + $rootScope.dialpad.number + number;
+            } else {
+                $rootScope.dialpad.number = "" + number;
             }
-            if (verto.data.call) {
-                verto.dtmf(number);
-            }
+            console.log($rootScope.dialpad.number);
         };
 
         $rootScope.callActive = function (data, params) {
@@ -214,7 +215,7 @@
             storage.data.numOfCalls += 1;
             callHistory.addCall(storage.data.called_number, 'Outbound', true);
             $scope.callHistory = storage.data.call_history;
-            $rootScope.dialpadNumber = "";
+            $rootScope.dialpad.number = "";
             try {
                 $rootScope.$digest();
             } catch (e) {}
