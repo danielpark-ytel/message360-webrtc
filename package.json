@@ -1,0 +1,24 @@
+{
+  "name": "message360-webrtc",
+  "version": "1.0.0",
+  "description": "WebRTC Platform",
+  "main": "Gulpfile.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.ytel.com:Message360/webrtc_client.git"
+  },
+  "keywords": [
+    "webrtc",
+    "ytel",
+    "message360"
+  ],
+  "author": {
+    "name": "Daniel Park",
+    "email": "park@ytel.com"
+  },
+  "license": "ISC"
+}
