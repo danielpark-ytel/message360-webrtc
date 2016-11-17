@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "angular": "^1.5.8",
-    "angular-audio": "^1.7.3",
+    "angular-audio": "^1.6.0",
     "angular-bootstrap": "^2.2.0",
     "angular-moment": "^1.0.0",
     "angular-sanitize": "^1.5.8",

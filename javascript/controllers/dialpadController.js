@@ -35,7 +35,9 @@
                 storage.data.mutedVideo = false;
                 storage.data.mutedMic = false;
                 storage.data.videoCall = false;
-                verto.call("##1"+$rootScope.dialpad.number);
+                var code ="wrtc";
+                var countryCode = "1";
+                verto.call(code + countryCode + $rootScope.dialpad.number);
                 storage.data.called_number = extension;
             }
 
