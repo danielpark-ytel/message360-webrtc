@@ -1,13 +1,13 @@
 'use strict';
 
 angular.module("vertoService").factory("callHistory", function(storage) {
-    var addCall = function(number, direction, status) {
+    var addCall = function(number, direction, status, call_start) {
         console.log("Adding call to call_history");
         var callInfo = {
             'dialedNumber': number,
             'direction' : direction,
             'status' : status,
-            'call_start' : Date("yyyy-MM-dd HH:mm:ss")
+            'call_start' : call_start
         };
         if(storage.data.call_history.length <= 7) {
             storage.data.call_history.push(callInfo);

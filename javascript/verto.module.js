@@ -11,7 +11,8 @@
         "cgPrompt",
         'ngToast',
         'ngAudio',
-        'ngCookies'
+        'ngCookies',
+        'angularMoment'
     ]);
 
     app.config(function ($stateProvider, $urlRouterProvider, $translateProvider) {
@@ -92,13 +93,10 @@
             return (country + " (" + city + ") " + number).trim();
         };
     });
-
-    app.run(['$rootScope', '$location',
-    function($rootScope, $location) {
+    app.run(function($rootScope, $location){
         window.onbeforeunload = function(e) {
-            window.location.href = "/";
-        };
-    }]);
-
+            window.location.ref = "/";
+        }
+    });
 })();
 

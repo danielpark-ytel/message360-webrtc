@@ -5,7 +5,7 @@
 
 (function () {
     'use strict';
-    angular.module("vertoControllers").controller("mainController", function ($scope, $rootScope, $http, $location, $timeout, $q, verto, storage, $state, prompt, ngToast, callHistory, ngAudio, $uibModal) {
+    angular.module("vertoControllers").controller("mainController", function ($scope, $rootScope, $http, $location, $timeout, $q, verto, storage, $state, prompt, ngToast, callHistory, ngAudio, $uibModal, moment) {
         if (storage.data.language && storage.data.language !== 'browse') {
             storage.data.language = 'browser';
         }
@@ -222,7 +222,9 @@
             checkFunds();
             $scope.incall = false;
             storage.data.numOfCalls += 1;
-            callHistory.addCall(storage.data.called_number, 'Outbound', true);
+
+            callHistory.addCall(storage.data.called_number, 'Outbound', true, $rootScope.start_time);
+            $rootScope.start_time = "";
             $scope.callHistory = storage.data.call_history;
             $rootScope.dialpad.number = "";
             try {
@@ -284,7 +286,7 @@
                 animation: true,
                 controller: "chModalController",
                 size: "md",
-                templateUrl: "src/modals/callHistoryModal.html"
+                templateUrl: "views/modals/callHistoryModal.html"
             };
             modalInstance = $uibModal.open(options);
         };

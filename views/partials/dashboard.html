@@ -308,7 +308,7 @@
                             <tbody>
                             <tr ng-repeat="call in callHistory">
                                 <td class="ch-item text-center">{{ call.dialedNumber }}</td>
-                                <td class="ch-item text-center">{{ call.call_start }}</td>
+                                <td class="ch-item text-center">{{ call.call_start | amUtc | amDateFormat: 'YYYY.MM.DD hh:mm:ss' }}</td>
                                 <td class="ch-item text-center">{{ call.direction }}</td>
                                 <td class="ch-item text-center"><a href="" ng-click="chCall(call.dialedNumber)">Call</a></td>
                             </tr>
