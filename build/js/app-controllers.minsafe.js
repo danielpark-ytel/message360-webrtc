@@ -1,4 +1,11 @@
-var mainController = angular.module("vertoControllers").controller("mainController", function ($scope, $rootScope, $http, $location, $timeout, $q, verto, storage, $state, prompt, ngToast, callHistory, ngAudio, $uibModal, moment) {
+var vertoControllers = angular.module("vertoControllers", [
+    'ui.bootstrap',
+    'vertoService',
+    'storageService'
+]);
+
+
+var mainController = angular.module("vertoControllers").controller("mainController", ["$scope", "$rootScope", "$http", "$location", "$timeout", "$q", "verto", "storage", "$state", "prompt", "ngToast", "callHistory", "ngAudio", "$uibModal", "moment", function ($scope, $rootScope, $http, $location, $timeout, $q, verto, storage, $state, prompt, ngToast, callHistory, ngAudio, $uibModal, moment) {
     if (storage.data.language && storage.data.language !== 'browse') {
         storage.data.language = 'browser';
     }
@@ -329,5 +336,204 @@ var mainController = angular.module("vertoControllers").controller("mainControll
             callee_id_number: verto.data.login
         });
     };
-});
+}]);
 mainController.$inject = ['$scope', '$rootScope', '$http', '$location', '$timeout', '$q', 'verto', 'storage', '$state', 'prompt', 'ngToast', 'callHistory', 'ngAudio', '$uibModal', 'moment'];
+var loginController = angular.module("vertoControllers")
+    .controller("loginController", ["preRoute", function (preRoute) {
+        preRoute.checkLogin();
+    }]);
+
+loginController.$inject = ['preRoute'];
+
+var loadScreenController = angular.module("vertoControllers")
+    .controller("loadScreenController", ["$scope", "$location", "$rootScope", "$state", "$timeout", "storage", "loadScreen", "preRoute", function ($scope, $location, $rootScope, $state, $timeout, storage, loadScreen, preRoute) {
+        preRoute.checkLogin();
+        $scope.progressPercentage = loadScreen.progressPercentage;
+        $scope.message = '';
+        $scope.interruptNext = false;
+        $scope.errors = [];
+
+        var redirectTo = function (link, activity) {
+            if (activity) {
+                if (activity == 'initialize') {
+                    link = activity;
+                }
+            }
+            $location.path(link);
+        };
+
+        var checkProgressState = function (currentProgress, status, promise, activity, soft, interruptNext, message) {
+            $scope.progressPercentage = loadScreen.calculate(currentProgress);
+            $scope.message = message;
+
+            if (interruptNext && status == 'error') {
+                $scope.errors.push(message);
+                if (!soft) {
+                    redirectTo('', activity);
+                    return;
+                } else {
+                    message = message + '. Continue?';
+                }
+                if (!confirm(message)) {
+                    $scope.interruptNext = true;
+                }
+            }
+            if ($scope.interruptNext) {
+                return;
+            }
+            $scope.message = loadScreen.getProgressMessage(currentProgress + 1);
+            return true;
+        };
+
+        $rootScope.$on('progress.next', function (ev, currentProgress, status, promise, activity, soft, interrupt, message) {
+            $timeout(function () {
+                if (promise) {
+                    promise.then(function (response) {
+                        message = response['message'];
+                        status = response['status'];
+                        if (checkProgressState(currentProgress, status, promise, activity, soft, interrupt, message)) {
+                            loadScreen.next();
+                        }
+                    });
+                    return;
+                }
+                if (!checkProgressState(currentProgress, status, promise, activity, soft, interrupt, message)) {
+                    return;
+                }
+                loadScreen.next();
+            }, 600);
+        });
+
+        $rootScope.$on("progress.complete", function (ev, currentProgress) {
+            $scope.message = "Done configuring, going to login.";
+            $timeout(function () {
+                $state.go("login");
+            }, 500);
+        });
+        loadScreen.next();
+    }]);
+    
+loadScreenController.$inject = ['$scope', '$location', '$rootScope', '$state', '$timeout', 'storage', 'loadScreen', 'preRoute'];
+
+var dialpadController = angular.module("vertoControllers")
+    .controller("dialpadController", ["$rootScope", "$scope", "$http", "$state", "verto", "storage", "ngToast", "preRoute", function ($rootScope, $scope, $http, $state, verto, storage, ngToast, preRoute) {
+        storage.data.notifications = true;
+        storage.data.videoCall = false;
+        storage.data.userStatus = 'connecting';
+        storage.data.calling = false;
+
+        function call(extension) {
+            storage.data.cur_call = 0;
+            storage.data.onHold = false;
+            $rootScope.dialpad.number = extension;
+            if (!$rootScope.dialpad.number) {
+                ngToast.create({
+                    className: 'danger',
+                    content: "<p class='toast-text'><i class='fa fa-times-circle'></i> Please enter an extension.</p>"
+                });
+                return false;
+            }
+            if (verto.data.call) {
+                ngToast.create({
+                    className: 'danger',
+                    content: "<p class='toast-text'><i class='fa fa-times-circle'></i> A call is already in progress.</p>"
+                });
+                return false;
+            }
+            if (storage.data.cid_number == null) {
+                ngToast.create({
+                    className: "danger",
+                    content: "<p class='toast-text'><i class='fa fa-times-circle'></i> You have not yet set a Caller ID Number.</p>"
+                });
+                return false;
+            }
+            storage.data.mutedVideo = false;
+            storage.data.mutedMic = false;
+            storage.data.videoCall = false;
+            var code = "wrtc";
+            var countryCode = "1";
+            verto.call(code + countryCode + $rootScope.dialpad.number);
+            storage.data.called_number = extension;
+        }
+
+        /**
+         * Call to the number in $rootScope.dialpadNumber
+         */
+        $scope.loading = false;
+        $scope.cancelled = false;
+
+        $scope.call = function (extension) {
+            $scope.loading = true;
+            call(extension);
+        };
+        $scope.cancel = function () {
+            $scope.cancelled = true;
+        };
+    }]);
+dialpadController.$inject['$rootScope', '$scope', '$http', '$state', 'verto', 'storage', 'ngToast', 'preRoute'];
+
+var wsReconnectController = function($scope, storage, verto) {
+    console.log("Executing Websocket Controller.");
+}
+
+wsReconnectController.$inject = ['$scope', 'storage', 'verto'];
+
+angular.module('vertoControllers').controller('wsReconnectController', wsReconnectController);
+var sidemenuController = angular.module("vertoControllers")
+	.controller("sidemenuController", ["$scope", "$rootScope", "storage", "verto", "ngToast", "preRoute", function ($scope, $rootScope, storage, verto, ngToast, preRoute) {
+		preRoute.checkVerto();
+		console.debug("Side Menu Controller => Preparing side menu for usage.");
+		$scope.verto = verto;
+		$scope.storage = storage;
+		$scope.userData = {};
+		$scope.update = function () {
+			if ($scope.userData != {}) {
+				if ($scope.userData.video) {
+					storage.data.selectedVideo = $scope.userData.video.id;
+					storage.data.selectedVideoLabel = $scope.userData.video.label;
+				}
+				if ($scope.userData.audio) {
+					storage.data.selectedAudio = $scope.userData.audio.id;
+					storage.data.selectedAudioLabel = $scope.userData.audio.label;
+				}
+				if ($scope.userData.speaker) {
+					storage.data.selectedSpeaker = $scope.userData.speaker.id;
+					storage.data.selectedSpeakerLabel = $scope.userData.speaker.label;
+				}
+				ngToast.create({
+					className: "primary",
+					content: "<p class='toast-text'><i class='fa fa-cogs'></i> Settings updated.</p>"
+				});
+				$scope.closeSettings();
+			} else {
+				$scope.closeSettings();
+			}
+		};
+	}]);
+
+sidemenuController.$inject = ['$scope', '$rootScope', 'storage', 'verto', 'ngToast', 'preRoute'];
+
+
+var chModalController = angular.module("vertoControllers")
+    .controller("chModalController", ["$scope", "$rootScope", "storage", "vertoService", "$uibModal", "ngToast", function ($scope, $rootScope, storage, vertoService, $uibModal, ngToast) {
+        $scope.storage = storage;
+        $scope.callHistory = storage.data.call_history;
+        $scope.chCall = function (extension) {
+            storage.data.cur_call = 0;
+            storage.data.onHold = false;
+            if (vertoService.data.call) {
+                ngToast.create({
+                    className: 'danger',
+                    content: "<p class='toast-text'><i class='fa fa-times-circle'></i> A call is already in progress.</p>"
+                });
+                return false;
+            }
+            storage.data.mutedVideo = false;
+            storage.data.mutedMic = false;
+            storage.data.videoCall = false;
+            vertoService.call("##1" + extension);
+            storage.data.called_number = extension;
+        }
+    }]);
+
+chModalController.$inject = ['$scope', '$rootScope', 'storage', 'vertoService', '$uibModal', 'ngToast'];

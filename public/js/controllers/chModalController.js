@@ -1,4 +1,4 @@
-angular.module("vertoControllers")
+var chModalController = angular.module("vertoControllers")
     .controller("chModalController", function ($scope, $rootScope, storage, vertoService, $uibModal, ngToast) {
         $scope.storage = storage;
         $scope.callHistory = storage.data.call_history;

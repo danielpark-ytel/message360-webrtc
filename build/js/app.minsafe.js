@@ -13,7 +13,7 @@ var app = angular.module("vertoApp", [
     'angularMoment'
 ]);
 
-app.config(function ($stateProvider, $urlRouterProvider, $translateProvider) {
+app.config(["$stateProvider", "$urlRouterProvider", "$translateProvider", function ($stateProvider, $urlRouterProvider, $translateProvider) {
     $stateProvider
         .state("loading", {
             url: '/',
@@ -38,7 +38,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $translateProvider) {
         .determinePreferredLanguage()
         .fallbackLanguage('en')
         .useSanitizeValueStrategy(null);
-});
+}]);
 
 app.config(["ngToastProvider", function (ngToastProvider) {
     ngToastProvider.configure({
@@ -93,8 +93,8 @@ app.filter("phoneFilter", function () {
         return (country + " (" + city + ") " + number).trim();
     };
 });
-app.run(function ($rootScope, $location) {
+app.run(["$rootScope", "$location", function ($rootScope, $location) {
     window.onbeforeunload = function (e) {
         window.location.ref = "/";
     }
-});
+}]);

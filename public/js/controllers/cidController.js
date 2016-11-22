@@ -1,4 +1,4 @@
-angular.module("vertoControllers")
+var cidController = angular.module("vertoControllers")
     .controller("cidController", function ($scope, $rootScope, storage, vertoService, $http, ngToast, ngAudio) {
         $scope.callerIdNumber = "";
 

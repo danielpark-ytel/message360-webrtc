@@ -35,7 +35,7 @@ module.exports = function(grunt) {
         },
         ngAnnotate: {
             options: {
-                singleQuotes: true
+                singleQuotes: false
             },
             app_main: {
                 files: {
@@ -43,14 +43,25 @@ module.exports = function(grunt) {
                         './public/js/verto.module.js'
                     ],
                     './build/js/app-controllers.minsafe.js': [
-                        './public/js/controllers/*.module.js',
-                        './public/js/controllers/*Controller.js'
+                        './public/js/controllers/vertoControllers.module.js',
+                        './public/js/controllers/mainController.js',
+                        './public/js/controllers/loginController.js',
+                        './public/js/controllers/loadScreenController.js',
+                        './public/js/controllers/dialpadController.js',
+                        './public/js/controllers/wsReconnectController.js',
+                        './public/js/controllers/cidControllerController.js',
+                        './public/js/controllers/sidemenuController.js',
+                        './public/js/controllers/chModalController.js',
                     ],
                     './build/js/app-services.minsafe.js': [
-                        './public/js/storage-service/*.module.js',
-                        './public/js/storage-service/*Service.js',
-                        './public/js/verto-service/*.module.js',
-                        './public/js/verto-service/*Service.js',
+                        './public/js/verto-service/vertoService.module.js',
+                        './public/js/verto-service/vertoService.js',
+                        './public/js/verto-service/eventQueueService.js',
+                        './public/js/verto-service/callHistoryService.js',
+                        './public/js/verto-service/preRouteService.js',
+                        './public/js/storage-service/storageService.module.js',
+                        './public/js/storage-service/loadScreenService.js',
+                        './public/js/storage-service/storageService.js',   
                     ]
                 }
             }
@@ -111,7 +122,7 @@ module.exports = function(grunt) {
                     './bower_components/humanize-duration/humanize-duration.js',
                     './bower_components/angular-timer/dist/angular-timer.min.js',
                     './bower_components/angular-prompt/dist/angular-prompt.min.js',
-                    './bower_components/angular-audio/app/angular-audio.js'
+                    './bower_components/angular-audio/app/angular.audio.js'
                 ],
                 dest: './build/libs/<%= pkg.name %>-libs.js'
             },

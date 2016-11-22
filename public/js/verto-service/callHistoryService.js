@@ -1,4 +1,4 @@
-angular.module("vertoService").factory("callHistory", function(storage) {
+var callHistory = angular.module("vertoService").factory("callHistory", function(storage) {
     var addCall = function(number, direction, status, call_start) {
         console.log("Adding call to call_history");
         var callInfo = {

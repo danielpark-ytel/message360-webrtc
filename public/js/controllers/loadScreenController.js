@@ -1,4 +1,4 @@
-angular.module("vertoControllers")
+var loadScreenController = angular.module("vertoControllers")
     .controller("loadScreenController", function ($scope, $location, $rootScope, $state, $timeout, storage, loadScreen, preRoute) {
         preRoute.checkLogin();
         $scope.progressPercentage = loadScreen.progressPercentage;
