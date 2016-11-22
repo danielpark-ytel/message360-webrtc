@@ -43,7 +43,7 @@
                         <a href="" class="btn btn-holdcall" ng-click="hold()"><i ng-class="{'fa fa-pause' : !storage.data.onHold, 'fa fa-play' : storage.data.onHold}"></i></a>
                     </div>
                     <div class="nocall-group" ng-if="!verto.data.call">
-                        <a href="" class="btn btn-callphone" ng-click="call(dialpad.number)" ng-disabled="dialpad.number.length != 10"><i class="fa fa-phone"></i></a>
+                        <a href="" class="btn btn-callphone" ng-click="!dialpad.valid | call(dialpad.number)" ng-disabled="!dialpad.valid"><i class="fa fa-phone"></i></a>
                         <a href="" class="btn btn-calendar" ng-click="openChModal()" ng-if="callHistory.length"><i
                                 class="fa fa-calendar"></i></a>
                     </div>

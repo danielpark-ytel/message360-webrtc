@@ -128,13 +128,13 @@ var mainController = angular.module("vertoControllers").controller("mainControll
             size: "sm"
         };
         if (type == "video") {
-            options.templateUrl = "views/modals/videoSettingsModal.html";
+            options.templateUrl = "public/views/modals/videoSettingsModal.html";
         }
         if (type == "audio") {
-            options.templateUrl = "views/modals/audioSettingsModal.html";
+            options.templateUrl = "public/views/modals/audioSettingsModal.html";
         }
         if (type == "speaker") {
-            options.templateUrl = "views/modals/speakerSettingsModal.html";
+            options.templateUrl = "public/views/modals/speakerSettingsModal.html";
         }
         settingsInstance = $uibModal.open(options);
     };
@@ -147,7 +147,7 @@ var mainController = angular.module("vertoControllers").controller("mainControll
             animation: true,
             controller: "sidemenuController",
             size: "md",
-            templateUrl: "views/modals/settingsModal.html"
+            templateUrl: "public/views/modals/settingsModal.html"
         };
         settingsInstance = $uibModal.open(options);
     };
@@ -279,7 +279,7 @@ var mainController = angular.module("vertoControllers").controller("mainControll
             animation: true,
             controller: "chModalController",
             size: "md",
-            templateUrl: "views/modals/callHistoryModal.html"
+            templateUrl: "public/views/modals/callHistoryModal.html"
         };
         modalInstance = $uibModal.open(options);
     };

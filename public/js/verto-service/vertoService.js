@@ -34,9 +34,7 @@ var framerate = [
     {id: '30', label: '30 FPS'}
 ];
 
-var vertoService = angular.module('vertoService', []);
-
-vertoService.service('verto', ['$rootScope', '$state', 'storage', '$location', function ($rootScope, $state, storage, $location) {
+angular.module('vertoService').service('verto', ['$rootScope', '$state', 'storage', '$location', function ($rootScope, $state, storage, $location) {
     var data = {
         // Connection data.
         instance: null,

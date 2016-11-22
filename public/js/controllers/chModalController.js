@@ -1,11 +1,11 @@
 var chModalController = angular.module("vertoControllers")
-    .controller("chModalController", function ($scope, $rootScope, storage, vertoService, $uibModal, ngToast) {
+    .controller("chModalController", function ($scope, $rootScope, storage, verto, $uibModal, ngToast) {
         $scope.storage = storage;
         $scope.callHistory = storage.data.call_history;
         $scope.chCall = function (extension) {
             storage.data.cur_call = 0;
             storage.data.onHold = false;
-            if (vertoService.data.call) {
+            if (verto.data.call) {
                 ngToast.create({
                     className: 'danger',
                     content: "<p class='toast-text'><i class='fa fa-times-circle'></i> A call is already in progress.</p>"
@@ -15,9 +15,9 @@ var chModalController = angular.module("vertoControllers")
             storage.data.mutedVideo = false;
             storage.data.mutedMic = false;
             storage.data.videoCall = false;
-            vertoService.call("##1" + extension);
+            verto.call("##1" + extension);
             storage.data.called_number = extension;
         }
     });
 
-chModalController.$inject = ['$scope', '$rootScope', 'storage', 'vertoService', '$uibModal', 'ngToast'];
+chModalController.$inject = ['$scope', '$rootScope', 'storage', 'verto', '$uibModal', 'ngToast'];

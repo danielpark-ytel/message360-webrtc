@@ -24,6 +24,14 @@ module.exports = function(grunt) {
                     expand: true
                 }]
             },
+            dist_fontawesome: {
+                files: [{
+                    cwd: 'bower_components/font-awesome/css',
+                    src: 'font-awesome.min.css',
+                    dest: './dist/css',
+                    expand: true
+                }]
+            },
             dist_css: {
                 files: [{
                     cwd: './public/css',
@@ -49,7 +57,7 @@ module.exports = function(grunt) {
                         './public/js/controllers/loadScreenController.js',
                         './public/js/controllers/dialpadController.js',
                         './public/js/controllers/wsReconnectController.js',
-                        './public/js/controllers/cidControllerController.js',
+                        './public/js/controllers/cidController.js',
                         './public/js/controllers/sidemenuController.js',
                         './public/js/controllers/chModalController.js',
                     ],
@@ -91,7 +99,6 @@ module.exports = function(grunt) {
                     './build/css/animate.min.css',
                     './build/css/dashboard.min.css',
                     './build/css/spinners.min.css',
-                    './bower_components/font-awesome/css/font-awesome.min.css',
                     './bower_components/ngToast/dist/ngToast.min.css',
                     './bower_components/ngToast-animations.min.css',
                 ],
@@ -142,14 +149,14 @@ module.exports = function(grunt) {
         uglify: {
             options: {
                 compress: {
-                    // drop_console: true,
-                    // properties: true,
-                    // dead_code: true,
-                    // conditionals: true,
-                    // comparisons: true,
-                    // booleans: true,
-                    // loops: true,
-                    // unused: true,
+                    drop_console: true,
+                    properties: true,
+                    dead_code: true,
+                    conditionals: true,
+                    comparisons: true,
+                    booleans: true,
+                    loops: true,
+                    unused: true,
                 },
                 preserveComments: false,
                 mangle: false

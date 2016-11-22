@@ -1,5 +1,5 @@
 var cidController = angular.module("vertoControllers")
-    .controller("cidController", function ($scope, $rootScope, storage, vertoService, $http, ngToast, ngAudio) {
+    .controller("cidController", function ($scope, $rootScope, storage, verto, $http, ngToast, ngAudio) {
         $scope.callerIdNumber = "";
 
         /**
@@ -31,4 +31,4 @@ var cidController = angular.module("vertoControllers")
         };
     });
 
-cidController.$inject = ['$scope', '$rootScope', 'storage', 'vertoService', '$http', 'ngToast', 'ngAudio'];
+cidController.$inject = ['$scope', '$rootScope', 'storage', 'verto', '$http', 'ngToast', 'ngAudio'];
