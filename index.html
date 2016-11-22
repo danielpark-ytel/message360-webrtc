@@ -5,73 +5,29 @@
         <meta http-equiv="x-ua-compatible" content="IE=Edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shoftcut icon" href="/assets/images/favicon.png" type="image/png"/>
+        <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+        <link rel='stylesheet' href='dist/css/message360-webrtc.css'>
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="bower_components/angular/angular.js"></script>
-        <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-        <script src="bower_components/ngstorage/ngStorage.min.js"></script>
-        <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
-        <script src="bower_components/moment/moment.js"></script>
-        <script src="bower_components/moment/locale/de.js"></script>
-        <script src="bower_components/angular-moment/angular-moment.js"></script>
-        <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
-        <script src="bower_components/ngToast/dist/ngToast.min.js"></script>
-        <script src="bower_components/angular-translate/angular-translate.min.js"></script>
-        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-        <script src="bower_components/humanize-duration/humanize-duration.js"></script>
-        <script src="bower_components/angular-timer/dist/angular-timer.min.js"></script>
-        <script src="bower_components/angular-prompt/dist/angular-prompt.min.js"></script>
-        <script src="bower_components/angular-audio/app/angular.audio.js"></script>
+        <script type='text/javascript' src='dist/message360-webrtc-libs.min.js'></script>
     </head>
     <body>
         <video class="hide" id="webcam" autoplay="autoplay" style="width:100%; height:100%; object-fit:inherit;"></video>
         <toast></toast>
         <div class="banner">
-            <img style="margin : auto auto;" class="img img-responsive animated fadeInLeft" alt="No Image Found" src="assets/images/m360logo.png">
+            <img style="margin : auto auto;" class="img img-responsive animated fadeInLeft" alt="No Image Found" src="public/images/m360logo.png">
         </div>
         <div class="fs-banner">
             <div class="mask"></div>
             <video id="mask-vid" poster muted autoplay loop>
-                <source src="assets/videos/communicate.mp4" type="video/mp4">
-                <source src="assets/videos/communicate.webm" type="video/webm">
-                <source src="assets/videos/communicate.ogv" type="video/ogv">
+                <source src="public/videos/communicate.mp4" type="video/mp4">
+                <source src="public/videos/communicate.webm" type="video/webm">
+                <source src="public/videos/communicate.ogv" type="video/ogv">
                 Your browser does not support the video tag.
             </video>
         </div>
         <section class="main-content" ui-view>
         </section>
-        <!-- Verto Plugin Dependencies -->
-        <script type='text/javascript' src="javascript/vertoDependencies/jquery.jsonrpcclient.js"></script>
-        <script type='text/javascript' src="javascript/vertoDependencies/jquery.FSRTC.js"></script>
-        <script type='text/javascript' src="javascript/vertoDependencies/jquery.verto.js"></script>
-        <script type="text/javascript" src="bower_components/jquery-json/dist/jquery.json.min.js"></script>
-        <script type='text/javascript' src="javascript/vertoDependencies/getScreenId.js"></script>
-        <script type='text/javascript' src="javascript/vertoDependencies/md5.min.js"></script>
-        <script type='text/javascript' src="javascript/vertoDependencies/volume-meter.js"></script>
-        <!-- Verto App -->
-        <script type='text/javascript' src="javascript/verto.module.js"></script>
-        <!-- Verto Controller Module -->
-        <script type='text/javascript' src="javascript/controllers/vertoControllers.module.js"></script>
-        <script type="text/javascript" src="javascript/controllers/mainController.js"></script>
-        <script type="text/javascript" src="javascript/controllers/loginController.js"></script>
-        <script type="text/javascript" src="javascript/controllers/loadScreenController.js"></script>
-        <script type="text/javascript" src="javascript/controllers/dialpadController.js"></script>
-        <script type="text/javascript" src="javascript/controllers/wsReconnectController.js"></script>
-        <script type="text/javascript" src="javascript/controllers/cidController.js"></script>
-        <script type="text/javascript" src="javascript/controllers/sidemenuController.js"></script>
-        <script type="text/javascript" src="javascript/controllers/chModalController.js"></script>
-        <!-- Verto Services Module -->
-        <script type="text/javascript" src="javascript/vertoService/vertoService.module.js"></script>
-        <script type="text/javascript" src="javascript/vertoService/vertoService.js"></script>
-        <script type="text/javascript" src="javascript/vertoService/eventQueueService.js"></script>
-        <script type="text/javascript" src="javascript/vertoService/callHistoryService.js"></script>
-        <script type="text/javascript" src="javascript/vertoService/preRouteService.js"></script>
-
-        <!-- Storage Services Module -->
-        <script type="text/javascript" src="javascript/storageService/storageService.module.js"></script>
-        <script type="text/javascript" src="javascript/storageService/loadScreenService.js"></script>
-        <script type="text/javascript" src="javascript/storageService/storageService.js"></script>
+        <script type='text/javascript' src='dist/message360-webrtc-deps.min.js'></script>
+        <script type='text/javascript' src='dist/message360-webrtc.min.js'></script>
     </body>
 </html>

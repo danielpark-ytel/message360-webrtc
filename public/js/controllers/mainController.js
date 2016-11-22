@@ -174,11 +174,11 @@ angular.module("vertoControllers").controller("mainController", function ($scope
      */
     $rootScope.dtmf = function (number) {
         if (number == '*') {
-            ngAudio.play('assets/sounds/dtmf/dtmf-star.mp3');
+            ngAudio.play('public/sounds/dtmf/dtmf-star.mp3');
         } else if (number == '#') {
-            ngAudio.play('assets/sounds/dtmf/dtmf-hash.mp3');
+            ngAudio.play('public/sounds/dtmf/dtmf-hash.mp3');
         } else {
-            ngAudio.play('assets/sounds/dtmf/dtmf-' + number + '.mp3');
+            ngAudio.play('public/sounds/dtmf/dtmf-' + number + '.mp3');
         }
         if ($rootScope.dialpad.number !== undefined && $rootScope.dialpad.number !== null) {
             //Added "" just to make sure the number is treated like a string

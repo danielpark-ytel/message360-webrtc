@@ -19,7 +19,7 @@ angular.module("vertoControllers")
                 console.log(response);
                 if (response.data.Message360.ResponseStatus == 1) {
                     storage.data.cid_number = $scope.callerIdNumber;
-                    ngAudio.play("assets/sounds/notification.mp3");
+                    ngAudio.play("public/sounds/notification.mp3");
                     ngToast.create("<p class='toast-text'><i class='ion-android-notifications'></i> Caller ID updated.</p>");
                 } else {
                     ngToast.create({
