@@ -43,14 +43,14 @@ module.exports = function(grunt) {
                         './public/js/verto.module.js'
                     ],
                     './build/js/app-controllers.minsafe.js': [
-                        './public/js/controllers/*.*.js',
-                        './public/js/controllers/*.js'
+                        './public/js/controllers/*.module.js',
+                        './public/js/controllers/*Controller.js'
                     ],
                     './build/js/app-services.minsafe.js': [
-                        './public/js/storage-service/*.*.js',
-                        './public/js/storage-service/*.js',
-                        './public/js/verto-service/*.*.js',
-                        './public/js/verto-service/*.js'
+                        './public/js/storage-service/*.module.js',
+                        './public/js/storage-service/*Service.js',
+                        './public/js/verto-service/*.module.js',
+                        './public/js/verto-service/*Service.js',
                     ]
                 }
             }
