@@ -1,5 +1,3 @@
-'use strict';
-
 angular.module("vertoService")
     .service('preRoute', ['$rootScope', 'verto', '$state', 'ngToast', '$cookies',
         function($rootScope, verto, $state, ngToast, $cookies) {

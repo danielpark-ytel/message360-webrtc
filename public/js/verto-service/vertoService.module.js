@@ -1,4 +1,1 @@
-(function() {
-    'use strict';
-    var vertoService = angular.module("vertoService", []);
-})();
+var vertoService = angular.module("vertoService", []);

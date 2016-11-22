@@ -53,7 +53,4 @@ angular.module("vertoControllers")
             $scope.cancelled = true;
         };
     });
-
-    $rootScope, $scope, $http, $state, verto, storage, ngToast, preRoute
-
 dialpadController.$inject['$rootScope', '$scope', '$http', '$state', 'verto', 'storage', 'ngToast', 'preRoute'];

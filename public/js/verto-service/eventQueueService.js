@@ -1,5 +1,3 @@
-'use strict';
-
 angular.module("vertoService")
 .service('eventQueue', ['$rootScope', '$q', 'storage', 'verto',
     function($rootScope, $q, storage, verto) {

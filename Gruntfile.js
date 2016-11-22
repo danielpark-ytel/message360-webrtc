@@ -131,16 +131,17 @@ module.exports = function(grunt) {
         uglify: {
             options: {
                 compress: {
-                    drop_console: true,
-                    properties: true,
-                    dead_code: true,
-                    conditionals: true,
-                    comparisons: true,
-                    booleans: true,
-                    loops: true,
-                    unused: true,
+                    // drop_console: true,
+                    // properties: true,
+                    // dead_code: true,
+                    // conditionals: true,
+                    // comparisons: true,
+                    // booleans: true,
+                    // loops: true,
+                    // unused: true,
                 },
-                preserveComments: false
+                preserveComments: false,
+                mangle: false
             },
             app: {
                 src: [

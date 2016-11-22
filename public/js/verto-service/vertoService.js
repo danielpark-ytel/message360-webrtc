@@ -1,4 +1,3 @@
-'use strict';
 /* Controllers */
 var videoQuality = [];
 var videoQualitySource = [
@@ -37,7 +36,7 @@ var framerate = [
 
 var vertoService = angular.module('vertoService', []);
 
-vertoService.service('verto', ['$rootScope', '$state', 'storage', '$location', function ($rootScope, $state, storage, $location) {
+vertoService.service('vertoService', ['$rootScope', '$state', 'storage', '$location', function ($rootScope, $state, storage, $location) {
     var data = {
         // Connection data.
         instance: null,
