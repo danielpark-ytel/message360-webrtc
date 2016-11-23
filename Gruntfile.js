@@ -24,6 +24,14 @@ module.exports = function(grunt) {
                     expand: true
                 }]
             },
+            dist_bootstrap: {
+                files: [{
+                    cwd: 'bower_components/bootstrap/dist/css/',
+                    src: 'bootstrap.min.css',
+                    dest: './dist/css/',
+                    expand: true
+                }]
+            },
             dist_fontawesome: {
                 files: [{
                     cwd: 'bower_components/font-awesome/css',

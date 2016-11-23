@@ -8,30 +8,9 @@ html {
 	height: 100% !important;
 }
 
-i.ion.special:before {
-    font-size : 2em;
-    position: absolute;
-    top:40%;
-    left:50%;
-    height : 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    width : 10px;
-    height : 10px;
-    display : block;
-}
-
-i.ion-android-checkmark-circle {
-    color : green;
-}
-
 p {
     margin : 0;
     padding : 0;
-}
-.status-ion {
-    color : white !important;
-    font-size : 1.1em;
 }
 
 .dashboard-footer-sm > h4 {
@@ -53,6 +32,7 @@ p {
 	background: #2c3e50;
 	color : white;
 }
+
 .inline-group {
 	width : 90%;
 	margin : auto auto;
@@ -95,7 +75,6 @@ p {
 	font-size : 0.8vw;
 	float : left;
 	width : auto;
-	display : inline-block;
 }
 .info-group > .inline-left {
 	width : 30%;
@@ -152,7 +131,6 @@ p.cid-right {
 	padding : 2px 6px;
 	font-size : 0.8em;
 	font-weight: 700;
-	display: inline-block;
 	float: left;
 	vertical-align: top;
 }
@@ -449,7 +427,6 @@ div.fs-banner video {
 }
 
 .dashboard-left {
-	display : inline-block;
 	width : 280px;
 	float: left;
 	clear : none;
@@ -462,7 +439,6 @@ div.fs-banner video {
 	float : left;
 	clear: none;
 	vertical-align: top;
-	display : inline-block;
 	height : 580px;
 	width: 720px;
 }
@@ -652,7 +628,6 @@ div.fs-banner video {
 	height : 40px;
 	width : 40px;
 	padding : 0;
-	display: inline-block;
 	vertical-align: top;
 	color : white;
 	text-align: center;
@@ -669,7 +644,6 @@ div.fs-banner video {
 	margin-left : 8px;
 	vertical-align: top;
 	float :left;
-	display : inline-block;
 	height : 50px;
 }
 
@@ -724,7 +698,6 @@ div.fs-banner video {
 	position : relative;
 	height : 270px;
 	width : 250px;
-	display: inline-block;
 	vertical-align: top;
 	float: left;
 	background: white;
@@ -875,7 +848,6 @@ label {
 */
 
 .webrtc-box {
-	display: inline-block;
 	vertical-align: top;
 	float: right;
 	width : 100%;
@@ -898,7 +870,6 @@ label {
 
 form#dialerForm {
 	height : auto;
-	display: inline-block;
 	vertical-align: top;
 	background: #617487;
 	float: left;
