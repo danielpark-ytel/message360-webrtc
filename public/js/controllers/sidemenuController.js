@@ -1,6 +1,6 @@
 var sidemenuController = angular.module("vertoControllers")
 	.controller("sidemenuController", function ($scope, $rootScope, storage, verto, ngToast, preRoute) {
-		preRoute.checkVerto();
+		
 		console.debug("Side Menu Controller => Preparing side menu for usage.");
 		$scope.verto = verto;
 		$scope.storage = storage;

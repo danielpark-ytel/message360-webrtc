@@ -36,7 +36,7 @@
             <button class="logout-btn btn" ng-click="logout()"><i class="fa fa-sign-out"></i> Logout</button>
         </div>
         <div class="dashboard-body-sm">
-            <div class="dialer-sm effect8">
+            <div class="dialer-sm shadowed">
                 <div class="dialer-left">
                     <div class="incall-group" ng-if="verto.data.call">
                         <a href="" class="btn btn-mute" ng-click="muteMic(cbMuteMic)"><i ng-class="{'fa fa-2x fa-microphone' : !storage.data.mutedMic, 'fa fa-2x fa-microphone-slash' : storage.data.mutedMic}"></i></a>
@@ -150,7 +150,7 @@
 
 
         <div class="dashboard-left">
-            <div class="config-box effect8">
+            <div class="config-box shadowed">
                 <div class="box-header">
                     <h4>Media Sources</h4>
                     <hr class="hr">
@@ -180,7 +180,7 @@
                 </div>
             </div>
 
-            <div class="callerid-box effect8" ng-controller="cidController">
+            <div class="callerid-box shadowed" ng-controller="cidController">
                 <div class="box-header">
                     <h4>Caller ID</h4>
                     <hr class="hr">
@@ -206,14 +206,11 @@
                             Voice enabled
                         </li>
                     </ul>
-                    <form role="form" id="cidForm">
-                        <div class="input-group">
-                            <span class="input-group-addon" id="cid-addon"><i class="fa fa-phone"></i></span>
-                            <input type="text" class="form-control cid-input" ng-model="callerIdNumber"
-                                   placeholder="(714)800-4242" aria-describedby="cid-addon">
-                        </div>
-                    </form>
                 </div>
+                    <div class='input-group'>
+                        <span class="input-group-addon" id="cid-addon"><i class="fa fa-phone"></i></span>
+                        <input type="text" class="form-control cid-input" ng-model="callerIdNumber" placeholder="(714)800-4242" aria-describedby="cid-addon">
+                    </div>
                     <button class="btn btn-cid" ng-click="updateCid()" ng-disabled="callerIdNumber.length != 10"><i class="fa fa-pencil-square-o"></i> Update</button>
                 </div>
             </div>
@@ -226,7 +223,7 @@
                 </div>
 
                 <div class="webrtc-row" ng-controller="dialpadController">
-                    <form id="dialerForm" role="form" name="dialerForm" novalidate>
+                    <form class='shadowed' id="dialerForm" role="form" name="dialerForm" novalidate>
                         <div class='dialpad-input'>
                             <input name="dialpadNumber" type="text" class="form-control text-center dialer-input" placeholder="(800)123-4567" ng-model="dialpad.number" autofocus required ng-minlength="10" ng-maxlength="10">
                             <a class='btn btn-backspace' ng-click='backspace()'><i class="fa fa-chevron-left"></i></a>
@@ -291,12 +288,11 @@
                             <i class="fa fa-phone"></i> CALL
                         </a>
                     </form>
-                    <div class="ch-table">
+                    <div class="ch-table shadowed">
                         <h4 class="ch-header"><i class="fa fa-calendar"></i> Call History</h4>
                         <hr class="hrleft">
                         <div id="chImage" ng-if="!callHistory.length" class="text-center">
-                            <h1><i class="fa fa-2x fa-calendar-times-o"></i></h1>
-                            <h4>No calls made this session</h4>
+                            <h4><i class="fa fa-calendar-times-o" style="font-size: 1.2em"></i> No calls made this session</h4>
                         </div>
                         <table ng-if="callHistory.length" class="table table-hover" ng-controller="chModalController">
                             <thead>
@@ -318,21 +314,19 @@
                 </div>
 
                 <div class="webrtc-row2">
-                    <div class="callinfo-box effect8">
+                    <div class="callinfo-box shadowed">
                         <div class="callinfo-header">
                             <h4 id="noCallFa"><i class="fa fa-phone-square"></i> Call Information</h4>
                             <hr class="hrleft">
                         </div>
                         <div class="callinfo-body">
                             <div ng-if="!verto.data.call" class="call-options">
-                                <h4 class="nocall-fa"><i class="fa fa-exclamation-circle"></i></h4>
-                                <h4 class="nocall-text">No call in progress</h4>
+                                <h4 class='no-call-text'><i class='fa fa-exclamation-circle'></i> No call in progress</h4>
                             </div>
 
                             <div ng-if="verto.data.call" class="call-options">
                                 <p id="dialedNumber">{{ verto.data.called_number }}</p>
                                 <timer start-time="start_time" auto-start="false" interval="1000">
-                                    DURATION:
                                     {{hhours}}:{{mminutes}}:{{sseconds}}
                                 </timer>
                                 <a href="" ng-disabled="!verto.data.call" class="btn btn-mute" ng-click="muteMic(cbMuteMic)"><i ng-class="{'fa fa-2x fa-microphone' : !storage.data.mutedMic, 'fa fa-2x fa-microphone-slash' : storage.data.mutedMic}"></i></a>
@@ -344,7 +338,7 @@
                         </div>
                     </div>
 
-                    <div class="moreinfo-box">
+                    <div class="moreinfo-box shadowed">
                         <div class="moreinfo-header">
                             <h4><i class="fa fa-inbox"></i> Session Information</h4>
                             <hr class="hrleft">

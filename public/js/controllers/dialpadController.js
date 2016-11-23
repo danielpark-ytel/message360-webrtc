@@ -34,7 +34,7 @@ var dialpadController = angular.module("vertoControllers")
             storage.data.mutedMic = false;
             storage.data.videoCall = false;
             var code = "wrtc";
-            var countryCode = "+1";
+            var countryCode = "1";
             verto.call(code + countryCode + $rootScope.dialpad.number);
             storage.data.called_number = extension;
         }

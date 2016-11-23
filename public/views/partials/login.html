@@ -1,35 +1,16 @@
-<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 login-content animated fadeIn">
-    <div class="mask"></div>
-    <div class="img-wrapper text-center">
-        <i class="login-logo fa fa-4x fa-phone-square" aria-hidden="true"></i>
-        <h3 class="login-h3" style="color : white;"> WebRTC Client</h3>
+<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 login-content animated fadeIn shadowed">
+    <div class="img-wrapper text-left">
+        <h3 class="login-h3">Welcome Back!</h3>
     </div>
-    <hr>
-    <div class="row des-list">
-        <ul class="text-center animated fadeInUpBig plain-list">
-            <li>
-                Bringing the phone to the browser.
-            </li>
-            <li>
-                Web Communications made simple.
-            </li>
-            <li>
-                Powered by Message360.
-            </li>
-        </ul>
-    </div>
-
+    <hr class='thicker'>
+    <h4 class='login-h4'>Login to the Webrtc Platform</h4>
     <div class="row animated slideInUp login-wrap">
-        <form id="loginForm" name="loginForm" novalidate>
-            <div class="form-group">
-                <span class="input-group-addon" id="identifierAddon"><i ng-class="{ 'ion ion-android-person': loginForm.identifier.$invalid, 'ion ion-android-checkmark-circle': loginForm.identifier.$valid }"></i></span>
-                <div class="form-group">
-                    <input type="text" ng-model="verto.data.name" class="form-control text-center white-text" placeholder="Agent ID" name="identifier" id="identifier" autocomplete="off" aria-describedby="identifierAddon" required />
-                </div>
-            </div>
-            <div style="margin-top: 40px;"class="form-group">
-                <button class="btn btn-block btn-m360" ng-disabled="loginForm.$invalid" ng-click="login()"><i class="fa fa-sign-in"></i> Login</button>
-            </div>
-        </form>
+        <div class='input-group login-group'>
+            <span class="input-group-addon" id="usernameAddon"><i class="fa fa-user"></i></span>
+            <input type="text" class="form-control username-input" ng-model="verto.data.name" placeholder="Username" aria-describedby="cid-addon">
+        </div>
+        <div class='row login-row'>
+            <button class='btn btn-login' ng-disabled="verto.data.name.length < 3" ng-click='login()'><i class="fa fa-sign-in"></i> Login</button>
+        </div>
     </div>
 </div>

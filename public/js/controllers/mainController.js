@@ -30,13 +30,13 @@ var mainController = angular.module("vertoControllers").controller("mainControll
     }
 
     $scope.timerRunning = false;
-    $scope.startTimer = function () {
+    $scope.start_timer = function () {
         $scope.$broadcast('timer-start');
         $scope.timerRunning = true;
     }
     $scope.stopTimer = function () {
         console.log("stopTimer function");
-        $scope.$broadcast('timer-reset');
+        $scope.$broadcast('timer-stop');
         $scope.timerRunning = false;
     }
 
@@ -197,7 +197,7 @@ var mainController = angular.module("vertoControllers").controller("mainControll
         var call_start = new Date(storage.data.call_start);
         $rootScope.start_time = call_start;
         $timeout(function () {
-            $scope.startTimer();
+            $scope.start_timer();
             $scope.incall = true;
         });
         storage.data.calling = false;

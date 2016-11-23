@@ -8,9 +8,22 @@ html {
 	height: 100% !important;
 }
 
+h1, h2, h3, h4, p, span, li {
+	color : #757575;
+}
+
 p {
     margin : 0;
     padding : 0;
+}
+.btn {
+	text-transform: uppercase;
+}
+
+.btn-login,
+.btn-callphone,
+.btn-hangupcall {
+	border-radius: none;
 }
 
 .dashboard-footer-sm > h4 {
@@ -19,9 +32,10 @@ p {
 	letter-spacing: 1px;
 	text-align: center;
 	font-weight: 700;
+	margin: 0 !important;
+	line-height: 45px;
 	color : white;
 }
-
 .settings-header {
 	margin : 0;
 	font-size : 1.5em;
@@ -45,7 +59,6 @@ p {
 }
 .inline-group > label {
 	width : 25%;
-	float: left;
 	line-height : 37px;
 	margin: 0;
 	padding : 0;
@@ -156,7 +169,7 @@ p.cid-right {
 	line-height: 27px;
 }
 
-.btn-m360 {
+.btn-login {
     background : #ec2c36;
     color : #fff;
     border-color : #ec2c36;
@@ -164,14 +177,14 @@ p.cid-right {
     outline : none;
 }
 
-.btn-m360:hover {
+.btn-login:hover {
     background : #fff;
     color : #ec2c36;
     border-color : #ec2c36;
     outline : none;
 }
 
-.btn-m360:active, .btn-m360:focus {
+.btn-login:active, .btn-login:focus {
     background : #fff;
     color : #ec2c36;
     border-color : #ec2c36;
@@ -181,6 +194,21 @@ p.cid-right {
     width : 100%;
     height : 100%;
     object-fit: inherit;
+}
+
+.login-group {
+	width : 60%;
+	margin: auto auto;
+}
+
+.username-input {
+	height : 38px;
+	text-align: center;
+}
+
+#usernameAddon {
+	color : white;
+	background : #ec2c36;
 }
 
 #panel-middle {
@@ -202,8 +230,8 @@ img.img-responsive {
 	margin: auto auto;
 }
 
-.img-wrapper {
-	margin : 32px 0 24px 0;
+.thicker {
+	font-weight: 600;
 }
 
 img.loader-img {
@@ -217,15 +245,22 @@ img.loader-img {
 	margin-right: auto;
 }
 
+.img-wrapper {
+	padding : 6px 0;
+}
+
 section {
 	flex: 1 0 auto !important;
+	background: url('../../public/images/m360icon.png') no-repeat bottom -125px right -50px;
+	background-size: 30%;
 }
 hr {
 	margin: 0;
 }
-input#identifier.form-control {
-	color: white;
+.login-row {
+	text-align: center;
 }
+
 .settings-caret {
 	display : none;
 }
@@ -236,13 +271,10 @@ input#identifier.form-control {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #333;
-	opacity: 0.5;
 	color : white;
-	z-index: -1000;
 }
 
-.des-list {
+.descriptions-list {
 	margin-top : 24px;
 }
 
@@ -257,6 +289,7 @@ div.login-content {
 	height : 525px;
 	padding : 15px;
 	margin-top : 60px;
+	background: white;
 }
 
 video#mask-vid {
@@ -294,43 +327,10 @@ a.btn-mp > h4,
 	transition: all 0.5s ease;
 }
 
-textarea:focus,
-textarea.form-control,
-input.form-control,
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=number],
-[type=text].form-control,
-[type=password].form-control,
-[type=email].form-control,
-[type=tel].form-control,
-[contenteditable].form-control {
-	-webkit-box-shadow : inset 0px -2px 0 white;
-	box-shadow : inset 0px -2px 0 white;
-	color : white;
-}
-
-textarea:focus,
-textarea.form-control:focus,
-input.form-control:focus,
-input[type=text]:focus,
-input[type=password]:focus,
-input[type=email]:focus,
-input[type=number]:focus,
-[type=text].form-control:focus,
-[type=password].form-control:focus,
-[type=email].form-control:focus,
-[type=tel].form-control:focus,
-[contenteditable].form-control:focus {
-	-webkit-box-shadow : inset 0px -2px 0 #2196f3;
-	box-shadow : inset 0px -2px 0 #2196f3;
-	color : white;
-}
-
 p.toast-text {
 	font-weight: 700;
 }
+
 div.banner {
 	position: relative;
 	top : 0;
@@ -369,25 +369,6 @@ div.banner {
 	width : 70%;
 	margin : auto auto;
 	border-radius: 30px;
-}
-
-div.fs-banner {
-	position : fixed;
-	top : 0;
-	right : 0;
-	bottom : 0;
-	left : 0;
-	overflow: hidden;
-	z-index: -100;
-}
-
-
-div.fs-banner video {
-	position : absolute;
-	top : 0;
-	left : 0;
-	width : 100%;
-	height : 100%;
 }
 
 .hrcall {
@@ -441,39 +422,6 @@ div.fs-banner video {
 	vertical-align: top;
 	height : 580px;
 	width: 720px;
-}
-
-.effect8
-{
-	position:relative;
-	-webkit-box-shadow:0 3px 7px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-	-moz-box-shadow:0 3px 7px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-	box-shadow:0 3px 7px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-}
-.effect8:before, .effect8:after
-{
-	content:"";
-	position:absolute;
-	z-index:-1;
-	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
-	-moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
-	box-shadow:0 0 20px rgba(0,0,0,0.8);
-	top:10px;
-	bottom:10px;
-	left:0;
-	right:0;
-	-moz-border-radius:100px / 10px;
-	border-radius:100px / 10px;
-}
-.effect8:after
-{
-	right:10px;
-	left:auto;
-	-webkit-transform:skew(8deg) rotate(3deg);
-	-moz-transform:skew(8deg) rotate(3deg);
-	-ms-transform:skew(8deg) rotate(3deg);
-	-o-transform:skew(8deg) rotate(3deg);
-	transform:skew(8deg) rotate(3deg);
 }
 
 /**
@@ -636,8 +584,8 @@ div.fs-banner video {
 }
 
 .config-item > i:before {
-	font-size: 1.4em;
-	line-height: 40px;
+	font-size: 1.2em;
+	line-height: 36px;
 }
 
 .config-text {
@@ -651,14 +599,14 @@ div.fs-banner video {
 
 .config-text > p {
 	line-height: 20px;
-	font-size : 0.7em;
+	font-size : 0.6em;
 }
 
 .config-label {
 	font-weight: 900;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-size: 0.9em !important;
+	font-size: 1.1em;
 }
 
 /**
@@ -701,7 +649,6 @@ div.fs-banner video {
 	vertical-align: top;
 	float: left;
 	background: white;
-	border : 3px solid rgba(215, 215, 215,0.3);
 	margin-left : 18px;
 	margin-top : 15px;
 }
@@ -715,40 +662,18 @@ div.content-wrapper {
 	padding : 0px;
 }
 
+input[type=text] {
+	border-radius: 0;
+}
+
 input[type=text].dialer-input {
-	color : black !important;
 	height : 45px;
-	background: #f0f0f0;
-	-webkit-box-shadow : inset 0px -2px 0 white;
-    box-shadow : inset 0px -2px 0 white;
 }
 
-input[type=text].dialer-input::-webkit-input-placeholder {
-	color : grey !important;
+.cid-input {
+	height: 38px;
 }
 
-input[type=text].cid-input {
-	color : black !important;
-	padding-left : 10px;
-	height : 50px;
-	-webkit-box-shadow: inset 0 2px 2px rgba(0, 0, 0, .075) !important;
-	box-shadow: inset 0 2px 2px rgba(0, 0, 0, .075) !important;
-	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s !important;
-	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s !important;
-	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s !important;
-}
-
-input.cid-input:focus {
-	border-color: #66afe9 !important;
-	outline: 0 !important;
-	-webkit-box-shadow: inset 0 3px 3px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6) !important;
-	box-shadow: inset 0 3px 3px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6) !important;
-}
-
-form#cidForm > div.input-group {
-	margin-top : 6px;
-	height : 40px;
-}
 .cid-wrapper {
 	position: relative;
 	height : 25px;
@@ -868,12 +793,14 @@ label {
 	line-height: 55px;
 }
 
+.shadowed {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 form#dialerForm {
-	height : auto;
+	height : 285px;
 	vertical-align: top;
-	background: #617487;
 	float: left;
-	border : 3px solid #617487;
 	width : 35%;
 }
 
@@ -895,8 +822,8 @@ div.minipad-body {
 a.btn-mp {
 	padding : 0;
 	float : left;
-	background: #617487;
 	border : none !important;
+	border-right: 0;
 	outline: none !important;
 	box-shadow: none;
 	margin : 0;
@@ -905,9 +832,9 @@ a.btn-mp {
 }
 
 a.btn-mp > span {
-	font-size : 0.8em;
+	font-size : 0.6em;
+	color: black;
 	font-weight: 700;
-	color : white;
 }
 
 a.btn-mp:focus > span,
@@ -918,8 +845,8 @@ a.btn-mp:hover > h4 {
 }
 
 a.btn-mp > h4 {
-	font-size : 1.1em;
-	color : white;
+	font-size : 0.8em;
+	color : #2196f3;
 	margin : 10px 0 0 0;
 	font-weight: 700;
 }
@@ -943,7 +870,8 @@ a.btn-mp > h4 {
 	width : 62%;
 	max-height : 290px;
 	border : 3px solid #617487;
-	margin-left : 20px;
+	margin : 0 0 0 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	height : 285px;
 }
 
@@ -995,6 +923,7 @@ a.btn-mp > h4 {
 .moreinfo-box {
 	display: inline-block;
 	vertical-align: top;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .callinfo-header > h4 {
@@ -1005,6 +934,11 @@ a.btn-mp > h4 {
 	font-weight: 600;
 	text-transform: uppercase;
 	margin : 0;
+}
+
+.callinfo-body {
+	height: 120px;
+	padding : 6px;
 }
 
 timer > span {
@@ -1068,13 +1002,13 @@ timer {
 }
 .plain-list {
 	list-style-type: none;
-	color : white;
 	padding : 0;
 	margin-top : 18px;
 
 }
 .plain-list > li {
 	padding : 8px 0;
+	letter-spacing: 1px;
 }
 .hangup:active,
 .hangup:visited,
@@ -1109,8 +1043,12 @@ timer {
 	font-size : 0.9em !important;
 }
 
-.call-options {
-	padding : 0px 8px;
+.no-call-text {
+	margin : 0;
+	font-weight: 800;
+	text-transform: uppercase;
+	line-height: 100px;
+	text-align: center;
 }
 
 .infobox {
@@ -1176,15 +1114,12 @@ timer {
 	font-weight: 700;
 }
 
-div.call-options {
-	margin-top : 12px;
-}
-
 div#chImage > h4 {
 	text-transform: uppercase;
-	margin-top : 20px;
+	margin : 0;
 	font-size : 1.5em;
 	font-weight: 700;
+	line-height: 230px;
 	letter-spacing: 2px;
 }
 
@@ -1199,15 +1134,11 @@ div#chImage > h4 {
 	letter-spacing: 1px;
 }
 
-.login-logo {
-	color : #ec2c36;
+.login-h3 > i {
+	color: #ec2c36;
 }
 .login-h3 {
 	margin : 0 0 0 6px;
-}
-
-.login-logo,
-.login-h3 {
 	line-height: 53px;
 	vertical-align: top;
 	display : inline-block;
@@ -1439,7 +1370,6 @@ div#chImage > h4 {
 		float : left;
 		height : 60px;
 		width : 33.333333%;
-		display : inline-block;
 		box-shadow: none;
 	}
 	.btn-dialer-sm > h4 {
