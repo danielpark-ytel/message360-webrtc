@@ -284,32 +284,47 @@
                                 <span class="dialer-text">---</span>
                             </a>
                         </div>
-                        <a class="btn btn-callphone" ng-disabled="dialerForm.$invalid || verto.data.call" ng-click="call(dialpad.number)">
-                            <i class="fa fa-phone"></i> CALL
-                        </a>
-                    </form>
-                    <div class="ch-table shadowed">
-                        <h4 class="ch-header"><i class="fa fa-calendar"></i> Call History</h4>
-                        <hr class="hrleft">
-                        <div id="chImage" ng-if="!callHistory.length" class="text-center">
-                            <h4><i class="fa fa-calendar-times-o" style="font-size: 1.2em"></i> No calls made this session</h4>
+                        <div class='form-footer'>
+                            <a class="btn btn-callphone" ng-disabled="dialerForm.$invalid || verto.data.call" ng-click="call(dialpad.number)">
+                                <i class="fa fa-phone"></i> call
+                            </a>
                         </div>
-                        <table ng-if="callHistory.length" class="table table-hover" ng-controller="chModalController">
-                            <thead>
-                            <th class="uppercase">Called Number</th>
-                            <th class="uppercase">Start Date/Time</th>
-                            <th class="uppercase">Direction</th>
-                            <th class="uppercase">Actions</th>
-                            </thead>
-                            <tbody>
-                            <tr ng-repeat="call in callHistory">
-                                <td class="ch-item text-center">{{ call.dialedNumber }}</td>
-                                <td class="ch-item text-center">{{ call.call_start | amUtc | amDateFormat: 'YYYY.MM.DD hh:mm:ss' }}</td>
-                                <td class="ch-item text-center">{{ call.direction }}</td>
-                                <td class="ch-item text-center"><a href="" ng-click="chCall(call.dialedNumber)">Call</a></td>
-                            </tr>
-                            </tbody>
-                        </table>
+                    </form>
+
+                    <div class='table-wrapper shadowed'>
+                        <div class='table-header'>
+                            <h4 class="ch-header"><i class="fa fa-calendar"></i> Call History</h4>
+                            <hr class="hrleft">
+                        </div>
+                        <div class='table-main' ng-if="!callHistory.length">
+                            <h4 class='no-call-history text-center'><i class="fa fa-calendar-times-o" style="font-size: 1.2em"></i> No calls made this session</h4>
+                        </div>
+                        <div class='table-main' ng-if='callHistory.length'>
+                            <div class='list-header'>
+                                <ul>
+                                    <li class='list-data'>
+                                        Called Number
+                                    </li>
+                                    <li class='list-data'>
+                                        Start Date/Time
+                                    </li>
+                                    <li class='list-data'>
+                                        Direction
+                                    </li>
+                                    <li class='list-data'>
+                                        Actions
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class='list-body'>
+                                <ul ng-repeat='call in callHistory track by $index'>
+                                    <li class='ch-item text-center'>{{ call.dialedNumber }}</li>
+                                    <li class='ch-item text-center'>{{ call.call_start | amUtc | amDateFormat: 'YYYY.MM.DD hh:mm:ss' }}</li>
+                                    <li class='ch-item text-center'>{{ call.direction }}</li>
+                                    <li class='ch-item text-center'><a href="" ng-click="chCall(call.dialedNumber)">Call</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -326,7 +341,7 @@
 
                             <div ng-if="verto.data.call" class="call-options">
                                 <p id="dialedNumber">{{ verto.data.called_number }}</p>
-                                <timer start-time="start_time" auto-start="false" interval="1000">
+                                <timer auto-start="false" interval="1000">
                                     {{hhours}}:{{mminutes}}:{{sseconds}}
                                 </timer>
                                 <a href="" ng-disabled="!verto.data.call" class="btn btn-mute" ng-click="muteMic(cbMuteMic)"><i ng-class="{'fa fa-2x fa-microphone' : !storage.data.mutedMic, 'fa fa-2x fa-microphone-slash' : storage.data.mutedMic}"></i></a>

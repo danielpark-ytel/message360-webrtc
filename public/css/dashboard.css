@@ -206,6 +206,10 @@ p.cid-right {
 	text-align: center;
 }
 
+div.ng-toast {
+	height: 0;
+}
+
 #usernameAddon {
 	color : white;
 	background : #ec2c36;
@@ -219,6 +223,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100% !important;
+	background: #eaeaea;
 	overflow-x: hidden;
 }
 div.load-wrapper {
@@ -252,7 +257,7 @@ img.loader-img {
 section {
 	flex: 1 0 auto !important;
 	background: url('../../public/images/m360icon.png') no-repeat bottom -125px right -50px;
-	background-size: 30%;
+	background-size: 20%;
 }
 hr {
 	margin: 0;
@@ -278,13 +283,6 @@ hr {
 	margin-top : 24px;
 }
 
-.videoContainer {
-	position : absolute;
-	height : 100%;
-	width : 100%;
-	overflow : hidden;
-}
-
 div.login-content {
 	height : 525px;
 	padding : 15px;
@@ -292,24 +290,16 @@ div.login-content {
 	background: white;
 }
 
-video#mask-vid {
-	-o-object-fit: cover;
-	object-fit: cover;
-	height : 100% !important;
-	width : 100% !important;
-	top: 0px;
-	display : block;
-	-webkit-background-size: cover;
-	background-size: cover;
-}
 #loginForm {
 	margin: auto auto;
 	width : 60%;
 }
+
 a:hover,
 a:focus {
 	text-decoration: none;
 }
+
 .hr,
 .btn,
 .hrleft,
@@ -398,6 +388,10 @@ div.banner {
 	border-radius: 40px;
 }
 
+.form-footer {
+	bottom : 0;
+}
+
 .dashboard {
 	margin-top : 30px;
 	margin-left : auto;
@@ -409,8 +403,8 @@ div.banner {
 
 .dashboard-left {
 	width : 280px;
+	background : white;
 	float: left;
-	clear : none;
 	vertical-align: top;
 	height: 580px;
 }
@@ -798,7 +792,7 @@ label {
 }
 
 form#dialerForm {
-	height : 285px;
+	height: 100%;
 	vertical-align: top;
 	float: left;
 	width : 35%;
@@ -856,6 +850,7 @@ a.btn-mp > h4 {
 	padding : 6px;
 	height : 300px;
 	margin : 15px 0;
+	text-align: center;
 }
 
 .webrtc-row2 {
@@ -868,11 +863,11 @@ a.btn-mp > h4 {
 	vertical-align: top;
 	display: inline-block;
 	width : 62%;
-	max-height : 290px;
 	border : 3px solid #617487;
 	margin : 0 0 0 20px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	height : 285px;
+	overflow: scroll;
 }
 
 .ch-table > h4 {
@@ -892,7 +887,7 @@ a.btn-mp > h4 {
 }
 
 .moreinfo-box:hover > .moreinfo-header > hr,
-.ch-table:hover >hr {
+.table-wrapper:hover > .table-header >hr {
 	border-top : 6px solid #617487;
 	width : 97.5%;
 }
@@ -908,15 +903,14 @@ a.btn-mp > h4 {
 }
 
 .ch-item {
+	padding : 0;
 	font-size : 0.7em;
 	font-weight : 700;
 }
 
 .moreinfo-box {
-	margin-left : 20px;
+	margin-left : 3%;
 	width : 62%;
-	border : 3px solid #617487;
-
 }
 
 .callinfo-box,
@@ -924,6 +918,7 @@ a.btn-mp > h4 {
 	display: inline-block;
 	vertical-align: top;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	height: 100%;
 }
 
 .callinfo-header > h4 {
@@ -947,16 +942,18 @@ timer > span {
 	color : black;
 }
 
+.list-body {
+	overflow-y: scroll;
+}
+
 timer {
 	margin-right : 15px;
 }
 
 .callinfo-box {
-	position: relative;
 	float : left;
-	border : 3px solid #617487;
 	width : 35%;
-	height : 166px;
+	height: 100%;
 }
 
 .callinfo-header > h4 {
@@ -1114,7 +1111,14 @@ timer {
 	font-weight: 700;
 }
 
-div#chImage > h4 {
+.table-wrapper {
+	height : 100%;
+	display : inline-block;
+	width: 62%;
+	margin-left: 3%;
+}
+
+.no-call-history {
 	text-transform: uppercase;
 	margin : 0;
 	font-size : 1.5em;
