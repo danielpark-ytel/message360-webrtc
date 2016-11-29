@@ -23,7 +23,7 @@ p {
 .btn-login,
 .btn-callphone,
 .btn-hangupcall {
-	border-radius: none;
+	border-radius: 0;
 }
 
 .dashboard-footer-sm > h4 {
@@ -393,11 +393,9 @@ div.banner {
 }
 
 .dashboard {
-	margin-top : 30px;
-	margin-left : auto;
-	margin-right : auto;
-	width : 1200px;
-	height : 640px;
+	margin:0;
+	height:100%;
+	width:100%;
 	background-color: #E0E0E0;
 }
 
@@ -505,24 +503,17 @@ div.banner {
 /**
 * Dashboard Content
 */
-.dashboard-content {
-	height : inherit;
-	padding-left : 200px;
-}
 
 .dashboard-content-sm {
 	display : none;
 }
 
 .config-box {
-	position: relative;
-	display: inline-block;
-	vertical-align: top;
-	height : 270px;
-	width : 250px;
+	display: block;
+	height: 270px;
+	width:90%;
+	margin: 10px auto 0 auto;
 	background-color : white;
-	margin-top : 15px;
-	margin-left : 18px;
 }
 
 .fa-cogs {
@@ -639,12 +630,9 @@ div.banner {
 .callerid-box {
 	position : relative;
 	height : 270px;
-	width : 250px;
-	vertical-align: top;
-	float: left;
+	width:90%;
+	margin: 16px auto 0 auto;
 	background: white;
-	margin-left : 18px;
-	margin-top : 15px;
 }
 
 div.content-wrapper {
@@ -1195,14 +1183,6 @@ timer {
 @media only screen and (max-width: 1200px) {
 	div.sidemenu {
 		display : none;
-	}
-
-	div.dashboard-content {
-		padding-left : 0;
-	}
-
-	div.dashboard {
-		width : 1000px;
 	}
 
 	.info-group > p {
