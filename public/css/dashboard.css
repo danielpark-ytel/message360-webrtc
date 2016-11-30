@@ -206,7 +206,7 @@ p.cid-right {
 }
 
 .login-group {
-	width : 60%;
+	width:100%;
 	margin: auto auto;
 }
 
@@ -215,8 +215,8 @@ p.cid-right {
 	text-align: center;
 }
 
-div.ng-toast {
-	height: 0;
+.progress-bar-text {
+	padding-top : 25px;
 }
 
 #usernameAddon {
@@ -228,12 +228,28 @@ div.ng-toast {
     padding : 25px 25px 0 25px !important;
 }
 
+.progress-message{
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 800;
+	letter-spacing: 1px;
+}
+
 body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100% !important;
 	background: #eaeaea;
 	overflow: auto;
+}
+
+.load-screen-wrapper {
+	height:50%;
+	position: absolute;
+	top:25%;
+	left:25%;
+	width:50%;
+	background: white;
 }
 div.load-wrapper {
 	position: relative;
@@ -265,7 +281,6 @@ img.loader-img {
 
 section {
 	flex: 1 0 auto !important;
-	background: url('../../public/images/m360icon.png') no-repeat bottom -125px right -50px;
 	background-size: 20%;
 	display: flex;
 }
@@ -283,7 +298,13 @@ timer > span {
 }
 
 .login-row {
-	text-align: center;
+	text-align: left;
+	margin: 12px 0;
+}
+
+.help-text {
+	font-size : 0.9vw;
+	margin-top : 8px;
 }
 
 .settings-caret {
@@ -304,10 +325,11 @@ timer > span {
 }
 
 div.login-content {
-	height : 525px;
-	padding : 15px;
-	margin-top : 60px;
 	background: white;
+	height:40%;
+	padding:15px;
+	position: absolute;
+	top:30%;
 }
 
 #loginForm {
@@ -857,8 +879,7 @@ a.btn-mp > h4 {
 }
 
 .right-footer {
-	margin: 50px auto;
-	padding:12px;
+	padding-top: 40px;
 }
 
 .right-footer-text {
@@ -952,6 +973,8 @@ a.btn-mp > h4 {
 .list-body {
 	overflow-y: scroll;
 	height: inherit;
+	position: absolute;
+	width: 100%;
 }
 
 .call-main {
@@ -1176,6 +1199,7 @@ timer {
 
 .table-main {
 	height: 85%;
+	position: relative;
 }
 
 .list-header > ul{
@@ -1194,13 +1218,24 @@ timer {
 .list-header > ul > li {
 	display: inline-block;
 	width: 25%;
-	text-align: center;
 	float: left;
+	padding: 0 5px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 800;
 	font-size: 0.8vw;
 	vertical-align: top;
+}
+
+.ng-toast {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10;
+}
+
+.ng-toast > ul {
+	list-style-type: none;
 }
 
 .list-body > ul {
@@ -1227,14 +1262,32 @@ timer {
 	vertical-align: top;
 }
 
+.table-modal {
+	height: 300px;
+	width: 100%;
+	margin: 0;
+}
+
+.list-header-modal > ul > li {
+	font-size : 1vw !important;
+}
+
+.list-body-modal > ul > li {
+	font-size : 0.9vw !important;
+}
+
 .login-wrap {
-	margin-top : 32px;
+	width: 60%;
+	margin: 20px auto 0 auto;
 }
 
 .logout-btn {
 	background: #ff4136;
 	color: white;
 	position: absolute;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
 	right : 6px;
 	top : 10%;
 	bottom : 10%;

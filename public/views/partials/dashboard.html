@@ -47,7 +47,7 @@
                     </div>
                     <div class="nocall-group" ng-if="!verto.data.call">
                         <a href="" class="btn btn-callphone" ng-click="call(dialpad.number)"
-                           ng-disabled="!dialpad.number.length != 10"><i class="fa fa-phone"></i></a>
+                           ng-disabled="dialpad.number.length != 10"><i class="fa fa-phone"></i></a>
                         <a href="" class="btn btn-calendar" ng-click="openChModal()" ng-if="callHistory.length"><i
                                 class="fa fa-calendar"></i></a>
                     </div>
@@ -128,14 +128,14 @@
                     Number Dialed:
                 </p>
                 <p class="dialed-number pull-right">
-                    {{verto.data.called_number || 7143181299}}
+                    {{ storage.data.called_number }}
                 </p>
             </div>
             <div class="info-col">
                 <p class="dialed-number">
                     Duration:
                 </p>
-                <timer start-time="start_time" auto-start="false" interval="1000" class="pull-right">
+                <timer auto-start="false" interval="1000" class="pull-right">
                     {{hhours}}:{{mminutes}}:{{sseconds}}
                 </timer>
             </div>
@@ -355,7 +355,7 @@
                         </div>
 
                         <div ng-if="verto.data.call" class="call-options call-main">
-                            <p class="call-text">Number Dialed: {{ verto.data.called_number || 7143191200}}</p>
+                            <p class="call-text">Number Dialed: {{ storage.data.called_number }}</p>
                             <timer auto-start="false" interval="1000">
                                 Call Duration: {{hhours}}:{{mminutes}}:{{sseconds}}
                             </timer>

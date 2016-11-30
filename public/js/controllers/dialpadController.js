@@ -1,5 +1,5 @@
 var dialpadController = angular.module("vertoControllers")
-    .controller("dialpadController", function ($rootScope, $scope, $http, $state, verto, storage, ngToast, preRoute) {
+    .controller("dialpadController", function ($rootScope, $scope, $http, $state, verto, storage, ngToast) {
         storage.data.notifications = true;
         storage.data.videoCall = false;
         storage.data.userStatus = 'connecting';
@@ -53,4 +53,4 @@ var dialpadController = angular.module("vertoControllers")
             $scope.cancelled = true;
         };
     });
-dialpadController.$inject['$rootScope', '$scope', '$http', '$state', 'verto', 'storage', 'ngToast', 'preRoute'];
+dialpadController.$inject['$rootScope', '$scope', '$http', '$state', 'verto', 'storage', 'ngToast'];

@@ -1,20 +1,21 @@
-<div class="container-fluid">
-    <div class="row load-screen-wrapper">
-        <div class="progress animated fadeIn progress-striped active">
-            <div class="progress-bar progress-bar-danger" ng-class="{'progress-bar-danger':interruptNext}"
-                 style="width:{{progressPercentage}}%">
-             </div>
-        </div>
-        <div class="progress-bar-text text-center">
-            <p style="color:white">
-                Hello, we're getting you setup.
-            </p>
-            <p style="color:white;" ng-bind="message"></p>
+<div class="load-screen-wrapper">
+    <div class="progress animated fadeIn progress-striped active">
+        <div class="progress-bar progress-bar-danger" ng-class="{'progress-bar-danger':interruptNext}"
+             style="width:{{progressPercentage}}%">
         </div>
     </div>
+    <div class="progress-bar-text text-center animated fadeInLeft">
+        <p class="progress-message">
+            <i class="fa fa-handshake-o"></i> Hello, we're getting you setup.
+        </p>
+    </div>
     <div class="load-wrapper">
-        <img class="loader-img" src="public/images/m360icon.png" alt="no image" />
+        <img class="loader-img" src="public/images/m360icon.png" alt="no image"/>
         <div class="row loader text-center">
         </div>
     </div>
+    <div class="animated fadeIn">
+        <p class='progress-message' ng-bind="message"></p>
+    </div>
 </div>
+

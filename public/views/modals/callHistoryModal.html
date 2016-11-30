@@ -1,23 +1,35 @@
-<div class="modal-title">
-    <h4 class="ch-header">
-        <i class="fa fa-calendar"></i> Call History
-    </h4>
-</div>
-<div class="modal-body">
-    <table class="table table-hover">
-        <thead>
-        <th class="uppercase">Called Number</th>
-        <th class="uppercase">Start Date/Time</th>
-        <th class="uppercase">Direction</th>
-        <th class="uppercase">Actions</th>
-        </thead>
-        <tbody>
-        <tr ng-repeat="call in callHistory">
-            <td class="ch-item">{{ call.dialedNumber }}</td>
-            <td class="ch-item">{{ call.call_start }}</td>
-            <td class="ch-item">{{ call.direction }}</td>
-            <td class="ch-item"><a href="" ng-click="chCall(call.dialedNumber)">Call</a></td>
-        </tr>
-        </tbody>
-    </table>
+<div class='table-wrapper shadowed table-modal'>
+    <div class='table-header'>
+        <h4 class="ch-header"><i class="fa fa-calendar"></i> Call History</h4>
+        <hr class="hrleft">
+    </div>
+    <div class='table-main' ng-if='callHistory.length'>
+        <div class='list-header list-header-modal'>
+            <ul>
+                <li class='list-data'>
+                    Called Number
+                </li>
+                <li class='list-data'>
+                    Start Date/Time
+                </li>
+                <li class='list-data'>
+                    Direction
+                </li>
+                <li class='list-data'>
+                    Actions
+                </li>
+            </ul>
+        </div>
+        <div class='list-body list-body-modal'>
+            <ul ng-repeat='call in callHistory track by $index'>
+                <li class='ch-item text-center'>{{ call.dialedNumber }}</li>
+                <li class='ch-item text-center'>{{ call.call_start | amUtc | amDateFormat: 'YYYY.MM.DD
+                    hh:mm:ss'}}
+                </li>
+                <li class='ch-item text-center'>{{ call.direction }}</li>
+                <li class='ch-item text-center'><a href="" ng-click="chCall(call.dialedNumber)">Call</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
