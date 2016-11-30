@@ -3,6 +3,9 @@ node_modules
 .idea/
 .sass-cache
 bower_components
+Gruntfile.js
+bower.json
+package.json
 
 # Compiled source #
 ###################
