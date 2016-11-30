@@ -6,7 +6,7 @@ var cidController = angular.module("vertoControllers")
          * IMPORTANT: Set the url which points to the location of your helper library script to authenticate your caller ID number.
          * This should be the location of the script on your web server, for example: 'https://www.yourdomain.com/authenticateNumber.php'
          */
-        var numberUrl = "lib/authenticate-number.php";
+        var numberUrl = "scripts/authenticate-number.php";
 
         $scope.updateCid = function () {
             $http({
@@ -19,7 +19,7 @@ var cidController = angular.module("vertoControllers")
                 console.log(response);
                 if (response.data.Message360.ResponseStatus == 1) {
                     storage.data.cid_number = $scope.callerIdNumber;
-                    ngAudio.play("public/sounds/notification.mp3");
+                    ngAudio.play("src/sounds/notification.mp3");
                     ngToast.create("<p class='toast-text'><i class='ion-android-notifications'></i> Caller ID updated.</p>");
                 } else {
                     ngToast.create({

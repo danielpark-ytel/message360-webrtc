@@ -12,8 +12,8 @@ var mainController = angular.module("vertoControllers").controller("mainControll
      * IMPORTANT: Set the url which points to the location of your helper library script to obtain an access token.
      * This should be the location of the script on your web server, for example: 'https://www.yourdomain.com/accessToken.php'
      */
-    var tokenUrl = 'lib/access-token.php';
-    var fundUrl = 'lib/check-funds.php';
+    var tokenUrl = 'scripts/access-token.php';
+    var fundUrl = 'scripts/check-funds.php';
 
     function checkFunds() {
         $http.post(fundUrl).then(function (response) {
@@ -128,13 +128,13 @@ var mainController = angular.module("vertoControllers").controller("mainControll
             size: "sm"
         };
         if (type == "video") {
-            options.templateUrl = "public/views/modals/videoSettingsModal.html";
+            options.templateUrl = "src/views/modals/videoSettingsModal.html";
         }
         if (type == "audio") {
-            options.templateUrl = "public/views/modals/audioSettingsModal.html";
+            options.templateUrl = "src/views/modals/audioSettingsModal.html";
         }
         if (type == "speaker") {
-            options.templateUrl = "public/views/modals/speakerSettingsModal.html";
+            options.templateUrl = "src/views/modals/speakerSettingsModal.html";
         }
         settingsInstance = $uibModal.open(options);
     };
@@ -147,7 +147,7 @@ var mainController = angular.module("vertoControllers").controller("mainControll
             animation: true,
             controller: "sidemenuController",
             size: "md",
-            templateUrl: "public/views/modals/settingsModal.html"
+            templateUrl: "src/views/modals/settingsModal.html"
         };
         settingsInstance = $uibModal.open(options);
     };
@@ -174,11 +174,11 @@ var mainController = angular.module("vertoControllers").controller("mainControll
      */
     $rootScope.dtmf = function (number) {
         if (number == '*') {
-            ngAudio.play('public/sounds/dtmf/dtmf-star.mp3');
+            ngAudio.play('src/sounds/dtmf/dtmf-star.mp3');
         } else if (number == '#') {
-            ngAudio.play('public/sounds/dtmf/dtmf-hash.mp3');
+            ngAudio.play('src/sounds/dtmf/dtmf-hash.mp3');
         } else {
-            ngAudio.play('public/sounds/dtmf/dtmf-' + number + '.mp3');
+            ngAudio.play('src/sounds/dtmf/dtmf-' + number + '.mp3');
         }
         if ($rootScope.dialpad.number !== undefined && $rootScope.dialpad.number !== null) {
             //Added "" just to make sure the number is treated like a string
@@ -279,7 +279,7 @@ var mainController = angular.module("vertoControllers").controller("mainControll
             animation: true,
             controller: "chModalController",
             size: "md",
-            templateUrl: "public/views/modals/callHistoryModal.html"
+            templateUrl: "src/views/modals/callHistoryModal.html"
         };
         modalInstance = $uibModal.open(options);
     };
@@ -301,7 +301,7 @@ var mainController = angular.module("vertoControllers").controller("mainControll
             keyboard: false
         };
         if ($scope.showReconnect) {
-            wsInstance = $scope.openModal("public/views/partials/websocket_error.html", "wsReconnectController", options);
+            wsInstance = $scope.openModal("src/views/partials/websocket_error.html", "wsReconnectController", options);
         };
         if (verto.data.call) {
             verto.hangup();

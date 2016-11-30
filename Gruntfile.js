@@ -42,7 +42,7 @@ module.exports = function(grunt) {
             },
             dist_css: {
                 files: [{
-                    cwd: './public/css',
+                    cwd: './src/css',
                     src: '*.min.css',
                     dest: './build/css/',
                     expand: true
@@ -56,28 +56,28 @@ module.exports = function(grunt) {
             app_main: {
                 files: {
                     './build/js/app.minsafe.js': [
-                        './public/js/verto.module.js'
+                        './src/js/verto.module.js'
                     ],
                     './build/js/app-controllers.minsafe.js': [
-                        './public/js/controllers/vertoControllers.module.js',
-                        './public/js/controllers/mainController.js',
-                        './public/js/controllers/loginController.js',
-                        './public/js/controllers/loadScreenController.js',
-                        './public/js/controllers/dialpadController.js',
-                        './public/js/controllers/wsReconnectController.js',
-                        './public/js/controllers/cidController.js',
-                        './public/js/controllers/sidemenuController.js',
-                        './public/js/controllers/chModalController.js',
+                        './src/js/controllers/vertoControllers.module.js',
+                        './src/js/controllers/mainController.js',
+                        './src/js/controllers/loginController.js',
+                        './src/js/controllers/loadScreenController.js',
+                        './src/js/controllers/dialpadController.js',
+                        './src/js/controllers/wsReconnectController.js',
+                        './src/js/controllers/cidController.js',
+                        './src/js/controllers/sidemenuController.js',
+                        './src/js/controllers/chModalController.js',
                     ],
                     './build/js/app-services.minsafe.js': [
-                        './public/js/verto-service/vertoService.module.js',
-                        './public/js/verto-service/vertoService.js',
-                        './public/js/verto-service/eventQueueService.js',
-                        './public/js/verto-service/callHistoryService.js',
-                        './public/js/verto-service/preRouteService.js',
-                        './public/js/storage-service/storageService.module.js',
-                        './public/js/storage-service/loadScreenService.js',
-                        './public/js/storage-service/storageService.js',   
+                        './src/js/verto-service/vertoService.module.js',
+                        './src/js/verto-service/vertoService.js',
+                        './src/js/verto-service/eventQueueService.js',
+                        './src/js/verto-service/callHistoryService.js',
+                        './src/js/verto-service/preRouteService.js',
+                        './src/js/storage-service/storageService.module.js',
+                        './src/js/storage-service/loadScreenService.js',
+                        './src/js/storage-service/storageService.js',   
                     ]
                 }
             }
@@ -86,13 +86,13 @@ module.exports = function(grunt) {
             target: {
                 files: {
                     './build/css/animate.min.css': [
-                        './public/css/animate.css'
+                        './src/css/animate.css'
                     ],
                     './build/css/dashboard.min.css': [
-                        './public/css/dashboard.css'
+                        './src/css/dashboard.css'
                     ],
                     './build/css/spinners.min.css': [
-                        './public/css/spinners.css'
+                        './src/css/spinners.css'
                     ]
                 }
             }
@@ -143,13 +143,13 @@ module.exports = function(grunt) {
             },
             deps_main: {
                 src: [
-                    './public/js/verto-dependencies/jquery.jsonrpcclient.js',
-                    './public/js/verto-dependencies/jquery.FSRTC.js',
-                    './public/js/verto-dependencies/jquery.verto.js',
+                    './src/js/verto-dependencies/jquery.jsonrpcclient.js',
+                    './src/js/verto-dependencies/jquery.FSRTC.js',
+                    './src/js/verto-dependencies/jquery.verto.js',
                     './bower_components/jquery-json/dist/jquery.json.min.js',
-                    './public/js/verto-dependencies/getScreenId.js',
-                    './public/js/verto-dependencies/md5.min.js',
-                    './public/js/verto-dependencies/volume-meter.js'
+                    './src/js/verto-dependencies/getScreenId.js',
+                    './src/js/verto-dependencies/md5.min.js',
+                    './src/js/verto-dependencies/volume-meter.js'
                 ],
                 dest: './build/deps/<%= pkg.name %>-deps.js'
             }

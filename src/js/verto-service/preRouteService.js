@@ -1,6 +1,6 @@
 angular.module("vertoService")
-    .service('preRoute', ['$rootScope', 'verto', '$state', 'ngToast', '$cookies',
-        function($rootScope, verto, $state, ngToast, $cookies) {
+    .service('preRoute', ['$rootScope', 'verto', '$state', 'ngToast',
+        function($rootScope, verto, $state, ngToast) {
             /**
              * Event queue functionality? What is this going to be used for..
              */

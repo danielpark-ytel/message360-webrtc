@@ -17,19 +17,19 @@ app.config(function ($stateProvider, $urlRouterProvider, $translateProvider) {
     $stateProvider
         .state("loading", {
             url: '/',
-            templateUrl: 'public/views/partials/load_screen.html',
+            templateUrl: 'src/views/partials/load_screen.html',
             controller: "loadScreenController",
             title: "Loading..."
         })
         .state("login", {
             url: "/login",
-            templateUrl: "public/views/partials/login.html",
+            templateUrl: "src/views/partials/login.html",
             controller: "loginController",
             title: "Welcome!"
         })
         .state("dashboard", {
             url: "/dashboard",
-            templateUrl: "public/views/partials/dashboard.html",
+            templateUrl: "src/views/partials/dashboard.html",
             title: "Dashboard"
         });
     $urlRouterProvider.otherwise("/");
