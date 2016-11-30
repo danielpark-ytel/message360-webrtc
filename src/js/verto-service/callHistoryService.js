@@ -7,9 +7,7 @@ var callHistory = angular.module("vertoService").factory("callHistory", function
             'status' : status,
             'call_start' : call_start
         };
-        for(var i = 0; i < 10; i++) {
-            storage.data.call_history.push(callInfo);
-        }
+        storage.data.call_history.push(callInfo);
     };
     return {
         'addCall' : addCall,
