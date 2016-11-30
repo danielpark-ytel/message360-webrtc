@@ -31,7 +31,8 @@
 
     <div class="dashboard-content-sm" ng-controller="dialpadController">
         <div class="dashboard-header-sm">
-            <button class="settings-caret" ng-click="openSettingsModal()"><i class="fa fa-bars" aria-hidden="true"></i></button>
+            <button class="settings-caret" ng-click="openSettingsModal()"><i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
             <h4><i class="fa fa-tachometer" style="font-size: 1.2em;"></i> User Dashboard</h4>
             <button class="logout-btn btn" ng-click="logout()"><i class="fa fa-sign-out"></i> Logout</button>
         </div>
@@ -39,18 +40,22 @@
             <div class="dialer-sm shadowed">
                 <div class="dialer-left">
                     <div class="incall-group" ng-if="verto.data.call">
-                        <a href="" class="btn btn-mute" ng-click="muteMic(cbMuteMic)"><i ng-class="{'fa fa-2x fa-microphone' : !storage.data.mutedMic, 'fa fa-2x fa-microphone-slash' : storage.data.mutedMic}"></i></a>
-                        <a href="" class="btn btn-holdcall" ng-click="hold()"><i ng-class="{'fa fa-pause' : !storage.data.onHold, 'fa fa-play' : storage.data.onHold}"></i></a>
+                        <a href="" class="btn btn-mute" ng-click="muteMic(cbMuteMic)"><i
+                                ng-class="{'fa fa-2x fa-microphone' : !storage.data.mutedMic, 'fa fa-2x fa-microphone-slash' : storage.data.mutedMic}"></i></a>
+                        <a href="" class="btn btn-holdcall" ng-click="hold()"><i
+                                ng-class="{'fa fa-pause' : !storage.data.onHold, 'fa fa-play' : storage.data.onHold}"></i></a>
                     </div>
                     <div class="nocall-group" ng-if="!verto.data.call">
-                        <a href="" class="btn btn-callphone" ng-click="call(dialpad.number)" ng-disabled="!dialpad.number.length != 10"><i class="fa fa-phone"></i></a>
+                        <a href="" class="btn btn-callphone" ng-click="call(dialpad.number)"
+                           ng-disabled="!dialpad.number.length != 10"><i class="fa fa-phone"></i></a>
                         <a href="" class="btn btn-calendar" ng-click="openChModal()" ng-if="callHistory.length"><i
                                 class="fa fa-calendar"></i></a>
                     </div>
                 </div>
                 <div class="dialer-right">
                     <div class="dialpad-input">
-                        <input ng-model="dialpad.number" class="dialer-input-sm form-control" placeholder="(714)800-2222" autofocus required ng-minlength="10" ng-maxlength="10">
+                        <input ng-model="dialpad.number" class="dialer-input-sm form-control"
+                               placeholder="(714)800-2222" autofocus required ng-minlength="10" ng-maxlength="10">
                         <a class='btn btn-backspace' ng-click='backspace()'><i class="fa fa-chevron-left"></i></a>
                     </div>
                     <div class="dialer-row-sm">
@@ -143,7 +148,8 @@
     <div class="dashboard-content">
 
         <div class="dashboard-header">
-            <button class="settings-caret" ng-click="openSettingsModal()"><i class="fa fa-bars" aria-hidden="true"></i></button>
+            <button class="settings-caret" ng-click="openSettingsModal()"><i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
             <h4><i class="fa fa-tachometer"></i> User Dashboard</h4>
             <button class="logout-btn btn" ng-click="logout()"><i class="fa fa-sign-out"></i> Logout</button>
         </div>
@@ -161,19 +167,22 @@
                         <li class="config-item">
                             <i class="fa fa-volume-up"></i>
                             <div class="config-text">
-                                <p><span class="config-label">Selected Speaker:</span><br>{{storage.data.selectedSpeakerLabel || "No speaker source"}}</p>
+                                <p><span class="config-label">Selected Speaker:</span><br>{{storage.data.selectedSpeakerLabel
+                                    || "No speaker source"}}</p>
                             </div>
                         </li>
                         <li class="config-item">
                             <i class="fa fa-video-camera"></i>
                             <div class="config-text">
-                                <p><span class="config-label">Selected Video:</span><br>{{storage.data.selectedVideoLabel || "No video source"}}</p>
+                                <p><span class="config-label">Selected Video:</span><br>{{storage.data.selectedVideoLabel
+                                    || "No video source"}}</p>
                             </div>
                         </li>
                         <li class="config-item">
                             <i class="fa fa-microphone"></i>
                             <div class="config-text">
-                                <p><span class="config-label">Selected Microphone:</span><br>{{storage.data.selectedAudioLabel || "No audio source"}}</p>
+                                <p><span class="config-label">Selected Microphone:</span><br>{{storage.data.selectedAudioLabel
+                                    || "No audio source"}}</p>
                             </div>
                         </li>
                     </ul>
@@ -186,193 +195,208 @@
                     <hr class="hr">
                 </div>
                 <div class="box-body">
-                <div class="content-wrapper">
-                    <div class="cid-wrapper">
-                        <p class="cid-left">CID Number:</p>
-                        <p class="cid-right">{{storage.data.cid_number || "Caller ID not set."}}</p>
+                    <div class="content-wrapper">
+                        <div class="cid-wrapper">
+                            <p class="cid-left">CID Number:</p>
+                            <p class="cid-right">{{storage.data.cid_number || "Caller ID not set."}}</p>
+                        </div>
+                        <p class="req-header">Requirements</p>
+                        <hr>
+                        <ul class="req-list">
+                            <li class="req-item">
+                                10 digit number
+                                &#8226;
+                            </li>
+                            <li class="req-item">
+                                Owned by account
+                                &#8226;
+                            </li>
+                            <li class="req-item">
+                                Voice enabled
+                            </li>
+                        </ul>
                     </div>
-                    <p class="req-header">Requirements</p>
-                    <hr>
-                    <ul class="req-list">
-                        <li class="req-item">
-                            10 digit number
-                            &#8226;
-                        </li>
-                        <li class="req-item">
-                            Owned by account
-                            &#8226;
-                        </li>
-                        <li class="req-item">
-                            Voice enabled
-                        </li>
-                    </ul>
-                </div>
                     <div class='input-group'>
                         <span class="input-group-addon" id="cid-addon"><i class="fa fa-phone"></i></span>
-                        <input type="text" class="form-control cid-input" ng-model="callerIdNumber" placeholder="(714)800-4242" aria-describedby="cid-addon">
+                        <input type="text" class="form-control cid-input" ng-model="callerIdNumber"
+                               placeholder="(714)800-4242" aria-describedby="cid-addon">
                     </div>
-                    <button class="btn btn-cid" ng-click="updateCid()" ng-disabled="callerIdNumber.length != 10"><i class="fa fa-pencil-square-o"></i> Update</button>
+                    <button class="btn btn-cid" ng-click="updateCid()" ng-disabled="callerIdNumber.length != 10"><i
+                            class="fa fa-pencil-square-o"></i> Update
+                    </button>
                 </div>
             </div>
         </div>
 
         <div class="dashboard-right">
-            <div class="webrtc-box">
-                <div class="box-header">
-                    <h4>Communications</h4>
+            <div class="webrtc-row" ng-controller="dialpadController">
+                <form class='shadowed' id="dialerForm" role="form" name="dialerForm" novalidate>
+                    <div class='dialpad-input'>
+                        <input name="dialpadNumber" type="text" class="form-control text-center dialer-input"
+                               placeholder="(800)123-4567" ng-model="dialpad.number" autofocus required
+                               ng-minlength="10" ng-maxlength="10">
+                        <a class='btn btn-backspace' ng-click='backspace()'><i class="fa fa-chevron-left"></i></a>
+                    </div>
+                    <div class="group">
+                        <a class="btn btn-mp" ng-click="dtmf(1)">
+                            <h4 class="dialer-number">1</h4>
+                            <span class="dialer-text">./@</span>
+                        </a>
+                        <a class="btn btn-mp" ng-click="dtmf(2)">
+                            <h4 class="dialer-number">2</h4>
+                            <span class="dialer-text">ABC</span>
+                        </a>
+                        <a class="btn btn-mp" ng-click="dtmf(3)">
+                            <h4 class="dialer-number">3</h4>
+                            <span class="dialer-text">DEF</span>
+                        </a>
+                    </div>
+                    <div class="group">
+                        <a class="btn btn-mp" ng-click="dtmf(4)">
+                            <h4 class="dialer-number">4</h4>
+                            <span class="dialer-text">GHI</span>
+                        </a>
+                        <a class="btn btn-mp" ng-click="dtmf(5)">
+                            <h4 class="dialer-number">5</h4>
+                            <span class="dialer-text">JKL</span>
+                        </a>
+                        <a class="btn btn-mp" ng-click="dtmf(6)">
+                            <h4 class="dialer-number">6</h4>
+                            <span class="dialer-text">MNO</span>
+                        </a>
+                    </div>
+                    <div class="group">
+                        <a class="btn btn-mp" ng-click="dtmf(7)">
+                            <h4 class="dialer-number">7</h4>
+                            <span class="dialer-text">PQRS</span>
+                        </a>
+                        <a class="btn btn-mp" ng-click="dtmf(8)">
+                            <h4 class="dialer-number">8</h4>
+                            <span class="dialer-text">TUV</span>
+                        </a>
+                        <a class="btn btn-mp" ng-click="dtmf(9)">
+                            <h4 class="dialer-number">9</h4>
+                            <span class="dialer-text">WXYZ</span>
+                        </a>
+                    </div>
+                    <div class="group">
+                        <a class="btn btn-mp" ng-click="dtmf('*')">
+                            <h4 class="dialer-number">*</h4>
+                            <span class="dialer-text">---</span>
+                        </a>
+                        <a class="btn btn-mp" ng-click="dtmf(0)">
+                            <h4 class="dialer-number">0</h4>
+                            <span class="dialer-text">+</span>
+                        </a>
+                        <a class="btn btn-mp" ng-click="dtmf('#')">
+                            <h4 class="dialer-number">#</h4>
+                            <span class="dialer-text">---</span>
+                        </a>
+                    </div>
+                    <div class='form-footer'>
+                        <a class="btn btn-callphone" ng-disabled="dialerForm.$invalid || verto.data.call"
+                           ng-click="call(dialpad.number)">
+                            <i class="fa fa-phone"></i> call
+                        </a>
+                    </div>
+                </form>
+
+                <div class='table-wrapper shadowed'>
+                    <div class='table-header'>
+                        <h4 class="ch-header"><i class="fa fa-calendar"></i> Call History</h4>
+                        <hr class="hrleft">
+                    </div>
+                    <div class='table-main' ng-if="!callHistory.length">
+                        <h4 class='no-call-history text-center'><i class="fa fa-calendar-times-o"
+                                                                   style="font-size: 1.2em"></i> No calls made this
+                            session</h4>
+                    </div>
+                    <div class='table-main' ng-if='callHistory.length'>
+                        <div class='list-header'>
+                            <ul>
+                                <li class='list-data'>
+                                    Called Number
+                                </li>
+                                <li class='list-data'>
+                                    Start Date/Time
+                                </li>
+                                <li class='list-data'>
+                                    Direction
+                                </li>
+                                <li class='list-data'>
+                                    Actions
+                                </li>
+                            </ul>
+                        </div>
+                        <div class='list-body'>
+                            <ul ng-repeat='call in callHistory track by $index'>
+                                <li class='ch-item text-center'>{{ call.dialedNumber }}</li>
+                                <li class='ch-item text-center'>{{ call.call_start | amUtc | amDateFormat: 'YYYY.MM.DD
+                                    hh:mm:ss'}}
+                                </li>
+                                <li class='ch-item text-center'>{{ call.direction }}</li>
+                                <li class='ch-item text-center'><a href="" ng-click="chCall(call.dialedNumber)">Call</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <div class="webrtc-row" ng-controller="dialpadController">
-                    <form class='shadowed' id="dialerForm" role="form" name="dialerForm" novalidate>
-                        <div class='dialpad-input'>
-                            <input name="dialpadNumber" type="text" class="form-control text-center dialer-input" placeholder="(800)123-4567" ng-model="dialpad.number" autofocus required ng-minlength="10" ng-maxlength="10">
-                            <a class='btn btn-backspace' ng-click='backspace()'><i class="fa fa-chevron-left"></i></a>
+            <div class="webrtc-row2">
+                <div class="callinfo-box shadowed">
+                    <div class="callinfo-header">
+                        <h4 id="noCallFa"><i class="fa fa-phone-square"></i> Call Information</h4>
+                        <hr class="hrleft">
+                    </div>
+                    <div class="callinfo-body">
+                        <div ng-if="!verto.data.call" class="call-options">
+                            <h4 class='no-call-text'><i class='fa fa-exclamation-circle'></i> No call in progress</h4>
                         </div>
-                        <div class="group">
-                            <a class="btn btn-mp" ng-click="dtmf(1)">
-                                <h4 class="dialer-number">1</h4>
-                                <span class="dialer-text">./@</span>
-                            </a>
-                            <a class="btn btn-mp" ng-click="dtmf(2)">
-                                <h4 class="dialer-number">2</h4>
-                                <span class="dialer-text">ABC</span>
-                            </a>
-                            <a class="btn btn-mp" ng-click="dtmf(3)">
-                                <h4 class="dialer-number">3</h4>
-                                <span class="dialer-text">DEF</span>
-                            </a>
-                        </div>
-                        <div class="group">
-                            <a class="btn btn-mp" ng-click="dtmf(4)">
-                                <h4 class="dialer-number">4</h4>
-                                <span class="dialer-text">GHI</span>
-                            </a>
-                            <a class="btn btn-mp" ng-click="dtmf(5)">
-                                <h4 class="dialer-number">5</h4>
-                                <span class="dialer-text">JKL</span>
-                            </a>
-                            <a class="btn btn-mp" ng-click="dtmf(6)">
-                                <h4 class="dialer-number">6</h4>
-                                <span class="dialer-text">MNO</span>
-                            </a>
-                        </div>
-                        <div class="group">
-                            <a class="btn btn-mp" ng-click="dtmf(7)">
-                                <h4 class="dialer-number">7</h4>
-                                <span class="dialer-text">PQRS</span>
-                            </a>
-                            <a class="btn btn-mp" ng-click="dtmf(8)">
-                                <h4 class="dialer-number">8</h4>
-                                <span class="dialer-text">TUV</span>
-                            </a>
-                            <a class="btn btn-mp" ng-click="dtmf(9)">
-                                <h4 class="dialer-number">9</h4>
-                                <span class="dialer-text">WXYZ</span>
-                            </a>
-                        </div>
-                        <div class="group">
-                            <a class="btn btn-mp" ng-click="dtmf('*')">
-                                <h4 class="dialer-number">*</h4>
-                                <span class="dialer-text">---</span>
-                            </a>
-                            <a class="btn btn-mp" ng-click="dtmf(0)">
-                                <h4 class="dialer-number">0</h4>
-                                <span class="dialer-text">+</span>
-                            </a>
-                            <a class="btn btn-mp" ng-click="dtmf('#')">
-                                <h4 class="dialer-number">#</h4>
-                                <span class="dialer-text">---</span>
-                            </a>
-                        </div>
-                        <div class='form-footer'>
-                            <a class="btn btn-callphone" ng-disabled="dialerForm.$invalid || verto.data.call" ng-click="call(dialpad.number)">
-                                <i class="fa fa-phone"></i> call
-                            </a>
-                        </div>
-                    </form>
 
-                    <div class='table-wrapper shadowed'>
-                        <div class='table-header'>
-                            <h4 class="ch-header"><i class="fa fa-calendar"></i> Call History</h4>
-                            <hr class="hrleft">
+                        <div ng-if="verto.data.call" class="call-options">
+                            <p id="dialedNumber">{{ verto.data.called_number }}</p>
+                            <timer auto-start="false" interval="1000">
+                                {{hhours}}:{{mminutes}}:{{sseconds}}
+                            </timer>
+                            <a href="" ng-disabled="!verto.data.call" class="btn btn-mute"
+                               ng-click="muteMic(cbMuteMic)"><i
+                                    ng-class="{'fa fa-2x fa-microphone' : !storage.data.mutedMic, 'fa fa-2x fa-microphone-slash' : storage.data.mutedMic}"></i></a>
+                            <a href="" ng-disabled="!verto.data.call" class="btn btn-holdcall" ng-click="hold()"><i
+                                    ng-class="{'fa fa-2x fa-pause' : !storage.data.onHold, 'fa fa-2x fa-play' : storage.data.onHold}"></i></a>
                         </div>
-                        <div class='table-main' ng-if="!callHistory.length">
-                            <h4 class='no-call-history text-center'><i class="fa fa-calendar-times-o" style="font-size: 1.2em"></i> No calls made this session</h4>
-                        </div>
-                        <div class='table-main' ng-if='callHistory.length'>
-                            <div class='list-header'>
-                                <ul>
-                                    <li class='list-data'>
-                                        Called Number
-                                    </li>
-                                    <li class='list-data'>
-                                        Start Date/Time
-                                    </li>
-                                    <li class='list-data'>
-                                        Direction
-                                    </li>
-                                    <li class='list-data'>
-                                        Actions
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class='list-body'>
-                                <ul ng-repeat='call in callHistory track by $index'>
-                                    <li class='ch-item text-center'>{{ call.dialedNumber }}</li>
-                                    <li class='ch-item text-center'>{{ call.call_start | amUtc | amDateFormat: 'YYYY.MM.DD hh:mm:ss' }}</li>
-                                    <li class='ch-item text-center'>{{ call.direction }}</li>
-                                    <li class='ch-item text-center'><a href="" ng-click="chCall(call.dialedNumber)">Call</a></li>
-                                </ul>
-                            </div>
+                        <div ng-if="verto.data.call" class="btn-wrap">
+                            <button class="btn btn-hangupcall" ng-click="hangup()" ng-disabled="!verto.data.call">
+                                Hangup
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <div class="webrtc-row2">
-                    <div class="callinfo-box shadowed">
-                        <div class="callinfo-header">
-                            <h4 id="noCallFa"><i class="fa fa-phone-square"></i> Call Information</h4>
-                            <hr class="hrleft">
-                        </div>
-                        <div class="callinfo-body">
-                            <div ng-if="!verto.data.call" class="call-options">
-                                <h4 class='no-call-text'><i class='fa fa-exclamation-circle'></i> No call in progress</h4>
-                            </div>
-
-                            <div ng-if="verto.data.call" class="call-options">
-                                <p id="dialedNumber">{{ verto.data.called_number }}</p>
-                                <timer auto-start="false" interval="1000">
-                                    {{hhours}}:{{mminutes}}:{{sseconds}}
-                                </timer>
-                                <a href="" ng-disabled="!verto.data.call" class="btn btn-mute" ng-click="muteMic(cbMuteMic)"><i ng-class="{'fa fa-2x fa-microphone' : !storage.data.mutedMic, 'fa fa-2x fa-microphone-slash' : storage.data.mutedMic}"></i></a>
-                                <a href="" ng-disabled="!verto.data.call" class="btn btn-holdcall" ng-click="hold()"><i ng-class="{'fa fa-2x fa-pause' : !storage.data.onHold, 'fa fa-2x fa-play' : storage.data.onHold}"></i></a>
-                            </div>
-                            <div ng-if="verto.data.call" class="btn-wrap">
-                                <button class="btn btn-hangupcall" ng-click="hangup()" ng-disabled="!verto.data.call">Hangup</button>
-                            </div>
-                        </div>
+                <div class="moreinfo-box shadowed">
+                    <div class="moreinfo-header">
+                        <h4><i class="fa fa-inbox"></i> Session Information</h4>
+                        <hr class="hrleft">
                     </div>
-
-                    <div class="moreinfo-box shadowed">
-                        <div class="moreinfo-header">
-                            <h4><i class="fa fa-inbox"></i> Session Information</h4>
-                            <hr class="hrleft">
+                    <div class="moreinfo-body">
+                        <div class="infobox">
+                            <h4><i class="fa fa-hashtag"></i> Calls this session</h4>
+                            <hr>
+                            <p style="font-size : 1.2em">{{ storage.data.numOfCalls }}</p>
                         </div>
-                        <div class="moreinfo-body">
-                            <div class="infobox">
-                                <h4><i class="fa fa-hashtag"></i> Calls this session</h4>
-                                <hr>
-                                <p style="font-size : 1.2em">{{ storage.data.numOfCalls }}</p>
-                            </div>
-                            <div class="infobox">
-                                <h4><i class="fa fa-lock"></i> Access Token</h4>
-                                <hr>
-                                <p style="line-height: 1.5; margin-top : 20px;">{{ storage.data.accessToken }}</p>
-                            </div>
+                        <div class="infobox">
+                            <h4><i class="fa fa-lock"></i> Access Token</h4>
+                            <hr>
+                            <p style="line-height: 1.5; margin-top : 20px;">{{ storage.data.accessToken }}</p>
                         </div>
                     </div>
                 </div>
 
+            </div>
+            <div class="right-footer">
+                <h4 class="right-footer-text">
+                    © 2016 Ytel, Inc. | Ytel™ All Rights Reserved. | 877.467.4360 | Privacy Policy | Terms and Conditions
+                </h4>
             </div>
         </div>
     </div>

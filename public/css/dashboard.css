@@ -177,6 +177,14 @@ p.cid-right {
     outline : none;
 }
 
+.dashboard-content {
+	float: left;
+	background: white;
+	width:80%;
+	position: relative;
+	height: 100%;
+}
+
 .btn-login:hover {
     background : #fff;
     color : #ec2c36;
@@ -224,7 +232,7 @@ body {
 	flex-direction: column;
 	min-height: 100% !important;
 	background: #eaeaea;
-	overflow-x: hidden;
+	overflow: auto;
 }
 div.load-wrapper {
 	position: relative;
@@ -258,6 +266,7 @@ section {
 	flex: 1 0 auto !important;
 	background: url('../../public/images/m360icon.png') no-repeat bottom -125px right -50px;
 	background-size: 20%;
+	display: flex;
 }
 hr {
 	margin: 0;
@@ -394,26 +403,16 @@ div.banner {
 
 .dashboard {
 	margin:0;
-	height:100%;
+	height:inherit;
 	width:100%;
 	background-color: #E0E0E0;
 }
 
 .dashboard-left {
-	width : 280px;
-	background : white;
-	float: left;
-	vertical-align: top;
-	height: 580px;
-}
-
-.dashboard-right {
-	position : relative;
-	float : left;
-	clear: none;
-	vertical-align: top;
-	height : 580px;
-	width: 720px;
+	width:30%;
+	float:left;
+	height:91%;
+	padding:12px;
 }
 
 /**
@@ -422,8 +421,8 @@ div.banner {
 .sidemenu {
 	position : relative;
 	background-color : #2C3E50;
-	height : 640px;
-	width : 200px;
+	height: 100%;
+	width : 20%;
 	float : left;
 }
 
@@ -512,7 +511,7 @@ div.banner {
 	display: block;
 	height: 270px;
 	width:90%;
-	margin: 10px auto 0 auto;
+	margin: 20px auto 20px auto;
 	background-color : white;
 }
 
@@ -603,7 +602,7 @@ div.banner {
 * Dashboard Header
 */
 .dashboard-header {
-	height : 60px;
+	height:9%;
 	width : 100%;
 	background-color: #617487;
 	position : relative;
@@ -631,7 +630,7 @@ div.banner {
 	position : relative;
 	height : 270px;
 	width:90%;
-	margin: 16px auto 0 auto;
+	margin: 20px auto 20px auto;
 	background: white;
 }
 
@@ -754,25 +753,13 @@ label {
 * Dashboard WebRTC
 */
 
-.webrtc-box {
+.dashboard-right {
 	vertical-align: top;
 	float: right;
-	width : 100%;
+	padding:12px;
+	width : 70%;
 	background: white;
-	height : 100%;
-}
-
-.webrtc-box > .box-header {
-	background: #2C3E50;
-	height : 55px;
-	width: 100%;
-}
-
-.webrtc-box > .box-header > h4 {
-	color : white;
-	font-size: 1.4em;
-	letter-spacing: 2px;
-	line-height: 55px;
+	height : 91%;
 }
 
 .shadowed {
@@ -834,17 +821,26 @@ a.btn-mp > h4 {
 }
 
 .webrtc-row {
-	width : auto;
-	padding : 6px;
-	height : 300px;
-	margin : 15px 0;
+	height:45%;
+	margin : 20px auto;
 	text-align: center;
 }
 
 .webrtc-row2 {
+	height:30%;
+	margin:20px auto;
 	position: relative;
-	padding : 6px;
-	height : 190px;
+}
+
+.right-footer {
+	margin: 25px auto;
+	padding:12px;
+}
+
+.right-footer-text {
+	margin:0;
+	font-size:1em;
+	text-align:center;
 }
 
 .ch-table {
