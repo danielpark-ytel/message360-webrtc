@@ -4,7 +4,6 @@
   "description": "WebRTC Platform",
   "main": "Gruntfile.js",
   "dependencies": {
-    "angular-simple-pagination": "^1.0.5"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
