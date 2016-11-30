@@ -22,7 +22,8 @@ p {
 
 .btn-login,
 .btn-callphone,
-.btn-hangupcall {
+.btn-hangupcall,
+.btn-cid {
 	border-radius: 0;
 }
 
@@ -142,7 +143,7 @@ p.cid-left,
 p.cid-right {
 	letter-spacing: 1px;
 	padding : 2px 6px;
-	font-size : 0.8em;
+	font-size : 0.8vw;
 	font-weight: 700;
 	float: left;
 	vertical-align: top;
@@ -271,6 +272,16 @@ section {
 hr {
 	margin: 0;
 }
+
+.call-text,
+timer > span {
+	text-transform: uppercase;
+	letter-spacing:1px;
+	font-size:0.8vw;
+	font-weight:bolder;
+
+}
+
 .login-row {
 	text-align: center;
 }
@@ -307,6 +318,12 @@ div.login-content {
 a:hover,
 a:focus {
 	text-decoration: none;
+}
+
+.btn-wrap {
+	position: absolute;
+	width:100%;
+	bottom: 0;
 }
 
 .hr,
@@ -583,7 +600,7 @@ div.banner {
 
 .config-text > p {
 	line-height: 20px;
-	font-size : 0.6em;
+	font-size : 0.8vw;
 }
 
 .config-label {
@@ -651,14 +668,21 @@ input[type=text].dialer-input {
 	height : 45px;
 }
 
-.cid-input {
+.cid-group {
 	height: 38px;
+	width:90%;
+	margin: 16px auto 0 auto;
+}
+
+.cid-group > input {
+	height: inherit;
 }
 
 .cid-wrapper {
 	position: relative;
 	height : 25px;
-	width: 100%;
+	margin:8px auto;
+	width: 90%;
 }
 label {
 	font-weight: 700;
@@ -695,7 +719,7 @@ label {
 }
 
 .req-item {
-	font-size : 0.7em;
+	font-size : 0.7vw;
 	font-weight: 600;
 	padding : 2px 0;
 	display : inline-block;
@@ -892,6 +916,11 @@ a.btn-mp > h4 {
 	font-weight : 700;
 }
 
+.row {
+	margin : 8px auto 0 auto;
+	padding: 6px;
+}
+
 .moreinfo-box {
 	margin-left : 3%;
 	width : 62%;
@@ -915,19 +944,17 @@ a.btn-mp > h4 {
 	margin : 0;
 }
 
-.callinfo-body {
-	height: 120px;
-	padding : 6px;
-}
-
-timer > span {
-	font-size: 0.9em;
-	font-weight: 700;
-	color : black;
+.actions {
+	display: inline-block;
+	line-height: 30px;
 }
 
 .list-body {
 	overflow-y: scroll;
+}
+
+.call-main {
+	padding : 8px;
 }
 
 timer {
@@ -938,6 +965,7 @@ timer {
 	float : left;
 	width : 35%;
 	height: 100%;
+	position: relative;
 }
 
 .callinfo-header > h4 {
@@ -1025,11 +1053,13 @@ timer {
 }
 
 .no-call-text {
-	margin : 0;
-	font-weight: 800;
 	text-transform: uppercase;
-	line-height: 100px;
+	margin : 0;
 	text-align: center;
+	font-size : 1.2vw;
+	font-weight: 700;
+	line-height: 115px;
+	letter-spacing: 2px;
 }
 
 .infobox {
@@ -1105,7 +1135,7 @@ timer {
 .no-call-history {
 	text-transform: uppercase;
 	margin : 0;
-	font-size : 1.5em;
+	font-size : 1.3vw;
 	font-weight: 700;
 	line-height: 230px;
 	letter-spacing: 2px;
@@ -1167,11 +1197,11 @@ timer {
 	font-size : 2em;
 }
 
-.nocall-text {
+.no-call-text {
 	text-align: center;
 	text-transform: uppercase;
-	margin-top : 20px;
 	font-size : 1.2em;
+	margin-top:12px;
 	font-weight: 700;
 	letter-spacing: 2px;
 }
@@ -1179,6 +1209,10 @@ timer {
 @media only screen and (max-width: 1200px) {
 	div.sidemenu {
 		display : none;
+	}
+
+	.dashboard-content {
+		width:100%;
 	}
 
 	.info-group > p {
@@ -1253,7 +1287,9 @@ timer {
 		font-size : 1.5em;
 	}
 	div.dashboard {
-		margin-top : 10%;
+		top: 25%;
+		left: 25%;
+		position: absolute;
 		width : 450px;
 		height : 450px;
 		padding : 8px;

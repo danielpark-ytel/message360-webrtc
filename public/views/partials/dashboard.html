@@ -196,10 +196,6 @@
                 </div>
                 <div class="box-body">
                     <div class="content-wrapper">
-                        <div class="cid-wrapper">
-                            <p class="cid-left">CID Number:</p>
-                            <p class="cid-right">{{storage.data.cid_number || "Caller ID not set."}}</p>
-                        </div>
                         <p class="req-header">Requirements</p>
                         <hr>
                         <ul class="req-list">
@@ -215,8 +211,12 @@
                                 Voice enabled
                             </li>
                         </ul>
+                        <div class="cid-wrapper">
+                            <p class="cid-left">CID Number:</p>
+                            <p class="cid-right">{{storage.data.cid_number || "Caller ID not set."}}</p>
+                        </div>
                     </div>
-                    <div class='input-group'>
+                    <div class='input-group cid-group'>
                         <span class="input-group-addon" id="cid-addon"><i class="fa fa-phone"></i></span>
                         <input type="text" class="form-control cid-input" ng-model="callerIdNumber"
                                placeholder="(714)800-4242" aria-describedby="cid-addon">
@@ -354,17 +354,21 @@
                             <h4 class='no-call-text'><i class='fa fa-exclamation-circle'></i> No call in progress</h4>
                         </div>
 
-                        <div ng-if="verto.data.call" class="call-options">
-                            <p id="dialedNumber">{{ verto.data.called_number }}</p>
+                        <div ng-if="verto.data.call" class="call-options call-main">
+                            <p class="call-text">Number Dialed: {{ verto.data.called_number || 7143191200}}</p>
                             <timer auto-start="false" interval="1000">
-                                {{hhours}}:{{mminutes}}:{{sseconds}}
+                                Call Duration: {{hhours}}:{{mminutes}}:{{sseconds}}
                             </timer>
-                            <a href="" ng-disabled="!verto.data.call" class="btn btn-mute"
-                               ng-click="muteMic(cbMuteMic)"><i
-                                    ng-class="{'fa fa-2x fa-microphone' : !storage.data.mutedMic, 'fa fa-2x fa-microphone-slash' : storage.data.mutedMic}"></i></a>
-                            <a href="" ng-disabled="!verto.data.call" class="btn btn-holdcall" ng-click="hold()"><i
-                                    ng-class="{'fa fa-2x fa-pause' : !storage.data.onHold, 'fa fa-2x fa-play' : storage.data.onHold}"></i></a>
+                            <div class="row">
+                                <p class="call-text actions">Actions: </p>
+                                <a href="" ng-disabled="!verto.data.call" class="btn btn-mute"
+                                   ng-click="muteMic(cbMuteMic)"><i
+                                        ng-class="{'fa fa-2x fa-microphone' : !storage.data.mutedMic, 'fa fa-2x fa-microphone-slash' : storage.data.mutedMic}"></i></a>
+                                <a href="" ng-disabled="!verto.data.call" class="btn btn-holdcall" ng-click="hold()"><i
+                                        ng-class="{'fa fa-2x fa-pause' : !storage.data.onHold, 'fa fa-2x fa-play' : storage.data.onHold}"></i></a>
+                            </div>
                         </div>
+
                         <div ng-if="verto.data.call" class="btn-wrap">
                             <button class="btn btn-hangupcall" ng-click="hangup()" ng-disabled="!verto.data.call">
                                 Hangup
@@ -395,7 +399,8 @@
             </div>
             <div class="right-footer">
                 <h4 class="right-footer-text">
-                    © 2016 Ytel, Inc. | Ytel™ All Rights Reserved. | 877.467.4360 | Privacy Policy | Terms and Conditions
+                    © 2016 Ytel, Inc. | Ytel™ All Rights Reserved. | 877.467.4360 | <a href="https://www.ytel.com/company/privacy-policy/">Privacy
+                    Policy</a> | <a href="https://www.ytel.com/company/terms-conditions/">Terms and Conditions</a>
                 </h4>
             </div>
         </div>
