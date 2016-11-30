@@ -1236,6 +1236,7 @@ timer {
 
 .ng-toast > ul {
 	list-style-type: none;
+	width: 500px;
 }
 
 .list-body > ul {
