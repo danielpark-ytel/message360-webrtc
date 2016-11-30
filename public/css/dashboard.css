@@ -857,7 +857,7 @@ a.btn-mp > h4 {
 }
 
 .right-footer {
-	margin: 25px auto;
+	margin: 50px auto;
 	padding:12px;
 }
 
@@ -951,6 +951,7 @@ a.btn-mp > h4 {
 
 .list-body {
 	overflow-y: scroll;
+	height: inherit;
 }
 
 .call-main {
@@ -1167,6 +1168,63 @@ timer {
 	margin : 12px auto 8px auto;
 	border-top : 5px solid white;
 	border-radius : 70px;
+}
+
+.table-header {
+	height: 15%;
+}
+
+.table-main {
+	height: 85%;
+}
+
+.list-header > ul{
+	list-style-type: none;
+	padding : 8px 0;
+	margin : 0;
+	text-align: left;
+}
+
+.list-header > ul::after {
+	content:"";
+	display: block;
+	clear: both;
+}
+
+.list-header > ul > li {
+	display: inline-block;
+	width: 25%;
+	text-align: center;
+	float: left;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 800;
+	font-size: 0.8vw;
+	vertical-align: top;
+}
+
+.list-body > ul {
+	list-style-type: none;
+	padding: 4px 0;
+	margin : 0;
+	text-align: left;
+}
+
+.list-body > ul::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.list-body > ul > li {
+	display: inline-block;
+	width: 25%;
+	text-align: center;
+	float: left;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 0.7vw;
+	vertical-align: top;
 }
 
 .login-wrap {
