@@ -4,6 +4,7 @@ var sidemenuController = angular.module("vertoControllers")
 		console.debug("Side Menu Controller => Preparing side menu for usage.");
 		$scope.verto = verto;
 		$scope.storage = storage;
+		verto.refreshDevices();
 		$scope.userData = {};
 		$scope.update = function () {
 			if ($scope.userData != {}) {
