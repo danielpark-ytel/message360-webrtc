@@ -49,6 +49,31 @@ var dialpadController = angular.module("vertoControllers")
             $scope.loading = true;
             call(extension);
         };
+        $scope.quickCall = function(number) {
+            storage.data.cur_call = 0;
+            storage.data.onHold = false;
+            if(verto.data.call) {
+                ngToast.create({
+                    className: 'danger',
+                    content: "<p class='toast-text'><i class='fa fa-times-circle'></i> A call is already in progress.</p>"
+                });
+                return false;
+            }
+            if (storage.data.cid_number == null) {
+                ngToast.create({
+                    className: "danger",
+                    content: "<p class='toast-text'><i class='fa fa-times-circle'></i> You have not yet set a Caller ID Number.</p>"
+                });
+                return false;
+            }
+            storage.data.mutedVideo = false;
+            storage.data.mutedMic = false;
+            storage.data.videoCall = false;
+            var code = "wrtc";
+            var countryCode = "1";
+            verto.call(code + countryCode + number);
+            storage.data.called_number = number;
+        };
         $scope.cancel = function () {
             $scope.cancelled = true;
         };

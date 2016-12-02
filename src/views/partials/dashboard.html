@@ -181,7 +181,7 @@
                         <li class="config-item">
                             <i class="fa fa-microphone"></i>
                             <div class="config-text">
-                                <p><span class="config-label">Selected Microphone:</span><br>{{storage.data.selectedAudioLabel
+                                <p><span class="config-label">Selected Mic:</span><br>{{storage.data.selectedAudioLabel
                                     || "No audio source"}}</p>
                             </div>
                         </li>
@@ -211,19 +211,20 @@
                                 Voice enabled
                             </li>
                         </ul>
-                        <div class="cid-wrapper">
-                            <p class="cid-left">CID Number:</p>
-                            <p class="cid-right">{{storage.data.cid_number || "Caller ID not set."}}</p>
-                        </div>
+                        <p class="req-header">Caller ID Number:</p>
+                        <hr>
+                        <ul class="req-list">
+                            <li class="req-item">{{storage.data.cid_number || "Caller ID not set."}}</li>
+                        </ul>
+                            <div class='input-group cid-group'>
+                                <span class="input-group-addon" id="cid-addon"><i class="fa fa-phone"></i></span>
+                                <input type="text" class="form-control cid-input" ng-model="callerIdNumber"
+                                       placeholder="(714)800-4242" aria-describedby="cid-addon">
+                            </div>
                     </div>
-                    <div class='input-group cid-group'>
-                        <span class="input-group-addon" id="cid-addon"><i class="fa fa-phone"></i></span>
-                        <input type="text" class="form-control cid-input" ng-model="callerIdNumber"
-                               placeholder="(714)800-4242" aria-describedby="cid-addon">
-                    </div>
-                    <button class="btn btn-cid" ng-click="updateCid()" ng-disabled="callerIdNumber.length != 10"><i
-                            class="fa fa-pencil-square-o"></i> Update
-                    </button>
+                        <button class="btn btn-cid" ng-click="updateCid()" ng-disabled="callerIdNumber.length != 10"><i
+                                class="fa fa-pencil-square-o"></i> Update
+                        </button>
                 </div>
             </div>
         </div>
@@ -237,68 +238,68 @@
                                ng-minlength="10" ng-maxlength="10">
                         <a class='btn btn-backspace' ng-click='backspace()'><i class="fa fa-chevron-left"></i></a>
                     </div>
-                    <div class="group">
-                        <a class="btn btn-mp" ng-click="dtmf(1)">
-                            <h4 class="dialer-number">1</h4>
-                            <span class="dialer-text">./@</span>
-                        </a>
-                        <a class="btn btn-mp" ng-click="dtmf(2)">
-                            <h4 class="dialer-number">2</h4>
-                            <span class="dialer-text">ABC</span>
-                        </a>
-                        <a class="btn btn-mp" ng-click="dtmf(3)">
-                            <h4 class="dialer-number">3</h4>
-                            <span class="dialer-text">DEF</span>
-                        </a>
+                    <div class="dialpad-groups">
+                        <div class="group">
+                            <a class="btn btn-mp" ng-click="dtmf(1)">
+                                <h4 class="dialer-number">1</h4>
+                                <span class="dialer-text">./@</span>
+                            </a>
+                            <a class="btn btn-mp" ng-click="dtmf(2)">
+                                <h4 class="dialer-number">2</h4>
+                                <span class="dialer-text">ABC</span>
+                            </a>
+                            <a class="btn btn-mp" ng-click="dtmf(3)">
+                                <h4 class="dialer-number">3</h4>
+                                <span class="dialer-text">DEF</span>
+                            </a>
+                        </div>
+                        <div class="group">
+                            <a class="btn btn-mp" ng-click="dtmf(4)">
+                                <h4 class="dialer-number">4</h4>
+                                <span class="dialer-text">GHI</span>
+                            </a>
+                            <a class="btn btn-mp" ng-click="dtmf(5)">
+                                <h4 class="dialer-number">5</h4>
+                                <span class="dialer-text">JKL</span>
+                            </a>
+                            <a class="btn btn-mp" ng-click="dtmf(6)">
+                                <h4 class="dialer-number">6</h4>
+                                <span class="dialer-text">MNO</span>
+                            </a>
+                        </div>
+                        <div class="group">
+                            <a class="btn btn-mp" ng-click="dtmf(7)">
+                                <h4 class="dialer-number">7</h4>
+                                <span class="dialer-text">PQRS</span>
+                            </a>
+                            <a class="btn btn-mp" ng-click="dtmf(8)">
+                                <h4 class="dialer-number">8</h4>
+                                <span class="dialer-text">TUV</span>
+                            </a>
+                            <a class="btn btn-mp" ng-click="dtmf(9)">
+                                <h4 class="dialer-number">9</h4>
+                                <span class="dialer-text">WXYZ</span>
+                            </a>
+                        </div>
+                        <div class="group">
+                            <a class="btn btn-mp" ng-click="dtmf('*')">
+                                <h4 class="dialer-number">*</h4>
+                                <span class="dialer-text">---</span>
+                            </a>
+                            <a class="btn btn-mp" ng-click="dtmf(0)">
+                                <h4 class="dialer-number">0</h4>
+                                <span class="dialer-text">+</span>
+                            </a>
+                            <a class="btn btn-mp" ng-click="dtmf('#')">
+                                <h4 class="dialer-number">#</h4>
+                                <span class="dialer-text">---</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="group">
-                        <a class="btn btn-mp" ng-click="dtmf(4)">
-                            <h4 class="dialer-number">4</h4>
-                            <span class="dialer-text">GHI</span>
-                        </a>
-                        <a class="btn btn-mp" ng-click="dtmf(5)">
-                            <h4 class="dialer-number">5</h4>
-                            <span class="dialer-text">JKL</span>
-                        </a>
-                        <a class="btn btn-mp" ng-click="dtmf(6)">
-                            <h4 class="dialer-number">6</h4>
-                            <span class="dialer-text">MNO</span>
-                        </a>
-                    </div>
-                    <div class="group">
-                        <a class="btn btn-mp" ng-click="dtmf(7)">
-                            <h4 class="dialer-number">7</h4>
-                            <span class="dialer-text">PQRS</span>
-                        </a>
-                        <a class="btn btn-mp" ng-click="dtmf(8)">
-                            <h4 class="dialer-number">8</h4>
-                            <span class="dialer-text">TUV</span>
-                        </a>
-                        <a class="btn btn-mp" ng-click="dtmf(9)">
-                            <h4 class="dialer-number">9</h4>
-                            <span class="dialer-text">WXYZ</span>
-                        </a>
-                    </div>
-                    <div class="group">
-                        <a class="btn btn-mp" ng-click="dtmf('*')">
-                            <h4 class="dialer-number">*</h4>
-                            <span class="dialer-text">---</span>
-                        </a>
-                        <a class="btn btn-mp" ng-click="dtmf(0)">
-                            <h4 class="dialer-number">0</h4>
-                            <span class="dialer-text">+</span>
-                        </a>
-                        <a class="btn btn-mp" ng-click="dtmf('#')">
-                            <h4 class="dialer-number">#</h4>
-                            <span class="dialer-text">---</span>
-                        </a>
-                    </div>
-                    <div class='form-footer'>
-                        <a class="btn btn-callphone" ng-disabled="dialerForm.$invalid || verto.data.call"
+                        <button class="btn btn-callphone" ng-disabled="dialerForm.$invalid || verto.data.call"
                            ng-click="call(dialpad.number)">
                             <i class="fa fa-phone"></i> call
-                        </a>
-                    </div>
+                        </button>
                 </form>
 
                 <div class='table-wrapper shadowed'>
@@ -308,7 +309,9 @@
                     </div>
                     <div class='table-main' ng-if="!callHistory.length">
                         <h4 class='no-call-history text-center'><i class="fa fa-calendar-times-o"
-                                                                   style="font-size: 1.2em"></i> No calls made this
+                                                                   style="font-size: 1.2em;"></i>
+                            No calls made
+                            this
                             session</h4>
                     </div>
                     <div class='table-main' ng-if='callHistory.length'>
@@ -328,14 +331,14 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class='list-body'>
+                        <div class='list-body' ng-controller="dialpadController">
                             <ul ng-repeat='call in callHistory track by $index'>
-                                <li class='ch-item text-center'>{{ call.dialedNumber }}</li>
-                                <li class='ch-item text-center'>{{ call.call_start | amUtc | amDateFormat: 'YYYY.MM.DD
+                                <li class='ch-item'>{{ call.dialedNumber }}</li>
+                                <li class='ch-item'>{{ call.call_start | amUtc | amDateFormat: 'YYYY.MM.DD
                                     hh:mm:ss'}}
                                 </li>
-                                <li class='ch-item text-center'>{{ call.direction }}</li>
-                                <li class='ch-item text-center'><a href="" ng-click="chCall(call.dialedNumber)">Call</a>
+                                <li class='ch-item'>{{ call.direction }}</li>
+                                <li class='ch-item'><a href="" ng-click="quickCall(call.dialedNumber)">Call</a>
                                 </li>
                             </ul>
                         </div>
@@ -386,12 +389,12 @@
                         <div class="infobox">
                             <h4><i class="fa fa-hashtag"></i> Calls this session</h4>
                             <hr>
-                            <p style="font-size : 1.2em">{{ storage.data.numOfCalls }}</p>
+                            <p class="num-calls">{{ storage.data.numOfCalls }}</p>
                         </div>
                         <div class="infobox">
                             <h4><i class="fa fa-lock"></i> Access Token</h4>
                             <hr>
-                            <p style="line-height: 1.5; margin-top : 20px;">{{ storage.data.accessToken }}</p>
+                            <p>{{ storage.data.accessToken }}</p>
                         </div>
                     </div>
                 </div>
