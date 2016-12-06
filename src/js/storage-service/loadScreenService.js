@@ -18,6 +18,23 @@ angular.module('storageService')
 
             var checkBrowser = function() {
                 return $q(function(resolve, reject) {
+                    function checkBrowser() {
+                        var ua= navigator.userAgent, tem,
+                            M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+                        if(/trident/i.test(M[1])){
+                            tem=  /\brv[ :]+(\d+)/g.exec(ua) || [];
+                            return 'IE '+(tem[1] || '');
+                        }
+                        if(M[1]=== 'Chrome'){
+                            tem= ua.match(/\b(OPR|Edge)\/(\d+)/);
+                            if(tem!= null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+                        }
+                        M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+                        if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
+                        return M.join(' ');
+                    }
+
+                    var x = checkBrowser();
                     console.log("Checking browser compatibility");
                     var activity = 'checkBrowser';
                     var result = {
@@ -29,10 +46,10 @@ angular.module('storageService')
                     navigator.getUserMedia = navigator.getUserMedia ||
                         navigator.webkitGetUserMedia ||
                         navigator.mozGetUserMedia;
-
                     if (!navigator.getUserMedia) {
                         result['status'] = 'error';
-                        result['message'] = $translate.instant("Something went wrong.");
+                        result['message'] = $translate.instant(x + " does not support WebRTC. Please use Firefox" +
+                            " or Chrome.");
                         reject(result);
                     }
                     resolve(result);
