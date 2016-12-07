@@ -2,10 +2,14 @@
 	<h4> Video Settings</h4>
 </div>
 <div class="modal-body settings-body">
-	<div class="form-group">
+	<div class="form-group" ng-if="verto.data.videoDevices">
 		<label for="selectedVideo"> Video Source : </label>
-		<select class="form-control" name="selectedVideo" ng-model="userData.video" ng-options="item as item.label for item in verto.data.videoDevices track by item.id">
+		<select class="form-control" id="selectedVideo" ng-model="userData.video"
+				ng-options="item as item.label for item in verto.data.videoDevices track by item.id">
 		</select>
+	</div>
+	<div ng-if="!verto.data.videoDevices">
+		<h4>Your browser does not support this feature.</h4>
 	</div>
 	<a class="update-settings" href="" ng-if="userData.video" ng-click="update()">Update</a>
 </div>

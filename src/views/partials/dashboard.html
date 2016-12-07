@@ -17,10 +17,14 @@
                     <a href="" ng-click="openSettings('video')" class="btn btn-sidenav">Video Settings</a>
                 </li>-->
                 <li>
-                    <a href="" ng-click="openSettings('speaker')" class="btn btn-sidenav">Speaker Settings</a>
+                    <a href=""  ng-click="openSettings('speaker')"
+                       class="btn
+                    btn-sidenav">Speaker
+                        Settings</a>
                 </li>
                 <li>
-                    <a href="" ng-click="openSettings('audio')" class="btn btn-sidenav">Mic Settings</a>
+                    <a href="" ng-click="openSettings('audio')" class="btn
+                    btn-sidenav">Mic Settings</a>
                 </li>
                 <!--<li>
                     <a href="" ng-click="appearance()" class="btn btn-sidenav">Appearance</a>
@@ -163,29 +167,19 @@
                 </div>
 
                 <div class="box-body">
-                    <ul class="config-list">
-                        <li class="config-item">
-                            <i class="fa fa-volume-up"></i>
-                            <div class="config-text">
-                                <p><span class="config-label">Selected Speaker:</span><br>{{storage.data.selectedSpeakerLabel
-                                    || "No speaker source"}}</p>
-                            </div>
-                        </li>
-                        <li class="config-item">
-                            <i class="fa fa-video-camera"></i>
-                            <div class="config-text">
-                                <p><span class="config-label">Selected Video:</span><br>{{storage.data.selectedVideoLabel
-                                    || "No video source"}}</p>
-                            </div>
-                        </li>
-                        <li class="config-item">
-                            <i class="fa fa-microphone"></i>
-                            <div class="config-text">
-                                <p><span class="config-label">Selected Mic:</span><br>{{storage.data.selectedAudioLabel
-                                    || "No audio source"}}</p>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="config-group">
+                        <h4 class="config-label"> <i class="config-addon fa fa-volume-up"></i> Selected Speaker:</h4>
+                        <p class="config-item">{{storage.data.selectedSpeakerLabel || "Your browser does not support this feature."}}</p>
+                    </div>
+                    <div class="config-group">
+                        <h4 class="config-label"> <i class="config-addon fa fa-video-camera"></i> Selected Video:</h4>
+                        <p class="config-item">{{storage.data.selectedVideoLabel || "Your browser does not support this feature."}}</p>
+                    </div>
+                    <div class="config-group">
+                        <h4 class="config-label"> <i class="config-addon fa fa-microphone"></i> Selected
+                            Mic:</h4>
+                        <p class="config-item">{{storage.data.selectedAudioLabel || "Your browser does not support this feature."}}</p>
+                    </div>
                 </div>
             </div>
 

@@ -168,6 +168,7 @@ angular.module('vertoService').service('verto', ['$rootScope', '$state', 'storag
                 data.audioDevices.push({id: device.id, label: device.label || device.id});
             }
             for (var i in jQuery.verto.audioOutDevices) {
+                console.log(jQuery.verto.audioOutDevices);
                 var device = jQuery.verto.audioOutDevices[i];
                 // Selecting the first source.
                 if (i == 0 && !storage.data.selectedSpeaker) {

@@ -4,8 +4,9 @@
 * {
 	font-family: "Lato", sans-serif;
 }
-html {
-	height: 100% !important;
+
+html,body{
+	height:100%;
 }
 
 h1, h2, h3, h4, p, span, li {
@@ -32,7 +33,6 @@ p {
 	font-size : 1.5em;
 	letter-spacing: 1px;
 	text-align: center;
-	font-weight: 700;
 	margin: 0 !important;
 	line-height: 45px;
 	color : white;
@@ -42,7 +42,6 @@ p {
 	font-size : 1.5em;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-weight: 600;
 	padding : 16px;
 	background: #2c3e50;
 	color : white;
@@ -83,7 +82,6 @@ p {
 }
 .info-group > p {
 	text-transform: uppercase;
-	font-weight: 700;
 	letter-spacing: 1px;
 	padding : 2px 6px;
 	font-size : 0.8vw;
@@ -150,7 +148,6 @@ p.cid-right {
 	letter-spacing: 1px;
 	padding : 2px 6px;
 	font-size : 0.8vw;
-	font-weight: 700;
 	float: left;
 	vertical-align: top;
 }
@@ -187,7 +184,7 @@ p.cid-right {
 .dashboard-content {
 	float: left;
 	background: white;
-	width:80%;
+	width: 85%;
 	position: relative;
 	height: 100%;
 }
@@ -237,14 +234,10 @@ p.cid-right {
 .progress-message{
 	text-align: center;
 	text-transform: uppercase;
-	font-weight: 800;
 	letter-spacing: 1px;
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-	min-height: 100% !important;
 	background: #eaeaea;
 	overflow: auto;
 }
@@ -266,10 +259,6 @@ img.img-responsive {
 	margin: auto auto;
 }
 
-.thicker {
-	font-weight: 600;
-}
-
 img.loader-img {
 	height : 75px;
 	width : 75px;
@@ -281,10 +270,6 @@ img.loader-img {
 	margin-right: auto;
 }
 
-.img-wrapper {
-	padding : 6px 0;
-}
-
 section {
 	flex: 1 0 auto !important;
 	display: flex;
@@ -294,14 +279,11 @@ hr {
 	margin: 0;
 }
 
-
-
 .call-text,
 timer > span {
 	text-transform: uppercase;
 	letter-spacing:1px;
 	font-size:0.8vw;
-	font-weight:bolder;
 
 }
 
@@ -311,12 +293,7 @@ timer > span {
 }
 
 .help-text {
-	font-size : 0.9vw;
 	margin-top : 8px;
-}
-
-.dialpad-groups {
-
 }
 
 .settings-caret {
@@ -338,8 +315,7 @@ timer > span {
 
 div.login-content {
 	background: white;
-	height:50%;
-	padding:15px;
+	padding:3%;
 	position: absolute;
 	top:30%;
 }
@@ -376,10 +352,6 @@ a.btn-mp > h4,
 	-ms-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
-}
-
-p.toast-text {
-	font-weight: 700;
 }
 
 div.banner {
@@ -434,7 +406,6 @@ div.banner {
 }
 
 .btn {
-	font-weight : 700;
 	font-size : 1em;
 	letter-spacing: 1px;
 	color : white;
@@ -455,7 +426,8 @@ div.banner {
 
 .dashboard {
 	margin:0;
-	height:inherit;
+	max-height:1080px;
+	max-width:1920px;
 	width:100%;
 	background-color: #E0E0E0;
 }
@@ -463,7 +435,7 @@ div.banner {
 .dashboard-left {
 	width:30%;
 	float:left;
-	height:90%;
+	padding: 20px;
 }
 
 /**
@@ -473,7 +445,7 @@ div.banner {
 	position : relative;
 	background-color : #2C3E50;
 	height: 100%;
-	width : 20%;
+	width : 15%;
 	float : left;
 }
 
@@ -523,7 +495,6 @@ div.banner {
 .btn-sidenav {
 	font-size : 1em;
 	letter-spacing: 1px;
-	font-weight: 700;
 	padding : 10px 0px;
 	width : 100%;
 	box-shadow: none;
@@ -566,10 +537,8 @@ div.banner {
 
 
 .config-box {
-	display: block;
-	height: 45%;
+	margin: auto auto;
 	width:90%;
-	margin: 20px auto 20px auto;
 	background-color : white;
 }
 
@@ -585,81 +554,54 @@ div.banner {
 }
 
 .box-header > h4 {
-	font-size : 1vw;
+	font-size:1em;
 	margin : 0;
-	font-weight: 700;
 	color : #2c3e50;
 	height:100%;
 	padding:5%;
 }
 
 .box-body {
-	padding:8%;
+	padding:5%;
 	height:85%;
 	width: 100%;
 	vertical-align: top;
 	display: inline-block;
 }
 
-.config-list {
-	padding : 3%;
-	margin : 0;
-	height:100%;
-	list-style-type: none;
+/* Media Sources */
+.config-group{
+	width:100%;
+	padding: 8px;
 }
-
-.config-item {
-	margin : 5px 0 5px 0;
-	height : 33.3%;
-}
-
-.config-item > i {
-	float : left;
-	border: 2px solid #2C3E50;
-	height : 40px;
-	width : 40px;
-	padding : 0;
-	vertical-align: top;
-	color : white;
-	text-align: center;
-	border-radius: 50%;
-	background: #2C3E50;
-}
-
-.config-item > i:before {
-	font-size: 1.2em;
-	line-height: 36px;
-}
-
-.config-text {
-	margin-left: 8px;
-	vertical-align: top;
-	float: left;
-	height: 50px;
-}
-
-.config-text > p {
-	line-height: 20px;
-	font-size : 0.7vw;
-}
-
-.config-label {
-	font-weight: 900;
+.config-label{
+	margin:4px 0px;
+	font-size:0.9em;
+	color:#2C3E50;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-size: 1.1em;
+}
+.config-item{
+	font-size:0.9em;
+}
+.config-label > i {
+	height: 32px;
+	width: 32px;
+	padding: 8px;
+	background:#617487;
+	color:white;
+	text-align: center;
+	margin-right: 6px;
 }
 
-/**
-* Dashboard Dialer
-*/
-
-
+.config-label>i:before{
+	line-height:16px;
+}
 /**
 * Dashboard Header
 */
 .dashboard-header {
-	height: 9%;
+	height: 60px;
 	width : 100%;
 	background-color: #617487;
 	position : relative;
@@ -669,9 +611,7 @@ div.banner {
 }
 
 .dashboard-header > h4 {
-	font-weight: 800;
 	text-align: center;
-	font-size: 1.2vw;
 	position: absolute;
 	left:25%;
 	right:25%;
@@ -684,9 +624,8 @@ div.banner {
 
 .callerid-box {
 	position : relative;
-	height : 45%;
 	width:90%;
-	margin: 20px auto 20px auto;
+	margin: 20px auto 0 auto;
 	background: white;
 }
 
@@ -710,28 +649,21 @@ input[type=text].dialer-input {
 }
 
 .cid-group {
-	width:90%;
 	margin: 20px auto 0 auto;
 }
 
 .cid-group > input {
-	padding:25px;
+	padding:20px;
 }
 
 .cid-wrapper {
 	height:50%;
 	margin-top:10%;
 }
-label {
-	font-weight: 700;
-}
-.settings-box > .form-group {
-	text-align: center;
-}
+
 .input-group-addon {
     padding: 6px 16px;
     font-size: 24px !important;
-    font-weight: normal;
     line-height: 1;
     color: #ec2c36;
     background-color: inherit;
@@ -746,6 +678,10 @@ label {
 
 }
 
+.toast-text > i {
+	margin-right: 3px;
+}
+
 .req-list {
 	list-style-type: none;
 	padding : 4px;
@@ -757,8 +693,7 @@ label {
 }
 
 .req-item {
-	font-size : 0.8vw;
-	font-weight: 600;
+	font-size : 0.9em;
 	padding : 2px 0;
 	display : inline-block;
 	vertical-align: top;
@@ -766,9 +701,8 @@ label {
 
 .req-header {
 	padding : 1.5%;
-	font-size : 1vw;
+	font-size : 1em;
 	color : rgb(178, 178, 178);
-	font-weight : 700;
 }
 .btn-update:focus {
 	color : white;
@@ -797,10 +731,14 @@ label {
 	display : inline-block;
 }
 
+.reconnect-title > h3.modal-title {
+	background: salmon;
+	padding: 6px 0;
+}
+
 .btn-cid {
 	height:15%;
 	width : 100%;
-	font-size:1vw;
 	background: #2c3e50;
 	border : 2px solid #2c3e50;
 }
@@ -817,10 +755,10 @@ label {
 
 .dashboard-right {
 	vertical-align: top;
-	float: right;
+	float: left;
 	width : 70%;
+	height: auto;
 	background: white;
-	height : 80%;
 	padding-right:1.5%;
 }
 
@@ -864,9 +802,8 @@ a.btn-mp {
 }
 
 a.btn-mp > span {
-	font-size : 0.7vw;
+	font-size : 0.7em;
 	color: black;
-	font-weight: 700;
 }
 
 a.btn-mp:focus > span,
@@ -877,33 +814,32 @@ a.btn-mp:hover > h4 {
 }
 
 a.btn-mp > h4 {
-	font-size : 0.8vw;
+	font-size : 0.9em;
 	color : #2196f3;
 	margin : 15px 0 0 0;
-	font-weight: 700;
 }
 
 .webrtc-row {
-	height:45%;
+	height:300px;
 	margin : 20px auto;
 	text-align: center;
 }
 
 .webrtc-row2 {
-	height:35%;
+	height: 180px;
 	margin:20px auto;
 	position: relative;
 }
 
 .right-footer {
 	position: absolute;
-	right:10px;
+	left:10px;
 	bottom:10px;
 }
 
 .right-footer-text {
 	margin:0;
-	font-size:1vw;
+	font-size:16px;
 	text-align:center;
 }
 
@@ -924,12 +860,11 @@ a.btn-mp > h4 {
 
 .ch-header,
 .moreinfo-header > h4 {
-	font-size : 1vw;
 	text-align: left;
-	font-weight: 700;
 	background : #617487;
 	color : white;
 	margin : 0;
+	font-size:1em;
 	padding : 1.7%;
 	letter-spacing: 2px;
 	text-transform: uppercase;
@@ -953,8 +888,6 @@ a.btn-mp > h4 {
 
 .ch-item {
 	padding : 0;
-	font-size : 0.7em;
-	font-weight : 700;
 }
 
 .row {
@@ -979,10 +912,9 @@ a.btn-mp > h4 {
 	padding : 3%;
 	text-align: left;
 	color : white;
+	font-size:1em;
 	letter-spacing: 1px;
 	background : #617487;
-	font-size: 1vw;
-	font-weight: 700;
 	text-transform: uppercase;
 	margin : 0;
 }
@@ -1094,11 +1026,11 @@ timer {
 .no-call-text {
 	text-transform: uppercase;
 	margin : 0;
+	padding: 0 6px;
 	text-align: center;
-	font-size : 1.2vw;
-	font-weight: 700;
+	font-size : 1em;
 	width:100%;
-	top:40%;
+	top:35%;
 	position: absolute;
 	letter-spacing: 2px;
 }
@@ -1117,14 +1049,20 @@ timer {
 	position: relative;
 }
 
+.infobox > h4 {
+	font-size: 1em;
+}
+
+.infobox > p {
+	font-size: 0.9em;
+}
+
 .update-settings {
-	font-weight: 700;
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
 }
 
 .cid-settings {
-	font-weight: 700;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 }
@@ -1132,20 +1070,15 @@ timer {
 .settings-title > h4 {
 	text-transform: uppercase;
 	font-size: 1.2em;
-	font-weight: 700;
 }
 
 .infobox > h4 {
-	font-size : 1vw;
-	font-weight: 700;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 }
 
 .infobox > p {
 	text-transform: uppercase;
-	font-weight : 700;
-	font-size: 0.8vw;
 	padding: 3%;
 }
 
@@ -1158,7 +1091,6 @@ timer {
 	position: absolute;
 	left:0;
 	bottom:0;
-	font-size: 1vw;
     background: #59b75c;
     border: 2px solid #59b75c;
     width : 100%;
@@ -1185,12 +1117,11 @@ timer {
 .no-call-history {
 	text-transform: uppercase;
 	margin: 0;
-	font-size: 1.3vw;
-	height: 100%;
-	font-weight: 700;
+	font-size: 1.1em;
 	width: 100%;
-	line-height: 230px;
 	left: 0;
+	top: 40%;
+	padding: 0 12px;
 	position: absolute;
 	letter-spacing: 2px;
 }
@@ -1198,7 +1129,6 @@ timer {
 	width : 80%;
 	margin : auto auto;
 	font-size : 1.5em;
-	font-weight : 700;
 	color : white;
 	text-align: center;
 	text-transform: uppercase;
@@ -1239,14 +1169,9 @@ timer {
 	width: 97%;
 }
 
-.list-header > ul::after {
+.list-header > ul::after,
+.group::after{
 	content:"";
-	display: block;
-	clear: both;
-}
-
-.group::after {
-	content: "";
 	display: block;
 	clear: both;
 }
@@ -1259,17 +1184,15 @@ timer {
 	display: inline-block;
 	width: 25%;
 	float: left;
+	font-size: 0.8em;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	text-align: left;
-	font-weight: 800;
-	font-size: 0.8vw;
 	vertical-align: top;
 }
 
 .ng-toast {
 	position: absolute;
-	width: 100%;
 	top: 0;
 	right: 0;
 	z-index: 10;
@@ -1277,12 +1200,11 @@ timer {
 
 .ng-toast > ul {
 	list-style-type: none;
-	width: 100%;
 }
 
 .list-body > ul {
 	list-style-type: none;
-	padding: 6px 0;
+	padding: 6px 4px;
 	margin : 0;
 	text-align: left;
 }
@@ -1297,9 +1219,8 @@ timer {
 	display: inline-block;
 	width: 25%;
 	float: left;
+	font-size: 0.8em;
 	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 0.7vw;
 	vertical-align: top;
 }
 
@@ -1326,12 +1247,10 @@ timer {
 	background: #ff4136;
 	color: white;
 	position: absolute;
+	right: 0;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;
-	right : 6px;
-	top : 10%;
-	bottom : 10%;
 }
 
 .logout-btn:hover,
@@ -1349,7 +1268,7 @@ timer {
 	font-size : 2em;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1230px) {
 	div.sidemenu {
 		display : none;
 	}
@@ -1380,7 +1299,6 @@ timer {
 		font-size : 1.5em;
 		text-transform: uppercase;
 		letter-spacing: 1px;
-		font-weight: 600;
 		padding : 16px;
 		background: #2c3e50;
 		color : white;
@@ -1392,7 +1310,6 @@ timer {
 		background: #617487;
 		color : white;
 		font-size : 1.5em;
-		font-weight: 700;
 		letter-spacing: 1px;
 		padding : 8px 8px;
 		text-align: center;
@@ -1421,7 +1338,6 @@ timer {
 	.dialed-number,
 	timer > span {
 		letter-spacing: 1px;
-		font-weight: 600;
 		font-size : 10px;
 		text-transform: uppercase;
 		color : white !important;
@@ -1482,7 +1398,6 @@ timer {
 		vertical-align: top;
 		margin : 0 0 0 16px;
 		font-size: 1.5em;
-		font-weight: 700;
 		line-height: 50px;
 	}
 	div.dialer-sm {
@@ -1536,12 +1451,11 @@ timer {
 		color : #2196f3;
 	}
 	.settings-caret {
+		padding: 0;
 		height : 50px;
 		width : 50px;
 	}
-	.settings-caret > i {
-		vertical-align: text-top;
-	}
+
 	.btn-dialer-sm > span {
 		font-size: 0.6em !important;
 		color : rgb(167, 167, 167);

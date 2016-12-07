@@ -1,6 +1,6 @@
 var sidemenuController = angular.module("vertoControllers")
 	.controller("sidemenuController", function ($scope, $rootScope, storage, verto, ngToast, preRoute) {
-		preRoute.checkVerto();
+		// preRoute.checkVerto();
 		console.debug("Side Menu Controller => Preparing side menu for usage.");
 		$scope.verto = verto;
 		$scope.storage = storage;
@@ -21,7 +21,7 @@ var sidemenuController = angular.module("vertoControllers")
 					storage.data.selectedSpeakerLabel = $scope.userData.speaker.label;
 				}
 				ngToast.create({
-					className: "primary",
+					className: "success",
 					content: "<p class='toast-text'><i class='fa fa-cogs'></i> Settings updated.</p>"
 				});
 				$scope.closeSettings();

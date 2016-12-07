@@ -21,7 +21,7 @@ var mainController = angular.module("vertoControllers").controller("mainControll
                 $scope.logout();
                 ngToast.create({
                     className: 'danger',
-                    content: "<p class='toast-text'><i class='fa fa-info-circle'></i>" + response.data.Message360.Errors.Error[0].Message + "</p>"
+                    content: "<p class='toast-text'><i class='fa fa-info-circle'></i> " + response.data.Message360.Errors.Error[0].Code + ": " + response.data.Message360.Errors.Error[0].Message + "</p>"
                 });
             } else {
                 console.debug("Account has funds: TRUE");
@@ -72,7 +72,7 @@ var mainController = angular.module("vertoControllers").controller("mainControll
             if (response.data.Message360.Errors) {
                 ngToast.create({
                     className: 'danger',
-                    content: "<p class='toast-text'><i class='fa fa-info-circle'></i>" + response.data.Message360.Errors.Error[0].Message + "</p>"
+                    content: "<p class='toast-text'><i class='fa fa-info-circle'></i> " + response.data.Message360.Errors.Error[0].Code + ": " + response.data.Message360.Errors.Error[0].Message + "</p>"
                 });
                 return false;
             } else if (response.data.Message360.Message['token']) {
@@ -86,8 +86,9 @@ var mainController = angular.module("vertoControllers").controller("mainControll
             if (err) {
                 console.log(err);
                 ngToast.create({
-                    className: 'warning',
-                    content: "<p class='toast-text'><i class='fa fa-info-circle'></i> The Message360 SDK for authentication is not set up properly.</p>"
+                    className: 'danger',
+                    content: "<p class='toast-text'><i class='fa fa-times-circle'></i> Configuration has not been" +
+                    " done properly, please check the docs for more info</p>"
                 });
             }
         });
@@ -105,7 +106,10 @@ var mainController = angular.module("vertoControllers").controller("mainControll
         $scope.showReconnect = false;
         verto.disconnect(disconnectCallback);
         verto.hangup();
-        ngToast.create("<p class='toast-text'><i class='ion-android-notifications'></i> Successfully logged out!</p>");
+        ngToast.create({
+            className: 'success',
+            content: "<p class='toast-text'><i class='fa fa-info-circle'></i> Successfully logged out!</p>"
+        });
     };
 
     $rootScope.openModal = function (templateUrl, controller, _opts) {
@@ -140,9 +144,7 @@ var mainController = angular.module("vertoControllers").controller("mainControll
     };
 
     $rootScope.openSettingsModal = function () {
-        if (!verto.data.audioDevices.length || !verto.data.speakerDevices.length || !verto.data.audioDevices.length) {
-            verto.refreshDevices();
-        }
+        verto.refreshDevices();
         var options = {
             animation: true,
             controller: "sidemenuController",
@@ -329,5 +331,7 @@ var mainController = angular.module("vertoControllers").controller("mainControll
             callee_id_number: verto.data.login
         });
     };
+
+    console.log(verto.data);
 });
 mainController.$inject = ['$scope', '$rootScope', '$http', '$location', '$timeout', '$q', 'verto', 'storage', '$state', 'prompt', 'ngToast', 'callHistory', 'ngAudio', '$uibModal', 'moment'];

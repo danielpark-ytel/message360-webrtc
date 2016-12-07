@@ -157,7 +157,7 @@ module.exports = function(grunt) {
         uglify: {
             options: {
                 compress: {
-                    drop_console: true,
+                    drop_console: false,
                     properties: true,
                     dead_code: true,
                     conditionals: true,
