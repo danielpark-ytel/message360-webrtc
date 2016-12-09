@@ -47,6 +47,14 @@ module.exports = function(grunt) {
                     dest: './build/css/',
                     expand: true
                 }]
+            },
+            dist_iframe: {
+                files: [{
+                    cwd: 'bower_components/iframe-resizer/js/',
+                    src: 'iframeResizer.contentWindow.min.js',
+                    dest: './dist/deps/',
+                    expand: true
+                }]
             }
         },
         ngAnnotate: {
@@ -68,6 +76,7 @@ module.exports = function(grunt) {
                         './src/js/controllers/cidController.js',
                         './src/js/controllers/sidemenuController.js',
                         './src/js/controllers/chModalController.js',
+                        './src/js/controllers/widgetController.js',
                     ],
                     './build/js/app-services.minsafe.js': [
                         './src/js/verto-service/vertoService.module.js',
@@ -77,7 +86,7 @@ module.exports = function(grunt) {
                         './src/js/verto-service/preRouteService.js',
                         './src/js/storage-service/storageService.module.js',
                         './src/js/storage-service/loadScreenService.js',
-                        './src/js/storage-service/storageService.js',   
+                        './src/js/storage-service/storageService.js'
                     ]
                 }
             }
@@ -93,6 +102,9 @@ module.exports = function(grunt) {
                     ],
                     './build/css/spinners.min.css': [
                         './src/css/spinners.css'
+                    ],
+                    './build/css/widget.min.css': [
+                        './src/css/widget.css'
                     ]
                 }
             }
@@ -111,6 +123,13 @@ module.exports = function(grunt) {
                     './bower_components/ngToast-animations.min.css',
                 ],
                 dest: './dist/css/<%= pkg.name %>.css'
+            },
+            css_widget: {
+                src: [
+                    './build/css/bootstrap.min.css',
+                    './build/css/widget.min.css'
+                ],
+                dest: './dist/css/<%= pkg.name %>-widget.css'
             },
             js_main: {
                 src: [
@@ -137,7 +156,8 @@ module.exports = function(grunt) {
                     './bower_components/humanize-duration/humanize-duration.js',
                     './bower_components/angular-timer/dist/angular-timer.min.js',
                     './bower_components/angular-prompt/dist/angular-prompt.min.js',
-                    './bower_components/angular-audio/app/angular.audio.js'
+                    './bower_components/angular-audio/app/angular.audio.js',
+                    './bower_components/angular-messages/angular-messages.min.js'
                 ],
                 dest: './build/libs/<%= pkg.name %>-libs.js'
             },

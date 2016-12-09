@@ -2,16 +2,10 @@ var cidController = angular.module("vertoControllers")
     .controller("cidController", function ($scope, $rootScope, storage, verto, $http, ngToast, ngAudio) {
         $scope.callerIdNumber = "";
 
-        /**
-         * IMPORTANT: Set the url which points to the location of your helper library script to authenticate your caller ID number.
-         * This should be the location of the script on your web server, for example: 'https://www.yourdomain.com/authenticateNumber.php'
-         */
-        var numberUrl = "scripts/authenticate-number.php";
-
         $scope.updateCid = function () {
             $http({
                 method: "POST",
-                url: numberUrl,
+                url: $rootScope.numberUrl,
                 data: {
                     phone_number: $scope.callerIdNumber
                 }

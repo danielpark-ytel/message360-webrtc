@@ -1,4 +1,4 @@
-var mainController = angular.module("vertoControllers").controller("mainController", function ($scope, $rootScope, $http, $location, $timeout, $q, verto, storage, $state, prompt, ngToast, callHistory, ngAudio, $uibModal, moment) {
+var mainController = angular.module("vertoControllers").controller("mainController", function ($scope, $rootScope, $http, $location, $timeout, $q, verto, storage, $state, prompt, ngToast, callHistory, ngAudio, $uibModal) {
     if (storage.data.language && storage.data.language !== 'browse') {
         storage.data.language = 'browser';
     }
@@ -8,15 +8,8 @@ var mainController = angular.module("vertoControllers").controller("mainControll
     $rootScope.dialpad = {};
     $scope.callHistory = [];
 
-    /**
-     * IMPORTANT: Set the url which points to the location of your helper library script to obtain an access token.
-     * This should be the location of the script on your web server, for example: 'https://www.yourdomain.com/accessToken.php'
-     */
-    var tokenUrl = 'scripts/access-token.php';
-    var fundUrl = 'scripts/check-funds.php';
-
     function checkFunds() {
-        $http.post(fundUrl).then(function (response) {
+        $http.post($rootScope.fundUrl).then(function (response) {
             if (response.data.Message360.ResponseStatus != 1) {
                 $scope.logout();
                 ngToast.create({
@@ -67,7 +60,7 @@ var mainController = angular.module("vertoControllers").controller("mainControll
                 }
             });
         };
-        $http.post(tokenUrl).then(function (response) {
+        $http.post($rootScope.tokenUrl).then(function (response) {
             console.log(response);
             if (response.data.Message360.Errors) {
                 ngToast.create({
@@ -334,4 +327,4 @@ var mainController = angular.module("vertoControllers").controller("mainControll
 
     console.log(verto.data);
 });
-mainController.$inject = ['$scope', '$rootScope', '$http', '$location', '$timeout', '$q', 'verto', 'storage', '$state', 'prompt', 'ngToast', 'callHistory', 'ngAudio', '$uibModal', 'moment'];
+mainController.$inject = ['$scope', '$rootScope', '$http', '$location', '$timeout', '$q', 'verto', 'storage', '$state', 'prompt', 'ngToast', 'callHistory', 'ngAudio', '$uibModal'];

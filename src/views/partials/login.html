@@ -7,7 +7,8 @@
     <div class="row animated slideInUp login-wrap">
         <div class='input-group login-group'>
             <span class="input-group-addon" id="usernameAddon"><i class="fa fa-user"></i></span>
-            <input type="text" class="form-control username-input" ng-model="verto.data.name" placeholder="Username" aria-describedby="cid-addon">
+            <input type="text" class="form-control username-input" ng-model="verto.data.name" placeholder="Username"
+                   aria-describedby="usernameAddon">
         </div>
         <div class='login-row'>
             <button class='btn btn-login' ng-disabled="verto.data.name.length < 3" ng-click='login()'><i class="fa fa-sign-in"></i> Login</button>

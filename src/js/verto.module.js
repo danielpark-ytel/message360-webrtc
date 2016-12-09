@@ -93,8 +93,11 @@ app.filter("phoneFilter", function () {
         return (country + " (" + city + ") " + number).trim();
     };
 });
-app.run(function ($rootScope, $location) {
+app.run(function ($rootScope) {
+    $rootScope.tokenUrl = 'scripts/access-token.php';
+    $rootScope.fundUrl = 'scripts/check-funds.php';
+    $rootScope.numberUrl = "scripts/authenticate-number.php";
     window.onbeforeunload = function (e) {
         window.location.ref = "/";
-    }
+    };
 });
