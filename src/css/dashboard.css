@@ -1196,6 +1196,7 @@ timer {
 	top: 0;
 	right: 0;
 	z-index: 10;
+	width: 100%;
 }
 
 .ng-toast > ul {
