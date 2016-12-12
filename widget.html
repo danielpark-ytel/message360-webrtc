@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="vertoApp">
+    <head>
+        <title>M360 WebDialer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="x-ua-compatible" content="IE=Edge">
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+        <link rel="shortcut icon" href="src/images/favicon.png" type="image/png"/>
+        <link rel="stylesheet" href="dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="dist/css/message360-webrtc-widget.css"/>
+        <link rel="stylesheet" href="dist/css/font-awesome.min.css"/>
+        <script type='text/javascript' src='dist/message360-webrtc-libs.min.js'></script>
+    </head>
+    <body ng-controller="widgetController">
+        <video class="hide" id="webcam" autoplay="autoplay" style="object-fit:inherit;"></video>
+        <div class="widget-container">
+            <div class="login-content ng-cloak" ng-show="content.showLogin">
+                <div class="login-banner">
+                    <img style="margin : auto auto;" class="banner-img img-responsive" alt="No Image Found" src="src/images/m360logo.png">
+                </div>
+                <form name="login-form" novalidate>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user-circle"></i></span>
+                        <input class="form-control" placeholder="Agent Smith" ng-model="user.username">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                        <input class="form-control" placeholder="7141231234" ng-model="user.cid">
+                    </div>
+                    <div class="form-group">
+                        <button ng-disabled="user.cid.length != 10 || !user.username" class="btn btn-primary btn-login" type="submit" ng-click="login()">
+                            <i class="fa fa-sign-in"></i> Login
+                        </button>
+                        <div class="help-block">
+                            <p class="text-danger" ng-bind="errors.authError"></p>
+                            <p class="text-danger" ng-bind="errors.cidError"></p>
+                            <p class="text-danger" ng-bind="errors.fundError"></p>
+                            <p class="text-danger" ng-bind="errors.serverError"></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="dialer-content ng-cloak" ng-show="content.showDialer">
+                <form name="dialpad-form" novalidate>
+                    <div class="dialpad-input-row">
+                        <input ng-model="dialpad.number" class="dialpad-input form-control"
+                               placeholder="Enter a 10 digit number" autofocus required ng-minlength="10" ng-maxlength="10">
+                        <a class="btn btn-backspace"
+                           ng-click="backspace()"><i class="fa fa-chevron-circle-left"></i></a>
+                    </div>
+                    <div class="dialpad-row">
+                        <a class="btn btn-dialer" ng-click="dtmf(1)">
+                            <h4 class="btn-number">1</h4>
+                            <span>./@</span>
+                        </a>
+                        <a class="btn btn-dialer" ng-click="dtmf(2)">
+                            <h4 class="btn-number">2</h4>
+                            <span>ABC</span>
+                        </a>
+                        <a class="btn btn-dialer" ng-click="dtmf(3)">
+                            <h4 class="btn-number">3</h4>
+                            <span>DEF</span>
+                        </a>
+                    </div>
+                    <div class="dialpad-row">
+                        <a class="btn btn-dialer" ng-click="dtmf(4)">
+                            <h4 class="btn-number">4</h4>
+                            <span>GHI</span>
+                        </a>
+                        <a class="btn btn-dialer" ng-click="dtmf(5)">
+                            <h4 class="btn-number">5</h4>
+                            <span>JKL</span>
+                        </a>
+                        <a class="btn btn-dialer" ng-click="dtmf(6)">
+                            <h4 class="btn-number">6</h4>
+                            <span>MNO</span>
+                        </a>
+                    </div>
+                    <div class="dialpad-row">
+                        <a class="btn btn-dialer" ng-click="dtmf(7)">
+                            <h4 class="btn-number">7</h4>
+                            <span>PQRS</span>
+                        </a>
+                        <a class="btn btn-dialer" ng-click="dtmf(8)">
+                            <h4 class="btn-number">8</h4>
+                            <span>TUV</span>
+                        </a>
+                        <a class="btn btn-dialer" ng-click="dtmf(9)">
+                            <h4 class="btn-number">9</h4>
+                            <span>WXYZ</span>
+                        </a>
+                    </div>
+                    <div class="dialpad-row">
+                        <a class="btn btn-dialer" ng-click="dtmf('*')">
+                            <h4 class="btn-number">*</h4>
+                            <span>---</span>
+                        </a>
+                        <a class="btn btn-dialer" ng-click="dtmf(0)">
+                            <h4 class="btn-number">0</h4>
+                            <span>+</span>
+                        </a>
+                        <a class="btn btn-dialer" ng-click="dtmf('#')">
+                            <h4 class="btn-number">#</h4>
+                            <span>---</span>
+                        </a>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-block btn-success"
+                                ng-disabled="dialpad.number.length != 10" ng-click="call()">
+                            <i class="fa fa-phone"></i> Call
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="incall-content ng-cloak" ng-show="content.showInCall">
+                <div class="incall-col">
+                    <p class="incall-number">
+                        <i class="fa fa-phone-square"></i> Number Dialed: {{storage.data.called_number}}
+                    </p>
+                    <timer auto-start="false" interval="1000">
+                        <i class="fa fa-clock-o"></i> Duration: {{hhours}}:{{mminutes}}:{{sseconds}}
+                    </timer>
+                </div>
+                <div class="incall-row">
+                    <button class="btn btn-danger" ng-click="hangup()">Hangup</button>
+                    <a class="btn btn-warning" ng-click="muteMic(cbMuteMic)"><i
+                            ng-class="{'fa fa-microphone' : !storage.data.mutedMic, 'fa fa-microphone-slash' : storage.data.mutedMic}"></i></a>
+                    <a class="btn btn-primary" ng-click="hold()"><i
+                            ng-class="{'fa fa-pause' : !storage.data.onHold, 'fa fa-play' : storage.data.onHold}"></i></a>
+                </div>
+            </div>
+        </div>
+        <script type='text/javascript' src='dist/message360-webrtc-deps.min.js'></script>
+        <script type='text/javascript' src='dist/message360-webrtc.min.js'></script>
+        <script type='text/javascript' src="dist/deps/iframeResizer.contentWindow.min.js"></script>
+    </body>
+</html>

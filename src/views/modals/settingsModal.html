@@ -1,0 +1,73 @@
+<div class="modal-title on-sm-md">
+    <h4 class="settings-header"><i class="fa fa-cogs"></i> Settings & Info</h4>
+</div>
+<div class="modal-body on-sm-md">
+    <uib-tabset active="activeJustified" justified="true">
+        <uib-tab index="0" heading="User Info">
+            <div class="settings-box">
+                <div class="info-group">
+                    <p class="inline-left"><i class="fa fa-user"></i> User Name: </p>
+                    <p class="inline-right" ng-bind="verto.data.name"></p>
+                </div>
+                <div class="info-group">
+                    <p class="inline-left"><i class="fa fa-phone-square"></i> Caller ID: </p>
+                    <p class="inline-right" ng-bind="storage.data.cid_number || 'Caller ID not set'"></p>
+                </div>
+                <div class="info-group">
+                    <p class="inline-left"><i class="fa fa-lock"></i> Access Token: </p>
+                    <p class="inline-right" ng-bind="storage.data.accessToken"></p>
+                </div>
+                <div class="info-group">
+                    <p class="inline-left"><i class="fa fa-sort-numeric-asc"></i> Number of Calls: </p>
+                    <p class="inline-right" ng-bind="storage.data.numOfCalls"></p>
+                </div>
+                <div class="info-group">
+                    <p class="inline-left"><i class="fa fa-volume-up"></i> Speaker Source:  </p>
+                    <p class="inline-right"
+                       ng-bind="storage.data.selectedSpeakerLabel || 'Browser does not support this properly.'"></p>
+                </div>
+                <div class="info-group">
+                    <p class="inline-left"><i class="fa fa-microphone"></i> Mic Source: </p>
+                    <p class="inline-right"
+                       ng-bind="storage.data.selectedAudioLabel || 'Browser does not support this properly.'"></p>
+                </div>
+            </div>
+        </uib-tab>
+        <uib-tab index="1" heading="Settings">
+            <div class="settings-box">
+                <div class="form-group inline-group" ng-if="verto.data.speakerDevices.length">
+                    <label for="selectedSpeaker"> Speaker Source: </label>
+                    <select class="form-control" id="selectedSpeaker" ng-options="item as item.label for item in verto.data.speakerDevices" ng-model="userData.speaker">
+                        <option value="">--Select a new source--</option>
+                    </select>
+                    <a class="update-settings" href="" ng-if="userData.speaker" ng-click="update()">Update</a>
+                </div>
+                <div class="form-group inline-group" ng-if="!verto.data.speakerDevices.length">
+                    <h4>Browser does not support this properly: Speaker Source</h4>
+                </div>
+                <div class="form-group inline-group" ng-if="verto.data.audioDevices.length">
+                    <label for="selectedAudio"> Mic Source: </label>
+                    <select class="form-control" id="selectedAudio" ng-options="item as item.label for item in verto.data.audioDevices" ng-model="userData.audio">
+                        <option value="">--Select a new source--</option>
+                    </select>
+                    <a class="update-settings" href="" ng-if="userData.audio" ng-click="update()">Update</a>
+                </div>
+                <div class="form-group inline-group" ng-if="!verto.data.audioDevices.length">
+                    <h4>Browser does not support this properly: Audio Source</h4>
+                </div>
+                <!--<div class="form-group inline-group">-->
+                    <!--<label for="selectedVideo"> Video Source: </label>-->
+                    <!--<select class="form-control" name="selectedVideo" ng-model="userData.video" ng-options="item as item.label for item in verto.data.videoDevices track by item.id">-->
+                    <!--</select>-->
+                    <!--<a class="update-settings" href="" ng-if="userData.video" ng-click="update()">Update</a>-->
+                <!--</div>-->
+                <div class="form-group inline-group" ng-controller="cidController">
+                    <label for="callerId">Caller ID: </label>
+                    <input type="text" id="callerId" class="form-control cid-modal"
+                           ng-model="callerIdNumber"placeholder="(714)800-4242" aria-describedby="cid-addon">
+                    <a class="cid-settings" href="" ng-if="callerIdNumber.length == 10" ng-click="updateCid()">Update</a>
+                </div>
+            </div>
+        </uib-tab>
+    </uib-tabset>
+</div>

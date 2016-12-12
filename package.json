@@ -1,0 +1,31 @@
+{
+  "name": "message360-webrtc",
+  "version": "1.0.0",
+  "description": "WebRTC Platform",
+  "main": "Gruntfile.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-ng-annotate": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.ytel.com:Message360/webrtc_client.git"
+  },
+  "keywords": [
+    "webrtc",
+    "ytel",
+    "message360"
+  ],
+  "author": {
+    "name": "Daniel Park",
+    "email": "park@ytel.com"
+  },
+  "license": "ISC"
+}
