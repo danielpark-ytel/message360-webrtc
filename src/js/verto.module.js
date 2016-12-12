@@ -94,9 +94,10 @@ app.filter("phoneFilter", function () {
     };
 });
 app.run(function ($rootScope) {
-    $rootScope.tokenUrl = 'scripts/access-token.php';
-    $rootScope.fundUrl = 'scripts/check-funds.php';
-    $rootScope.numberUrl = "scripts/authenticate-number.php";
+    //TODO: Set the URL's for the helper library scripts.
+    $rootScope.tokenUrl = '';
+    $rootScope.fundUrl = '';
+    $rootScope.numberUrl = '';
     window.onbeforeunload = function (e) {
         window.location.ref = "/";
     };
