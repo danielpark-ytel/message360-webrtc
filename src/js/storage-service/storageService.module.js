@@ -1,1 +1,0 @@
-var storageService = angular.module("storageService", ['ngStorage']);
