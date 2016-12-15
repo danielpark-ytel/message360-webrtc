@@ -31,6 +31,10 @@ The following section explains how to set up and install the WebRTC Platform.
 
 4. Once done, you can execute the script with `./script.sh`
 
+5. **IMPORTANT**: During the `bower install` portion of the script, you may be prompted with an error: `Unable to find a suitable version for [package], please choose by typing one of the numbers below: `
+    * Look for the number that says `is required by webrtc_client` and enter that option prefixed with a '!'. 
+    * The '!' prefixed along with your choice will ensure that this choice is remembered for subsequent installs.
+
 Here is a list things the script will be taking care of for you:
 * Downloading the WebRTC platform source code from Github.
 * Downloading the PHP Helper Library.
