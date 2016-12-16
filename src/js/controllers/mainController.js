@@ -210,8 +210,12 @@ var mainController = angular.module("vertoControllers").controller("mainControll
         checkFunds();
         $scope.incall = false;
         storage.data.numOfCalls += 1;
-
-        callHistory.addCall(storage.data.called_number, 'Outbound', true, $rootScope.start_time);
+        if($rootScope.start_time != "") {
+            var start_time = $rootScope.start_time;
+        } else {
+            var start_time = "Call failed."
+        }
+        callHistory.addCall(storage.data.called_number, 'Outbound', true, start_time);
         $rootScope.start_time = "";
         $scope.callHistory = storage.data.call_history;
         $rootScope.dialpad.number = "";
